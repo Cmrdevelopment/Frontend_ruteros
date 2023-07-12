@@ -17,7 +17,7 @@ const CardDeveloper = ({ developer }) => {
         <ToggleBtnFollowUser userToFollowId={developer._id} />
       </div>
       <button
-        className='developer-card-btn'
+        className="developer-card-btn"
         onClick={() =>
           navigate(pathById, {
             state: { id: developer._id },

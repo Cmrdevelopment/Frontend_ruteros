@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 
 import handleOfferDeletionResponse from '../../hooks/useDeleteOffer';
