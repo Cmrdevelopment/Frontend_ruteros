@@ -74,9 +74,10 @@ const Uploadfile = ({ registerForm }) => {
       <input
         id="file-upload"
         type="file"
-        name="image"
+        name="images"
         accept="image/*"
         {...registerForm}
+        multiple
       />
 
       <label htmlFor="file-upload" id="file-drag">

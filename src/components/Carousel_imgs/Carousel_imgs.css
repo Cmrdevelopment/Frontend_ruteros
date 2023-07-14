@@ -6,3 +6,10 @@
 .carousel-container {
   border: 0px solid red;
 }
+
+.carousel-item-padding-40-px {
+  width: 150px;
+  height: 200px;
+  object-fit: fill;
+  border: 0px solid blue;
+}

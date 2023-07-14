@@ -27,18 +27,41 @@ const CreateOffer2 = () => {
 
   //const [serverMessage, setServerMessage] = useState(null);
 
+  /*
+const inputfile = document.getElementById('file-upload').files;
+console.log(inputfile);
+let customFormData;
+
+if (inputfile.length !== 0) {
+  const imageArray = Array.from(inputfile); // Convert FileList to an array
+  customFormData = {
+    ...data,
+    annualSalary: parseInt(data.annualSalary),
+    offerState: 'Open',
+    technologies: arrayTech,
+    image: imageArray, // Assign the array of files to the 'image' property
+  };
+}
+
+  */
+
+
   const onSubmit = async (data) => {
     const inputfile = document.getElementById('file-upload').files;
     console.log(inputfile);
     let customFormData;
 
     if (inputfile.length !== 0) {
+      const imageArray = Array.from(inputfile); // Convert FileList to an array
       customFormData = {
         ...data,
         annualSalary: parseInt(data.annualSalary),
         offerState: 'Open',
         technologies: arrayTech,
-        image: inputfile[0],
+        //image: inputfile[0],
+        //images: imageArray[1],
+        images: imageArray,
+        // images: inputfile,
       };
     }
 

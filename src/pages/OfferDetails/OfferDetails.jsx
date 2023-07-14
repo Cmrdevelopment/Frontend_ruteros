@@ -22,6 +22,7 @@ import {
   getByReference,
 } from '../../services/API_proyect/comment.service';
 import { getOfferById } from '../../services/API_proyect/offer.service';
+import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 
 const OfferDetails = () => {
   const [res, setRes] = useState({});
@@ -66,17 +67,6 @@ const OfferDetails = () => {
     setLoading(false);
   };
 
-  // const newCommentPrivate = async () => {
-  //   //// otra funciuon despues ddle useEffect
-  //   const customFormData = {
-  //     commentContent: inputValue,
-  //     commentType: 'Privado',
-  //     referenceOfferComment: id,
-  //   };
-  //   setLoading(true);
-  //   setResCommentPrivate(await createComment(customFormData));
-  //   setLoading(false);
-  // };
   useEffect(() => {
     if (resNewChat?.status == 200) {
       console.log(resNewChat);
@@ -177,6 +167,9 @@ const OfferDetails = () => {
         <p>Valora esta oferta</p>
         {offer && <WriteRatingForOffer offerToRate={offer} />}
       </div>
+
+      {offer && <Carousel_imgs images={offer.images} />}
+
       <div className="offerDetails-city-jobType-technologies">
         <div className="offerDetails-city-jobType">
           <h3>Localización y desplazamiento</h3>
