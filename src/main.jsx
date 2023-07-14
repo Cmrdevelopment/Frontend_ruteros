@@ -17,6 +17,7 @@ import Tecnologias from './components/Tecnologias/Tecnologias';
 import { AuthContextProvider } from './contexts/authContext.jsx';
 import AboutUs from './pages/AboutUs/AboutUs';
 import CheckCode from './pages/CheckCode.jsx';
+import Citys from './pages/Citys/Citys.jsx';
 //import DeveloperDetails from './pages/DeveloperDetails/DeveloperDetails';
 import DeveloperDetails2 from './pages/DeveloperDetails2/DeveloperDetails2';
 import Developers from './pages/Developers/Developers';
@@ -41,6 +42,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/developers" element={<Developers />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/offers" element={<Offers />} />
+          <Route path="/citys" element={<Citys />} />
           {/* <Route path="/developerDetails" element={<DeveloperDetails />} /> */}
           <Route path="/developerDetails" element={<DeveloperDetails2 />} />
           <Route path="/offerDetails" element={<OfferDetails />} />
