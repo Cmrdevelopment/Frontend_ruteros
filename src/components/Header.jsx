@@ -66,6 +66,9 @@ const Header = () => {
             <NavLink to="/citys">
               <button className="buttonNav">Ciudades</button>
             </NavLink>
+            <NavLink to="/mountainRoutes">
+              <button className="buttonNav">Montañas</button>
+            </NavLink>
             <NavLink to="/aboutUs">
               <button className="buttonNav">AboutUs</button>
             </NavLink>
