@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavLink } from 'react-router-dom';
 
+import MountainRoutesList from '../../components/MountainRoutesList/MountainRoutesList';
 import AnnualSalarySlider from '../../components/offersComponts/AnnualSalarySlider/AnnualSalarySlider';
 import ExperienceYearsSlider from '../../components/offersComponts/ExperienceYearsSlider/ExperienceYearsSlider';
 import JobTypeSelect from '../../components/offersComponts/JobTypeSelect/JobTypeSelect';
 import OfferStateSelect from '../../components/offersComponts/OfferStateSelect/OfferStateSelect';
 import OfferTypeSelect from '../../components/offersComponts/OfferTypeSelect/OfferTypeSelect';
 import OffersList from '../../components/OffersList/OffersList';
-import MountainRoutesList from '../../components/MountainRoutesList/MountainRoutesList';
 
 const MountainRoutes = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 880 });
@@ -80,9 +80,7 @@ const MountainRoutes = () => {
   return (
     <div className="outletContainer">
       {isLargeScreen ? (
-        <h2 className="offerTit">
-          ¡Ven y consulta todas nuestras rutas de montaña!
-        </h2>
+        <h2 className="offerTit">¡Ven y consulta todas nuestras rutas de montaña!</h2>
       ) : (
         <h2 className="offerTit">Sigue nuestras rutas de montaña</h2>
       )}
