@@ -21,6 +21,7 @@ import Citys from './pages/Citys/Citys.jsx';
 //import DeveloperDetails from './pages/DeveloperDetails/DeveloperDetails';
 import DeveloperDetails2 from './pages/DeveloperDetails2/DeveloperDetails2';
 import Developers from './pages/Developers/Developers';
+import Ruteros from './pages/Ruteros/Ruteros.jsx';
 import ForgotPassword from './pages/ForgotPassword.jsx';
 import { Home } from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
@@ -41,6 +42,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Home />} />
           {/* <Route index element={<PruebaEmotion />} /> */}
           <Route path="/developers" element={<Developers />} />
+          <Route path="/ruteros" element={<Ruteros />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/citys" element={<Citys />} />

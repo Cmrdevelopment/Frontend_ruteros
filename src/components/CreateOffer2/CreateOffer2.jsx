@@ -45,7 +45,6 @@ if (inputfile.length !== 0) {
 
   */
 
-
   const onSubmit = async (data) => {
     const inputfile = document.getElementById('file-upload').files;
     console.log(inputfile);
