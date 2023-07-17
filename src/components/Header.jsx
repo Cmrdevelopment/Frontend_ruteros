@@ -48,8 +48,8 @@ const Header = () => {
               src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687877185/ProjectFinalBOOTCAMP/Home/logoVerdesep120_wpsaja.png"
             ></img>
 
-            <h3 className="titleWeb">Dev</h3>
-            <h3 className="titleWeb-second">Link</h3>
+            <h3 className="titleWeb">Ru</h3>
+            <h3 className="titleWeb-second">Teros</h3>
           </NavLink>
         </div>
         <nav className="navHeader" ref={navRef}>

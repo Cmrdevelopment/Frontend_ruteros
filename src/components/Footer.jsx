@@ -5,14 +5,10 @@ const Footer = () => {
     <footer>
       <div className="footer-information-container">
         <div className="footer-infotmation">
-          <p className="footer-infotmation-title">
-            Nos encantaría que te unieras a nosotros
-          </p>
+          <p className="footer-infotmation-title">Unete y participa de nuestras rutas</p>
           <p className="footer-information-description">
-            No te convertiste en desarrollador independiente para pasar horas cada semana{' '}
-            <br></br>
-            frente a tu ordenador desplazándote a través de interminables listas de
-            trabajos
+            Disfruta de nuestras rutas tanto en la montaña como en la ciudad
+            <br></br>y podrás disfrutar de los paisajes más emblematicos
           </p>
         </div>
 
@@ -22,8 +18,8 @@ const Footer = () => {
             alt="icon"
             className="footer-icon"
           ></img>
-          <h3 className="titleWeb">Dev</h3>
-          <h3 className="titleWeb-second">Link</h3>
+          <h3 className="titleWeb">Ru</h3>
+          <h3 className="titleWeb-second">teros</h3>
         </div>
       </div>
 

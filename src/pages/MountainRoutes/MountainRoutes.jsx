@@ -86,10 +86,9 @@ const MountainRoutes = () => {
       )}
 
       <div className="spinner"></div>
-      
-          {<MountainRoutesList filters={filtersToApply} itemsPerPage={10} />}
-        </div>
-     
+
+      {<MountainRoutesList filters={filtersToApply} itemsPerPage={10} />}
+    </div>
   );
 };
 
