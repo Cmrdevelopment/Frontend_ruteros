@@ -46,6 +46,7 @@ const Carousel_imgs = ({ images }) => {
         {images.map((image, index) => {
           return (
             <img
+              className="carousel-img-container"
               key={index}
               src={image}
               alt={`Carousel ${index}`}

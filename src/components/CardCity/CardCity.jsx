@@ -1,10 +1,9 @@
 import './CardCity.css';
 
-// import WriteRatingForDeveloper from '../ratings/WriteRatingForDeveloper/WriteRatingForDeveloper'
 import { FaMapMarker } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-// import ReadOnlyUserRating from '../ratings/ReadOnlyUserRating/ReadOnlyUserRating';
+import ReadOnlyCityRating from '../ratings/ReadOnlyCityRating/ReadOnlyCityRating';
 import ToggleBtnFollowUser from '../ToggleBtnFollowUser/ToggleBtnFollowUser';
 
 const CardCity = ({ city }) => {
@@ -45,6 +44,7 @@ const CardCity = ({ city }) => {
       <div className="developer-Info-ratingsByOthers">
         {/*--- Este componente hace la media de las estrellas ---*/}
         {/* <ReadOnlyUserRating user={city} /> */}
+        <ReadOnlyCityRating city={city} />
         <p>({city?.ratings?.length} valoraciones)</p>
       </div>
 

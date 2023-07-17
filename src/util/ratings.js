@@ -28,3 +28,19 @@ export const getOfferAverageScore = (offer) => {
   const averageScore = totalScore / offer.ratings.length;
   return averageScore;
 };
+
+export const getCityAverageScore = (city) => {
+  if (city === null) {
+    console.log('ERROR: getCityAverageScore -> city = null');
+    return 0;
+  }
+
+  if (city.ratings.length === 0) {
+    console.log('getCityAverageScore -> city.ratings.length === 0');
+    return 0;
+  }
+
+  const totalScore = city.ratings.reduce((acc, curr) => acc + curr.score, 0);
+  const averageScore = totalScore / city.ratings.length;
+  return averageScore;
+};

@@ -13,3 +13,10 @@
   object-fit: fill;
   border: 0px solid blue;
 }
+
+.carousel-img-container {
+  /* width: 150px; */
+  /* height: 50px; */
+  /* object-fit: contain; */
+  border: 2px solid blue;
+}
