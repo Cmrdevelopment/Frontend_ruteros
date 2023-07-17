@@ -1,33 +1,33 @@
-import './DevelopersList.css';
+import './CitiesList.css';
 
 import { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 
-import { developer_getAll } from '../../services/API_proyect/developer.service';
-import { sortUsersByAverageScore_descendingOrder } from '../../util/filters/developer.filter';
-import CardDeveloper from '../CardDeveloper/CardDeveloper';
+import { city_getAll } from '../../services/API_proyect/city.service';
+import { sortCitiesByAverageScore_descendingOrder } from '../../util/filters/city.filter';
+import CardCity from '../CardCity/CardCity';
 import { Spinner } from '../Spinner/Spinner';
 
-const DevelopersList = ({ itemsPerPage }) => {
-  const [dataDevelopersList, setDataDevelopersList] = useState([]);
+const CitiesList = ({ itemsPerPage }) => {
+  const [dataCitiesList, setDataCitiesList] = useState([]);
   const [downloading, setDownloading] = useState(false);
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [pageCount, setPageCount] = useState(0);
   const [itemPerPage, setItemPerPage] = useState([]);
 
-  const getDevelopersData = async () => {
+  const getCitiesData = async () => {
     setDownloading(true);
-    const dataDeveloperDB = await developer_getAll();
-
+    const dataCityDB = await city_getAll();
+    console.log('dataCityDB', dataCityDB);
     // Filter to show only freelances
-    const dataDevelopers = dataDeveloperDB?.data.filter(
-      (developer) => developer.rol === 'freelance',
-    );
+    // const dataCities = dataCityDB?.data.filter((city) => city.rol === 'freelance');
 
     // Filter developers by average score
-    const dataSortByAverageScore =
-      sortUsersByAverageScore_descendingOrder(dataDevelopers);
+    const dataSortByAverageScore = sortCitiesByAverageScore_descendingOrder(
+      dataCityDB.data,
+    );
+    console.log('dataSortByAverageScore', dataSortByAverageScore);
 
     // const dataSortByAverageScore =
     //   sortUsersByAverageScore_ascendingOrder(dataDevelopers);
@@ -36,13 +36,13 @@ const DevelopersList = ({ itemsPerPage }) => {
     const numerberPage = Math.ceil(dataSortByAverageScore.length / itemsPerPage);
 
     setPageCount(numerberPage);
-    setDataDevelopersList(dataSortByAverageScore);
+    setDataCitiesList(dataSortByAverageScore);
     setItemPerPage(dataFilterZero);
     setDownloading(false);
   };
 
   useEffect(() => {
-    getDevelopersData();
+    getCitiesData();
   }, []);
 
   const handlePageClick = (event) => {
@@ -51,8 +51,8 @@ const DevelopersList = ({ itemsPerPage }) => {
       event.selected * itemsPerPage + itemsPerPage == 0
         ? itemsPerPage
         : event.selected * itemsPerPage + itemsPerPage;
-    const developersListWithOffset = dataDevelopersList.slice(end - itemsPerPage, end);
-    setItemPerPage(developersListWithOffset);
+    const citiesListWithOffset = dataCitiesList.slice(end - itemsPerPage, end);
+    setItemPerPage(citiesListWithOffset);
   };
 
   return (
@@ -62,9 +62,9 @@ const DevelopersList = ({ itemsPerPage }) => {
       ) : (
         <div className="developerList-paginate-and-devs-list-container">
           <div className="developersList-developers-container">
-            {itemPerPage.map((developer) => (
-              <div key={developer._id}>
-                <CardDeveloper developer={developer} />
+            {itemPerPage.map((city) => (
+              <div key={city._id}>
+                <CardCity city={city} />
               </div>
             ))}
           </div>
@@ -85,4 +85,4 @@ const DevelopersList = ({ itemsPerPage }) => {
   );
 };
 
-export default DevelopersList;
+export default CitiesList;

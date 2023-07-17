@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 // import JobTypeSelect from '../../components/offersComponts/JobTypeSelect/JobTypeSelect';
 // import OfferStateSelect from '../../components/offersComponts/OfferStateSelect/OfferStateSelect';
 // import OfferTypeSelect from '../../components/offersComponts/OfferTypeSelect/OfferTypeSelect';
-import OffersList from '../../components/OffersList/OffersList';
+import CitiesList from '../../components/CitiesList/CitiesList';
 
 const Citys = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 880 });
@@ -134,7 +134,7 @@ const Citys = () => {
           </NavLink>
         </div>
         <div className="offers-offersList-container">
-          {<OffersList filters={filtersToApply} itemsPerPage={10} />}
+          {<CitiesList filters={filtersToApply} itemsPerPage={10} />}
         </div>
       </div>
     </div>

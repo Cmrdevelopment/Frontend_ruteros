@@ -10,7 +10,7 @@ import ExperienceYearsSlider from '../../components/offersComponts/ExperienceYea
 import JobTypeSelect from '../../components/offersComponts/JobTypeSelect/JobTypeSelect';
 import OfferStateSelect from '../../components/offersComponts/OfferStateSelect/OfferStateSelect';
 import OfferTypeSelect from '../../components/offersComponts/OfferTypeSelect/OfferTypeSelect';
-import OffersList from '../../components/OffersList/OffersList';
+// import OffersList from '../../components/OffersList/OffersList';
 
 const MountainRoutes = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 880 });
