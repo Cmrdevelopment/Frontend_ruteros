@@ -86,57 +86,10 @@ const MountainRoutes = () => {
       )}
 
       <div className="spinner"></div>
-      <div className="offers-filters-and-offersList-container">
-        <div className="offers-filters-container">
-          <h2>Filtros</h2>
-          <section className="offers-filter-offerType-jobType-offerState-container">
-            <div className="offers-filter-offerType-container">
-              <OfferTypeSelect
-                value={valueOfferTypeSelect}
-                onChange={handleChangeOfferTypeSelect}
-              />
-            </div>
-            <div className="offers-filter-jobType-container">
-              <JobTypeSelect
-                value={valueJobTypeSelect}
-                onChange={handleChangeJobTypeSelect}
-              />
-            </div>
-            <div className="offers-filter-offerState-container">
-              <OfferStateSelect
-                value={valueOfferStateSelect}
-                onChange={handleChangeOfferStateSelect}
-              />
-            </div>
-          </section>
-          <section className="offers-filter-experienceYears-annualSalary-container">
-            <div className="offers-filter-experienceYears-container">
-              <p>Años de experiencia:</p>
-              <ExperienceYearsSlider onChange={handleChangeExperienceYearsSlider} />
-              {typeof filtersToApply.experienceYears == 'string' && (
-                <p style={{ color: 'red' }}>No utilizado</p>
-              )}
-            </div>
-            <div className="offers-filter-annualSalary-container">
-              <p>Salario anual:</p>
-              <AnnualSalarySlider
-                value={valueAnnualSalarySlider}
-                onChange={handleChangeAnnualSalarySlider}
-              />
-              {typeof filtersToApply.annualSalary == 'string' && (
-                <p style={{ color: 'red' }}>No utilizado</p>
-              )}
-            </div>
-          </section>
-          <NavLink to="/createOffer2">
-            <button className="offer-button-Create">Crear Ruta</button>
-          </NavLink>
-        </div>
-        <div className="offers-offersList-container">
+      
           {<MountainRoutesList filters={filtersToApply} itemsPerPage={10} />}
         </div>
-      </div>
-    </div>
+     
   );
 };
 
