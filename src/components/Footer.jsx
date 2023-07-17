@@ -14,7 +14,7 @@ const Footer = () => {
 
         <div className="footer-container-img">
           <img
-            src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1689612137/Ruteros_Japones_sin_bordes-removebg-preview_axvxir.png"
+            src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1689612757/MochilaPersonita_r2kpic.png"
             alt="icon"
             className="footer-icon"
           ></img>
