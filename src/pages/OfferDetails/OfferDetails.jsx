@@ -11,6 +11,7 @@ import { FaLaptopCode } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
+import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyOfferRating from '../../components/ratings/ReadOnlyOfferRating/ReadOnlyOfferRating';
@@ -22,7 +23,6 @@ import {
   getByReference,
 } from '../../services/API_proyect/comment.service';
 import { getOfferById } from '../../services/API_proyect/offer.service';
-import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 
 const OfferDetails = () => {
   const [res, setRes] = useState({});

@@ -21,16 +21,16 @@ import Citys from './pages/Citys/Citys.jsx';
 //import DeveloperDetails from './pages/DeveloperDetails/DeveloperDetails';
 import DeveloperDetails2 from './pages/DeveloperDetails2/DeveloperDetails2';
 import Developers from './pages/Developers/Developers';
-import Ruteros from './pages/Ruteros/Ruteros.jsx';
 import ForgotPassword from './pages/ForgotPassword.jsx';
 import { Home } from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
 import MountainRoutes from './pages/MountainRoutes/MountainRoutes.jsx';
-import RouteDetails from './pages/RouteDetails/RouteDetails';
 import OfferDetails from './pages/OfferDetails/OfferDetails';
 import Offers from './pages/Offers/Offers';
 import Profile from './pages/Profile';
 import Register from './pages/Register.jsx';
+import RouteDetails from './pages/RouteDetails/RouteDetails';
+import Ruteros from './pages/Ruteros/Ruteros.jsx';
 
 // import PruebaEmotion from './pages/PruebaEmotion/PruebaEmotion';
 

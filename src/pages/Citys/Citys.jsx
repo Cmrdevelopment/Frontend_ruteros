@@ -1,25 +1,25 @@
 import './Citys.css';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavLink } from 'react-router-dom';
 
-import AnnualSalarySlider from '../../components/offersComponts/AnnualSalarySlider/AnnualSalarySlider';
-import ExperienceYearsSlider from '../../components/offersComponts/ExperienceYearsSlider/ExperienceYearsSlider';
-import JobTypeSelect from '../../components/offersComponts/JobTypeSelect/JobTypeSelect';
-import OfferStateSelect from '../../components/offersComponts/OfferStateSelect/OfferStateSelect';
-import OfferTypeSelect from '../../components/offersComponts/OfferTypeSelect/OfferTypeSelect';
+// import AnnualSalarySlider from '../../components/offersComponts/AnnualSalarySlider/AnnualSalarySlider';
+// import ExperienceYearsSlider from '../../components/offersComponts/ExperienceYearsSlider/ExperienceYearsSlider';
+// import JobTypeSelect from '../../components/offersComponts/JobTypeSelect/JobTypeSelect';
+// import OfferStateSelect from '../../components/offersComponts/OfferStateSelect/OfferStateSelect';
+// import OfferTypeSelect from '../../components/offersComponts/OfferTypeSelect/OfferTypeSelect';
 import OffersList from '../../components/OffersList/OffersList';
 
 const Citys = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 880 });
-  const [valueExperienceYearsSlider, setValueExperienceYearsSlider] = useState(() => '');
-  const [valueAnnualSalarySlider, setValueAnnualSalarySlider] = useState(10000);
-  const [valueJobTypeSelect, setValueJobTypeSelect] = useState('All');
-  const [valueOfferStateSelect, setValueOfferStateSelect] = useState('All');
-  const [valueOfferTypeSelect, setValueOfferTypeSelect] = useState('All');
+  // const [valueExperienceYearsSlider, setValueExperienceYearsSlider] = useState(() => '');
+  // const [valueAnnualSalarySlider, setValueAnnualSalarySlider] = useState(10000);
+  // const [valueJobTypeSelect, setValueJobTypeSelect] = useState('All');
+  // const [valueOfferStateSelect, setValueOfferStateSelect] = useState('All');
+  // const [valueOfferTypeSelect, setValueOfferTypeSelect] = useState('All');
 
-  const [filtersToApply, setFiltersToApply] = useState({
+  const [filtersToApply] = useState({
     // CompanyOffer, FreelandOffer
     offerType: '',
 
@@ -36,45 +36,45 @@ const Citys = () => {
     offerState: '',
   });
 
-  const handleChangeExperienceYearsSlider = (event) => {
-    setValueExperienceYearsSlider(event.target.value);
-  };
+  // const handleChangeExperienceYearsSlider = (event) => {
+  //   setValueExperienceYearsSlider(event.target.value);
+  // };
 
-  const handleChangeAnnualSalarySlider = (event, newValue) => {
-    setValueAnnualSalarySlider(newValue);
-  };
+  // const handleChangeAnnualSalarySlider = (event, newValue) => {
+  //   setValueAnnualSalarySlider(newValue);
+  // };
 
-  const handleChangeJobTypeSelect = (event) => {
-    setValueJobTypeSelect(event.target.value);
-  };
+  // const handleChangeJobTypeSelect = (event) => {
+  //   setValueJobTypeSelect(event.target.value);
+  // };
 
-  const handleChangeOfferStateSelect = (event) => {
-    setValueOfferStateSelect(event.target.value);
-  };
+  // const handleChangeOfferStateSelect = (event) => {
+  //   setValueOfferStateSelect(event.target.value);
+  // };
 
-  const handleChangeOfferTypeSelect = (event) => {
-    setValueOfferTypeSelect(event.target.value);
-  };
+  // const handleChangeOfferTypeSelect = (event) => {
+  //   setValueOfferTypeSelect(event.target.value);
+  // };
 
-  useEffect(() => {
-    setFiltersToApply({ ...filtersToApply, experienceYears: valueExperienceYearsSlider });
-  }, [valueExperienceYearsSlider]);
+  // useEffect(() => {
+  //   setFiltersToApply({ ...filtersToApply, experienceYears: valueExperienceYearsSlider });
+  // }, [valueExperienceYearsSlider]);
 
-  useEffect(() => {
-    setFiltersToApply({ ...filtersToApply, annualSalary: valueAnnualSalarySlider });
-  }, [valueAnnualSalarySlider]);
+  // useEffect(() => {
+  //   setFiltersToApply({ ...filtersToApply, annualSalary: valueAnnualSalarySlider });
+  // }, [valueAnnualSalarySlider]);
 
-  useEffect(() => {
-    setFiltersToApply({ ...filtersToApply, jobType: valueJobTypeSelect });
-  }, [valueJobTypeSelect]);
+  // useEffect(() => {
+  //   setFiltersToApply({ ...filtersToApply, jobType: valueJobTypeSelect });
+  // }, [valueJobTypeSelect]);
 
-  useEffect(() => {
-    setFiltersToApply({ ...filtersToApply, offerState: valueOfferStateSelect });
-  }, [valueOfferStateSelect]);
+  // useEffect(() => {
+  //   setFiltersToApply({ ...filtersToApply, offerState: valueOfferStateSelect });
+  // }, [valueOfferStateSelect]);
 
-  useEffect(() => {
-    setFiltersToApply({ ...filtersToApply, offerType: valueOfferTypeSelect });
-  }, [valueOfferTypeSelect]);
+  // useEffect(() => {
+  //   setFiltersToApply({ ...filtersToApply, offerType: valueOfferTypeSelect });
+  // }, [valueOfferTypeSelect]);
 
   return (
     <div className="outletContainer">
@@ -89,36 +89,36 @@ const Citys = () => {
       <div className="spinner"></div>
       <div className="offers-filters-and-offersList-container">
         <div className="offers-filters-container">
-          <h2>Filtros</h2>
+          {/* <h2>Filtros</h2> */}
           <section className="offers-filter-offerType-jobType-offerState-container">
-            <div className="offers-filter-offerType-container">
+            {/* <div className="offers-filter-offerType-container">
               <OfferTypeSelect
                 value={valueOfferTypeSelect}
                 onChange={handleChangeOfferTypeSelect}
               />
-            </div>
-            <div className="offers-filter-jobType-container">
+            </div> */}
+            {/* <div className="offers-filter-jobType-container">
               <JobTypeSelect
                 value={valueJobTypeSelect}
                 onChange={handleChangeJobTypeSelect}
               />
-            </div>
-            <div className="offers-filter-offerState-container">
+            </div> */}
+            {/* <div className="offers-filter-offerState-container">
               <OfferStateSelect
                 value={valueOfferStateSelect}
                 onChange={handleChangeOfferStateSelect}
               />
-            </div>
+            </div> */}
           </section>
           <section className="offers-filter-experienceYears-annualSalary-container">
-            <div className="offers-filter-experienceYears-container">
+            {/* <div className="offers-filter-experienceYears-container">
               <p>Años de experiencia:</p>
               <ExperienceYearsSlider onChange={handleChangeExperienceYearsSlider} />
               {typeof filtersToApply.experienceYears == 'string' && (
                 <p style={{ color: 'red' }}>No utilizado</p>
               )}
-            </div>
-            <div className="offers-filter-annualSalary-container">
+            </div> */}
+            {/* <div className="offers-filter-annualSalary-container">
               <p>Salario anual:</p>
               <AnnualSalarySlider
                 value={valueAnnualSalarySlider}
@@ -127,7 +127,7 @@ const Citys = () => {
               {typeof filtersToApply.annualSalary == 'string' && (
                 <p style={{ color: 'red' }}>No utilizado</p>
               )}
-            </div>
+            </div> */}
           </section>
           <NavLink to="/createOffer2">
             <button className="offer-button-Create">Crear Oferta</button>

@@ -1,6 +1,7 @@
+import './ImageUploader.css';
+
 import { useEffect, useState } from 'react';
 import ImageUploading from 'react-images-uploading';
-import './ImageUploader.css';
 
 const ImageUploader = () => {
   const [images, setImages] = useState([]);
