@@ -45,7 +45,7 @@ const Header = () => {
             <img
               className="header-logo"
               alt="icon"
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687877185/ProjectFinalBOOTCAMP/Home/logoVerdesep120_wpsaja.png"
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1689612137/Ruteros_Japones_sin_bordes-removebg-preview_axvxir.png"
             ></img>
 
             <h3 className="titleWeb">Ru</h3>
