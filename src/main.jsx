@@ -26,6 +26,7 @@ import ForgotPassword from './pages/ForgotPassword.jsx';
 import { Home } from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
 import MountainRoutes from './pages/MountainRoutes/MountainRoutes.jsx';
+import RouteDetails from './pages/RouteDetails/RouteDetails';
 import OfferDetails from './pages/OfferDetails/OfferDetails';
 import Offers from './pages/Offers/Offers';
 import Profile from './pages/Profile';
@@ -50,6 +51,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           {/* <Route path="/developerDetails" element={<DeveloperDetails />} /> */}
           <Route path="/developerDetails" element={<DeveloperDetails2 />} />
           <Route path="/offerDetails" element={<OfferDetails />} />
+          <Route path="/routeDetails" element={<RouteDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           {/* <Route path="/createOffer" element={<CreateOffer />} /> */}
