@@ -21,7 +21,7 @@ export const getCityById = async (id) => {
 
 // ---------- Toggle the offer taht the user is interested in -----------
 export const offer_toggleInterestedCityToUser = async (id) => {
-  return API.post(`/citiess/toggleInterestedCityToUser/${id}`, {
+  return API.post(`/city/toggleInterestedCityToUser/${id}`, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
     },
@@ -34,7 +34,7 @@ export const offer_toggleInterestedCityToUser = async (id) => {
 
 // ---- Get the Status of the following (interested) offer that the user is interested in -----------
 export const city_getFollowingStatus = async (id) => {
-  return API.get(`/cities/cityFollowingStatus/${id}`, {
+  return API.get(`/city/cityFollowingStatus/${id}`, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
     },

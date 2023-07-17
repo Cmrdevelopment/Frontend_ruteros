@@ -12,7 +12,7 @@ const CardCity = ({ city }) => {
   const pathById = `/cityDetails`;
 
   return (
-    <section className="developer-Info">
+    <section className="city-Info">
       <div className="developer-Info-Toggle-Heart">
         <ToggleBtnFollowUser userToFollowId={city._id} />
       </div>

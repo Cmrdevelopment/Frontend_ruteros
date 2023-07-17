@@ -60,8 +60,8 @@ const CitiesList = ({ itemsPerPage }) => {
       {downloading ? (
         <Spinner />
       ) : (
-        <div className="developerList-paginate-and-devs-list-container">
-          <div className="developersList-developers-container">
+        <div className="city_List-Container-maps-y-react-paginate">
+          <div className="citys_List-container">
             {itemPerPage.map((city) => (
               <div key={city._id}>
                 <CardCity city={city} />
@@ -69,8 +69,8 @@ const CitiesList = ({ itemsPerPage }) => {
             ))}
           </div>
           <ReactPaginate
-            className="developerList-paginate"
-            activeClassName="developerList-paginate-active-element"
+            className="cityList-paginate"
+            activeClassName="cityList-paginate-active-element"
             breakLabel="..."
             nextLabel="next >"
             onPageChange={handlePageClick}

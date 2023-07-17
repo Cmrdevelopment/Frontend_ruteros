@@ -18,23 +18,22 @@ export const Home = () => {
             </ThemeProvider> */}
 
           <p className="home-title">
-            Encuentra y contrata desarrolladores profesionales
-            <br className="home-br"></br> con ganas de afrontar nuevos retos
+            Excursiones en español por todo el mundo con ganas
+            <br className="home-br"></br> de disfrutar de nuevas rutas
           </p>
 
           <div className="home-button-container">
             <p className="home-p">
-              Trabaja con los mejores profesionales <br></br>a través de nuestra
-              plataforma
+              Visitas con los mejores guias a través <br></br> de nuestra plataforma
             </p>
 
             <div className="home-subButton">
               <NavLink to="/aboutUs">
-                <button className="home-contactUs">About Us</button>
+                <button className="home-contactUs">Ciudades</button>
               </NavLink>
               <NavLink to="/offers">
                 <button className="home-learnMore">
-                  <p style={{ margin: 0 }}>Ofertas</p>
+                  <p style={{ margin: 0 }}>Montañas</p>
                 </button>
               </NavLink>
             </div>
@@ -51,7 +50,7 @@ export const Home = () => {
       </div>
 
       <div className="home-company-container">
-        <p className="home-p-company">Algunos de nuestros clientes de confianza</p>
+        <p className="home-p-company">Algunas de nuestros rutas recomentadas</p>
 
         <ul className="home-company-list">
           <li>
