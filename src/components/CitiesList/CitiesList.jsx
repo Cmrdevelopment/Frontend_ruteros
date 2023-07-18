@@ -27,7 +27,6 @@ const CitiesList = ({ itemsPerPage }) => {
     const dataSortByAverageScore = sortCitiesByAverageScore_descendingOrder(
       dataCityDB.data,
     );
-    console.log('dataSortByAverageScore', dataSortByAverageScore);
 
     // const dataSortByAverageScore =
     //   sortUsersByAverageScore_ascendingOrder(dataDevelopers);

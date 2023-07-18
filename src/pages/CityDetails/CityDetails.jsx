@@ -1,4 +1,4 @@
-import './OfferDetails.css';
+import './CityDetails.css';
 import './OfferDetailsDescription.css';
 import './OfferDetailsComments.css';
 
@@ -11,7 +11,9 @@ import { FaLaptopCode } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
+import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 import Comments from '../../components/Comments/Comments';
+import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyOfferRating from '../../components/ratings/ReadOnlyOfferRating/ReadOnlyOfferRating';
 import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
 import { technologies } from '../../data/object.tecnologias';
@@ -26,7 +28,6 @@ const OfferDetails = () => {
   const [res, setRes] = useState({});
   const [resComment, setResComment] = useState({});
   const [resNewChat, setResNewChat] = useState({});
-  const [resCommentPrivate, setResCommentPrivate] = useState({});
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [inputValue, setInputValue] = useState(null);
@@ -35,7 +36,6 @@ const OfferDetails = () => {
   const theme = useTheme();
   const { state } = useLocation();
   const { id } = state;
-  //const { user } = useAuth();
 
   const getData = async () => {
     setLoading(true);
@@ -64,25 +64,20 @@ const OfferDetails = () => {
     console.log(customFormData);
     setLoading(true);
     setResNewChat(await createMasChat(customFormData));
-    setLoading(true);
+    setLoading(false);
   };
 
-  // const newCommentPrivate = async () => {
-  //   //// otra funciuon despues ddle useEffect
-  //   const customFormData = {
-  //     commentContent: inputValue,
-  //     commentType: 'Privado',
-  //     referenceOfferComment: id,
-  //   };
-  //   setLoading(true);
-  //   setResCommentPrivate(await createComment(customFormData));
-  //   setLoading(false);
-  // };
   useEffect(() => {
     if (resNewChat?.status == 200) {
       console.log(resNewChat);
-
-      //newCommentPrivate(resNewChat.data.chat);
+      setShow(!show);
+      Swal.fire({
+        icon: 'success',
+        title: '¡Mensaje enviado!',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setResNewChat({});
     }
   }, [resNewChat]);
 
@@ -94,7 +89,7 @@ const OfferDetails = () => {
     );
 
     console.log(filterData);
-    //setComments(filterData);
+    setComments(filterData);
   };
 
   useEffect(() => {
@@ -124,19 +119,6 @@ const OfferDetails = () => {
 
     // TODO: swal alert in case of error !!!!
   }, [resComment]);
-
-  useEffect(() => {
-    if (resCommentPrivate?.status == 200) {
-      setShow(!show);
-      setResCommentPrivate({});
-      Swal.fire({
-        icon: 'success',
-        title: '¡Mensaje enviado!',
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    }
-  }, [resCommentPrivate]);
 
   //return offer ? offerLayout(offer) : null
 
@@ -185,6 +167,9 @@ const OfferDetails = () => {
         <p>Valora esta oferta</p>
         {offer && <WriteRatingForOffer offerToRate={offer} />}
       </div>
+
+      {offer && <Carousel_imgs images={offer.images} />}
+
       <div className="offerDetails-city-jobType-technologies">
         <div className="offerDetails-city-jobType">
           <h3>Localización y desplazamiento</h3>
@@ -239,13 +224,13 @@ const OfferDetails = () => {
           </div>
         </div>
       </div>
-      <div className="offerDetails-horizontal-line"></div>
+      {/* <div className="offerDetails-horizontal-line"></div> */}
       {/* <div
                 className="offerDetails-offer-description"
                 dangerouslySetInnerHTML={{ __html: offer?.description }}
                 
             /> */}
-
+      {/* ----------------------- Offer Description ----------------------- */}
       <div className="offerDetails-offer-description">
         <h3>Descripción</h3>
         <p>{offer?.descriptionGeneral}</p>
@@ -256,13 +241,25 @@ const OfferDetails = () => {
         <h3>Remunaración</h3>
         <p>{offer?.descriptionSalary}</p>
       </div>
-      <button className="private-comment-btn" onClick={() => setShow(!show)}>
-        Enviar mensaje
+      {/* ----------------------- Offer Description ----------------------- */}
+
+      {/* <Paper style={{ padding: '40px 20px 55px', backgroundColor: '#fcfcfc' }}> */}
+
+      <button className="offerDetails-private-comment-btn" onClick={() => setShow(!show)}>
+        Chat privado
       </button>
+
       {show ? (
-        <div className="container-privateMessage">
-          <Paper style={{ padding: '40px 20px', backgroundColor: '#fcfcfc' }}>
-            <h3>Envia tu mensaje privado!</h3>
+        <div className="offerDetails-private-comments-container">
+          <Paper
+            style={{
+              padding: '40px 20px 55px',
+              backgroundColor: '#fcfcfc',
+              border: '0px solid red',
+              width: '100%',
+            }}
+          >
+            <h3>Comentario privado</h3>
             <Grid container wrap="nowrap" spacing={2}>
               <Grid item>
                 <Avatar alt="Remy Sharp" src={offer?.image} />
@@ -309,12 +306,19 @@ const OfferDetails = () => {
           </Paper>
         </div>
       ) : null}
-      <div className="offerDetails-horizontal-line"></div>
+      {/* <div className="offerDetails-horizontal-line"></div> */}
 
       {/* -------------------COMMENTS ----------------------------- */}
-      <div style={{ padding: 14 }} className="offerDetails-comments-container">
-        <Paper style={{ padding: '40px 20px', backgroundColor: '#fcfcfc' }}>
-          <h3>Comenta la oferta!</h3>
+      <div className="offerDetails-public-comments-container">
+        <Paper
+          style={{
+            padding: '40px 20px 0px',
+            backgroundColor: '#fcfcfc',
+            border: '0px solid red',
+            width: '100%',
+          }}
+        >
+          <h3>Comentario público</h3>
           <Grid container wrap="nowrap" spacing={2}>
             <Grid item>
               <Avatar alt="Remy Sharp" src={offer?.image} />
@@ -362,11 +366,13 @@ const OfferDetails = () => {
           <div className="Dev-comments" style={{ maxHeight: '400px', overflowY: 'auto' }}>
             {comments != null &&
               comments.map((singleComment) => (
-                <Comments
-                  key={singleComment._id}
-                  comment={singleComment}
-                  setComentsByChild={setComments}
-                />
+                <div className="singlecomment-div" key={singleComment._id}>
+                  <Comments comment={singleComment} setComentsByChild={setComments} />
+                  <DeleteCommentComponent
+                    className="trash-icon"
+                    commentId={singleComment._id}
+                  />
+                </div>
               ))}
           </div>
         </Paper>
@@ -375,24 +381,5 @@ const OfferDetails = () => {
     </div>
   );
 };
-
-// const showTechnologies = (offerTechnologies, technologies) => {
-//     console.log("showTechnologies -> offerTechnologies: ", offerTechnologies)
-//     console.log("showTechnologies -> technologies: ", technologies)
-//     return (<div className="offerDetails-icons-technologies-container">
-//         {technologies
-//             .filter(tech => offerTechnologies.includes(tech.name))
-//             .map((tech, index) => (
-//                 <figure key={`${tech.name}_${index}`} className="offerDetails-tecnologia-item" id={tech.name}>
-//                     <div className="offerDetails-icon-container">
-//                         <img className="offerDetails-tech-image" src={tech.image} alt={tech.name} />
-//                         <p>{tech.name}</p>
-//                     </div>
-
-//                 </figure>
-//             ))}
-//     </div>
-//     )
-// }
 
 export default OfferDetails;
