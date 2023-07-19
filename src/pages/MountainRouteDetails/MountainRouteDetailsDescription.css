@@ -1,10 +1,10 @@
-.offerDetails-offer-description h3 {
+.mountainRouteDetails-offer-description h3 {
   font-size: 23px;
   font-weight: 900;
   padding: 9px 0;
 }
 
-.offerDetails-offer-description {
+.mountainRouteDetails-offer-description {
   text-align: justify;
   max-width: 1236px;
   border: 0.7px solid #e3e4e5;
@@ -13,13 +13,13 @@
   padding: 1.7rem;
 }
 
-.offerDetails-offer-description h5 {
+.mountainRouteDetails-offer-description h5 {
   font-size: 18px;
   margin-top: 16px;
 }
 
 @media (max-width: 600px) {
-  .offerDetails-offer-description {
+  .mountainRouteDetails-offer-description {
     height: 100%;
   }
 }

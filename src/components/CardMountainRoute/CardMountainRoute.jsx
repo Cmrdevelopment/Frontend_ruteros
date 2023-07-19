@@ -40,7 +40,7 @@ const CardMountainRoute = ({ mountainRoute }) => {
             {mountainRoute.routeName}
             <p className="CardMountainRoute-Info-routeDistance">
               {' '}
-              (&euro;): {mountainRoute.routeDistance}
+              (&km;): {mountainRoute.routeDistance}
             </p>
           </div>
           <p className="CardMountainRoute-Info-routeLocation">

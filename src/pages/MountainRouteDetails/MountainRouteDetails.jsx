@@ -124,46 +124,46 @@ const MountainRouteDetails = () => {
   //return offer ? offerLayout(offer) : null
 
   return (
-    <div className="offerDetails-container">
-      <div className="offerDetails-image-and-info-container">
+    <div className="mountainRouteDetails-container">
+      <div className="mountainRouteDetails-image-and-info-container">
         <img
-          className="offerDetails-image"
+          className="mountainRouteDetails-image"
           src={mountainRoute?.image}
           alt="imagen mountainRoute"
         ></img>
-        <div className="offerDetails-info-container">
-          <div className="offerDetails-title-and-state">
-            <div className="offerDetails-title">{mountainRoute?.routeName}</div>
-            <div className="offerDetails-offerState">{mountainRoute?.routeState}</div>
+        <div className="mountainRouteDetails-info-container">
+          <div className="mountainRouteDetails-title-and-state">
+            <div className="mountainRouteDetails-title">{mountainRoute?.routeName}</div>
+            <div className="mountainRouteDetails-offerState">{mountainRoute?.routeState}</div>
           </div>
-          <div className="offerDetails-read-ratings">
+          <div className="mountainRouteDetails-read-ratings">
             {mountainRoute && (
               <ReadOnlyMountainRouteRating mountainRoute={mountainRoute} />
             )}{' '}
             ({mountainRoute?.ratings.length})
           </div>
-          <div className="offerDetails-info-city-salary-jobtype-expYears">
-            <div className="offerDetails-info-city">
+          <div className="mountainRouteDetails-info-city-salary-jobtype-expYears">
+            <div className="mountainRouteDetails-info-city">
               <p>Localización</p>
-              <div className="offerDetails-info-offer-detail">
+              <div className="mountainRouteDetails-info-offer-detail">
                 <FaMapMarker /> {mountainRoute?.routeLocation}
               </div>
             </div>
-            <div className="offerDetails-info-annualSalary">
+            <div className="mountainRouteDetails-info-annualSalary">
               <p>Distancia</p>
-              <div className="offerDetails-info-offer-detail">
+              <div className="mountainRouteDetails-info-offer-detail">
                 (&euro;) {mountainRoute?.routeDistance}
               </div>
             </div>
-            <div className="offerDetails-info-jobType">
+            <div className="mountainRouteDetails-info-jobType">
               <p>Dificultad</p>
-              <div className="offerDetails-info-offer-detail">
+              <div className="mountainRouteDetails-info-offer-detail">
                 <FaLaptopCode /> {mountainRoute?.difficulty}
               </div>
             </div>
-            <div className="offerDetails-info-experienceYears">
+            <div className="mountainRouteDetails-info-experienceYears">
               <p>Duración</p>
-              <div className="offerDetails-info-offer-detail">
+              <div className="mountainRouteDetails-info-offer-detail">
                 <BsCalendarDay /> {mountainRoute?.routeDuration} hora/s
               </div>
             </div>
@@ -171,7 +171,7 @@ const MountainRouteDetails = () => {
         </div>
       </div>
       {/* <div className="offerDetails-horizontal-line"></div> */}
-      <div className="offerDetails-offer-rating-writeRating-container">
+      <div className="mountainRouteDetails-offer-rating-writeRating-container">
         <p>Valora esta ruta!</p>
         {mountainRoute && (
           <WriteRatingForMountainRoute mountainRouteToRate={mountainRoute} />
@@ -180,36 +180,36 @@ const MountainRouteDetails = () => {
 
       {mountainRoute && <Carousel_imgs images={mountainRoute.images} />}
 
-      <div className="offerDetails-city-jobType-technologies">
-        <div className="offerDetails-city-jobType">
+      <div className="mountainRouteDetails-city-jobType-technologies">
+        <div className="mountainRouteDetails-city-jobType">
           <h3>Localización y dificultad</h3>
-          <div className="offerDetails-city-jobType-without-title">
-            <div className="offerDetails-city-localization">
+          <div className="mountainRouteDetails-city-jobType-without-title">
+            <div className="mountainRouteDetails-city-localization">
               <h5>
                 <FaMapMarker /> Localización
               </h5>
-              <div className="offerDetails-info-city-jobType">
+              <div className="mountainRouteDetails-info-city-jobType">
                 {mountainRoute?.routeLocation}
               </div>
             </div>
-            <div className="offerDetails-jobType">
+            <div className="mountainRouteDetails-jobType">
               <h5>
                 <FaLaptopCode /> Estado de la ruta
               </h5>
-              <div className="offerDetails-info-city-jobType">
+              <div className="mountainRouteDetails-info-city-jobType">
                 {mountainRoute?.routeState}
               </div>
             </div>
           </div>
         </div>
-        <div className="offerDetails-technologies">
+        <div className="mountainRouteDetails-technologies">
           <h3>Equipación recomendada</h3>
 
-          <div className="offerDetails-info-technologies">
+          <div className="mountainRouteDetails-info-technologies">
             <h5>
               <BiCodeAlt /> Equipo
             </h5>
-            <div className="offerDetails-info-technology">
+            <div className="mountainRouteDetails-info-technology">
               {/* {offer && showTechnologies(offer.technologies, technologies)} */}
 
               {/* //------------------------ Show Offer Tecnologies -------------------- */}
@@ -245,7 +245,7 @@ const MountainRouteDetails = () => {
                 
             /> */}
       {/* ----------------------- Offer Description ----------------------- */}
-      <div className="offerDetails-offer-description">
+      <div className="mountainRouteDetails-offer-description">
         <h3>Descripción</h3>
         <p>{mountainRoute?.descriptionGeneral}</p>
         {/* <h3>Responsabilidades</h3>
@@ -259,12 +259,12 @@ const MountainRouteDetails = () => {
 
       {/* <Paper style={{ padding: '40px 20px 55px', backgroundColor: '#fcfcfc' }}> */}
 
-      <button className="offerDetails-private-comment-btn" onClick={() => setShow(!show)}>
+      <button className="mountainRouteDetails-private-comment-btn" onClick={() => setShow(!show)}>
         Chat privado
       </button>
 
       {show ? (
-        <div className="offerDetails-private-comments-container">
+        <div className="mountainRouteDetails-private-comments-container">
           <Paper
             style={{
               padding: '40px 20px 55px',
@@ -323,7 +323,7 @@ const MountainRouteDetails = () => {
       {/* <div className="offerDetails-horizontal-line"></div> */}
 
       {/* -------------------COMMENTS ----------------------------- */}
-      <div className="offerDetails-public-comments-container">
+      <div className="mountainRouteDetails-public-comments-container">
         <Paper
           style={{
             padding: '40px 20px 0px',

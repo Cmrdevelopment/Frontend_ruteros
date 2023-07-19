@@ -80,9 +80,9 @@ const MountainRoutes = () => {
   return (
     <div className="outletContainer">
       {isLargeScreen ? (
-        <h2 className="offerTit">¡Ven y consulta todas nuestras rutas de montaña!</h2>
+        <h2 className="mountainRouteTit">¡Ven y consulta todas nuestras rutas de montaña!</h2>
       ) : (
-        <h2 className="offerTit">Sigue nuestras rutas de montaña</h2>
+        <h2 className="mountainRouteTit">Sigue nuestras rutas de montaña</h2>
       )}
 
       <div className="spinner"></div>
