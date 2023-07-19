@@ -1,6 +1,6 @@
-import './RouteDetails.css';
-import './RouteDetailsDescription.css';
-import './RouteDetailsComments.css';
+import './MountainRouteDetails.css';
+import './MountainRouteDetailsDescription.css';
+import './MountainRouteDetailsComments.css';
 
 import { Avatar, Button, Divider, Grid, Paper, TextField, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
@@ -14,32 +14,33 @@ import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
-import ReadOnlyOfferRating from '../../components/ratings/ReadOnlyOfferRating/ReadOnlyOfferRating';
-import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
-import { technologies } from '../../data/object.tecnologias';
+import ReadOnlyMountainRouteRating from '../../components/ratings/ReadOnlyMountainRouteRating/ReadOnlyMountainRouteRating';
+//import WriteRatingForMountainRoute from '../../components/ratings/WriteRatingForMountainRoute/WriteRatingForMountainRoute';
+// import { technologies } from '../../data/object.tecnologias';
 import { createMasChat } from '../../services/API_proyect/chat.service';
 import {
   createComment,
   getByReference,
 } from '../../services/API_proyect/comment.service';
-import { getOfferById } from '../../services/API_proyect/offer.service';
+import { getMountainRouteById } from '../../services/API_proyect/mountainRoute.service';
 
-const RouteDetails = () => {
+const MountainRouteDetails = () => {
   const [res, setRes] = useState({});
   const [resComment, setResComment] = useState({});
   const [resNewChat, setResNewChat] = useState({});
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [inputValue, setInputValue] = useState(null);
-  const [offer, setOffer] = useState(null);
+  //const [offer, setOffer] = useState(null);
   const [comments, setComments] = useState(null);
   const theme = useTheme();
   const { state } = useLocation();
   const { id } = state;
+  const [mountainRoute] = useState(null);
 
   const getData = async () => {
     setLoading(true);
-    setRes(await getOfferById(id));
+    setRes(await getMountainRouteById(id));
     setLoading(false);
   };
 
@@ -82,7 +83,7 @@ const RouteDetails = () => {
   }, [resNewChat]);
 
   const getComments = async () => {
-    const dataComments = await getByReference('Offer', id);
+    const dataComments = await getByReference('MountainRoute', id);
     console.log(dataComments);
     const filterData = dataComments.data.filter(
       (singleCommets) => singleCommets.commentType == 'Publico',
@@ -107,10 +108,10 @@ const RouteDetails = () => {
   }, [res]);
 
   useEffect(() => {
-    if (offer != null) {
+    if (mountainRoute != null) {
       getComments();
     }
-  }, [offer]);
+  }, [mountainRoute]);
 
   useEffect(() => {
     if (res.status == 200) {
@@ -125,38 +126,45 @@ const RouteDetails = () => {
   return (
     <div className="offerDetails-container">
       <div className="offerDetails-image-and-info-container">
-        <img className="offerDetails-image" src={offer?.image} alt="imagen oferta"></img>
+        <img
+          className="offerDetails-image"
+          src={mountainRoute?.image}
+          alt="imagen mountainRoute"
+        ></img>
         <div className="offerDetails-info-container">
           <div className="offerDetails-title-and-state">
-            <div className="offerDetails-title">{offer?.offerTitle}</div>
-            <div className="offerDetails-offerState">{offer?.offerState}</div>
+            <div className="offerDetails-title">{mountainRoute?.routeName}</div>
+            <div className="offerDetails-offerState">{mountainRoute?.routeState}</div>
           </div>
           <div className="offerDetails-read-ratings">
-            {offer && <ReadOnlyOfferRating offer={offer} />} ({offer?.ratings.length})
+            {mountainRoute && (
+              <ReadOnlyMountainRouteRating mountainRoute={mountainRoute} />
+            )}{' '}
+            ({mountainRoute?.ratings.length})
           </div>
           <div className="offerDetails-info-city-salary-jobtype-expYears">
             <div className="offerDetails-info-city">
               <p>Localización</p>
               <div className="offerDetails-info-offer-detail">
-                <FaMapMarker /> {offer?.city}
+                <FaMapMarker /> {mountainRoute?.routeLocation}
               </div>
             </div>
             <div className="offerDetails-info-annualSalary">
-              <p>Salario anual</p>
+              <p>Distancia</p>
               <div className="offerDetails-info-offer-detail">
-                (&euro;) {offer?.annualSalary}
+                (&euro;) {mountainRoute?.routeDistance}
               </div>
             </div>
             <div className="offerDetails-info-jobType">
-              <p>Tipo de trabajo</p>
+              <p>Dificultad</p>
               <div className="offerDetails-info-offer-detail">
-                <FaLaptopCode /> {offer?.jobType}
+                <FaLaptopCode /> {mountainRoute?.difficulty}
               </div>
             </div>
             <div className="offerDetails-info-experienceYears">
-              <p>Experiencia</p>
+              <p>Duración</p>
               <div className="offerDetails-info-offer-detail">
-                <BsCalendarDay /> {offer?.experienceYears} año/s
+                <BsCalendarDay /> {mountainRoute?.routeDuration} hora/s
               </div>
             </div>
           </div>
@@ -164,43 +172,49 @@ const RouteDetails = () => {
       </div>
       {/* <div className="offerDetails-horizontal-line"></div> */}
       <div className="offerDetails-offer-rating-writeRating-container">
-        <p>Valora esta oferta</p>
-        {offer && <WriteRatingForOffer offerToRate={offer} />}
+        <p>Valora esta ruta!</p>
+        {mountainRoute && (
+          <WriteRatingForMountainRoute mountainRouteToRate={mountainRoute} />
+        )}
       </div>
 
-      {offer && <Carousel_imgs images={offer.images} />}
+      {mountainRoute && <Carousel_imgs images={mountainRoute.images} />}
 
       <div className="offerDetails-city-jobType-technologies">
         <div className="offerDetails-city-jobType">
-          <h3>Localización y desplazamiento</h3>
+          <h3>Localización y dificultad</h3>
           <div className="offerDetails-city-jobType-without-title">
             <div className="offerDetails-city-localization">
               <h5>
                 <FaMapMarker /> Localización
               </h5>
-              <div className="offerDetails-info-city-jobType">{offer?.city}</div>
+              <div className="offerDetails-info-city-jobType">
+                {mountainRoute?.routeLocation}
+              </div>
             </div>
             <div className="offerDetails-jobType">
               <h5>
-                <FaLaptopCode /> Trabajo a distancia/presencial
+                <FaLaptopCode /> Estado de la ruta
               </h5>
-              <div className="offerDetails-info-city-jobType">{offer?.jobType}</div>
+              <div className="offerDetails-info-city-jobType">
+                {mountainRoute?.routeState}
+              </div>
             </div>
           </div>
         </div>
         <div className="offerDetails-technologies">
-          <h3>Habilidades profesionales</h3>
+          <h3>Equipación recomendada</h3>
 
           <div className="offerDetails-info-technologies">
             <h5>
-              <BiCodeAlt /> Tecnologías
+              <BiCodeAlt /> Equipo
             </h5>
             <div className="offerDetails-info-technology">
               {/* {offer && showTechnologies(offer.technologies, technologies)} */}
 
               {/* //------------------------ Show Offer Tecnologies -------------------- */}
-              <div className="offerDetails-icons-technologies-container">
-                {technologies
+              {/* <div className="offerDetails-icons-technologies-container">
+                {itemsToCarry
                   .filter((tech) => offer?.technologies.includes(tech.name))
                   .map((tech, index) => (
                     <figure
@@ -218,7 +232,7 @@ const RouteDetails = () => {
                       </div>
                     </figure>
                   ))}
-              </div>
+              </div> */}
               {/* //------------------------ Show Offer Tecnologies -------------------- */}
             </div>
           </div>
@@ -233,13 +247,13 @@ const RouteDetails = () => {
       {/* ----------------------- Offer Description ----------------------- */}
       <div className="offerDetails-offer-description">
         <h3>Descripción</h3>
-        <p>{offer?.descriptionGeneral}</p>
-        <h3>Responsabilidades</h3>
-        <p>{offer?.descriptionResponsabilities}</p>
-        <h3>Requisitos</h3>
-        <p>{offer?.descriptionRequires}</p>
-        <h3>Remunaración</h3>
-        <p>{offer?.descriptionSalary}</p>
+        <p>{mountainRoute?.descriptionGeneral}</p>
+        {/* <h3>Responsabilidades</h3>
+        <p>{offer?.descriptionResponsabilities}</p> */}
+        <h3>Duración</h3>
+        <p>{mountainRoute?.routeDuration}</p>
+        <h3>Distancia</h3>
+        <p>{mountainRoute?.routeDistance}</p>
       </div>
       {/* ----------------------- Offer Description ----------------------- */}
 
@@ -262,7 +276,7 @@ const RouteDetails = () => {
             <h3>Comentario privado</h3>
             <Grid container wrap="nowrap" spacing={2}>
               <Grid item>
-                <Avatar alt="Remy Sharp" src={offer?.image} />
+                <Avatar alt="Remy Sharp" src={mountainRoute?.image} />
               </Grid>
               <Grid justifyContent="left" item xs zeroMinWidth>
                 <TextField
@@ -321,7 +335,7 @@ const RouteDetails = () => {
           <h3>Comentario público</h3>
           <Grid container wrap="nowrap" spacing={2}>
             <Grid item>
-              <Avatar alt="Remy Sharp" src={offer?.image} />
+              <Avatar alt="Remy Sharp" src={mountainRoute?.image} />
             </Grid>
             <Grid justifyContent="left" item xs zeroMinWidth>
               <TextField
@@ -382,4 +396,4 @@ const RouteDetails = () => {
   );
 };
 
-export default RouteDetails;
+export default MountainRouteDetails;

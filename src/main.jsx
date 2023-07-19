@@ -29,7 +29,7 @@ import OfferDetails from './pages/OfferDetails/OfferDetails';
 import Offers from './pages/Offers/Offers';
 import Profile from './pages/Profile';
 import Register from './pages/Register.jsx';
-import RouteDetails from './pages/RouteDetails/RouteDetails';
+import MountainRouteDetails from './pages/MountainRouteDetails/MountainRouteDetails';
 import Ruteros from './pages/Ruteros/Ruteros.jsx';
 
 // import PruebaEmotion from './pages/PruebaEmotion/PruebaEmotion';
@@ -52,7 +52,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/developerDetails" element={<DeveloperDetails2 />} />
           <Route path="/offerDetails" element={<OfferDetails />} />
           <Route path="/cityDetails" element={<OfferDetails />} />
-          <Route path="/routeDetails" element={<RouteDetails />} />
+          <Route path="/mountainRouteDetails" element={<MountainRouteDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           {/* <Route path="/createOffer" element={<CreateOffer />} /> */}

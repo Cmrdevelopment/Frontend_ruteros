@@ -13,6 +13,22 @@ export const getUserAverageScore = (user) => {
   return averageScore;
 };
 
+export const getMountainRouteAverageScore = (mountainRoute) => {
+  if (mountainRoute === null) {
+    console.log('ERROR: getMountainRouterAverageScore -> mountainRoute = null');
+    return 0;
+  }
+
+  if (mountainRoute.ratings.length === 0) {
+    console.log('getMountainRouteAverageScore -> mountainRoute.ratings.length === 0');
+    return 0;
+  }
+
+  const totalScore = mountainRoute.ratings.reduce((acc, curr) => acc + curr.score, 0);
+  const averageScore = totalScore / mountainRoute.ratings.length;
+  return averageScore;
+};
+
 export const getOfferAverageScore = (offer) => {
   if (offer === null) {
     console.log('ERROR: getOfferAverageScore -> offer = null');
