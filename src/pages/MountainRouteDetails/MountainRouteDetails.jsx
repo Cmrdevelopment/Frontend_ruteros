@@ -31,12 +31,12 @@ const MountainRouteDetails = () => {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [inputValue, setInputValue] = useState(null);
-  //const [offer, setOffer] = useState(null);
+  const [mountainRoute, setMountainRoute] = useState(null);
   const [comments, setComments] = useState(null);
   const theme = useTheme();
   const { state } = useLocation();
   const { id } = state;
-  const [mountainRoute] = useState(null);
+  //const [mountainRoute] = useState(null);
 
   const getData = async () => {
     setLoading(true);
@@ -99,7 +99,7 @@ const MountainRouteDetails = () => {
 
   useEffect(() => {
     if (res.status == 200) {
-      setOffer(res.data);
+      setMountainRoute(res.data);
     }
 
     //console.log("OfferDetails -> res.data: ", res.data)
@@ -171,12 +171,12 @@ const MountainRouteDetails = () => {
         </div>
       </div>
       {/* <div className="offerDetails-horizontal-line"></div> */}
-      <div className="mountainRouteDetails-offer-rating-writeRating-container">
+      {/* <div className="mountainRouteDetails-offer-rating-writeRating-container">
         <p>Valora esta ruta!</p>
         {mountainRoute && (
           <WriteRatingForMountainRoute mountainRouteToRate={mountainRoute} />
         )}
-      </div>
+      </div> */}
 
       {mountainRoute && <Carousel_imgs images={mountainRoute.images} />}
 
