@@ -1,0 +1,6 @@
+.simple-map-container {
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+    border: 1px solid black;
+}
