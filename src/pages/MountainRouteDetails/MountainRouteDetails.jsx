@@ -134,7 +134,9 @@ const MountainRouteDetails = () => {
         <div className="mountainRouteDetails-info-container">
           <div className="mountainRouteDetails-title-and-state">
             <div className="mountainRouteDetails-title">{mountainRoute?.routeName}</div>
-            <div className="mountainRouteDetails-offerState">{mountainRoute?.routeState}</div>
+            <div className="mountainRouteDetails-offerState">
+              {mountainRoute?.routeState}
+            </div>
           </div>
           <div className="mountainRouteDetails-read-ratings">
             {mountainRoute && (
@@ -259,7 +261,10 @@ const MountainRouteDetails = () => {
 
       {/* <Paper style={{ padding: '40px 20px 55px', backgroundColor: '#fcfcfc' }}> */}
 
-      <button className="mountainRouteDetails-private-comment-btn" onClick={() => setShow(!show)}>
+      <button
+        className="mountainRouteDetails-private-comment-btn"
+        onClick={() => setShow(!show)}
+      >
         Chat privado
       </button>
 

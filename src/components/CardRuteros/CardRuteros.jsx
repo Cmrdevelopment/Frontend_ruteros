@@ -7,44 +7,44 @@ import { useNavigate } from 'react-router-dom';
 import ReadOnlyUserRating from '../ratings/ReadOnlyUserRating/ReadOnlyUserRating';
 import ToggleBtnFollowUser from '../ToggleBtnFollowUser/ToggleBtnFollowUser';
 
-const CardRuteros = ({ developer }) => {
+const CardRuteros = ({ rutero }) => {
   const navigate = useNavigate();
-  const pathById = `/developerDetails`;
+  const pathById = `/ruteroDetails`;
 
   return (
     <section className="developer-Info">
       <div className="developer-Info-Toggle-Heart">
-        <ToggleBtnFollowUser userToFollowId={developer._id} />
+        <ToggleBtnFollowUser userToFollowId={rutero._id} />
       </div>
       <button
         className="developer-card-btn"
         onClick={() =>
           navigate(pathById, {
-            state: { id: developer._id },
+            state: { id: rutero._id },
           })
         }
       >
         <img
           className="developer-Info-img"
-          src={developer.image}
-          alt={`developer's ${developer.name.surname} pic`}
+          src={rutero.image}
+          alt={`developer's ${rutero.name} pic`}
         />
 
         <div className="developer-Info-tabla-name">
-          {developer.name} {developer.surname}
+          {rutero.name} {rutero.surname}
           <p className="developer-Info-Ubicado">
             {' '}
-            <FaMapMarker /> Ubicado/a en {developer.city}
+            <FaMapMarker /> Ubicado/a en {rutero.city}
           </p>
         </div>
-        <h3 className="developer-Info-Rol">{developer.rol}</h3>
+        <h3 className="developer-Info-Rol">{rutero.rol}</h3>
       </button>
 
       <div className="developer-Info-ratingsByOthers">
         {/*--- Este componente hace la media de las estrellas ---*/}
-        <ReadOnlyUserRating user={developer} />
+        <ReadOnlyUserRating user={rutero} />
         {/* {developer && <WriteRatingForDeveloper userToRate={developer} />} */}
-        <p>({developer?.ratingsByOthers?.length} valoraciones)</p>
+        <p>({rutero?.ratingsByOthers?.length} valoraciones)</p>
       </div>
 
       {/* Removed  because dosn´t look ok when the number of technologies is too long*/}

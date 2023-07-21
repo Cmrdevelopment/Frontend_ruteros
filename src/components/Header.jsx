@@ -60,9 +60,9 @@ const Header = () => {
             <NavLink to="/offers">
               <button className="buttonNav">Ofertas</button>
             </NavLink>
-            <NavLink to="/developers">
+            {/* <NavLink to="/developers">
               <button className="buttonNav">Desarrolladores</button>
-            </NavLink>
+            </NavLink> */}
             <NavLink to="/ruteros">
               <button className="buttonNav">Ruteros</button>
             </NavLink>

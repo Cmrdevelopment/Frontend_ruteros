@@ -19,7 +19,6 @@ const RuterosList = ({ itemsPerPage }) => {
   const getDevelopersData = async () => {
     setDownloading(true);
     const dataDeveloperDB = await developer_getAll();
-    console.log('dataDeveloperDB: =>', dataDeveloperDB);
     // Filter to show only freelances
     const dataDevelopers = dataDeveloperDB?.data.filter(
       (developer) => developer.rol === 'freelance',
@@ -62,9 +61,9 @@ const RuterosList = ({ itemsPerPage }) => {
       ) : (
         <div className="developerList-paginate-and-devs-list-container">
           <div className="developersList-developers-container">
-            {itemPerPage.map((developer) => (
-              <div key={developer._id}>
-                <CardRuteros developer={developer} />
+            {itemPerPage.map((rutero) => (
+              <div key={rutero._id}>
+                <CardRuteros rutero={rutero} />
               </div>
             ))}
           </div>

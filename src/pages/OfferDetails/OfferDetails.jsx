@@ -16,6 +16,7 @@ import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyOfferRating from '../../components/ratings/ReadOnlyOfferRating/ReadOnlyOfferRating';
 import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
+import RouteMap from '../../components/RouteMap/RouteMap';
 import { technologies } from '../../data/object.tecnologias';
 import { createMasChat } from '../../services/API_proyect/chat.service';
 import {
@@ -23,7 +24,6 @@ import {
   getByReference,
 } from '../../services/API_proyect/comment.service';
 import { getOfferById } from '../../services/API_proyect/offer.service';
-import RouteMap from '../../components/RouteMap/RouteMap';
 
 const OfferDetails = () => {
   const [res, setRes] = useState({});
@@ -37,7 +37,10 @@ const OfferDetails = () => {
   const theme = useTheme();
   const { state } = useLocation();
   const { id } = state;
-  const geolocations = [[51.505, -0.09], [51.505, -0.07]]
+  const geolocations = [
+    [51.505, -0.09],
+    [51.505, -0.07],
+  ];
 
   const getData = async () => {
     setLoading(true);
