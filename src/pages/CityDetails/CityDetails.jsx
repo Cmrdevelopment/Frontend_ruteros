@@ -14,7 +14,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
-import ReadOnlyOfferRating from '../../components/ratings/ReadOnlyOfferRating/ReadOnlyOfferRating';
+import ReadOnlyCityRating from '../../components/ratings/ReadOnlyCityRating/ReadOnlyCityRating';
 import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
 import { technologies } from '../../data/object.tecnologias';
 import { createMasChat } from '../../services/API_proyect/chat.service';
@@ -22,9 +22,9 @@ import {
   createComment,
   getByReference,
 } from '../../services/API_proyect/comment.service';
-import { getOfferById } from '../../services/API_proyect/offer.service';
+import { getCityById } from '../../services/API_proyect/city.service';
 
-const OfferDetails = () => {
+const CityDetails = () => {
   const [res, setRes] = useState({});
   const [resComment, setResComment] = useState({});
   const [resNewChat, setResNewChat] = useState({});
@@ -39,7 +39,7 @@ const OfferDetails = () => {
 
   const getData = async () => {
     setLoading(true);
-    setRes(await getOfferById(id));
+    setRes(await getCityById(id));
     setLoading(false);
   };
 
@@ -82,7 +82,7 @@ const OfferDetails = () => {
   }, [resNewChat]);
 
   const getComments = async () => {
-    const dataComments = await getByReference('Offer', id);
+    const dataComments = await getByReference('City', id);
     console.log(dataComments);
     const filterData = dataComments.data.filter(
       (singleCommets) => singleCommets.commentType == 'Publico',
@@ -110,7 +110,7 @@ const OfferDetails = () => {
     if (offer != null) {
       getComments();
     }
-  }, [offer]);
+  }, [city]);
 
   useEffect(() => {
     if (res.status == 200) {
@@ -125,38 +125,38 @@ const OfferDetails = () => {
   return (
     <div className="offerDetails-container">
       <div className="offerDetails-image-and-info-container">
-        <img className="offerDetails-image" src={offer?.image} alt="imagen oferta"></img>
+        <img className="offerDetails-image" src={city?.image} alt="imagen ruta ciudad"></img>
         <div className="offerDetails-info-container">
           <div className="offerDetails-title-and-state">
-            <div className="offerDetails-title">{offer?.offerTitle}</div>
-            <div className="offerDetails-offerState">{offer?.offerState}</div>
+            <div className="offerDetails-title">{city?.routeName}</div>
+            <div className="offerDetails-offerState">{city?.offerState}</div>
           </div>
           <div className="offerDetails-read-ratings">
-            {offer && <ReadOnlyOfferRating offer={offer} />} ({offer?.ratings.length})
+            {offer && <ReadOnlyCityRating city={city} />} ({city?.ratings.length})
           </div>
           <div className="offerDetails-info-city-salary-jobtype-expYears">
             <div className="offerDetails-info-city">
               <p>Localización</p>
               <div className="offerDetails-info-offer-detail">
-                <FaMapMarker /> {offer?.city}
+                <FaMapMarker /> {city?.routeLocation}
               </div>
             </div>
             <div className="offerDetails-info-annualSalary">
-              <p>Salario anual</p>
+              <p>Distancia</p>
               <div className="offerDetails-info-offer-detail">
-                (&euro;) {offer?.annualSalary}
+                (&euro;) {city?.routeDistance}
               </div>
             </div>
             <div className="offerDetails-info-jobType">
-              <p>Tipo de trabajo</p>
+              <p>Dificultad</p>
               <div className="offerDetails-info-offer-detail">
-                <FaLaptopCode /> {offer?.jobType}
+                <FaLaptopCode /> {city?.difficulty}
               </div>
             </div>
             <div className="offerDetails-info-experienceYears">
-              <p>Experiencia</p>
+              <p>Duración</p>
               <div className="offerDetails-info-offer-detail">
-                <BsCalendarDay /> {offer?.experienceYears} año/s
+                <BsCalendarDay /> {city?.routeDuration} hora/s
               </div>
             </div>
           </div>
@@ -165,40 +165,40 @@ const OfferDetails = () => {
       {/* <div className="offerDetails-horizontal-line"></div> */}
       <div className="offerDetails-offer-rating-writeRating-container">
         <p>Valora esta oferta</p>
-        {offer && <WriteRatingForOffer offerToRate={offer} />}
+        {offer && <WriteRatingForOffer offerToRate={offer} />} {/*PENDIENTE DE CAMBIAR, HAY QUE CREAR WRITERATINGFORCITY*/}
       </div>
 
-      {offer && <Carousel_imgs images={offer.images} />}
+      {city && <Carousel_imgs images={city.images} />}
 
       <div className="offerDetails-city-jobType-technologies">
         <div className="offerDetails-city-jobType">
-          <h3>Localización y desplazamiento</h3>
+          <h3>Localización y dificultad</h3>
           <div className="offerDetails-city-jobType-without-title">
             <div className="offerDetails-city-localization">
               <h5>
                 <FaMapMarker /> Localización
               </h5>
-              <div className="offerDetails-info-city-jobType">{offer?.city}</div>
+              <div className="offerDetails-info-city-jobType">{city?.routeLocation}</div>
             </div>
             <div className="offerDetails-jobType">
               <h5>
-                <FaLaptopCode /> Trabajo a distancia/presencial
+                <FaLaptopCode /> Estado de la ruta
               </h5>
-              <div className="offerDetails-info-city-jobType">{offer?.jobType}</div>
+              <div className="offerDetails-info-city-jobType">{city?.routeState}</div>
             </div>
           </div>
         </div>
         <div className="offerDetails-technologies">
-          <h3>Habilidades profesionales</h3>
+          <h3>Equipación recomendada</h3>
 
           <div className="offerDetails-info-technologies">
             <h5>
-              <BiCodeAlt /> Tecnologías
+              <BiCodeAlt /> Equipo
             </h5>
             <div className="offerDetails-info-technology">
               {/* {offer && showTechnologies(offer.technologies, technologies)} */}
 
-              {/* //------------------------ Show Offer Tecnologies -------------------- */}
+              {/* //------------------------ Show Offer Tecnologies --------------------
               <div className="offerDetails-icons-technologies-container">
                 {technologies
                   .filter((tech) => offer?.technologies.includes(tech.name))
@@ -218,7 +218,7 @@ const OfferDetails = () => {
                       </div>
                     </figure>
                   ))}
-              </div>
+              </div> */}
               {/* //------------------------ Show Offer Tecnologies -------------------- */}
             </div>
           </div>
@@ -233,13 +233,13 @@ const OfferDetails = () => {
       {/* ----------------------- Offer Description ----------------------- */}
       <div className="offerDetails-offer-description">
         <h3>Descripción</h3>
-        <p>{offer?.descriptionGeneral}</p>
-        <h3>Responsabilidades</h3>
-        <p>{offer?.descriptionResponsabilities}</p>
-        <h3>Requisitos</h3>
-        <p>{offer?.descriptionRequires}</p>
-        <h3>Remunaración</h3>
-        <p>{offer?.descriptionSalary}</p>
+        <p>{city?.descriptionGeneral}</p>
+        {/* <h3>Responsabilidades</h3>
+        <p>{offer?.descriptionResponsabilities}</p> */}
+        <h3>Duración</h3>
+        <p>{city?.routeDuration}</p>
+        <h3>Distancia</h3>
+        <p>{city?.routeDistance}</p>
       </div>
       {/* ----------------------- Offer Description ----------------------- */}
 
@@ -262,7 +262,7 @@ const OfferDetails = () => {
             <h3>Comentario privado</h3>
             <Grid container wrap="nowrap" spacing={2}>
               <Grid item>
-                <Avatar alt="Remy Sharp" src={offer?.image} />
+                <Avatar alt="Remy Sharp" src={city?.image} />
               </Grid>
               <Grid justifyContent="left" item xs zeroMinWidth>
                 <TextField
@@ -382,4 +382,4 @@ const OfferDetails = () => {
   );
 };
 
-export default OfferDetails;
+export default CityDetails;

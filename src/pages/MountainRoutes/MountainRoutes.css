@@ -50,9 +50,8 @@
 .offers-offersList-container {
   /* margin-top: 25px;
       padding: 20px; */
-  padding-left: 27px;
-  display: flex;
-  flex-direction: column;
+      display: flex;
+      flex-direction: column;
 }
 
 .offersList-offers-container {
