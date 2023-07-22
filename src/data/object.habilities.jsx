@@ -55,4 +55,44 @@ export const habilitiesArr = [
         name: 'Espectáculos',
         image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690040221/UserFTProyect/habilities/stage_mzrmjf.png'
     },
+    {
+        name: 'Chino',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/chinese_l1vymv.png'
+    },
+    {
+        name: 'Frances',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/bonjour_e2pgks.png'
+    },
+    {
+        name: 'Italiano',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/ciao_x9579o.png'
+    },
+    {
+        name: 'Castellano',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/spanish-language_hbi4qk.png'
+    },
+    {
+        name: 'Inglés',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/english_hhcq3d.png'
+    },
+    {
+        name: 'Interculturalidad',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690051809/UserFTProyect/habilities/cultural-diversity_kjnkc4.png'
+    },
+    {
+        name: 'Adaptación',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690051945/UserFTProyect/habilities/adaptation_e7dikl.png'
+    },
+    {
+        name: 'Flexibilidad',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690052068/UserFTProyect/habilities/flexibility_w58vok.png'
+    },
+    {
+        name: 'Paciencia',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690052234/UserFTProyect/habilities/patience_s2maha.png'
+    },
+    {
+        name: 'Buen rollo',
+        image: 'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690052665/UserFTProyect/habilities/buen_rollo_weigrt.png'
+    },
 ];

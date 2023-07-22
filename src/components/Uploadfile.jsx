@@ -84,12 +84,12 @@ const Uploadfile = ({ registerForm }) => {
         <img id="file-image" src="#" alt="Preview" className="hidden" />
         <div id="start">
           <i className="fa fa-download" aria-hidden="true"></i>
-          <div className="divSelect">Seleccione o arrastre un archivo</div>
+          <div className="divSelect">Selecciona o arrastra tus fotos</div>
           <div id="notimage" className="hidden">
             Please select an image
           </div>
           <span id="file-upload-btn" className="btn">
-            Seleccione un archivo
+            Selecciona tus fotos
           </span>
         </div>
         <div id="response" className="hidden">

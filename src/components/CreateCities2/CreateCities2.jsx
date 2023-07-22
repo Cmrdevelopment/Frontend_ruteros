@@ -183,7 +183,7 @@ const createCities2 = () => {
                 ></label>
 
                 <input
-                  type="number" 
+                  type="number"
                   className="input-create-offer-años-salario-ciudad"
                   {...register('routeDuration', { required: false })}
                   placeholder="Duración de la ruta"
@@ -198,7 +198,7 @@ const createCities2 = () => {
                   className={`form-label ${errors.routeDistance ? 'required-label' : ''}`}
                 ></label>
                 <input
-                  type="number" 
+                  type="number"
                   className="input-create-offer-años-salario-ciudad"
                   {...register('routeDistance', { required: true })}
                   placeholder="Distancia de la Ruta"
@@ -291,7 +291,7 @@ const createCities2 = () => {
             <input
               className="btn-submit-create-offer_dos"
               type="submit"
-              value="Crear Oferta"
+              value="Crear Ruta"
             />
           </div>
         </form>
