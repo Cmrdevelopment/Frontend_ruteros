@@ -11,11 +11,6 @@ const Profile = () => {
   const navigate = useNavigate();
   const { setUser, logout } = useAuth();
   const [activeButton, setActiveButton] = useState('Profile');
-  // const navRef = useRef();
-  // const showNavbar = () => {
-  //   navRef.current.classList.toggle('responsive_nav');
-  // };
-
   const [ancho, setAncho] = useState(window.innerWidth);
 
   const handleResize = () => {
@@ -144,16 +139,6 @@ const Profile = () => {
                 }}
               >
                 📋 Ofertas
-              </button>
-              <button
-                className={`btn-profile ${activeButton === 'Tecnologias' ? 'active' : ''
-                  }`}
-                onClick={() => {
-                  setActiveButton('Tecnologias');
-                  navigate('/profile/tecnologias');
-                }}
-              >
-                📳 Tecnologías
               </button>
 
               <button

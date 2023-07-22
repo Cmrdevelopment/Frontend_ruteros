@@ -1,6 +1,5 @@
 import './RuteroDetails.css';
 
-// import { habilitiesArr } from '../../data/object.habilities';
 import { Avatar, Button, Divider, Grid, Paper, TextField, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { BiCodeAlt } from 'react-icons/bi';
@@ -18,7 +17,6 @@ import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment
 import ReadOnlyDeveloperRating from '../../components/ratings/ReadOnlyUserRating/ReadOnlyUserRating';
 import WriteRatingForRutero from '../../components/ratings/WriteRatingForRutero/WriteRatingForRutero';
 import { useAuth } from '../../contexts/authContext';
-import { technologies } from '../../data/object.tecnologias';
 import { habilitiesArr } from '../../data/object.habilities';
 import { createMasChat } from '../../services/API_proyect/chat.service';
 import {
@@ -179,8 +177,7 @@ const RuteroDetails = () => {
               {rutero?.name} {rutero?.surname}
             </div>
             <div className="ruteroDetails-developerType">
-              {/* For now,  all developer are freelancers, could be better: Java developer, ...*/}
-              Freelancer
+              Top Rutero
             </div>
           </div>
           <div className="ruteroDetails-read-ratings">
@@ -284,41 +281,42 @@ const RuteroDetails = () => {
       <div className="ruteroDetails-experiences-container">
         <h3>Experiencias</h3>
         {experiences != null &&
-          experiences.map((singleExperience) => (
+          experiences.map((experience) => (
             <div
               className="ruteroDetails-single-experience-container"
-              key={singleExperience?._id}
+              key={experience?._id}
             >
-              <h3>Projecto/Empresa</h3>
-              <p>{singleExperience.workedWith}</p>
+              <h3>Nombre experiencia</h3>
+              <p>{experience.workedWith}</p>
               <h3>Descripción</h3>
-              <p>{singleExperience.description}</p>
-              <h3>Tecnologías</h3>
+              <p>{experience.description}</p>
+              <h3>Habilidades</h3>
 
-              {/* //------------------------ Show job experience's Tecnologies -------------------- */}
+              {/* //------------------------ Show router experience's Habilities -------------------- */}
               <div className="ruteroDetails-icons-technologies-container">
-                {technologies
-                  .filter((tech) => singleExperience.technologies?.includes(tech.name))
-                  .map((tech, index) => (
+                {habilitiesArr
+                  .filter((hability) => experience.habilities?.includes(hability.name))
+                  .map((hability, index) => (
                     <figure
-                      key={`${tech.name}_job_experience_${index}`}
+                      key={`${hability.name}_job_experience_${index}`}
                       className="ruteroDetails-tecnologia-item"
-                      id={tech.name}
+                      id={hability.name}
                     >
                       <div className="ruteroDetails-icon-container">
                         <img
                           className="ruteroDetails-tech-image"
-                          src={tech.image}
-                          alt={tech.name}
+                          src={hability.image}
+                          alt={hability.name}
                         />
-                        <p>{tech.name}</p>
+                        <p>{hability.name}</p>
                       </div>
                     </figure>
                   ))}
               </div>
-              {/* //------------------------ Show Developer's Tecnologies -------------------- */}
+
+              {/* //------------------------ Show router experience's Habilities -------------------- */}
               <h3>Duración</h3>
-              <p>{singleExperience.duration} año/s</p>
+              <p>{experience.duration} hora/s</p>
             </div>
           ))}
       </div>

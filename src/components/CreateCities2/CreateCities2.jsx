@@ -15,13 +15,10 @@ const createCities2 = () => {
   const [arrayItems, setArrayItems] = useState([]);
   const difficulty = ['Easy', 'Medium', 'Hard'];
   const routeState = ['Close', 'Abandoned', 'Open'];
-  //const offerStates = ['Close', 'Suspended', 'Open'];
-  //const { user } = useAuth();
 
   const {
     register,
     handleSubmit,
-    //setValue,
     formState: { errors },
   } = useForm();
 

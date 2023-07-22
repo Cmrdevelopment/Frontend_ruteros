@@ -2,8 +2,7 @@ import './createExperience.css';
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
-
-import { technologies } from '../../data/object.tecnologias';
+import { habilitiesArr } from '../../data/object.habilities';
 import handleExperienceResponse from '../../hooks/useExperience';
 import { createExperience } from '../../services/API_proyect/experience.service';
 import Uploadfile from '../Uploadfile';
@@ -13,43 +12,33 @@ const createExperienceUser = () => {
   const [experienceData] = useState({
     workedWith: '',
     duration: 0,
-    technologies: [],
+    habilities: [],
     description: '',
   });
 
-  const [arrayTech, setArrayTech] = useState([]);
+  const [arrayHability, setArrayHability] = useState([]);
 
   const fileInput = useRef();
 
-  // const handleInputChange = (event) => {
-  //   setExperienceData({
-  //     ...experienceData,
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
-
   const formSubmit = async (formData) => {
-    console.log('entro');
     const file = fileInput.current.files[0];
 
-    formData = { ...formData, technologies: arrayTech };
+    formData = { ...formData, habilities: arrayHability };
 
     if (file) {
       formData = { ...formData, image: file };
     }
     try {
       const res = await createExperience(formData);
-      console.log(res.data);
       handleExperienceResponse(res);
     } catch (err) {
-      console.log(err);
       handleExperienceResponse(err.response);
     }
   };
 
-  const createArrayTech = ({ target }) => {
-    if (arrayTech.includes(target.id)) {
-      setArrayTech((value) => {
+  const createArrayHabilities = ({ target }) => {
+    if (arrayHability.includes(target.id)) {
+      setArrayHability((value) => {
         const customArray = [];
         value.forEach((element) => {
           if (target.id != element) customArray.push(element);
@@ -57,7 +46,7 @@ const createExperienceUser = () => {
         return customArray;
       });
     } else {
-      setArrayTech((value) => {
+      setArrayHability((value) => {
         const customArray = [...value, target.id];
         return customArray;
       });
@@ -65,8 +54,8 @@ const createExperienceUser = () => {
   };
 
   useEffect(() => {
-    console.log('🍟', arrayTech);
-  }, [arrayTech]);
+    console.log('🍟', arrayHability);
+  }, [arrayHability]);
 
   return (
     <>
@@ -110,23 +99,23 @@ const createExperienceUser = () => {
         <section className="Create_Experiencia-tecnologías-Uploadfile_photo_profile">
           <label className="form-label-Create_Experiencia-tecnologías-Uploadfile_photo_profile">
             {' '}
-            Tecnologias
+            Habilidades
             <div className="tecnologies-experience">
-              {technologies.map((technology, index) => (
-                <figure key={index} className="tecnologia-item" id={technology.name}>
+              {habilitiesArr.map((hability) => (
+                <figure key={hability.name} className="tecnologia-item" id={hability.name}>
                   <div className="image-container">
                     <img
                       className="tech-image"
-                      src={technology.image}
-                      alt={technology.name}
+                      src={hability.image}
+                      alt={hability.name}
                     />
                   </div>
-                  <p className="tech-image-text">{technology.name}</p>
+                  <p className="tech-image-text">{hability.name}</p>
                   <input
                     type="checkbox"
-                    name={technology.name}
-                    id={technology.name}
-                    onChange={createArrayTech}
+                    name={hability.name}
+                    id={hability.name}
+                    onChange={createArrayHabilities}
                   />
                 </figure>
               ))}
