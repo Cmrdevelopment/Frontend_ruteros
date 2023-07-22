@@ -10,6 +10,7 @@ import ChangePassword2 from './components/ChangePassword2/ChangePassword2';
 import { Chat } from './components/ChatTemplate.jsx';
 import CreateOffer2 from './components/CreateOffer2/CreateOffer2';
 import CreateMountainRoute2 from './components/CreateMountainRoute2/CreateMountainRoute2';
+import CreateCities2 from './components/CreateCities2/CreateCities2';
 import Experience from './components/Experience/Experience';
 import FormProfile from './components/FormProfile';
 import Offer from './components/Offers/Offers';
@@ -50,6 +51,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/home" element={<Home />} />
           <Route path="/createOffer2" element={<CreateOffer2 />} />
           <Route path="/createMountainRoute2" element={<CreateMountainRoute2 />} />
+          <Route path="/createCities2" element={<CreateCities2 />} />
           <Route path="/register" element={<Register />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/profile" element={<Profile />}>
