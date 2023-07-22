@@ -106,8 +106,6 @@ const OfferDetails = () => {
       setOffer(res.data);
     }
 
-    //console.log("OfferDetails -> res.data: ", res.data)
-
     // TODO: swal alert in case of error !!!!
   }, [res]);
 
@@ -125,10 +123,12 @@ const OfferDetails = () => {
     // TODO: swal alert in case of error !!!!
   }, [resComment]);
 
-  //return offer ? offerLayout(offer) : null
-
   return (
     <div className="offerDetails-container">
+      <div className="offerDetails-carousel-imgs-container">
+        {/* <Carousel_imgs images={images} /> */}
+        {offer && <Carousel_imgs images={offer.images} />}
+      </div>
       <div className="offerDetails-image-and-info-container">
         <img className="offerDetails-image" src={offer?.image} alt="imagen oferta"></img>
         <div className="offerDetails-info-container">
@@ -173,7 +173,7 @@ const OfferDetails = () => {
         {offer && <WriteRatingForOffer offerToRate={offer} />}
       </div>
 
-      {offer && <Carousel_imgs images={offer.images} />}
+      {/* {offer && <Carousel_imgs images={offer.images} />} */}
 
       <RouteMap geolocations={geolocations} />
 

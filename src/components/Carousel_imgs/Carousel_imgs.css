@@ -8,15 +8,12 @@
 }
 
 .carousel-item-padding-40-px {
-  width: 150px;
-  height: 200px;
-  object-fit: fill;
+  width: 100vw;
+  height: 30vh;
   border: 0px solid blue;
 }
 
 .carousel-img-container {
-  /* width: 150px; */
-  /* height: 50px; */
-  /* object-fit: contain; */
-  border: 2px solid blue;
+  object-fit: cover;
+  border: 0px solid blue;
 }

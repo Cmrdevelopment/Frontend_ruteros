@@ -1,21 +1,19 @@
 import './HeaderProfile.css';
-
-import React, { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/authContext';
 import { getUserById } from '../../services/API_proyect/user.service';
 
 const UserProfile = () => {
   const [userData, setUserData] = useState(null);
   const { user } = useAuth();
+  const navigate = useNavigate();
+  const pathById = `/ruteroDetails`;
 
   useEffect(() => {
     const fetchUser = async () => {
-      console.log(user._id);
       try {
         const userDataProfile = await getUserById(user._id);
-        console.log(user._id);
-        console.log(userDataProfile);
         if (userDataProfile) {
           setUserData(userDataProfile.data);
         }
@@ -29,9 +27,19 @@ const UserProfile = () => {
 
   return (
     <div className="user-profile">
-      <div className="user-image">
-        {userData && <img src={userData.image} alt={userData.name} />}
-      </div>
+      <button
+        className="developer-card-btn"
+        onClick={() =>
+          navigate(pathById, {
+            state: { id: user._id },
+          })
+        }
+      >
+        <div className="user-image">
+          {userData && <img src={userData.image} alt={userData.name} />}
+        </div>
+      </button>
+
       <div className="user-info">
         {userData && (
           <>
@@ -45,3 +53,5 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
+
+

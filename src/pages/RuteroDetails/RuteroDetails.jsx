@@ -161,6 +161,9 @@ const RuteroDetails = () => {
 
   return (
     <div className="ruteroDetails-container">
+      <div className="ruteroDetails-carousel-imgs-container">
+        <Carousel_imgs images={images} />
+      </div>
       <div className="ruteroDetails-image-and-info-container">
         <img
           className="ruteroDetails-image"
@@ -209,13 +212,10 @@ const RuteroDetails = () => {
           </div>
         </div>
       </div>
-      {/* <div className="ruteroDetails-horizontal-line"></div> */}
       <div className="ruteroDetails-developer-rating-writeRating-container">
-        <p>Danos tú valoración</p>
+        <div>Danos tú valoración</div>
         {rutero && <WriteRatingForRutero userToRate={rutero} />}
       </div>
-
-      <Carousel_imgs images={images} />
 
       <div className="ruteroDetails-city-languages-technologies">
         <div className="ruteroDetails-city-languages">
@@ -236,7 +236,7 @@ const RuteroDetails = () => {
           </div>
         </div>
         <div className="ruteroDetails-technologies">
-          <h3>Habilidades profesionales</h3>
+          <h3>Habilidades ruteras</h3>
 
           <div className="ruteroDetails-info-technologies">
             <h5>
@@ -453,15 +453,15 @@ const RuteroDetails = () => {
           <div className="Dev-comments" style={{ maxHeight: '400px', overflowY: 'auto' }}>
             {comments != null
               ? comments.map((singleComment) => (
-                  <div className="singlecomment-div" key={singleComment?._id}>
-                    <Comments comment={singleComment} setComentsByChild={setComments} />
-                    <DeleteCommentComponent
-                      className="trash-icon"
-                      commentId={singleComment?._id}
-                      onDelete={handleCommentDelete}
-                    />
-                  </div>
-                ))
+                <div className="singlecomment-div" key={singleComment?._id}>
+                  <Comments comment={singleComment} setComentsByChild={setComments} />
+                  <DeleteCommentComponent
+                    className="trash-icon"
+                    commentId={singleComment?._id}
+                    onDelete={handleCommentDelete}
+                  />
+                </div>
+              ))
               : null}
           </div>
         </Paper>
