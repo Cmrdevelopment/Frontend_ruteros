@@ -73,6 +73,12 @@ const Profile = () => {
                   </div>
                 </NavLink>
 
+                <NavLink to="/profile/habilities">
+                  <div className="habilities-responsive">
+                    <span>Habilidades</span>
+                  </div>
+                </NavLink>
+
                 <div
                   className="borrar-perfil"
                   onClick={() => {
@@ -140,9 +146,8 @@ const Profile = () => {
                 📋 Ofertas
               </button>
               <button
-                className={`btn-profile ${
-                  activeButton === 'Tecnologias' ? 'active' : ''
-                }`}
+                className={`btn-profile ${activeButton === 'Tecnologias' ? 'active' : ''
+                  }`}
                 onClick={() => {
                   setActiveButton('Tecnologias');
                   navigate('/profile/tecnologias');
@@ -151,6 +156,16 @@ const Profile = () => {
                 📳 Tecnologías
               </button>
 
+              <button
+                className={`btn-profile ${activeButton === 'Habilities' ? 'active' : ''
+                  }`}
+                onClick={() => {
+                  setActiveButton('Habilities');
+                  navigate('/profile/habilities');
+                }}
+              >
+                🛠 Habilidades
+              </button>
               <button
                 className={`btn-profile ${activeButton === 'Delete' ? 'active' : ''}`}
                 onClick={() => {

@@ -4,12 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
 
 import { useAuth } from '../../contexts/authContext';
-//import { toggleFavoriteComment } from '../../services/API_proyect/comment.service';
-//import { updateTecnologia } from '../../services/API_proyect/user.service';
 
 const ToggleTech = ({ setArrayTecn, arrayTecn }) => {
-  //const [res, setRes] = useState(null);
-  //const [loading, setLoading] = useState(false);
   const [valuePather, setValuePather] = useState('');
   const [elementId, setElementId] = useState(null);
   const { user } = useAuth();
@@ -20,8 +16,6 @@ const ToggleTech = ({ setArrayTecn, arrayTecn }) => {
     setValuePather(data);
     setArrayTecn((value) => {
       if (value.includes(data)) {
-        console.log('entro en el if');
-
         const copyValue = [];
         value.forEach((element) => {
           if (element != data) {
@@ -31,14 +25,13 @@ const ToggleTech = ({ setArrayTecn, arrayTecn }) => {
 
         return copyValue;
       } else {
-        console.log('entro en el else');
         const copyValue = [...value];
         copyValue.push(data);
         return copyValue;
       }
     });
   };
-  useEffect(() => {}, [arrayTecn]);
+  useEffect(() => { }, [arrayTecn]);
 
   useEffect(() => {
     setElementId(buttonRef?.current?.parentElement?.attributes[1]?.textContent);
@@ -48,7 +41,6 @@ const ToggleTech = ({ setArrayTecn, arrayTecn }) => {
     <button
       style={{ background: 'none', border: 'none' }}
       onClick={handleAddTech}
-      //disabled={loading || user == null}
       disabled={user == null}
       ref={buttonRef}
       className={

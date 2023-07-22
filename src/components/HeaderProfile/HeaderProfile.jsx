@@ -1,6 +1,8 @@
 import './HeaderProfile.css';
+
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import { useAuth } from '../../contexts/authContext';
 import { getUserById } from '../../services/API_proyect/user.service';
 
@@ -53,5 +55,3 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
-
-

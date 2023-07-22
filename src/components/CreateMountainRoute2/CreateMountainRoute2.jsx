@@ -25,8 +25,6 @@ const createMountainRoute2 = () => {
     formState: { errors },
   } = useForm();
 
-
-
   const onSubmit = async (data) => {
     const inputfile = document.getElementById('file-upload').files;
     console.log(inputfile);
@@ -183,7 +181,7 @@ const createMountainRoute2 = () => {
                 ></label>
 
                 <input
-                  type="number" 
+                  type="number"
                   className="input-create-offer-años-salario-ciudad"
                   {...register('routeDuration', { required: false })}
                   placeholder="Duración de la ruta"
@@ -198,7 +196,7 @@ const createMountainRoute2 = () => {
                   className={`form-label ${errors.routeDistance ? 'required-label' : ''}`}
                 ></label>
                 <input
-                  type="number" 
+                  type="number"
                   className="input-create-offer-años-salario-ciudad"
                   {...register('routeDistance', { required: true })}
                   placeholder="Distancia de la Ruta"
@@ -228,7 +226,9 @@ const createMountainRoute2 = () => {
             <div className="form-container-descripcion-ganeral-responsabilidades">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
 
                 <textarea
@@ -243,7 +243,9 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"
@@ -258,7 +260,9 @@ const createMountainRoute2 = () => {
             <div className="form-container-descripcion-requisitos-remuneracion">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"

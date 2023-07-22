@@ -135,6 +135,20 @@ export const updateTecnologia = async (formData) => {
       return error;
     });
 };
+
+//! -------------------------UPDATE Habilities----------------------------------------------
+export const updateHabilities = async (formData) => {
+  return API.patch('/users/updateHabilities', formData, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
+
 // ----------------- Get User by Id from DB -----------
 export const getUserById = async (id) => {
   return API.get(`/users/${id}`)

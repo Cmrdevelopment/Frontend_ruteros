@@ -58,7 +58,6 @@ const Carousel_imgs = ({ images }) => {
           />
         );
       })}
-
     </Carousel>
     // </div>
   );

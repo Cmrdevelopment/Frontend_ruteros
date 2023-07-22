@@ -1,5 +1,6 @@
 import './RuteroDetails.css';
 
+// import { habilitiesArr } from '../../data/object.habilities';
 import { Avatar, Button, Divider, Grid, Paper, TextField, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { BiCodeAlt } from 'react-icons/bi';
@@ -18,6 +19,7 @@ import ReadOnlyDeveloperRating from '../../components/ratings/ReadOnlyUserRating
 import WriteRatingForRutero from '../../components/ratings/WriteRatingForRutero/WriteRatingForRutero';
 import { useAuth } from '../../contexts/authContext';
 import { technologies } from '../../data/object.tecnologias';
+import { habilitiesArr } from '../../data/object.habilities';
 import { createMasChat } from '../../services/API_proyect/chat.service';
 import {
   createComment,
@@ -170,6 +172,7 @@ const RuteroDetails = () => {
           src={rutero?.image}
           alt="imagen rutero"
         ></img>
+
         <div className="ruteroDetails-info-container">
           <div className="ruteroDetails-name-surname-and-developerType">
             <div className="ruteroDetails-name-surname">
@@ -240,48 +243,41 @@ const RuteroDetails = () => {
 
           <div className="ruteroDetails-info-technologies">
             <h5>
-              <BiCodeAlt /> Tecnologías
+              <BiCodeAlt /> Habilidades
             </h5>
             <div className="ruteroDetails-info-technology">
-              {/* //------------------------ Show Developer's Tecnologies -------------------- */}
+
+              {/* //------------------------ Show Rutero's Habilities -------------------- */}
               <div className="ruteroDetails-icons-technologies-container">
-                {technologies
-                  .filter((tech) => rutero?.technologies.includes(tech.name))
-                  .map((tech, index) => (
+                {habilitiesArr
+                  .filter((hability) => rutero?.habilities.includes(hability.name))
+                  .map((hability, index) => (
                     <figure
-                      key={`${tech.name}_${index}`}
+                      key={`${hability.name}_${index}`}
                       className="ruteroDetails-tecnologia-item"
-                      id={tech.name}
+                      id={hability.name}
                     >
                       <div className="ruteroDetails-icon-container">
                         <img
                           className="ruteroDetails-tech-image"
-                          src={tech.image}
-                          alt={tech.name}
+                          src={hability.image}
+                          alt={hability.name}
                         />
-                        <p>{tech.name}</p>
+                        <p>{hability.name}</p>
                       </div>
                     </figure>
                   ))}
               </div>
-              {/* //------------------------ Show Developer's Tecnologies -------------------- */}
+              {/* //------------------------ Show Rutero's Habilities -------------------- */}
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="ruteroDetails-horizontal-line"></div> */}
-      {/* <div
-                className="ruteroDetails-offer-description"
-                dangerouslySetInnerHTML={{ __html: offer?.description }}
-                
-            /> */}
 
       <div className="ruteroDetails-developer-description">
         <h3>Descripción</h3>
         <p>{rutero?.description}</p>
       </div>
-
-      {/* <div className="ruteroDetails-horizontal-line"></div> */}
 
       {/* ------------------- Developer job experiences ---------------------*/}
 
@@ -298,7 +294,7 @@ const RuteroDetails = () => {
               <h3>Descripción</h3>
               <p>{singleExperience.description}</p>
               <h3>Tecnologías</h3>
-              {/* <p>{singleExperience.technologies}</p> */}
+
               {/* //------------------------ Show job experience's Tecnologies -------------------- */}
               <div className="ruteroDetails-icons-technologies-container">
                 {technologies
