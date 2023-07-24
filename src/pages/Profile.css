@@ -187,6 +187,6 @@
   } */
 }
 
-#sidebar:hover div>span {
+#sidebar:hover div > span {
   display: inline;
 }

@@ -176,9 +176,7 @@ const RuteroDetails = () => {
             <div className="ruteroDetails-name-surname">
               {rutero?.name} {rutero?.surname}
             </div>
-            <div className="ruteroDetails-developerType">
-              Top Rutero
-            </div>
+            <div className="ruteroDetails-developerType">Top Rutero</div>
           </div>
           <div className="ruteroDetails-read-ratings">
             {rutero && <ReadOnlyDeveloperRating user={rutero} />} (
@@ -243,7 +241,6 @@ const RuteroDetails = () => {
               <BiCodeAlt /> Habilidades
             </h5>
             <div className="ruteroDetails-info-technology">
-
               {/* //------------------------ Show Rutero's Habilities -------------------- */}
               <div className="ruteroDetails-icons-technologies-container">
                 {habilitiesArr
@@ -447,15 +444,15 @@ const RuteroDetails = () => {
           <div className="Dev-comments" style={{ maxHeight: '400px', overflowY: 'auto' }}>
             {comments != null
               ? comments.map((singleComment) => (
-                <div className="singlecomment-div" key={singleComment?._id}>
-                  <Comments comment={singleComment} setComentsByChild={setComments} />
-                  <DeleteCommentComponent
-                    className="trash-icon"
-                    commentId={singleComment?._id}
-                    onDelete={handleCommentDelete}
-                  />
-                </div>
-              ))
+                  <div className="singlecomment-div" key={singleComment?._id}>
+                    <Comments comment={singleComment} setComentsByChild={setComments} />
+                    <DeleteCommentComponent
+                      className="trash-icon"
+                      commentId={singleComment?._id}
+                      onDelete={handleCommentDelete}
+                    />
+                  </div>
+                ))
               : null}
           </div>
         </Paper>

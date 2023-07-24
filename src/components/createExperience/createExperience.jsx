@@ -2,6 +2,7 @@ import './createExperience.css';
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+
 import { habilitiesArr } from '../../data/object.habilities';
 import handleExperienceResponse from '../../hooks/useExperience';
 import { createExperience } from '../../services/API_proyect/experience.service';
@@ -102,7 +103,11 @@ const createExperienceUser = () => {
             Habilidades
             <div className="tecnologies-experience">
               {habilitiesArr.map((hability) => (
-                <figure key={hability.name} className="tecnologia-item" id={hability.name}>
+                <figure
+                  key={hability.name}
+                  className="tecnologia-item"
+                  id={hability.name}
+                >
                   <div className="image-container">
                     <img
                       className="tech-image"

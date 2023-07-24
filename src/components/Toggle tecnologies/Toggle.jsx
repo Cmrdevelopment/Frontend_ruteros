@@ -31,7 +31,7 @@ const ToggleTech = ({ setArrayTecn, arrayTecn }) => {
       }
     });
   };
-  useEffect(() => { }, [arrayTecn]);
+  useEffect(() => {}, [arrayTecn]);
 
   useEffect(() => {
     setElementId(buttonRef?.current?.parentElement?.attributes[1]?.textContent);

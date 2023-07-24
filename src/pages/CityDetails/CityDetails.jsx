@@ -1,6 +1,6 @@
 import './CityDetails.css';
-import './OfferDetailsDescription.css';
-import './OfferDetailsComments.css';
+import './CityDetailsDescription.css';
+import './CityDetailsComments.css';
 
 import { Avatar, Button, Divider, Grid, Paper, TextField, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
@@ -16,13 +16,13 @@ import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyCityRating from '../../components/ratings/ReadOnlyCityRating/ReadOnlyCityRating';
 import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
-import { technologies } from '../../data/object.tecnologias';
+import { itemsToCarryArr } from '../../data/object.itemsToCarry';
 import { createMasChat } from '../../services/API_proyect/chat.service';
+import { getCityById } from '../../services/API_proyect/city.service';
 import {
   createComment,
   getByReference,
 } from '../../services/API_proyect/comment.service';
-import { getCityById } from '../../services/API_proyect/city.service';
 
 const CityDetails = () => {
   const [res, setRes] = useState({});
@@ -31,7 +31,7 @@ const CityDetails = () => {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [inputValue, setInputValue] = useState(null);
-  const [offer, setOffer] = useState(null);
+  const [city, setCity] = useState(null);
   const [comments, setComments] = useState(null);
   const theme = useTheme();
   const { state } = useLocation();
@@ -60,8 +60,6 @@ const CityDetails = () => {
       commentType: 'Privado',
       referenceOfferComment: id,
     };
-
-    console.log(customFormData);
     setLoading(true);
     setResNewChat(await createMasChat(customFormData));
     setLoading(false);
@@ -69,7 +67,6 @@ const CityDetails = () => {
 
   useEffect(() => {
     if (resNewChat?.status == 200) {
-      console.log(resNewChat);
       setShow(!show);
       Swal.fire({
         icon: 'success',
@@ -98,16 +95,14 @@ const CityDetails = () => {
 
   useEffect(() => {
     if (res.status == 200) {
-      setOffer(res.data);
+      setCity(res.data);
     }
-
-    //console.log("OfferDetails -> res.data: ", res.data)
 
     // TODO: swal alert in case of error !!!!
   }, [res]);
 
   useEffect(() => {
-    if (offer != null) {
+    if (city != null) {
       getComments();
     }
   }, [city]);
@@ -120,137 +115,133 @@ const CityDetails = () => {
     // TODO: swal alert in case of error !!!!
   }, [resComment]);
 
-  //return offer ? offerLayout(offer) : null
-
   return (
-    <div className="offerDetails-container">
-      <div className="offerDetails-image-and-info-container">
-        <img className="offerDetails-image" src={city?.image} alt="imagen ruta ciudad"></img>
-        <div className="offerDetails-info-container">
-          <div className="offerDetails-title-and-state">
-            <div className="offerDetails-title">{city?.routeName}</div>
-            <div className="offerDetails-offerState">{city?.offerState}</div>
+    <div className="cityDetails-container">
+      <div className="cityDetails-carousel-imgs-container">
+        {city && <Carousel_imgs images={city.images} />}
+      </div>
+
+      <div className="cityDetails-image-and-info-container">
+        <img
+          className="cityDetails-image"
+          src={city?.image}
+          alt="imagen ruta ciudad"
+        ></img>
+        <div className="cityDetails-info-container">
+          <div className="cityDetails-title-and-state">
+            <div className="cityDetails-title">{city?.routeName}</div>
+            <div className="cityDetails-cityState">{city?.routeState}</div>
           </div>
-          <div className="offerDetails-read-ratings">
-            {offer && <ReadOnlyCityRating city={city} />} ({city?.ratings.length})
+          <div className="cityDetails-read-ratings">
+            {city && <ReadOnlyCityRating city={city} />} ({city?.ratings.length})
           </div>
-          <div className="offerDetails-info-city-salary-jobtype-expYears">
-            <div className="offerDetails-info-city">
+          <div className="cityDetails-info-city-salary-jobtype-expYears">
+            <div className="cityDetails-info-city">
               <p>Localización</p>
-              <div className="offerDetails-info-offer-detail">
+              <div className="cityDetails-info-city-detail">
                 <FaMapMarker /> {city?.routeLocation}
               </div>
             </div>
-            <div className="offerDetails-info-annualSalary">
+            <div className="cityDetails-info-annualSalary">
               <p>Distancia</p>
-              <div className="offerDetails-info-offer-detail">
+              <div className="cityDetails-info-city-detail">
                 (&euro;) {city?.routeDistance}
               </div>
             </div>
-            <div className="offerDetails-info-jobType">
+            <div className="cityDetails-info-jobType">
               <p>Dificultad</p>
-              <div className="offerDetails-info-offer-detail">
+              <div className="cityDetails-info-city-detail">
                 <FaLaptopCode /> {city?.difficulty}
               </div>
             </div>
-            <div className="offerDetails-info-experienceYears">
+            <div className="cityDetails-info-experienceYears">
               <p>Duración</p>
-              <div className="offerDetails-info-offer-detail">
+              <div className="cityDetails-info-city-detail">
                 <BsCalendarDay /> {city?.routeDuration} hora/s
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="offerDetails-horizontal-line"></div> */}
-      <div className="offerDetails-offer-rating-writeRating-container">
+      {/* <div className="cityDetails-horizontal-line"></div> */}
+      <div className="cityDetails-city-rating-writeRating-container">
         <p>Valora esta oferta</p>
-        {offer && <WriteRatingForOffer offerToRate={offer} />} {/*PENDIENTE DE CAMBIAR, HAY QUE CREAR WRITERATINGFORCITY*/}
+        {city && <WriteRatingForOffer offerToRate={city} />}{' '}
+        {/*PENDIENTE DE CAMBIAR, HAY QUE CREAR WRITERATINGFORCITY*/}
       </div>
 
-      {city && <Carousel_imgs images={city.images} />}
-
-      <div className="offerDetails-city-jobType-technologies">
-        <div className="offerDetails-city-jobType">
+      <div className="cityDetails-city-jobType-itemsToCarry">
+        <div className="cityDetails-city-jobType">
           <h3>Localización y dificultad</h3>
-          <div className="offerDetails-city-jobType-without-title">
-            <div className="offerDetails-city-localization">
+          <div className="cityDetails-city-jobType-without-title">
+            <div className="cityDetails-city-localization">
               <h5>
                 <FaMapMarker /> Localización
               </h5>
-              <div className="offerDetails-info-city-jobType">{city?.routeLocation}</div>
+              <div className="cityDetails-info-city-jobType">{city?.routeLocation}</div>
             </div>
-            <div className="offerDetails-jobType">
+            <div className="cityDetails-jobType">
               <h5>
                 <FaLaptopCode /> Estado de la ruta
               </h5>
-              <div className="offerDetails-info-city-jobType">{city?.routeState}</div>
+              <div className="cityDetails-info-city-jobType">{city?.routeState}</div>
             </div>
           </div>
         </div>
-        <div className="offerDetails-technologies">
+        <div className="cityDetails-itemsToCArry">
           <h3>Equipación recomendada</h3>
 
-          <div className="offerDetails-info-technologies">
+          <div className="cityDetails-info-itemsToCArry">
             <h5>
               <BiCodeAlt /> Equipo
             </h5>
-            <div className="offerDetails-info-technology">
-              {/* {offer && showTechnologies(offer.technologies, technologies)} */}
-
-              {/* //------------------------ Show Offer Tecnologies --------------------
-              <div className="offerDetails-icons-technologies-container">
-                {technologies
-                  .filter((tech) => offer?.technologies.includes(tech.name))
-                  .map((tech, index) => (
+            <div className="cityDetails-info-itemToCarry">
+              {/* ----------Show City route's items to carry -------------------- */}
+              <div className="cityDetails-icons-itemsToCArry-container">
+                {itemsToCarryArr
+                  .filter((itemToCarry) => city?.itemsToCarry.includes(itemToCarry.name))
+                  .map((itemToCarry, index) => (
                     <figure
-                      key={`${tech.name}_${index}`}
-                      className="offerDetails-tecnologia-item"
-                      id={tech.name}
+                      key={`${itemToCarry.name}_${index}`}
+                      className="cityDetails-tecnologia-item"
+                      id={itemToCarry.name}
                     >
-                      <div className="offerDetails-icon-container">
+                      <div className="cityDetails-icon-container">
                         <img
-                          className="offerDetails-tech-image"
-                          src={tech.image}
-                          alt={tech.name}
+                          className="cityDetails-tech-image"
+                          src={itemToCarry.image}
+                          alt={itemToCarry.name}
                         />
-                        <p>{tech.name}</p>
+                        <p>{itemToCarry.name}</p>
                       </div>
                     </figure>
                   ))}
-              </div> */}
-              {/* //------------------------ Show Offer Tecnologies -------------------- */}
+              </div>
+              {/* //------------------------ Show City Route item's to carry -------------------- */}
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="offerDetails-horizontal-line"></div> */}
-      {/* <div
-                className="offerDetails-offer-description"
-                dangerouslySetInnerHTML={{ __html: offer?.description }}
-                
-            /> */}
-      {/* ----------------------- Offer Description ----------------------- */}
-      <div className="offerDetails-offer-description">
+
+      {/* ----------------------- City Route Description ----------------------- */}
+      <div className="cityDetails-city-description">
         <h3>Descripción</h3>
         <p>{city?.descriptionGeneral}</p>
-        {/* <h3>Responsabilidades</h3>
-        <p>{offer?.descriptionResponsabilities}</p> */}
         <h3>Duración</h3>
         <p>{city?.routeDuration}</p>
         <h3>Distancia</h3>
         <p>{city?.routeDistance}</p>
       </div>
-      {/* ----------------------- Offer Description ----------------------- */}
+      {/* ----------------------- City Route Description ----------------------- */}
 
       {/* <Paper style={{ padding: '40px 20px 55px', backgroundColor: '#fcfcfc' }}> */}
 
-      <button className="offerDetails-private-comment-btn" onClick={() => setShow(!show)}>
+      <button className="cityDetails-private-comment-btn" onClick={() => setShow(!show)}>
         Chat privado
       </button>
 
       {show ? (
-        <div className="offerDetails-private-comments-container">
+        <div className="cityDetails-private-comments-container">
           <Paper
             style={{
               padding: '40px 20px 55px',
@@ -306,10 +297,9 @@ const CityDetails = () => {
           </Paper>
         </div>
       ) : null}
-      {/* <div className="offerDetails-horizontal-line"></div> */}
 
       {/* -------------------COMMENTS ----------------------------- */}
-      <div className="offerDetails-public-comments-container">
+      <div className="cityDetails-public-comments-container">
         <Paper
           style={{
             padding: '40px 20px 0px',
@@ -321,7 +311,7 @@ const CityDetails = () => {
           <h3>Comentario público</h3>
           <Grid container wrap="nowrap" spacing={2}>
             <Grid item>
-              <Avatar alt="Remy Sharp" src={offer?.image} />
+              <Avatar alt="Remy Sharp" src={city?.image} />
             </Grid>
             <Grid justifyContent="left" item xs zeroMinWidth>
               <TextField

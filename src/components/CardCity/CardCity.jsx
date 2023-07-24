@@ -43,7 +43,6 @@ const CardCity = ({ city }) => {
 
       <div className="developer-Info-ratingsByOthers">
         {/*--- Este componente hace la media de las estrellas ---*/}
-        {/* <ReadOnlyUserRating user={city} /> */}
         <ReadOnlyCityRating city={city} />
         <p>({city?.ratings?.length} valoraciones)</p>
       </div>

@@ -3,8 +3,8 @@ import './CreateCities2.css';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-//import { useAuth } from '../../contexts/authContext';
-import { technologies } from '../../data/object.tecnologias';
+//import { technologies } from '../../data/object.tecnologias';
+import { itemsToCarryArr } from '../../data/object.itemsToCarry';
 import handleCityCreationResponse from '../../hooks/useCreateCity';
 import { createCity } from '../../services/API_proyect/city.service';
 import Uploadfile from '../Uploadfile';
@@ -12,7 +12,7 @@ import Uploadfile from '../Uploadfile';
 const createCities2 = () => {
   const [res, setRes] = useState({});
   const [send, setSend] = useState(false);
-  const [arrayItems, setArrayItems] = useState([]);
+  const [arrayItemsToCarry, setArrayItemsToCarry] = useState([]);
   const difficulty = ['Easy', 'Medium', 'Hard'];
   const routeState = ['Close', 'Abandoned', 'Open'];
 
@@ -22,11 +22,8 @@ const createCities2 = () => {
     formState: { errors },
   } = useForm();
 
-
-
   const onSubmit = async (data) => {
     const inputfile = document.getElementById('file-upload').files;
-    console.log(inputfile);
     let customFormData;
 
     if (inputfile.length !== 0) {
@@ -36,11 +33,8 @@ const createCities2 = () => {
         routeDistance: parseInt(data.routeDistance),
         routeDuration: parseInt(data.routeDuration),
         routeState: 'Open',
-        itemsToCarry: arrayItems,
-        //image: inputfile[0],
-        //images: imageArray[1],
+        itemsToCarry: arrayItemsToCarry,
         images: imageArray,
-        // images: inputfile,
       };
     }
 
@@ -61,9 +55,9 @@ const createCities2 = () => {
     }
   }, []);
 
-  const createArrayItems = ({ target }) => {
-    if (arrayItems.includes(target.id)) {
-      setArrayItems((value) => {
+  const createArrayItemsToCarry = ({ target }) => {
+    if (arrayItemsToCarry.includes(target.id)) {
+      setArrayItemsToCarry((value) => {
         const customArray = [];
         value.forEach((element) => {
           if (target.id != element) customArray.push(element);
@@ -71,7 +65,7 @@ const createCities2 = () => {
         return customArray;
       });
     } else {
-      setArrayItems((value) => {
+      setArrayItemsToCarry((value) => {
         const customArray = [...value, target.id];
         return customArray;
       });
@@ -142,31 +136,33 @@ const createCities2 = () => {
             </div>
             <div className="form-field-two">
               <label
-                className={`form-label ${errors.technologies ? 'required-label' : ''}`}
+                className={`form-label ${
+                  errors.arrayItemsToCarry ? 'required-label' : ''
+                }`}
               >
                 {/* Tecnologías requeridas */}
               </label>
-              {/* <div className="tecnologies-Offer">
-                {technologies.map((technology, index) => (
-                  <figure key={index} className="tecnologia-item" id={technology.name}>
+              <div className="tecnologies-Offer">
+                {itemsToCarryArr.map((itemToCarry, index) => (
+                  <figure key={index} className="tecnologia-item" id={itemToCarry.name}>
                     <div className="image-container">
                       <img
                         className="tech-image"
-                        src={technology.image}
-                        alt={technology.name}
+                        src={itemToCarry.image}
+                        alt={itemToCarry.name}
                       />
                     </div>
-                    <p className="tech-image-text">{technology.name}</p>
+                    <p className="tech-image-text">{itemToCarry.name}</p>
                     <input
                       type="checkbox"
-                      name={technology.name}
-                      id={technology.name}
-                      onChange={createArrayTech}
+                      name={itemToCarry.name}
+                      id={itemToCarry.name}
+                      onChange={createArrayItemsToCarry}
                     />
                   </figure>
                 ))}
-              </div> */}
-              {errors.technologies && (
+              </div>
+              {errors.arrayItemsToCarry && (
                 <p className="error-message">Este campo es obligatorio</p>
               )}
             </div>
@@ -225,7 +221,9 @@ const createCities2 = () => {
             <div className="form-container-descripcion-ganeral-responsabilidades">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
 
                 <textarea
@@ -240,7 +238,9 @@ const createCities2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"
@@ -255,7 +255,9 @@ const createCities2 = () => {
             <div className="form-container-descripcion-requisitos-remuneracion">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"

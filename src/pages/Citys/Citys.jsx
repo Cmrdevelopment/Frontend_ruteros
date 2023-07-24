@@ -2,8 +2,8 @@ import './Citys.css';
 
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-
 import { NavLink } from 'react-router-dom';
+
 // import AnnualSalarySlider from '../../components/offersComponts/AnnualSalarySlider/AnnualSalarySlider';
 // import ExperienceYearsSlider from '../../components/offersComponts/ExperienceYearsSlider/ExperienceYearsSlider';
 // import JobTypeSelect from '../../components/offersComponts/JobTypeSelect/JobTypeSelect';
@@ -127,8 +127,8 @@ const Citys = () => {
             </div> */}
       </section>
       <NavLink to="/createCities2">
-            <button className="offer-button-Create">Crear Ruta</button>
-          </NavLink>
+        <button className="offer-button-Create">Crear Ruta</button>
+      </NavLink>
 
       <div className="offers-offersList-container">
         {<CitiesList filters={filtersToApply} itemsPerPage={10} />}

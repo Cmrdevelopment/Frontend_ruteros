@@ -3,7 +3,6 @@ import './CreateMountainRoute2.css';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-//import { useAuth } from '../../contexts/authContext';
 import { technologies } from '../../data/object.tecnologias';
 import handleMountainRouteCreationResponse from '../../hooks/useCreateMountainRoute';
 import { createMountainRoute } from '../../services/API_proyect/mountainRoute.service';
@@ -15,8 +14,6 @@ const createMountainRoute2 = () => {
   const [arrayItems, setArrayItems] = useState([]);
   const difficulty = ['Easy', 'Medium', 'Hard'];
   const routeState = ['Close', 'Abandoned', 'Open'];
-  //const offerStates = ['Close', 'Suspended', 'Open'];
-  //const { user } = useAuth();
 
   const {
     register,
@@ -38,10 +35,7 @@ const createMountainRoute2 = () => {
         routeDuration: parseInt(data.routeDuration),
         routeState: 'Open',
         itemsToCarry: arrayItems,
-        //image: inputfile[0],
-        //images: imageArray[1],
         images: imageArray,
-        // images: inputfile,
       };
     }
 
@@ -147,7 +141,7 @@ const createMountainRoute2 = () => {
               >
                 {/* Tecnologías requeridas */}
               </label>
-              {/* <div className="tecnologies-Offer">
+              <div className="tecnologies-Offer">
                 {technologies.map((technology, index) => (
                   <figure key={index} className="tecnologia-item" id={technology.name}>
                     <div className="image-container">
@@ -166,7 +160,7 @@ const createMountainRoute2 = () => {
                     />
                   </figure>
                 ))}
-              </div> */}
+              </div>
               {errors.technologies && (
                 <p className="error-message">Este campo es obligatorio</p>
               )}
@@ -226,8 +220,9 @@ const createMountainRoute2 = () => {
             <div className="form-container-descripcion-ganeral-responsabilidades">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
 
                 <textarea
@@ -242,8 +237,9 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"
@@ -258,8 +254,9 @@ const createMountainRoute2 = () => {
             <div className="form-container-descripcion-requisitos-remuneracion">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"

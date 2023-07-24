@@ -126,7 +126,6 @@ const OfferDetails = () => {
   return (
     <div className="offerDetails-container">
       <div className="offerDetails-carousel-imgs-container">
-        {/* <Carousel_imgs images={images} /> */}
         {offer && <Carousel_imgs images={offer.images} />}
       </div>
       <div className="offerDetails-image-and-info-container">

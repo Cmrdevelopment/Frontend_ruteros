@@ -1,4 +1,4 @@
-.offerDetails-container {
+.cityDetails-container {
   width: 80vw;
   min-height: 100vh;
   display: flex;
@@ -8,7 +8,11 @@
   gap: 1rem;
 }
 
-.offerDetails-image-and-info-container {
+.cityDetails-carousel-imgs-container {
+  width: 100vw;
+}
+
+.cityDetails-image-and-info-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +21,7 @@
   border: 0px solid red;
 }
 
-.offerDetails-image-container {
+.cityDetails-image-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +29,7 @@
   gap: 1rem;
 }
 
-.offerDetails-info-city-salary-jobtype-expYears {
+.cityDetails-info-city-salary-jobtype-expYears {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -35,45 +39,45 @@
   padding: 0;
 }
 
-.offerDetails-image {
+.cityDetails-image {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.offerDetails-title-and-state {
+.cityDetails-title-and-state {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.offerDetails-title {
+.cityDetails-title {
   font-size: 30px;
   font-weight: 900;
 }
 
-.offerDetails-offerState {
+.cityDetails-cityState {
   font-size: 20px;
   font-weight: bold;
 }
 
-.offerDetails-read-ratings {
+.cityDetails-read-ratings {
   /* border: 1px solid red; */
   margin-bottom: 1rem;
 }
 
-.offerDetails-info {
+.cityDetails-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.offerDetails-info-city,
-.offerDetails-info-annualSalary,
-.offerDetails-info-jobType,
-.offerDetails-info-experienceYears {
+.cityDetails-info-city,
+.cityDetails-info-annualSalary,
+.cityDetails-info-jobType,
+.cityDetails-info-experienceYears {
   width: 230px;
   height: 110px;
   display: flex;
@@ -86,16 +90,16 @@
   padding: 0 0 0 12px;
 }
 
-.offerDetails-info-city:hover,
-.offerDetails-info-annualSalary:hover,
-.offerDetails-info-jobType:hover,
-.offerDetails-info-experienceYears:hover {
+.cityDetails-info-city:hover,
+.cityDetails-info-annualSalary:hover,
+.cityDetails-info-jobType:hover,
+.cityDetails-info-experienceYears:hover {
   background-color: #25d366;
   color: #e3e4e5;
   font-weight: 700;
 }
 
-.offerDetails-info-offer-detail {
+.cityDetails-info-city-detail {
   font-weight: 900;
 
   /* limit the number of characters to show just 22 */
@@ -105,7 +109,7 @@
   max-width: 20ch;
 }
 
-.offerDetails-offer-rating-writeRating-container {
+.cityDetails-city-rating-writeRating-container {
   width: 80%;
   height: 50px;
   display: flex;
@@ -119,7 +123,7 @@
   margin-top: 1rem;
 }
 
-.offerDetails-city-jobType-technologies {
+.cityDetails-city-jobType-itemsToCarry {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,13 +132,13 @@
   padding: 1rem;
 }
 
-.offerDetails-city-jobType {
+.cityDetails-city-jobType {
   width: 450px;
   height: 400px;
   display: flex;
   flex-direction: column;
   /* justify-content: flex-start;
-    align-items: flex-start; */
+      align-items: flex-start; */
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
@@ -145,7 +149,7 @@
   padding-top: 20px;
 }
 
-.offerDetails-technologies {
+.cityDetails-itemsToCarry {
   width: 763px;
   height: 400px;
   display: flex;
@@ -160,33 +164,33 @@
   padding-top: 20px;
 }
 
-.offerDetails-city-jobType > h3 {
+.cityDetails-city-jobType>h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.offerDetails-technologies > h3 {
+.cityDetails-itemsToCarry>h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.offerDetails-info-technologies {
+.cityDetails-info-itemsToCarry {
   border: 0px solid red;
   margin-top: 20px;
 }
 
-.offerDetails-info-technology {
+.cityDetails-info-itemToCarry {
   margin: 20px 0 0 25px;
   min-height: 150px;
   border: 0px solid red;
 }
 
-.offerDetails-info-technologies > h5 {
+.cityDetails-info-itemsToCarry>h5 {
   font-weight: 900;
   font-size: 18px;
 }
 
-.offerDetails-icons-technologies-container {
+.cityDetails-icons-itemsToCarry-container {
   min-height: 100%;
   min-width: 90%;
   display: flex;
@@ -199,8 +203,8 @@
   margin-bottom: 1rem;
 }
 
-.offerDetails-city-localization,
-.offerDetails-jobType {
+.cityDetails-city-localization,
+.cityDetails-jobType {
   display: flex;
   flex-direction: column;
   margin-top: 63px;
@@ -208,17 +212,17 @@
   font-size: 21px;
 }
 
-.offerDetails-info-city-jobType {
+.cityDetails-info-city-jobType {
   font-size: 16px;
   padding-left: 23px;
   border: 0 solid red;
 }
 
-.offerDetails-jobType {
+.cityDetails-jobType {
   margin-top: 52px;
 }
 
-.offerDetails-offer-comments {
+.cityDetails-city-comments {
   width: 80%;
   display: flex;
   justify-content: center;
@@ -229,7 +233,7 @@
   padding: 1rem;
 }
 
-.offerDetails-offer-rating-container {
+.cityDetails-city-rating-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -240,7 +244,7 @@
   padding: 1rem;
 }
 
-.offerDetails-tech-image {
+.cityDetails-tech-image {
   max-width: 57px;
   min-width: 57px;
   max-height: 57px;
@@ -250,14 +254,14 @@
   margin: 0;
 }
 
-.offerDetails-icon-container {
+.cityDetails-icon-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.offerDetails-horizontal-line {
+.cityDetails-horizontal-line {
   height: 2px;
   width: 80%;
   border: 0.7px solid #e3e4e5;
@@ -266,7 +270,7 @@
   margin: 1rem;
 }
 
-.offerDetails-private-comments-container {
+.cityDetails-private-comments-container {
   width: 80%;
   border: 1px solid #e3e4e5;
   border-radius: 9px;
@@ -274,7 +278,7 @@
   margin-bottom: 1rem;
 }
 
-.offerDetails-private-comment-btn {
+.cityDetails-private-comment-btn {
   border: none;
   border-radius: 30px;
   height: 39px;
@@ -286,7 +290,7 @@
   margin: 1rem;
 }
 
-.offerDetails-private-comment-btn:hover {
+.cityDetails-private-comment-btn:hover {
   border: 1.5px solid #25d366;
   background-color: rgb(250, 250, 250);
   color: #25d366;
@@ -294,62 +298,38 @@
   cursor: pointer;
 }
 
-/* .offerDetails-private-comment-btn:hover {
-    border: 1.5px solid #25d366;
-    background-color: rgb(250, 250, 250);
-    color: #25d366;
-    font-size: 18px;
-    cursor: pointer;
-} */
-
-/* .offerDetails-public-comments-container {
-    border: none;
-    border-radius: 30px;
-    height: 39px;
-    width: 270px;
-    background-color: #25d366;
-    color: white;
-    font-size: 16px;
-    transition: linear .2s;
-    margin-top: 30px;
-    border: 5px solid red;
-} */
-
-.offerDetails-public-comments-container {
+.cityDetails-public-comments-container {
   width: 80%;
-  /* border: 1px solid #e3e4e5; */
   border-radius: 9px;
   background-color: #fcfcfc;
-  /* border: 0px solid red; */
-  /* margin: 0rem 0 1.7rem 0; */
   margin-bottom: 2rem;
   border: 0px solid red;
 }
 
 @media (max-width: 600px) {
-  .offerDetails-image-and-info-container {
+  .cityDetails-image-and-info-container {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .offerDetails-info-city,
-  .offerDetails-info-annualSalary,
-  .offerDetails-info-jobType,
-  .offerDetails-info-experienceYears {
+  .cityDetails-info-city,
+  .cityDetails-info-annualSalary,
+  .cityDetails-info-jobType,
+  .cityDetails-info-experienceYears {
     gap: 1rem;
     width: 100%;
     align-items: center;
   }
 
-  .offerDetails-offer-rating-writeRating-container {
+  .cityDetails-city-rating-writeRating-container {
     width: 100%;
   }
 
-  .offerDetails-city-jobType {
+  .cityDetails-city-jobType {
     display: none;
   }
 
-  .offerDetails-technologies {
+  .cityDetails-itemsToCarry {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -359,27 +339,27 @@
     align-items: center;
   }
 
-  .offerDetails-icons-technologies-container {
+  .cityDetails-icons-itemsToCarry-container {
     max-height: 800px;
     margin: 0 0 0 0;
     gap: 12px;
     /* overflow-y: scroll; */
   }
 
-  .offerDetails-city-jobType-technologies {
+  .cityDetails-city-jobType-itemsToCarry {
     padding: 0;
   }
 
-  .offerDetails-technologies > h3 {
+  .cityDetails-itemsToCarry>h3 {
     font-size: 20px;
     margin-top: 12px;
   }
 
-  .offerDetails-info-technologies > h5 {
+  .cityDetails-info-itemsToCarry>h5 {
     text-align: center;
   }
 
-  .offerDetails-horizontal-line {
+  .cityDetails-horizontal-line {
     width: 100%;
   }
 }

@@ -3,7 +3,6 @@ import './CreateOffer2.css';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-//import { useAuth } from '../../contexts/authContext';
 import { technologies } from '../../data/object.tecnologias';
 import handleOfferCreationResponse from '../../hooks/useCreateOffer';
 import { createOffer } from '../../services/API_proyect/offer.service';
@@ -15,8 +14,6 @@ const CreateOffer2 = () => {
   const [arrayTech, setArrayTech] = useState([]);
   const offerTypes = ['CompanyOffer', 'FreelandOffer'];
   const jobTypes = ['Remote', 'Office', 'Hybrid'];
-  //const offerStates = ['Close', 'Suspended', 'Open'];
-  //const { user } = useAuth();
 
   const {
     register,
@@ -24,26 +21,6 @@ const CreateOffer2 = () => {
     //setValue,
     formState: { errors },
   } = useForm();
-
-  //const [serverMessage, setServerMessage] = useState(null);
-
-  /*
-const inputfile = document.getElementById('file-upload').files;
-console.log(inputfile);
-let customFormData;
-
-if (inputfile.length !== 0) {
-  const imageArray = Array.from(inputfile); // Convert FileList to an array
-  customFormData = {
-    ...data,
-    annualSalary: parseInt(data.annualSalary),
-    offerState: 'Open',
-    technologies: arrayTech,
-    image: imageArray, // Assign the array of files to the 'image' property
-  };
-}
-
-  */
 
   const onSubmit = async (data) => {
     const inputfile = document.getElementById('file-upload').files;
@@ -57,10 +34,7 @@ if (inputfile.length !== 0) {
         annualSalary: parseInt(data.annualSalary),
         offerState: 'Open',
         technologies: arrayTech,
-        //image: inputfile[0],
-        //images: imageArray[1],
         images: imageArray,
-        // images: inputfile,
       };
     }
 

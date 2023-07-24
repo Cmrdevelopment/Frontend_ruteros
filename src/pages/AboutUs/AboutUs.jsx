@@ -87,7 +87,7 @@ const AboutUs = () => {
           <div className="col-sm-6 col-md-4">
             <div className="team-item">
               <img
-                src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687627364/vegano_rvseme.jpg"
+                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690204093/UserFTProyect/AboutUs/igor_pic_w1anw8.jpg"
                 alt="person-review"
                 className="team-img"
               />
