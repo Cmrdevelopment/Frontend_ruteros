@@ -3,8 +3,7 @@ import './CreateCities2.css';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-//import { useAuth } from '../../contexts/authContext';
-import { habilitiesArr } from '../../data/object.habilities';
+import { itemsToCarryArr } from '../../data/object.itemsToCarry';
 import handleCityCreationResponse from '../../hooks/useCreateCity';
 import { createCity } from '../../services/API_proyect/city.service';
 import Uploadfile from '../Uploadfile';
@@ -12,7 +11,7 @@ import Uploadfile from '../Uploadfile';
 const createCities2 = () => {
   const [res, setRes] = useState({});
   const [send, setSend] = useState(false);
-  const [arrayHabilities, setArrayHabilities] = useState([]);
+  const [arrayItemsToCarry, setArrayItemsToCarry] = useState([]);
   const difficulty = ['Easy', 'Medium', 'Hard'];
   const routeState = ['Close', 'Abandoned', 'Open'];
 
@@ -22,11 +21,8 @@ const createCities2 = () => {
     formState: { errors },
   } = useForm();
 
-
-
   const onSubmit = async (data) => {
     const inputfile = document.getElementById('file-upload').files;
-    console.log(inputfile);
     let customFormData;
 
     if (inputfile.length !== 0) {
@@ -35,12 +31,13 @@ const createCities2 = () => {
         ...data,
         routeDistance: parseInt(data.routeDistance),
         routeDuration: parseInt(data.routeDuration),
+        routeStartLatitude: parseInt(data.routeStartLatitude),
+        routeStartLongitude: parseInt(data.routeStartLongitude),
+        routeEndLatitude: parseInt(data.routeEndLatitude),
+        routeEndLongitude: parseInt(data.routeEndLongitude),
         routeState: 'Open',
-        habilities: arrayHabilities,
-        //image: inputfile[0],
-        //images: imageArray[1],
+        itemsToCarry: arrayItemsToCarry,
         images: imageArray,
-        // images: inputfile,
       };
     }
 
@@ -61,9 +58,9 @@ const createCities2 = () => {
     }
   }, []);
 
-  const createArrayHabilities = ({ target }) => {
-    if (arrayHabilities.includes(target.id)) {
-      setArrayHabilities((value) => {
+  const createArrayItemsToCarry = ({ target }) => {
+    if (arrayItemsToCarry.includes(target.id)) {
+      setArrayItemsToCarry((value) => {
         const customArray = [];
         value.forEach((element) => {
           if (target.id != element) customArray.push(element);
@@ -71,7 +68,7 @@ const createCities2 = () => {
         return customArray;
       });
     } else {
-      setArrayHabilities((value) => {
+      setArrayItemsToCarry((value) => {
         const customArray = [...value, target.id];
         return customArray;
       });
@@ -142,31 +139,32 @@ const createCities2 = () => {
             </div>
             <div className="form-field-two">
               <label
-                className={`form-label ${errors.technologies ? 'required-label' : ''}`}
+                className={`form-label ${errors.arrayItemsToCarry ? 'required-label' : ''
+                  }`}
               >
-                {/* Tecnologías requeridas */}
-                </label>
-              <div className="tecnologies-Offer">
-                {habilitiesArr.map((hability, index) => (
-                  <figure key={index} className="tecnologia-item" id={hability.name}>
+                {/* Items to pick up to to carry to this route */}
+              </label>
+              <div className="createCity-itemsToCarry-container">
+                {itemsToCarryArr.map((itemToCarry, index) => (
+                  <figure key={index} className="tecnologia-item" id={itemToCarry.name}>
                     <div className="image-container">
                       <img
                         className="tech-image"
-                        src={hability.image}
-                        alt={hability.name}
+                        src={itemToCarry.image}
+                        alt={itemToCarry.name}
                       />
                     </div>
-                    <p className="tech-image-text">{hability.name}</p>
+                    <p className="tech-image-text">{itemToCarry.name}</p>
                     <input
                       type="checkbox"
-                      name={hability.name}
-                      id={hability.name}
-                      onChange={createArrayHabilities}
+                      name={itemToCarry.name}
+                      id={itemToCarry.name}
+                      onChange={createArrayItemsToCarry}
                     />
                   </figure>
                 ))}
               </div>
-              {errors.habilitiesArr && (
+              {errors.arrayItemsToCarry && (
                 <p className="error-message">Este campo es obligatorio</p>
               )}
             </div>
@@ -221,11 +219,47 @@ const createCities2 = () => {
               </div>
             </div>
           </section>
+          <section className='form-route-start-end-geolocalization-container'>
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization"
+              {...register('routeStartLatitude', { required: true })}
+              placeholder="Latitud Comienzo Ruta"
+              value="41.374663896520715"
+            />
+
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization"
+              {...register('routeEndLatitude', { required: true })}
+              placeholder="Latitud Fin Ruta"
+              value="41.367221067676326"
+            />
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization"
+              {...register('routeStartLongitude', { required: true })}
+              placeholder="Longitud Comienzo Ruta"
+              value="2.10063376682015"
+            />
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization"
+              {...register('routeEndLongitude', { required: true })}
+              placeholder="Longitud Fin Ruta"
+              value="2.095904339000168"
+            />
+          </section>
           <section className="form-container-titulo-descripción-responsabilidades-requisitos-remuneracion">
             <div className="form-container-descripcion-ganeral-responsabilidades">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
+                    }`}
                 ></label>
 
                 <textarea
@@ -238,9 +272,10 @@ const createCities2 = () => {
                 )}
               </div>
 
-              <div className="form-field">
+              {/* <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
+                    }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"
@@ -250,12 +285,13 @@ const createCities2 = () => {
                 {errors.descriptionGeneral && (
                   <p className="error-message">Este campo es obligatorio</p>
                 )}
-              </div>
+              </div> */}
             </div>
-            <div className="form-container-descripcion-requisitos-remuneracion">
+            {/* <div className="form-container-descripcion-requisitos-remuneracion">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
+                    }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"
@@ -281,7 +317,7 @@ const createCities2 = () => {
                   <p className="error-message">Este campo es obligatorio</p>
                 )}
               </div>
-            </div>
+            </div> */}
           </section>
 
           <div id="btn-offer" className="form-field">
@@ -298,4 +334,3 @@ const createCities2 = () => {
 };
 
 export default createCities2;
-

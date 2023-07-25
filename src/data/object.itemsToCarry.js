@@ -19,4 +19,14 @@ export const itemsToCarryArr = [
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690052665/UserFTProyect/habilities/buen_rollo_weigrt.png',
   },
+  {
+    name: 'Paraguas',
+    image:
+      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690276172/UserFTProyect/ItemsToCarry/umbrella_rb2bww.png',
+  },
+  {
+    name: 'Abrigo',
+    image:
+      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690276369/UserFTProyect/ItemsToCarry/coat_ayvqbr.png',
+  },
 ];
