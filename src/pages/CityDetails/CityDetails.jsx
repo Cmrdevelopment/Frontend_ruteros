@@ -23,6 +23,7 @@ import {
   createComment,
   getByReference,
 } from '../../services/API_proyect/comment.service';
+import RouteMap from '../../components/RouteMap/RouteMap';
 
 const CityDetails = () => {
   const [res, setRes] = useState({});
@@ -36,6 +37,10 @@ const CityDetails = () => {
   const theme = useTheme();
   const { state } = useLocation();
   const { id } = state;
+  const geolocations = [
+    [51.505, -0.09],
+    [51.505, -0.07],
+  ];
 
   const getData = async () => {
     setLoading(true);
@@ -145,7 +150,7 @@ const CityDetails = () => {
             <div className="cityDetails-info-annualSalary">
               <p>Distancia</p>
               <div className="cityDetails-info-city-detail">
-                (&euro;) {city?.routeDistance}
+                {city?.routeDistance} Kms
               </div>
             </div>
             <div className="cityDetails-info-jobType">
@@ -163,13 +168,12 @@ const CityDetails = () => {
           </div>
         </div>
       </div>
-      {/* <div className="cityDetails-horizontal-line"></div> */}
       <div className="cityDetails-city-rating-writeRating-container">
-        <p>Valora esta oferta</p>
+        <p>Valora esta ruta</p>
         {city && <WriteRatingForOffer offerToRate={city} />}{' '}
         {/*PENDIENTE DE CAMBIAR, HAY QUE CREAR WRITERATINGFORCITY*/}
       </div>
-
+      <RouteMap geolocations={geolocations} />
       <div className="cityDetails-city-jobType-itemsToCarry">
         <div className="cityDetails-city-jobType">
           <h3>Localización y dificultad</h3>
@@ -197,7 +201,7 @@ const CityDetails = () => {
             </h5>
             <div className="cityDetails-info-itemToCarry">
               {/* ----------Show City route's items to carry -------------------- */}
-              <div className="cityDetails-icons-itemsToCArry-container">
+              <div className="cityDetails-icons-itemsToCarry-container">
                 {itemsToCarryArr
                   .filter((itemToCarry) => city?.itemsToCarry.includes(itemToCarry.name))
                   .map((itemToCarry, index) => (
@@ -208,7 +212,7 @@ const CityDetails = () => {
                     >
                       <div className="cityDetails-icon-container">
                         <img
-                          className="cityDetails-tech-image"
+                          className="cityDetails-itemToCarry-image"
                           src={itemToCarry.image}
                           alt={itemToCarry.name}
                         />

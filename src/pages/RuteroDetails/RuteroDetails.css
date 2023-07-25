@@ -39,7 +39,8 @@
   border: 0px solid red;
   /* background-color: #fcfcfc; */
   /* background-color: #87CEEB; */
-  background-color: #e8eff9;
+  /* background-color: #e8eff9; */
+  background-color: rgb(143, 182, 249);
 
   padding: 0;
 }
@@ -125,7 +126,7 @@
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc;  */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   margin-top: 1rem;
 }
 
@@ -149,7 +150,7 @@
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   padding: 0 0 0 23px;
   padding-top: 20px;
 }
@@ -165,17 +166,17 @@
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   padding: 0 0 0 23px;
   padding-top: 20px;
 }
 
-.ruteroDetails-city-jobType > h3 {
+.ruteroDetails-city-jobType>h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.ruteroDetails-technologies > h3 {
+.ruteroDetails-technologies>h3 {
   font-weight: 900;
   font-size: 25px;
 }
@@ -191,7 +192,7 @@
   border: 0px solid red;
 }
 
-.ruteroDetails-info-technologies > h5 {
+.ruteroDetails-info-technologies>h5 {
   font-weight: 900;
   font-size: 18px;
 }
@@ -235,7 +236,7 @@
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   padding: 0rem;
 }
 
@@ -246,7 +247,7 @@
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   gap: 1rem;
   padding: 1rem;
 }
@@ -274,7 +275,7 @@
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   margin: 1rem;
 }
 
@@ -285,7 +286,7 @@
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   padding: 1.7rem;
 }
 
@@ -294,7 +295,7 @@
   border: 1px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   margin-bottom: 1rem;
 }
 
@@ -303,7 +304,7 @@
   border: 1px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   margin-bottom: 2rem;
 }
 
@@ -314,7 +315,7 @@
   border: 1px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   /* border: 1px solid red; */
   margin-top: 0.7rem;
   padding: 1.7rem;
@@ -324,7 +325,7 @@
   border: 2px solid #e3e4e5;
   border-radius: 9px;
   /* background-color: #fcfcfc; */
-  background-color: #8adb75;
+  background-color: rgb(143, 182, 249);
   padding: 1.5rem;
   margin-top: 1rem;
   /* border: 1px solid red; */
@@ -398,12 +399,12 @@
     padding: 0;
   }
 
-  .ruteroDetails-technologies > h3 {
+  .ruteroDetails-technologies>h3 {
     font-size: 20px;
     margin-top: 12px;
   }
 
-  .ruteroDetails-info-technologies > h5 {
+  .ruteroDetails-info-technologies>h5 {
     text-align: center;
   }
 
@@ -419,7 +420,7 @@
     width: 100%;
   }
 
-  .ruteroDetails-single-experience-container > h3 {
+  .ruteroDetails-single-experience-container>h3 {
     font-size: 18px;
     font-weight: 900;
   }

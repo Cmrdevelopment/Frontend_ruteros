@@ -1,11 +1,15 @@
 @font-face {
-  font-family: 'Fuente-Principal'; /* El nombre que quieras darle a tu fuente */
-  src: url('/Fonts/Poppins/Poppins-Light.ttf') format('truetype'); /* Ruta de la fuente en relación a tu archivo CSS */
+  font-family: 'Fuente-Principal';
+  /* El nombre que quieras darle a tu fuente */
+  src: url('/Fonts/Poppins/Poppins-Light.ttf') format('truetype');
+  /* Ruta de la fuente en relación a tu archivo CSS */
 }
 
 @font-face {
-  font-family: 'Fuente-Bold'; /* El nombre que quieras darle a tu fuente */
-  src: url('/Fonts/Poppins/Poppins-SemiBold.ttf') format('truetype'); /* Ruta de la fuente en relación a tu archivo CSS */
+  font-family: 'Fuente-Bold';
+  /* El nombre que quieras darle a tu fuente */
+  src: url('/Fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  /* Ruta de la fuente en relación a tu archivo CSS */
 }
 
 * {
@@ -18,6 +22,7 @@
 body {
   width: 100%;
   min-height: 100vh;
+  background-color: rgb(191, 214, 255);
 }
 
 #root {
