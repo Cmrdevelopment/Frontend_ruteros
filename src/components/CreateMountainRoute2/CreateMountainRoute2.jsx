@@ -226,8 +226,9 @@ const createMountainRoute2 = () => {
             <div className="form-container-descripcion-ganeral-responsabilidades">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
 
                 <textarea
@@ -242,8 +243,9 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"
@@ -258,8 +260,9 @@ const createMountainRoute2 = () => {
             <div className="form-container-descripcion-requisitos-remuneracion">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
+                  className={`form-label ${
+                    errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
                 ></label>
                 <textarea
                   className="input-create-offer-dos"
@@ -302,4 +305,3 @@ const createMountainRoute2 = () => {
 };
 
 export default createMountainRoute2;
-

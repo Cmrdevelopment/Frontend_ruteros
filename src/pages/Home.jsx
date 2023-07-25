@@ -24,14 +24,15 @@ export const Home = () => {
 
           <div className="home-button-container">
             <p className="home-p">
-              Visitas con los mejores guias a través <br></br> de nuestra plataforma
+              Descubre la libertad de visitar a tu manera o junto a los <br></br> mejores
+              guías en nuestra plataforma.
             </p>
 
             <div className="home-subButton">
-              <NavLink to="/aboutUs">
+              <NavLink to="/citys">
                 <button className="home-contactUs">Ciudades</button>
               </NavLink>
-              <NavLink to="/offers">
+              <NavLink to="/mountainRoutes">
                 <button className="home-learnMore">
                   <p style={{ margin: 0 }}>Montañas</p>
                 </button>

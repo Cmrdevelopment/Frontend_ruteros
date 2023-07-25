@@ -26,12 +26,11 @@
 }
 
 .cardMountainRoute-Info-img {
-  
-height: 115px;
+  height: 115px;
   width: 115px;
   object-fit: cover;
   border-radius: 7px;
-  padding: 0 0 16px; 
+  padding: 0 0 16px;
 }
 
 .cardMountainRoute-Info-img:hover {

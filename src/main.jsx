@@ -8,16 +8,16 @@ import App from './App.jsx';
 import ChangeEmail from './components/ChangeEmail/ChangeEmail';
 import ChangePassword2 from './components/ChangePassword2/ChangePassword2';
 import { Chat } from './components/ChatTemplate.jsx';
-import CreateOffer2 from './components/CreateOffer2/CreateOffer2';
-import CreateMountainRoute2 from './components/CreateMountainRoute2/CreateMountainRoute2';
 import CreateCities2 from './components/CreateCities2/CreateCities2';
+import CreateMountainRoute2 from './components/CreateMountainRoute2/CreateMountainRoute2';
+import CreateOffer2 from './components/CreateOffer2/CreateOffer2';
 import Experience from './components/Experience/Experience';
 import FormProfile from './components/FormProfile';
-import Offer from './components/Offers/Offers';
-import ProfileMountain from './components/profile/ProfileMountain/ProfileMountain';
-import ProfileCity from './components/profile/ProfileCity/ProfileCity';
-import Tecnologias from './components/Tecnologias/Tecnologias';
 import Habilities from './components/Habilities/Habilities';
+import Offer from './components/Offers/Offers';
+import ProfileCity from './components/profile/ProfileCity/ProfileCity';
+import ProfileMountain from './components/profile/ProfileMountain/ProfileMountain';
+import Tecnologias from './components/Tecnologias/Tecnologias';
 import { AuthContextProvider } from './contexts/authContext.jsx';
 import AboutUs from './pages/AboutUs/AboutUs';
 import CheckCode from './pages/CheckCode.jsx';
@@ -75,4 +75,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </AuthContextProvider>
   </BrowserRouter>,
 );
-

@@ -154,8 +154,7 @@ const Profile = () => {
               </button>
 
               <button
-                className={`btn-profile ${activeButton === 'Habilities' ? 'active' : ''
-                  }`}
+                className={`btn-profile ${activeButton === 'Habilities' ? 'active' : ''}`}
                 onClick={() => {
                   setActiveButton('Habilities');
                   navigate('/profile/habilities');
@@ -175,7 +174,9 @@ const Profile = () => {
               </button>
 
               <button
-                className={`btn-profile ${activeButton === 'MountainRoutes' ? 'active' : ''}`}
+                className={`btn-profile ${
+                  activeButton === 'MountainRoutes' ? 'active' : ''
+                }`}
                 onClick={() => {
                   setActiveButton('MountainRoutes');
                   navigate('/profile/ProfileMountain');
@@ -216,4 +217,3 @@ export default Profile;
 //   <button className="nav-icon" onClick={handleNav}>
 //   OPCIONES
 // </button>
-

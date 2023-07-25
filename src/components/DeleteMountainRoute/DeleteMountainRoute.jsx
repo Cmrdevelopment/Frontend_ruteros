@@ -8,7 +8,9 @@ const DeleteMountainRouteButton = ({ id, mountainRoutes, setMountainRoutes }) =>
     const res = await deleteMountainRoute(id);
     handleMountainRouteDeletionResponse(res);
     if (res.status === 200) {
-      setMountainRoutes(mountainRoutes.filter((mountainRoute) => mountainRoute._id !== id));
+      setMountainRoutes(
+        mountainRoutes.filter((mountainRoute) => mountainRoute._id !== id),
+      );
     }
   };
 
