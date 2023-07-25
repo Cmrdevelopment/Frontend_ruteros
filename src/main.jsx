@@ -33,6 +33,7 @@ import Profile from './pages/Profile';
 import Register from './pages/Register.jsx';
 import RuteroDetails from './pages/RuteroDetails/RuteroDetails';
 import Ruteros from './pages/Ruteros/Ruteros.jsx';
+import CityDetails from './pages/CityDetails/CityDetails';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/">
@@ -48,7 +49,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/mountainRoutes" element={<MountainRoutes />} />
           <Route path="/ruteroDetails" element={<RuteroDetails />} />
           <Route path="/offerDetails" element={<OfferDetails />} />
-          <Route path="/cityDetails" element={<OfferDetails />} />
+          <Route path="/cityDetails" element={<CityDetails />} />
           <Route path="/mountainRouteDetails" element={<MountainRouteDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />

@@ -31,10 +31,10 @@ const createCities2 = () => {
         ...data,
         routeDistance: parseInt(data.routeDistance),
         routeDuration: parseInt(data.routeDuration),
-        routeStartLatitude: parseInt(data.routeStartLatitude),
-        routeStartLongitude: parseInt(data.routeStartLongitude),
-        routeEndLatitude: parseInt(data.routeEndLatitude),
-        routeEndLongitude: parseInt(data.routeEndLongitude),
+        routeStartLatitude: parseFloat(data.routeStartLatitude),
+        routeStartLongitude: parseFloat(data.routeStartLongitude),
+        routeEndLatitude: parseFloat(data.routeEndLatitude),
+        routeEndLongitude: parseFloat(data.routeEndLongitude),
         routeState: 'Open',
         itemsToCarry: arrayItemsToCarry,
         images: imageArray,
@@ -139,9 +139,8 @@ const createCities2 = () => {
             </div>
             <div className="form-field-two">
               <label
-                className={`form-label ${
-                  errors.arrayItemsToCarry ? 'required-label' : ''
-                }`}
+                className={`form-label ${errors.arrayItemsToCarry ? 'required-label' : ''
+                  }`}
               >
                 {/* Items to pick up to to carry to this route */}
               </label>
@@ -220,7 +219,7 @@ const createCities2 = () => {
               </div>
             </div>
           </section>
-          <section className="form-route-start-end-geolocalization-container">
+          <section className='form-route-start-end-geolocalization-container'>
             <input
               type="number"
               step="any"
@@ -259,9 +258,8 @@ const createCities2 = () => {
             <div className="form-container-descripcion-ganeral-responsabilidades">
               <div className="form-field">
                 <label
-                  className={`form-label ${
-                    errors.descriptionGeneral ? 'required-label' : ''
-                  }`}
+                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
+                    }`}
                 ></label>
 
                 <textarea

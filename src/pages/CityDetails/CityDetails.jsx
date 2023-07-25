@@ -16,7 +16,6 @@ import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyCityRating from '../../components/ratings/ReadOnlyCityRating/ReadOnlyCityRating';
 import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
-import RouteMap from '../../components/RouteMap/RouteMap';
 import { itemsToCarryArr } from '../../data/object.itemsToCarry';
 import { createMasChat } from '../../services/API_proyect/chat.service';
 import { getCityById } from '../../services/API_proyect/city.service';
@@ -24,6 +23,7 @@ import {
   createComment,
   getByReference,
 } from '../../services/API_proyect/comment.service';
+import RouteMap from '../../components/RouteMap/RouteMap';
 
 const CityDetails = () => {
   const [res, setRes] = useState({});
@@ -173,7 +173,10 @@ const CityDetails = () => {
         {city && <WriteRatingForOffer offerToRate={city} />}{' '}
         {/*PENDIENTE DE CAMBIAR, HAY QUE CREAR WRITERATINGFORCITY*/}
       </div>
-      <RouteMap geolocations={geolocations} />
+      {/* <RouteMap geolocations={geolocations} /> */}
+
+      {city && showRouteMap(city)}
+
       <div className="cityDetails-city-jobType-itemsToCarry">
         <div className="cityDetails-city-jobType">
           <h3>Localización y dificultad</h3>
@@ -375,5 +378,13 @@ const CityDetails = () => {
     </div>
   );
 };
+
+const showRouteMap = (city) =>
+  <RouteMap geolocations={
+    [
+      [city.routeStartLatitude, city.routeStartLongitude],
+      [city.routeEndLatitude, city.routeEndLongitude]
+    ]}
+  />
 
 export default CityDetails;
