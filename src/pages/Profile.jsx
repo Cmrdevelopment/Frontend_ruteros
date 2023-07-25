@@ -62,6 +62,18 @@ const Profile = () => {
                   </div>
                 </NavLink>
 
+                <NavLink to="/profile/ProfileCity">
+                  <div className="citys-responsive">
+                    <span>Rutas de Ciudad</span>
+                  </div>
+                </NavLink>
+
+                <NavLink to="/profile/ProfileMountain">
+                  <div className="mountainRoutes-responsive">
+                    <span>Rutas de Montaña</span>
+                  </div>
+                </NavLink>
+
                 <NavLink to="/profile/tecnologias">
                   <div className="tecnologies-responsive">
                     <span>Tecnologías</span>
@@ -142,7 +154,8 @@ const Profile = () => {
               </button>
 
               <button
-                className={`btn-profile ${activeButton === 'Habilities' ? 'active' : ''}`}
+                className={`btn-profile ${activeButton === 'Habilities' ? 'active' : ''
+                  }`}
                 onClick={() => {
                   setActiveButton('Habilities');
                   navigate('/profile/habilities');
@@ -150,6 +163,27 @@ const Profile = () => {
               >
                 🛠 Habilidades
               </button>
+
+              <button
+                className={`btn-profile ${activeButton === 'Citys' ? 'active' : ''}`}
+                onClick={() => {
+                  setActiveButton('Citys');
+                  navigate('/profile/ProfileCity');
+                }}
+              >
+                📋 Rutas de Ciudad
+              </button>
+
+              <button
+                className={`btn-profile ${activeButton === 'MountainRoutes' ? 'active' : ''}`}
+                onClick={() => {
+                  setActiveButton('MountainRoutes');
+                  navigate('/profile/ProfileMountain');
+                }}
+              >
+                📋 Rutas de Montaña
+              </button>
+
               <button
                 className={`btn-profile ${activeButton === 'Delete' ? 'active' : ''}`}
                 onClick={() => {
@@ -182,3 +216,4 @@ export default Profile;
 //   <button className="nav-icon" onClick={handleNav}>
 //   OPCIONES
 // </button>
+
