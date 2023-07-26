@@ -86,14 +86,14 @@ const createCities2 = () => {
       </div>
       <section className="createOffer2-container">
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          <section className="form-container-titulo-tipo-oferta-tecnologias-Uploadfile">
+          <section className="createCity-form-big-container">
             <div>
               <div className="Create_Offer_form-field">
                 <label
                   className={`form-label ${errors.routeName ? 'required-label' : ''}`}
                 ></label>
                 <input
-                  className="input-create-offer-años-salario-ciudad"
+                  className="createCity-input-routeName"
                   {...register('routeName', { required: true })}
                   placeholder="Escribe el nombre de la ruta"
                 />
@@ -104,7 +104,7 @@ const createCities2 = () => {
               <div className="form-field">
                 {/* <label className="form-label">Tipo de oferta</label> */}
                 <select
-                  id="createOffer-select"
+                  id="createCity-select"
                   className={`input-select ${errors.difficulty ? 'required-label' : ''}`}
                   {...register('difficulty', { required: true })}
                 >
@@ -122,7 +122,7 @@ const createCities2 = () => {
               <div className="form-field-one">
                 {/* <label className="form-label">Modalidad de trabajo</label> */}
                 <select
-                  id="createOffer-select"
+                  id="createCity-select"
                   className={`input-select ${errors.routeState ? 'required-label' : ''}`}
                   {...register('routeState', { required: true })}
                 >
@@ -146,7 +146,7 @@ const createCities2 = () => {
               </label>
               <div className="createCity-itemsToCarry-container">
                 {itemsToCarryArr.map((itemToCarry, index) => (
-                  <figure key={index} className="tecnologia-item" id={itemToCarry.name}>
+                  <figure key={index} className="createCity-itemToCarry-container" id={itemToCarry.name}>
                     <div className="image-container">
                       <img
                         className="tech-image"
@@ -171,7 +171,7 @@ const createCities2 = () => {
             <div className="form-field-four_Uploadfile">
               <Uploadfile />
             </div>
-            <div className="form-container-años-salario-ciudad">
+            <div className="form-container-duration-distance-localization">
               <div className="form-field">
                 <label
                   className={`form-label ${errors.routeDistance ? 'required-label' : ''}`}
@@ -179,7 +179,7 @@ const createCities2 = () => {
 
                 <input
                   type="number"
-                  className="input-create-offer-años-salario-ciudad"
+                  className="createCity-input backgroundColor"
                   {...register('routeDuration', { required: false })}
                   placeholder="Duración de la ruta"
                 />
@@ -194,7 +194,7 @@ const createCities2 = () => {
                 ></label>
                 <input
                   type="number"
-                  className="input-create-offer-años-salario-ciudad"
+                  className="createCity-input backgroundColor"
                   {...register('routeDistance', { required: true })}
                   placeholder="Distancia de la Ruta"
                 />
@@ -208,7 +208,7 @@ const createCities2 = () => {
                   className={`form-label ${errors.routeLocation ? 'required-label' : ''}`}
                 ></label>
                 <input
-                  className="input-create-offer-años-salario-ciudad"
+                  className="createCity-input backgroundColor"
                   {...register('routeLocation', { required: true })}
                   placeholder="Localización de la ruta"
                 />
@@ -220,10 +220,11 @@ const createCities2 = () => {
             </div>
           </section>
           <section className='form-route-start-end-geolocalization-container'>
+
             <input
               type="number"
               step="any"
-              className="input-create-cityRoute-geolocalization"
+              className="input-create-cityRoute-geolocalization backgroundColor"
               {...register('routeStartLatitude', { required: true })}
               placeholder="Latitud Comienzo Ruta"
               value="41.374663896520715"
@@ -232,47 +233,51 @@ const createCities2 = () => {
             <input
               type="number"
               step="any"
-              className="input-create-cityRoute-geolocalization"
-              {...register('routeEndLatitude', { required: true })}
-              placeholder="Latitud Fin Ruta"
-              value="41.367221067676326"
-            />
-            <input
-              type="number"
-              step="any"
-              className="input-create-cityRoute-geolocalization"
+              className="input-create-cityRoute-geolocalization backgroundColor"
               {...register('routeStartLongitude', { required: true })}
               placeholder="Longitud Comienzo Ruta"
               value="2.10063376682015"
             />
+
             <input
               type="number"
               step="any"
-              className="input-create-cityRoute-geolocalization"
+              className="input-create-cityRoute-geolocalization backgroundColor"
+              {...register('routeEndLatitude', { required: true })}
+              placeholder="Latitud Fin Ruta"
+              value="41.367221067676326"
+            />
+
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization backgroundColor"
               {...register('routeEndLongitude', { required: true })}
               placeholder="Longitud Fin Ruta"
               value="2.095904339000168"
             />
           </section>
-          <section className="form-container-titulo-descripción-responsabilidades-requisitos-remuneracion">
-            <div className="form-container-descripcion-ganeral-responsabilidades">
-              <div className="form-field">
-                <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
-                ></label>
+          {/* <section className="form-container-titulo-descripción-responsabilidades-requisitos-remuneracion"> */}
 
-                <textarea
-                  className="input-create-offer-dos"
-                  {...register('descriptionGeneral', { required: true })}
-                  placeholder="Descripción general"
-                ></textarea>
-                {errors.descriptionGeneral && (
-                  <p className="error-message">Este campo es obligatorio</p>
-                )}
-              </div>
 
-              {/* <div className="form-field">
+          <section>
+            {/* <div className="form-field"> */}
+            <div className="createCity-textarea-route-description">
+              <label
+                className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+              ></label>
+
+              <textarea
+                className="createCity-descriptionGeneral backgroundColor"
+                {...register('descriptionGeneral', { required: true })}
+                placeholder="Descripción general"
+              ></textarea>
+              {errors.descriptionGeneral && (
+                <p className="error-message">Este campo es obligatorio</p>
+              )}
+            </div>
+
+            {/* <div className="form-field">
                 <label
                   className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
                     }`}
@@ -286,7 +291,6 @@ const createCities2 = () => {
                   <p className="error-message">Este campo es obligatorio</p>
                 )}
               </div> */}
-            </div>
             {/* <div className="form-container-descripcion-requisitos-remuneracion">
               <div className="form-field">
                 <label

@@ -1,47 +1,67 @@
+.backgroundColor {
+  background-color: #d5e0f4;
+}
+
 .crear-oferta-titulo {
   margin: 0 0 25px 0;
 }
 
-.form-container-titulo-tipo-oferta-tecnologias-Uploadfile {
+.createCity-input {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  border: 2px solid #cecfd0;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+
+.form-route-start-end-geolocalization-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 0px solid red;
+}
+
+/* .form-container-titulo-tipo-oferta-tecnologias-Uploadfile {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  border: 1px solid #cecfd0;
+  border: 0px solid #cecfd0;
+  padding: 0 20px;
+  border-radius: 12px;
+} */
+
+.form-container-duration-distance-localization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0px solid red;
+}
+
+
+.createCity-form-big-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 0px solid #cecfd0;
   padding: 0 20px;
   border-radius: 12px;
 }
 
-.form-container-años-salario-ciudad {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-container-titulo-tipo-oferta-tecnologias-Uploadfile {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-}
-
 .input-select {
+  background-color: #d5e0f4;
   border-radius: 12px;
-}
-
-.form-container-titulo-descripción-responsabilidades-requisitos-remuneracion {
-  display: flex;
-  justify-content: center;
-  border: 1px solid #cecfd0;
-  gap: 12px;
-  margin-top: 25px;
-  padding: 0 0 12px 0;
-  border-radius: 12px;
-}
-
-.form-container-descripcion-ganeral-responsabilidades {
-  width: 50%;
 }
 
 .form-container-descripcion-requisitos-remuneracion {
@@ -64,6 +84,7 @@
 }
 
 #oferta-h3-general {
+  margin-top: 2rem;
   font-weight: 800;
   font-size: bold;
   letter-spacing: 1px;
@@ -80,6 +101,11 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  border: 0px solid red;
+}
+
+.createCity-textarea-route-description {
+  width: 76vw;
 }
 
 .textarea {
@@ -99,9 +125,10 @@
 .form-field-two {
   margin-bottom: 30px;
   margin-top: 30px;
+  border: 0px solid red;
 }
 
-#createOffer-select {
+#createCity-select {
   margin-top: 20px;
   width: 350px;
   height: 44px;
@@ -119,30 +146,57 @@
   margin-top: 5px;
   overflow: auto;
   height: 180px;
-  width: 300px;
+  width: 350px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  background-color: #d5e0f4;
   gap: 0.5rem;
   border: 2px solid #cecfd0;
   border-radius: 5px;
   padding: 1rem;
 }
 
-.input-create-offer-años-salario-ciudad {
+.createCity-itemToCarry-container {
+  height: 100px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #cecfd0;
+}
+
+.input-create-cityRoute-geolocalization {
   height: 30px;
+  width: 328px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  border: 2px solid #cecfd0;
   border-radius: 12px;
   padding: 20px;
   font-size: 16px;
   color: black;
   text-align: center;
+  border: 2px solid #cecfd0;
 }
 
-.input-create-offer-dos {
+.createCity-input-routeName {
+  height: 30px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  background-color: #d5e0f4;
+  border: 2px solid #cecfd0;
+}
+
+.createCity-descriptionGeneral {
   height: 90px;
   display: flex;
   justify-content: center;
@@ -151,6 +205,7 @@
   padding: 12px;
   margin-top: 7px;
   border: 2px solid #cecfd0;
+  /* border: 2px solid red; */
   border-radius: 12px;
   padding: 20px;
   font-size: 16px;
@@ -184,4 +239,20 @@
 
 .form-field-four {
   margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-route-start-end-geolocalization-container {
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+
+  .input-create-cityRoute-geolocalization {
+    width: 350px;
+  }
+
+  .createCity-textarea-route-description {
+    margin: 0 auto;
+    width: 95vw;
+  }
 }
