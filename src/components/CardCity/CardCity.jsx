@@ -1,5 +1,6 @@
 import './CardCity.css';
 
+import { FcClock } from 'react-icons/fc';
 // import { FaMapMarker } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
@@ -48,9 +49,16 @@ const CardCity = ({ city }) => {
           <div className="city-Info-routeState-routeDistance-routeDuration">
             <p className="">{city.routeState}</p>
             <p className="city-Info-distance">{city.routeDistance} km</p>
-            <p className="city-Info-distance">{city.routeDuration} Horas</p>
+            <p className="city-Info-routeDuration">
+              {' '}
+              <FcClock />
+              {city.routeDuration} Horas
+            </p>
             <p className="">{city.difficulty}</p>
-            <p className="">{city.routeLocation}</p>
+            <p className="">
+              {' '}
+              <FcClock /> {city.routeLocation}
+            </p>
           </div>
         </div>
       </button>
