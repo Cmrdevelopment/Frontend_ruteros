@@ -65,7 +65,9 @@ const CityRoutesCreated = () => {
                 <select
                   className="select-offer-change-state"
                   value={CityRoute.routeState}
-                  onChange={(e) => handleCityRouteStateChange(CityRoute._id, e.target.value)}
+                  onChange={(e) =>
+                    handleCityRouteStateChange(CityRoute._id, e.target.value)
+                  }
                 >
                   <option value="Close">Close</option>
                   <option value="Suspended">Suspended</option>
@@ -73,14 +75,16 @@ const CityRoutesCreated = () => {
                 </select>
               </p>
               {/* <p>Equipo recomendado: {mountainRoute.itemsToCarry.join(', ')}</p> */}
-              <DeleteCityRouteButton id={CityRoute._id} CityRoute={CityRoute} setCityRoutes={setCityRoutes} />
+              <DeleteCityRouteButton
+                id={CityRoute._id}
+                CityRoute={CityRoute}
+                setCityRoutes={setCityRoutes}
+              />
             </li>
           ))}
         </ul>
       ) : (
-        <p className="offer-create-container_general_no_ofertas">
-          No hay rutas creadas.
-        </p>
+        <p className="offer-create-container_general_no_ofertas">No hay rutas creadas.</p>
       )}
     </section>
   );

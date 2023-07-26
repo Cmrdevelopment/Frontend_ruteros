@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
 
 import {
-  toggleInterestedCityToUser,
   getCityFollowingStatus,
+  toggleInterestedCityToUser,
 } from '../../services/API_proyect/city.service';
 
 const ToggleBtnFollowCity = ({ cityToFollowId }) => {

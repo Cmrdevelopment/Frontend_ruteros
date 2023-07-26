@@ -91,12 +91,12 @@
   gap: 12px;
 }
 
-.city-Info-name{
-  color: #F70759;
+.city-Info-name {
+  color: #f70759;
   font-weight: 750;
 }
 
-.city_ToggleBtnFollowUser{
+.city_ToggleBtnFollowUser {
   position: relative;
   z-index: 5;
   margin-top: -23px;
@@ -113,7 +113,7 @@
 
 .city-Info-descriptionGeneral {
   width: 750px;
-  color:#676969;
+  color: #676969;
   font-weight: 500;
   text-align: justify;
   text-overflow: ellipsis;

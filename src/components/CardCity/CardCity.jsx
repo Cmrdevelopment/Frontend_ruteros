@@ -1,6 +1,6 @@
 import './CardCity.css';
 
-import { FaMapMarker } from 'react-icons/fa';
+// import { FaMapMarker } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 import ReadOnlyCityRating from '../ratings/ReadOnlyCityRating/ReadOnlyCityRating';

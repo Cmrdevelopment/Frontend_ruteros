@@ -80,9 +80,7 @@ const createCities2 = () => {
       <div className="crear-oferta-titulo">
         <h3 className="createCity-h3-general">¡Crea tu</h3>
         <p> </p>
-        <h3 className="createCity-h3-general createCity-h3">
-          &nbsp; Ruta de Ciudad!
-        </h3>
+        <h3 className="createCity-h3-general createCity-h3">&nbsp; Ruta de Ciudad!</h3>
       </div>
       <section className="createOffer2-container">
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -90,7 +88,9 @@ const createCities2 = () => {
             <div>
               <div className="Create_Offer_form-field">
                 <label
-                  className={`createCity-form-label ${errors.routeName ? 'required-label' : ''}`}
+                  className={`createCity-form-label ${
+                    errors.routeName ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   className="createCity-input-routeName"
@@ -105,7 +105,9 @@ const createCities2 = () => {
                 {/* <label className="createCity-form-label">Tipo de oferta</label> */}
                 <select
                   id="createCity-select"
-                  className={`input-select backgroundColor ${errors.difficulty ? 'required-label' : ''}`}
+                  className={`input-select backgroundColor ${
+                    errors.difficulty ? 'required-label' : ''
+                  }`}
                   {...register('difficulty', { required: true })}
                 >
                   {difficulty.map((type, index) => (
@@ -123,7 +125,9 @@ const createCities2 = () => {
                 {/* <label className="createCity-form-label">Modalidad de trabajo</label> */}
                 <select
                   id="createCity-select"
-                  className={`input-select backgroundColor ${errors.routeState ? 'required-label' : ''}`}
+                  className={`input-select backgroundColor ${
+                    errors.routeState ? 'required-label' : ''
+                  }`}
                   {...register('routeState', { required: true })}
                 >
                   {routeState.map((state, index) => (
@@ -138,17 +142,20 @@ const createCities2 = () => {
               </div>
             </div>
             <div className="form-field-two">
-
               {/* Items to pick up to to carry to this route */}
 
               <label
-                className={`createCity-form-label ${errors.arrayItemsToCarry ? 'required-label' : ''
-                  }`}
-              >
-              </label>
+                className={`createCity-form-label ${
+                  errors.arrayItemsToCarry ? 'required-label' : ''
+                }`}
+              ></label>
               <div className="createCity-itemsToCarry-container">
                 {itemsToCarryArr.map((itemToCarry, index) => (
-                  <figure key={index} className="createCity-itemToCarry-container" id={itemToCarry.name}>
+                  <figure
+                    key={index}
+                    className="createCity-itemToCarry-container"
+                    id={itemToCarry.name}
+                  >
                     <div className="image-container">
                       <img
                         className="tech-image"
@@ -177,7 +184,9 @@ const createCities2 = () => {
             <div className="createCity-form-container-duration-distance-localization">
               <div className="form-field">
                 <label
-                  className={`createCity-form-label ${errors.routeDistance ? 'required-label' : ''}`}
+                  className={`createCity-form-label ${
+                    errors.routeDistance ? 'required-label' : ''
+                  }`}
                 ></label>
 
                 <input
@@ -193,7 +202,9 @@ const createCities2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createCity-form-label ${errors.routeDistance ? 'required-label' : ''}`}
+                  className={`createCity-form-label ${
+                    errors.routeDistance ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   type="number"
@@ -208,7 +219,9 @@ const createCities2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createCity-form-label ${errors.routeLocation ? 'required-label' : ''}`}
+                  className={`createCity-form-label ${
+                    errors.routeLocation ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   className="createCity-input backgroundColor"
@@ -223,8 +236,7 @@ const createCities2 = () => {
             </div>
           </section>
 
-          <section className='form-route-start-end-geolocalization-container'>
-
+          <section className="form-route-start-end-geolocalization-container">
             <input
               type="number"
               step="any"
@@ -265,7 +277,9 @@ const createCities2 = () => {
           <section>
             <div className="createCity-textarea-route-description">
               <label
-                className={`createCity-form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                className={`createCity-form-label ${
+                  errors.descriptionGeneral ? 'required-label' : ''
+                }`}
               ></label>
 
               <textarea
@@ -286,7 +300,6 @@ const createCities2 = () => {
               value="Crear Ruta"
             />
           </div>
-
         </form>
       </section>
     </>

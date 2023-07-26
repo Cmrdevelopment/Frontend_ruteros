@@ -2,6 +2,7 @@ import './CreateMountainRoute2.css';
 
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+
 import { itemsToCarryArr } from '../../data/object.itemsToCarry';
 import handleMountainRouteCreationResponse from '../../hooks/useCreateMountainRoute';
 import { createMountainRoute } from '../../services/API_proyect/mountainRoute.service';
@@ -91,7 +92,9 @@ const createMountainRoute2 = () => {
             <div>
               <div className="Create_Offer_form-field">
                 <label
-                  className={`createMountainRoute-form-label ${errors.routeName ? 'required-label' : ''}`}
+                  className={`createMountainRoute-form-label ${
+                    errors.routeName ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   className="createMountainRoute-input-routeName backgroundColor"
@@ -106,7 +109,9 @@ const createMountainRoute2 = () => {
                 {/* <label className="createMountainRoute-form-label">Tipo de oferta</label> */}
                 <select
                   id="createMountainRoute-select"
-                  className={`input-select backgroundColor ${errors.difficulty ? 'required-label' : ''}`}
+                  className={`input-select backgroundColor ${
+                    errors.difficulty ? 'required-label' : ''
+                  }`}
                   {...register('difficulty', { required: true })}
                 >
                   {difficulty.map((type, index) => (
@@ -124,7 +129,9 @@ const createMountainRoute2 = () => {
                 {/* <label className="createMountainRoute-form-label">Modalidad de trabajo</label> */}
                 <select
                   id="createMountainRoute-select"
-                  className={`input-select backgroundColor ${errors.routeState ? 'required-label' : ''}`}
+                  className={`input-select backgroundColor ${
+                    errors.routeState ? 'required-label' : ''
+                  }`}
                   {...register('routeState', { required: true })}
                 >
                   {routeState.map((state, index) => (
@@ -139,15 +146,15 @@ const createMountainRoute2 = () => {
               </div>
             </div>
             <div className="form-field-two">
-
               {/* Items to pick up to to carry to this route */}
 
               <label
-                className={`createMountainRoute-form-label ${errors.technologies ? 'required-label' : ''}`}
-              >
-              </label>
+                className={`createMountainRoute-form-label ${
+                  errors.technologies ? 'required-label' : ''
+                }`}
+              ></label>
 
-              <div className='createMountainRoute-itemsToCarry-container'>
+              <div className="createMountainRoute-itemsToCarry-container">
                 {itemsToCarryArr.map((itemToCarry, index) => (
                   <figure key={index} className="tecnologia-item" id={itemToCarry.name}>
                     <div className="image-container">
@@ -176,10 +183,12 @@ const createMountainRoute2 = () => {
               <Uploadfile />
             </div>
 
-            <div className='createMountainRoute-form-container-duration-distance-localization'>
+            <div className="createMountainRoute-form-container-duration-distance-localization">
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${errors.routeDistance ? 'required-label' : ''}`}
+                  className={`createMountainRoute-form-label ${
+                    errors.routeDistance ? 'required-label' : ''
+                  }`}
                 ></label>
 
                 <input
@@ -195,7 +204,9 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${errors.routeDistance ? 'required-label' : ''}`}
+                  className={`createMountainRoute-form-label ${
+                    errors.routeDistance ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   type="number"
@@ -210,7 +221,9 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${errors.routeLocation ? 'required-label' : ''}`}
+                  className={`createMountainRoute-form-label ${
+                    errors.routeLocation ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   className="createCity-input backgroundColor"
@@ -225,8 +238,7 @@ const createMountainRoute2 = () => {
             </div>
           </section>
 
-          <section className='form-route-start-end-geolocalization-container'>
-
+          <section className="form-route-start-end-geolocalization-container">
             <input
               type="number"
               step="any"
@@ -267,7 +279,9 @@ const createMountainRoute2 = () => {
           <section>
             <div className="createMountainRoute-textarea-route-description">
               <label
-                className={`createMountainRoute-form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                className={`createMountainRoute-form-label ${
+                  errors.descriptionGeneral ? 'required-label' : ''
+                }`}
               ></label>
 
               <textarea
