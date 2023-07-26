@@ -20,25 +20,37 @@ const CardCity = ({ city }) => {
           })
         }
       >
-        <img className="city-Info-img" src={city.image} alt={`city's ${city.city} pic`} />
-        <div className="">
-          <ToggleBtnFollowUser userToFollowId={city._id} />
-        </div>
-        <div className="">
-          {city.city}
-          <p className="">
-            {' '}
-            <FaMapMarker /> Ubicado/a en {city.city}
-          </p>
-        </div>
-        <div className="city-Info-difficulty-descriptionGeneral-routeLocation-valoraciones">
-          <p className="city-Info-descriptionGeneral">{city.descriptionGeneral}</p>
-          <h3 className="">{city.difficulty}</h3>
-          <p className="">{city.routeLocation}</p>
-          <div className="">
+        <div className="city-Info-img-valoraciones">
+          <img
+            className="city-Info-img"
+            src={city.image}
+            alt={`city's ${city.city} pic`}
+          />
+          <div>
             {/*--- Este componente hace la media de las estrellas ---*/}
             <ReadOnlyCityRating city={city} />
             <p>({city?.ratings?.length} valoraciones)</p>
+            {city.city}
+          </div>
+        </div>
+        <div className="city-Info-toda_la_carta">
+          <div className="city-Info-routeName-descriptionGeneral">
+            <div>
+              <h4 className="city-Info-name">{city.routeName}</h4>
+              <p className="city-Info-descriptionGeneral">{city.descriptionGeneral}</p>
+            </div>
+            <div>
+              <div className="city_ToggleBtnFollowUser">
+                <ToggleBtnFollowUser userToFollowId={city._id} />
+              </div>
+            </div>
+          </div>
+          <div className="city-Info-routeState-routeDistance-routeDuration">
+            <p className="">{city.routeState}</p>
+            <p className="city-Info-distance">{city.routeDistance} km</p>
+            <p className="city-Info-distance">{city.routeDuration} Horas</p>
+            <p className="">{city.difficulty}</p>
+            <p className="">{city.routeLocation}</p>
           </div>
         </div>
       </button>

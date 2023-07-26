@@ -2,17 +2,49 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: first baseline;
-  width: 1100px;
   min-height: 230px;
   max-height: 230px;
   border: 1px solid #e3e4e5;
   border-radius: 0.9rem;
-  padding: 0 0 0 0;
-  background-color: white;
+  background-color: #bfd6ff;
   color: black;
   transition: transform 0.2s;
   margin-bottom: 25px;
   box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
+}
+
+.city-Info:hover {
+  background-color: #b3c8ec;
+  transition: transform 0.2s;
+  animation: changeColor 2s ease infinite;
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: #b3e9ec;
+  }
+  50% {
+    background-color: #b3ecc4;
+  }
+  100% {
+    background-color: #e8ecb3;
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 .city-card-btn {
@@ -20,8 +52,8 @@
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: first baseline;
+  z-index: 1;
 }
 
 .city-Info-img {
@@ -30,29 +62,60 @@
   max-height: 140px;
   object-fit: cover;
   border-radius: 0.7rem;
-  
   cursor: pointer;
-  margin-left: 30px;
   box-shadow: 2px 2px 4px rgba(70, 189, 149, 0.7);
-  transition: transform 0.2s;  
+  transition: transform 0.2s;
+}
+
+.city-Info-img-valoraciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.city-Info-toda_la_carta {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.city-Info-routeName-descriptionGeneral {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  font-weight: 750;
+  gap: 12px;
+}
+
+.city-Info-name{
+  color: #F70759;
+  font-weight: 750;
+}
+
+.city_ToggleBtnFollowUser {
+  margin-top: -23px;
+  margin-right: 9px;
   z-index: 3;
 }
 
+.city-Info-routeState-routeDistance-routeDuration {
+  display: flex;
+  gap: 12px;
+}
+
 .city-Info-descriptionGeneral {
-  width: 250px;
+  width: 750px;
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
   overflow: hidden; /* Oculta el contenido que excede el ancho del contenedor */
   text-overflow: ellipsis;
 }
 
-.city-Info-Toggle-Heart {
-  position: absolute;
-  z-index: 1;
-  cursor: pointer;
-  transform: scale(1);
-  /*Tamaño del corazon*/
-  margin: 15px;
-}
+
+
 
 .city-Info-Ubicado {
   font-size: 12px;
