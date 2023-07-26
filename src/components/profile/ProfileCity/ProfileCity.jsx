@@ -1,9 +1,10 @@
 import './ProfileCity.css';
 
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-// import OffersCreated from '../offersCreated/offersCreated';
-// import OffersInterested from '../OffersInterested/offersInterested';
+import CityRoutesCreated from '../../CityRoutesCreated/CityRoutesCreated';
+import CityRoutesInterested from '../../CityRoutesInterested/cityRoutesInterested';
 
 const ProfileCity = () => {
   const [showCreated, setShowCreated] = useState(true);
@@ -17,15 +18,23 @@ const ProfileCity = () => {
   };
 
   return (
+    
+
     <section className="Offers-Btn-filter">
+      
       <button className="btn_profile_general-my-expe" onClick={handleShowCreated}>
-        Mis ofertas
+        Mis rutas
       </button>
+      
+      <NavLink to="/createCities2">
+        <button className="offer-button-Create">Crear Ruta</button>
+      </NavLink>
+      
       <button className="btn_profile_general-my-expe" onClick={handleShowInterested}>
-        Ofertas que sigo
+        Rutas que sigo
       </button>
-      {/* {showCreated ? <OffersCreated /> : <OffersInterested />} */}
-    </section>
+      {showCreated ? <CityRoutesCreated /> : <CityRoutesInterested />}
+      </section>
   );
 };
 

@@ -11,10 +11,7 @@ const MountainRoutesCreated = () => {
   const [mountainRoutes, setMountainRoutes] = useState([]);
   const { user } = useAuth();
 
-  const handleMountainRouteStateChange = async (
-    mountainRouteId,
-    newMountainRouteState,
-  ) => {
+  const handleMountainRouteStateChange = async (mountainRouteId, newMountainRouteState) => {
     try {
       const formData = new FormData();
       formData.append('mountainRouteState', newMountainRouteState);
@@ -68,9 +65,7 @@ const MountainRoutesCreated = () => {
                 <select
                   className="select-offer-change-state"
                   value={mountainRoute.routeState}
-                  onChange={(e) =>
-                    handleMountainRouteStateChange(mountainRoute._id, e.target.value)
-                  }
+                  onChange={(e) => handleMountainRouteStateChange(mountainRoute._id, e.target.value)}
                 >
                   <option value="Close">Close</option>
                   <option value="Suspended">Suspended</option>
@@ -78,16 +73,14 @@ const MountainRoutesCreated = () => {
                 </select>
               </p>
               {/* <p>Equipo recomendado: {mountainRoute.itemsToCarry.join(', ')}</p> */}
-              <DeleteMountainRouteButton
-                id={mountainRoute._id}
-                mountainRoutess={mountainRoutes}
-                setMountainRoutes={setMountainRoutes}
-              />
+              <DeleteMountainRouteButton id={mountainRoute._id} mountainRoutes={mountainRoutes} setMountainRoutes={setMountainRoutes} />
             </li>
           ))}
         </ul>
       ) : (
-        <p className="offer-create-container_general_no_ofertas">No hay rutas creadas.</p>
+        <p className="offer-create-container_general_no_ofertas">
+          No hay rutas creadas.
+        </p>
       )}
     </section>
   );
