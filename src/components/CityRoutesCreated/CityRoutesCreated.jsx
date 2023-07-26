@@ -39,7 +39,7 @@ const CityRoutesCreated = () => {
 
         console.log(userCityRoute);
         if (userCityRoute) {
-          setCityRoutes(userCityRoute.data.citiesCreated);
+          setCityRoutes(userCityRoute.data.cityRoutesCreated);
         }
       } catch (error) {
         console.error('Error al obtener el usuario:', error);
