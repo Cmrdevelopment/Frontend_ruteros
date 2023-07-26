@@ -21,6 +21,7 @@ import Tecnologias from './components/Tecnologias/Tecnologias';
 import { AuthContextProvider } from './contexts/authContext.jsx';
 import AboutUs from './pages/AboutUs/AboutUs';
 import CheckCode from './pages/CheckCode.jsx';
+import CityDetails from './pages/CityDetails/CityDetails';
 import Citys from './pages/Citys/Citys.jsx';
 import ForgotPassword from './pages/ForgotPassword.jsx';
 import { Home } from './pages/Home.jsx';
@@ -33,7 +34,6 @@ import Profile from './pages/Profile';
 import Register from './pages/Register.jsx';
 import RuteroDetails from './pages/RuteroDetails/RuteroDetails';
 import Ruteros from './pages/Ruteros/Ruteros.jsx';
-import CityDetails from './pages/CityDetails/CityDetails';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/">
