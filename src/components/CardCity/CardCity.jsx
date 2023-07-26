@@ -4,7 +4,7 @@ import { FaMapMarker } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 import ReadOnlyCityRating from '../ratings/ReadOnlyCityRating/ReadOnlyCityRating';
-import ToggleBtnFollowUser from '../ToggleBtnFollowUser/ToggleBtnFollowUser';
+import ToggleBtnFollowCity from '../ToggleBtnFollowCity/ToggleBtnFollowCity';
 
 const CardCity = ({ city }) => {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ const CardCity = ({ city }) => {
             </div>
             <div>
               <div className="city_ToggleBtnFollowUser">
-                <ToggleBtnFollowUser userToFollowId={city._id} />
+                <ToggleBtnFollowCity cityToFollowId={city._id} />
               </div>
             </div>
           </div>
