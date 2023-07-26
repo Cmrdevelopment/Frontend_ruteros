@@ -119,4 +119,34 @@ export const habilitiesArr = [
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690052665/UserFTProyect/habilities/buen_rollo_weigrt.png',
   },
+  {
+    name: 'Organización',
+    image:
+      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690397633/UserFTProyect/habilities/organization-skills_vpldo8.png',
+  },
+  {
+    name: 'Gest. tiempo',
+    image:
+      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690397803/UserFTProyect/habilities/time-mnagment_hdloec.png',
+  },
+  {
+    name: 'Presupuesto',
+    image:
+      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690397947/UserFTProyect/habilities/budget_v868f2.png',
+  },
+  {
+    name: 'Leer mapas',
+    image:
+      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690398052/UserFTProyect/habilities/map-reading_dro6h1.png',
+  },
+  {
+    name: 'Negociar',
+    image:
+      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690398180/UserFTProyect/habilities/negotiation_qopsfb.png',
+  },
+  {
+    name: 'Fotografía',
+    image:
+      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690398543/UserFTProyect/habilities/photographic-skills_qevuvf.png',
+  },
 ];

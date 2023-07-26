@@ -78,9 +78,9 @@ const createCities2 = () => {
   return (
     <>
       <div className="crear-oferta-titulo">
-        <h3 id="oferta-h3-general">¡Crea tu</h3>
+        <h3 className="createCity-h3-general">¡Crea tu</h3>
         <p> </p>
-        <h3 id="oferta-h3-general" className="h3-oferta">
+        <h3 className="createCity-h3-general createCity-h3">
           &nbsp; Ruta de Ciudad!
         </h3>
       </div>
@@ -90,7 +90,7 @@ const createCities2 = () => {
             <div>
               <div className="Create_Offer_form-field">
                 <label
-                  className={`form-label ${errors.routeName ? 'required-label' : ''}`}
+                  className={`createCity-form-label ${errors.routeName ? 'required-label' : ''}`}
                 ></label>
                 <input
                   className="createCity-input-routeName"
@@ -101,11 +101,11 @@ const createCities2 = () => {
                   <p className="error-message">Este campo es obligatorio</p>
                 )}
               </div>
-              <div className="form-field">
-                {/* <label className="form-label">Tipo de oferta</label> */}
+              <div className="createCity-form-field">
+                {/* <label className="createCity-form-label">Tipo de oferta</label> */}
                 <select
                   id="createCity-select"
-                  className={`input-select ${errors.difficulty ? 'required-label' : ''}`}
+                  className={`input-select backgroundColor ${errors.difficulty ? 'required-label' : ''}`}
                   {...register('difficulty', { required: true })}
                 >
                   {difficulty.map((type, index) => (
@@ -120,10 +120,10 @@ const createCities2 = () => {
               </div>
 
               <div className="form-field-one">
-                {/* <label className="form-label">Modalidad de trabajo</label> */}
+                {/* <label className="createCity-form-label">Modalidad de trabajo</label> */}
                 <select
                   id="createCity-select"
-                  className={`input-select ${errors.routeState ? 'required-label' : ''}`}
+                  className={`input-select backgroundColor ${errors.routeState ? 'required-label' : ''}`}
                   {...register('routeState', { required: true })}
                 >
                   {routeState.map((state, index) => (
@@ -138,11 +138,13 @@ const createCities2 = () => {
               </div>
             </div>
             <div className="form-field-two">
+
+              {/* Items to pick up to to carry to this route */}
+
               <label
-                className={`form-label ${errors.arrayItemsToCarry ? 'required-label' : ''
+                className={`createCity-form-label ${errors.arrayItemsToCarry ? 'required-label' : ''
                   }`}
               >
-                {/* Items to pick up to to carry to this route */}
               </label>
               <div className="createCity-itemsToCarry-container">
                 {itemsToCarryArr.map((itemToCarry, index) => (
@@ -168,13 +170,14 @@ const createCities2 = () => {
                 <p className="error-message">Este campo es obligatorio</p>
               )}
             </div>
+
             <div className="form-field-four_Uploadfile">
               <Uploadfile />
             </div>
-            <div className="form-container-duration-distance-localization">
+            <div className="createCity-form-container-duration-distance-localization">
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.routeDistance ? 'required-label' : ''}`}
+                  className={`createCity-form-label ${errors.routeDistance ? 'required-label' : ''}`}
                 ></label>
 
                 <input
@@ -190,7 +193,7 @@ const createCities2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.routeDistance ? 'required-label' : ''}`}
+                  className={`createCity-form-label ${errors.routeDistance ? 'required-label' : ''}`}
                 ></label>
                 <input
                   type="number"
@@ -205,7 +208,7 @@ const createCities2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.routeLocation ? 'required-label' : ''}`}
+                  className={`createCity-form-label ${errors.routeLocation ? 'required-label' : ''}`}
                 ></label>
                 <input
                   className="createCity-input backgroundColor"
@@ -219,6 +222,7 @@ const createCities2 = () => {
               </div>
             </div>
           </section>
+
           <section className='form-route-start-end-geolocalization-container'>
 
             <input
@@ -257,14 +261,11 @@ const createCities2 = () => {
               value="2.095904339000168"
             />
           </section>
-          {/* <section className="form-container-titulo-descripción-responsabilidades-requisitos-remuneracion"> */}
-
 
           <section>
-            {/* <div className="form-field"> */}
             <div className="createCity-textarea-route-description">
               <label
-                className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+                className={`createCity-form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
               ></label>
 
               <textarea
@@ -276,52 +277,6 @@ const createCities2 = () => {
                 <p className="error-message">Este campo es obligatorio</p>
               )}
             </div>
-
-            {/* <div className="form-field">
-                <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
-                ></label>
-                <textarea
-                  className="input-create-offer-dos"
-                  {...register('descriptionGeneral', { required: true })}
-                  placeholder="Describe la ruta"
-                ></textarea>
-                {errors.descriptionGeneral && (
-                  <p className="error-message">Este campo es obligatorio</p>
-                )}
-              </div> */}
-            {/* <div className="form-container-descripcion-requisitos-remuneracion">
-              <div className="form-field">
-                <label
-                  className={`form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                    }`}
-                ></label>
-                <textarea
-                  className="input-create-offer-dos"
-                  {...register('descriptionGeneral', { required: true })}
-                  placeholder="Comenta los Requisitos"
-                ></textarea>
-                {errors.descriptionGeneral && (
-                  <p className="error-message">Este campo es obligatorio</p>
-                )}
-              </div>
-
-              <div className="form-field">
-                <label
-                  className={`form-label ${errors.description ? 'required-label' : ''}`}
-                ></label>
-                <textarea
-                  className="input-create-offer-dos"
-                  {...register('descriptionSalary', { required: true })}
-                  placeholder="Comenta sobre la remuneración"
-                ></textarea>
-
-                {errors.description && (
-                  <p className="error-message">Este campo es obligatorio</p>
-                )}
-              </div>
-            </div> */}
           </section>
 
           <div id="btn-offer" className="form-field">
@@ -331,6 +286,7 @@ const createCities2 = () => {
               value="Crear Ruta"
             />
           </div>
+
         </form>
       </section>
     </>

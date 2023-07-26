@@ -40,7 +40,7 @@
   border-radius: 12px;
 } */
 
-.form-container-duration-distance-localization {
+.createCity-form-container-duration-distance-localization {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +60,6 @@
 }
 
 .input-select {
-  background-color: #d5e0f4;
   border-radius: 12px;
 }
 
@@ -79,11 +78,11 @@
   font-family: var(--font-bold);
 }
 
-.h3-oferta {
+.createCity-h3 {
   color: #61d61d;
 }
 
-#oferta-h3-general {
+.createCity-h3-general {
   margin-top: 2rem;
   font-weight: 800;
   font-size: bold;
@@ -112,7 +111,7 @@
   text-align: center;
 }
 
-.form-label {
+.createCity-form-label {
   display: flex;
   justify-content: center;
   align-items: center;

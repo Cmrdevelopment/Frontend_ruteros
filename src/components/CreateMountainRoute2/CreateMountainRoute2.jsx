@@ -2,9 +2,7 @@ import './CreateMountainRoute2.css';
 
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-
-//import { useAuth } from '../../contexts/authContext';
-import { habilitiesArr } from '../../data/object.habilities';
+import { itemsToCarryArr } from '../../data/object.itemsToCarry';
 import handleMountainRouteCreationResponse from '../../hooks/useCreateMountainRoute';
 import { createMountainRoute } from '../../services/API_proyect/mountainRoute.service';
 import Uploadfile from '../Uploadfile';
@@ -12,16 +10,14 @@ import Uploadfile from '../Uploadfile';
 const createMountainRoute2 = () => {
   const [res, setRes] = useState({});
   const [send, setSend] = useState(false);
-  const [arrayHabilities, setArrayHabilities] = useState([]);
+  const [arrayItemsToCarry, setArrayItemsToCarry] = useState([]);
   const difficulty = ['Easy', 'Medium', 'Hard'];
   const routeState = ['Close', 'Abandoned', 'Open'];
-  //const offerStates = ['Close', 'Suspended', 'Open'];
-  //const { user } = useAuth();
 
   const {
     register,
     handleSubmit,
-    //setValue,
+
     formState: { errors },
   } = useForm();
 
@@ -36,12 +32,13 @@ const createMountainRoute2 = () => {
         ...data,
         routeDistance: parseInt(data.routeDistance),
         routeDuration: parseInt(data.routeDuration),
+        routeStartLatitude: parseFloat(data.routeStartLatitude),
+        routeStartLongitude: parseFloat(data.routeStartLongitude),
+        routeEndLatitude: parseFloat(data.routeEndLatitude),
+        routeEndLongitude: parseFloat(data.routeEndLongitude),
         routeState: 'Open',
-        habilities: arrayHabilities,
-        //image: inputfile[0],
-        //images: imageArray[1],
+        itemsToCarry: arrayItemsToCarry,
         images: imageArray,
-        // images: inputfile,
       };
     }
 
@@ -62,8 +59,8 @@ const createMountainRoute2 = () => {
     }
   }, []);
 
-  const createArrayHabilities = ({ target }) => {
-    if (arrayHabilities.includes(target.id)) {
+  const createArrayItemsToCarry = ({ target }) => {
+    if (arrayItemsToCarry.includes(target.id)) {
       setArrayHabilities((value) => {
         const customArray = [];
         value.forEach((element) => {
@@ -72,7 +69,7 @@ const createMountainRoute2 = () => {
         return customArray;
       });
     } else {
-      setArrayHabilities((value) => {
+      setArrayItemsToCarry((value) => {
         const customArray = [...value, target.id];
         return customArray;
       });
@@ -82,9 +79,9 @@ const createMountainRoute2 = () => {
   return (
     <>
       <div className="crear-oferta-titulo">
-        <h3 id="oferta-h3-general">¡Crea tu</h3>
+        <h3 className="createMountainRoute-h3-general">¡Crea tu</h3>
         <p> </p>
-        <h3 id="oferta-h3-general" className="h3-oferta">
+        <h3 className="createMountainRoute-h3-general createMountainRoute-h3">
           &nbsp; Ruta de Montaña!
         </h3>
       </div>
@@ -94,10 +91,10 @@ const createMountainRoute2 = () => {
             <div>
               <div className="Create_Offer_form-field">
                 <label
-                  className={`form-label ${errors.routeName ? 'required-label' : ''}`}
+                  className={`createMountainRoute-form-label ${errors.routeName ? 'required-label' : ''}`}
                 ></label>
                 <input
-                  className="input-create-offer-años-salario-ciudad"
+                  className="createMountainRoute-input-routeName backgroundColor"
                   {...register('routeName', { required: true })}
                   placeholder="Escribe el nombre de la ruta"
                 />
@@ -106,10 +103,10 @@ const createMountainRoute2 = () => {
                 )}
               </div>
               <div className="form-field">
-                {/* <label className="form-label">Tipo de oferta</label> */}
+                {/* <label className="createMountainRoute-form-label">Tipo de oferta</label> */}
                 <select
-                  id="createOffer-select"
-                  className={`input-select ${errors.difficulty ? 'required-label' : ''}`}
+                  id="createMountainRoute-select"
+                  className={`input-select backgroundColor ${errors.difficulty ? 'required-label' : ''}`}
                   {...register('difficulty', { required: true })}
                 >
                   {difficulty.map((type, index) => (
@@ -124,10 +121,10 @@ const createMountainRoute2 = () => {
               </div>
 
               <div className="form-field-one">
-                {/* <label className="form-label">Modalidad de trabajo</label> */}
+                {/* <label className="createMountainRoute-form-label">Modalidad de trabajo</label> */}
                 <select
-                  id="createOffer-select"
-                  className={`input-select ${errors.routeState ? 'required-label' : ''}`}
+                  id="createMountainRoute-select"
+                  className={`input-select backgroundColor ${errors.routeState ? 'required-label' : ''}`}
                   {...register('routeState', { required: true })}
                 >
                   {routeState.map((state, index) => (
@@ -142,47 +139,52 @@ const createMountainRoute2 = () => {
               </div>
             </div>
             <div className="form-field-two">
+
+              {/* Items to pick up to to carry to this route */}
+
               <label
-                className={`form-label ${errors.technologies ? 'required-label' : ''}`}
+                className={`createMountainRoute-form-label ${errors.technologies ? 'required-label' : ''}`}
               >
-                {/* Tecnologías requeridas */}
               </label>
-              <div className="tecnologies-Offer">
-                {habilitiesArr.map((hability, index) => (
-                  <figure key={index} className="tecnologia-item" id={hability.name}>
+
+              <div className='createMountainRoute-itemsToCarry-container'>
+                {itemsToCarryArr.map((itemToCarry, index) => (
+                  <figure key={index} className="tecnologia-item" id={itemToCarry.name}>
                     <div className="image-container">
                       <img
                         className="tech-image"
-                        src={hability.image}
-                        alt={hability.name}
+                        src={itemToCarry.image}
+                        alt={itemToCarry.name}
                       />
                     </div>
-                    <p className="tech-image-text">{hability.name}</p>
+                    <p className="tech-image-text">{itemToCarry.name}</p>
                     <input
                       type="checkbox"
-                      name={hability.name}
-                      id={hability.name}
-                      onChange={createArrayHabilities}
+                      name={itemToCarry.name}
+                      id={itemToCarry.name}
+                      onChange={createArrayItemsToCarry}
                     />
                   </figure>
                 ))}
               </div>
-              {errors.habilitiesArr && (
+              {errors.arrayItemsToCarry && (
                 <p className="error-message">Este campo es obligatorio</p>
               )}
             </div>
+
             <div className="form-field-four_Uploadfile">
               <Uploadfile />
             </div>
-            <div className="form-container-años-salario-ciudad">
+
+            <div className='createMountainRoute-form-container-duration-distance-localization'>
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.routeDistance ? 'required-label' : ''}`}
+                  className={`createMountainRoute-form-label ${errors.routeDistance ? 'required-label' : ''}`}
                 ></label>
 
                 <input
                   type="number"
-                  className="input-create-offer-años-salario-ciudad"
+                  className="createMountainRoute-input backgroundColor"
                   {...register('routeDuration', { required: false })}
                   placeholder="Duración de la ruta"
                 />
@@ -193,11 +195,11 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.routeDistance ? 'required-label' : ''}`}
+                  className={`createMountainRoute-form-label ${errors.routeDistance ? 'required-label' : ''}`}
                 ></label>
                 <input
                   type="number"
-                  className="input-create-offer-años-salario-ciudad"
+                  className="createCity-input backgroundColor"
                   {...register('routeDistance', { required: true })}
                   placeholder="Distancia de la Ruta"
                 />
@@ -208,10 +210,10 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`form-label ${errors.routeLocation ? 'required-label' : ''}`}
+                  className={`createMountainRoute-form-label ${errors.routeLocation ? 'required-label' : ''}`}
                 ></label>
                 <input
-                  className="input-create-offer-años-salario-ciudad"
+                  className="createCity-input backgroundColor"
                   {...register('routeLocation', { required: true })}
                   placeholder="Localización de la ruta"
                 />
@@ -222,72 +224,60 @@ const createMountainRoute2 = () => {
               </div>
             </div>
           </section>
-          <section className="form-container-titulo-descripción-responsabilidades-requisitos-remuneracion">
-            <div className="form-container-descripcion-ganeral-responsabilidades">
-              <div className="form-field">
-                <label
-                  className={`form-label ${
-                    errors.descriptionGeneral ? 'required-label' : ''
-                  }`}
-                ></label>
 
-                <textarea
-                  className="input-create-offer-dos"
-                  {...register('descriptionGeneral', { required: true })}
-                  placeholder="Descripción general"
-                ></textarea>
-                {errors.descriptionGeneral && (
-                  <p className="error-message">Este campo es obligatorio</p>
-                )}
-              </div>
+          <section className='form-route-start-end-geolocalization-container'>
 
-              <div className="form-field">
-                <label
-                  className={`form-label ${
-                    errors.descriptionGeneral ? 'required-label' : ''
-                  }`}
-                ></label>
-                <textarea
-                  className="input-create-offer-dos"
-                  {...register('descriptionGeneral', { required: true })}
-                  placeholder="Describe la ruta"
-                ></textarea>
-                {errors.descriptionGeneral && (
-                  <p className="error-message">Este campo es obligatorio</p>
-                )}
-              </div>
-            </div>
-            <div className="form-container-descripcion-requisitos-remuneracion">
-              <div className="form-field">
-                <label
-                  className={`form-label ${
-                    errors.descriptionGeneral ? 'required-label' : ''
-                  }`}
-                ></label>
-                <textarea
-                  className="input-create-offer-dos"
-                  {...register('descriptionGeneral', { required: true })}
-                  placeholder="Comenta los Requisitos"
-                ></textarea>
-                {errors.descriptionGeneral && (
-                  <p className="error-message">Este campo es obligatorio</p>
-                )}
-              </div>
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization backgroundColor"
+              {...register('routeStartLatitude', { required: true })}
+              placeholder="Latitud Comienzo Ruta"
+              value="41.374663896520715"
+            />
 
-              <div className="form-field">
-                <label
-                  className={`form-label ${errors.description ? 'required-label' : ''}`}
-                ></label>
-                <textarea
-                  className="input-create-offer-dos"
-                  {...register('descriptionSalary', { required: true })}
-                  placeholder="Comenta sobre la remuneración"
-                ></textarea>
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization backgroundColor"
+              {...register('routeStartLongitude', { required: true })}
+              placeholder="Longitud Comienzo Ruta"
+              value="2.10063376682015"
+            />
 
-                {errors.description && (
-                  <p className="error-message">Este campo es obligatorio</p>
-                )}
-              </div>
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization backgroundColor"
+              {...register('routeEndLatitude', { required: true })}
+              placeholder="Latitud Fin Ruta"
+              value="41.367221067676326"
+            />
+
+            <input
+              type="number"
+              step="any"
+              className="input-create-cityRoute-geolocalization backgroundColor"
+              {...register('routeEndLongitude', { required: true })}
+              placeholder="Longitud Fin Ruta"
+              value="2.095904339000168"
+            />
+          </section>
+
+          <section>
+            <div className="createMountainRoute-textarea-route-description">
+              <label
+                className={`createMountainRoute-form-label ${errors.descriptionGeneral ? 'required-label' : ''}`}
+              ></label>
+
+              <textarea
+                className="createMountainRoute-descriptionGeneral backgroundColor"
+                {...register('descriptionGeneral', { required: true })}
+                placeholder="Descripción general"
+              ></textarea>
+              {errors.descriptionGeneral && (
+                <p className="error-message">Este campo es obligatorio</p>
+              )}
             </div>
           </section>
 
