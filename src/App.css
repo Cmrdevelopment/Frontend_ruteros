@@ -22,7 +22,8 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(191, 214, 255);
+  /* background-color: rgb(191, 214, 255); */
+  border-color: #fffffe;
 }
 
 #root {

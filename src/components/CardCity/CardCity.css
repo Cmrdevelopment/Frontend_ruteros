@@ -6,7 +6,7 @@
   max-height: 230px;
   border: 1px solid #e3e4e5;
   border-radius: 0.9rem;
-  background-color: #bfd6ff;
+  background-color: #fffffe;
   color: black;
   transition: transform 0.2s;
   margin-bottom: 25px;
@@ -21,13 +21,13 @@
 
 @keyframes changeColor {
   0% {
-    background-color: #b3e9ec;
+    background-color: #8c7851;
   }
   50% {
-    background-color: #b3ecc4;
+    background-color: #eaddcf;
   }
   100% {
-    background-color: #e8ecb3;
+    background-color: #fffffe;
   }
 }
 
