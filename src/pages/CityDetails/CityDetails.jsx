@@ -15,7 +15,7 @@ import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyCityRating from '../../components/ratings/ReadOnlyCityRating/ReadOnlyCityRating';
-import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
+// import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
 import RouteMap from '../../components/RouteMap/RouteMap';
 import { itemsToCarryArr } from '../../data/object.itemsToCarry';
 import { createMasChat } from '../../services/API_proyect/chat.service';
@@ -24,6 +24,7 @@ import {
   createComment,
   getByReference,
 } from '../../services/API_proyect/comment.service';
+import WriteRatingForCityRoute from '../../components/ratings/WriteRatingForCityRoute/WriteRatingForCityRoute';
 
 const CityDetails = () => {
   const [res, setRes] = useState({});
@@ -170,8 +171,8 @@ const CityDetails = () => {
       </div>
       <div className="cityDetails-city-rating-writeRating-container">
         <p>Valora esta ruta</p>
-        {city && <WriteRatingForOffer offerToRate={city} />}{' '}
-        {/*PENDIENTE DE CAMBIAR, HAY QUE CREAR WRITERATINGFORCITY*/}
+        {/* {city && <WriteRatingForOffer offerToRate={city} />}{' '} */}
+        {city && <WriteRatingForCityRoute cityToRate={city} />}{' '}
       </div>
       {/* <RouteMap geolocations={geolocations} /> */}
 

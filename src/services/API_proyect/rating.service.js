@@ -14,7 +14,6 @@ export const createRating = async (data) => {
 };
 
 export const updateRating = async (data, id) => {
-  console.log('Front -> createRating -> data: ', data);
   return API.patch(`/rating/${id}`, data, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
@@ -26,10 +25,20 @@ export const updateRating = async (data, id) => {
     });
 };
 
-export const getByReference = async (type, idUserWithRating) => {
-  // console.log('Front -> createRating -> data: ', data)
+export const getByReference = async (type, idOfRatingType) => {
+  return API.get(`/rating/${type}/${idOfRatingType}`, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};
 
-  return API.get(`/rating/${type}/${idUserWithRating}`, {
+export const getCityRouteRating = async (idOfCityToRate) => {
+  return API.get(`/rating/getCityRouteRating/${idOfCityToRate}`, {
     headers: {
       Authorization: `Bearer ${updateToken()}`,
     },

@@ -10,7 +10,7 @@ header {
   color: black;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 body {
@@ -24,6 +24,7 @@ body {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -31,9 +32,11 @@ body {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: translateY(-15px);
   }
@@ -62,7 +65,7 @@ body {
   width: 300px;
 }
 
-.titleFatherContainer > a {
+.titleFatherContainer>a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,6 +87,7 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
 }
+
 .titleWeb-second {
   color: #61d61d;
   font-size: bold;
@@ -189,6 +193,7 @@ nav {
   opacity: 1;
   visibility: visible;
 }
+
 .header-logo {
   display: flex;
   margin-top: -8px;
@@ -198,6 +203,7 @@ nav {
   width: 43px;
   object-fit: cover;
 }
+
 @media only screen and (max-width: 870px) {
   .navButton {
     margin-left: 70px;
