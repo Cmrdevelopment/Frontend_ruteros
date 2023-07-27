@@ -1,7 +1,7 @@
 import './CardCity.css';
 
-import { FcClock } from 'react-icons/fc';
 // import { FaMapMarker } from 'react-icons/fa';
+import { FcAddRow, FcClock, FcDepartment, FcEditImage } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
 
 import ReadOnlyCityRating from '../ratings/ReadOnlyCityRating/ReadOnlyCityRating';
@@ -46,19 +46,30 @@ const CardCity = ({ city }) => {
               </div>
             </div>
           </div>
-          <div className="city-Info-routeState-routeDistance-routeDuration">
-            <p className="">{city.routeState}</p>
-            <p className="city-Info-distance">{city.routeDistance} km</p>
-            <p className="city-Info-routeDuration">
-              {' '}
-              <FcClock />
-              {city.routeDuration} Horas
-            </p>
-            <p className="">{city.difficulty}</p>
-            <p className="">
-              {' '}
-              <FcClock /> {city.routeLocation}
-            </p>
+          <div className="city-Info-separar-info-general-routeState">
+            <div className="city-Info-separar-info-general">
+              <p className="city-Info-distance">
+                {' '}
+                <FcEditImage className="city-FcEditImage" />
+                {city.routeDistance} km
+              </p>
+              <p className="city-Info-routeDuration">
+                {' '}
+                <FcClock className="city-FcClock" />
+                {city.routeDuration} Horas
+              </p>
+              <p className="">
+                <FcAddRow className="city-FcAddRow" />
+                {city.difficulty}
+              </p>
+              <p className="">
+                {' '}
+                <FcDepartment className="city-FcDepartment" /> {city.routeLocation}
+              </p>
+            </div>
+            <div className="city-Info-separar-routeState">
+              <p className="">{city.routeState}</p>
+            </div>
           </div>
         </div>
       </button>

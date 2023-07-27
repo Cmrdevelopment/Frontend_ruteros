@@ -106,9 +106,21 @@
   padding: 12px;
 }
 
-.city-Info-routeState-routeDistance-routeDuration {
+.city-Info-separar-info-general-routeState {
   display: flex;
+  justify-content: space-between;
   gap: 21px;
+}
+
+.city-Info-separar-info-general {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+}
+
+.city-Info-separar-routeState{
+  margin-right: 16px;
+  font-weight: 750;
 }
 
 .city-Info-descriptionGeneral {
@@ -125,4 +137,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.city-FcAddRow {
+  font-size: 25px;
+  margin: 0 3px 3px 0;
+}
+
+.city-FcClock {
+  font-size: 16px;
+  margin: 0 3px 3px 0;
+}
+
+.city-FcDepartment {
+  font-size: 16px;
+  margin: 0 0 3px 0;
+}
+
+.city-FcEditImage {
+  font-size: 16px;
+  margin: 0 3px 3px 0;
 }
