@@ -1,6 +1,5 @@
 import './CardCity.css';
 
-// import { FaMapMarker } from 'react-icons/fa';
 import { FcAddRow, FcClock, FcDepartment, FcEditImage } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
 

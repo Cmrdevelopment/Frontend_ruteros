@@ -20,28 +20,6 @@ const MountainRouteList = ({ itemsPerPage }) => {
   const getMountainRouteData = async () => {
     setDownloading(true);
     const dataMountainRouteDB = await getAllMountainRoutes();
-    // const dataToRender = dataMountainRouteDB.data;
-
-    //   ////! filtramos la data
-
-    // const copyFilters = { ...filters };
-    // if (typeof filters.experienceYears == 'string') copyFilters.experienceYears = 10;
-    // if (filters.experienceYears == 1.0001) copyFilters.experienceYears = 1;
-    // if (filters.jobType == 'All') copyFilters.jobType = '';
-    // if (filters.offerState == 'All') copyFilters.offerState = '';
-    // if (typeof filters.annualSalary == 'string') copyFilters.annualSalary = 10000;
-    // if (filters.offerType == 'All') copyFilters.offerType = '';
-
-    // if (dataMountainRoute?.status == 200) {
-    //   const dataFiltered = dataToRender.filter((mountainRoute) => {
-    //     return (
-    //       mountainRoute.offerType.includes(copyFilters.offerType) &&
-    //       mountainRoute.offerState.includes(copyFilters.offerState) &&
-    //       mountainRoute.jobType.includes(copyFilters.jobType) &&
-    //       mountainRoute.annualSalary >= parseInt(copyFilters.annualSalary) &&
-    //       mountainROute.experienceYears <= parseInt(copyFilters.experienceYears)
-    //     );
-    //   });
 
     // Filter offers by average score
     const dataSortByAverageScore = sortMountainRoutesByAverageScore_descendingOrder(
@@ -55,9 +33,6 @@ const MountainRouteList = ({ itemsPerPage }) => {
     setDataMountainRoutesList(dataSortByAverageScore);
     setItemPerPage(dataFilteredZero);
     setDownloading(false);
-    // } else {
-    //   /// lanzar swall diciendo hay un error
-    // }
   };
 
   useEffect(() => {
@@ -65,7 +40,6 @@ const MountainRouteList = ({ itemsPerPage }) => {
   }, []);
 
   const handlePageClick = (event) => {
-    //console.log(event) /// selected empieza por 0
     const end =
       event.selected * itemsPerPage + itemsPerPage == 0
         ? itemsPerPage
@@ -78,12 +52,12 @@ const MountainRouteList = ({ itemsPerPage }) => {
   };
 
   return (
-    <div className="offersList-container">
+    <div className="mountainRouteList-container">
       {downloading ? (
         <Spinner />
       ) : (
-        <div className="offersList-paginate-and-offers-list-container">
-          <div className="offersList-offers-container">
+        <div>
+          <div>
             <h2>Rutas de Montaña</h2>
             {itemPerPage.map((mountainRoute) => (
               <div key={mountainRoute._id}>
@@ -91,18 +65,19 @@ const MountainRouteList = ({ itemsPerPage }) => {
               </div>
             ))}
           </div>
-
-          <ReactPaginate
-            className="offersList-paginate"
-            activeClassName="offersList-paginate-active-element"
-            breakLabel="..."
-            nextLabel="next >"
-            onPageChange={handlePageClick}
-            pageRangeDisplayed={5}
-            pageCount={pageCount}
-            previousLabel="< previous"
-            renderOnZeroPageCount={null}
-          />
+          <div className='mountainRouteList-reactPaginate-container'>
+            <ReactPaginate
+              className="mountainRouteList-paginate"
+              activeClassName="mountainRouteList-paginate-active-element"
+              breakLabel="..."
+              nextLabel="next >"
+              onPageChange={handlePageClick}
+              pageRangeDisplayed={5}
+              pageCount={pageCount}
+              previousLabel="< previous"
+              renderOnZeroPageCount={null}
+            />
+          </div>
         </div>
       )}
     </div>

@@ -55,11 +55,11 @@ const CitiesList = ({ itemsPerPage }) => {
   };
 
   return (
-    <div className="developers-container">
+    <div className="cityList-container">
       {downloading ? (
         <Spinner />
       ) : (
-        <div className="city_List-Container-maps-y-react-paginate">
+        <div className="city_List-Container-maps-y-react-paginate2">
           <div className="citys_List-container">
             {itemPerPage.map((city) => (
               <div key={city._id}>
@@ -67,17 +67,19 @@ const CitiesList = ({ itemsPerPage }) => {
               </div>
             ))}
           </div>
-          <ReactPaginate
-            className="cityList-paginate"
-            activeClassName="cityList-paginate-active-element"
-            breakLabel="..."
-            nextLabel="next >"
-            onPageChange={handlePageClick}
-            pageRangeDisplayed={5}
-            pageCount={pageCount}
-            previousLabel="< previous"
-            renderOnZeroPageCount={null}
-          />
+          <div className='cityList-reactPaginate-container'>
+            <ReactPaginate
+              className="cityList-paginate"
+              activeClassName="cityList-paginate-active-element"
+              breakLabel="..."
+              nextLabel="next >"
+              onPageChange={handlePageClick}
+              pageRangeDisplayed={5}
+              pageCount={pageCount}
+              previousLabel="< previous"
+              renderOnZeroPageCount={null}
+            />
+          </div>
         </div>
       )}
     </div>
