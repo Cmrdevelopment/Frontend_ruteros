@@ -2,9 +2,6 @@ import './ProfileMountain.css';
 
 import React, { useState } from 'react';
 
-// import OffersCreated from '../offersCreated/offersCreated';
-// import OffersInterested from '../OffersInterested/offersInterested';
-
 const ProfileMountain = () => {
   const [showCreated, setShowCreated] = useState(true);
 
@@ -24,7 +21,6 @@ const ProfileMountain = () => {
       <button className="btn_profile_general-my-expe" onClick={handleShowInterested}>
         Rutas que sigo
       </button>
-      {/* {showCreated ? <OffersCreated /> : <OffersInterested />} */}
     </section>
   );
 };

@@ -62,7 +62,7 @@ const createMountainRoute2 = () => {
 
   const createArrayItemsToCarry = ({ target }) => {
     if (arrayItemsToCarry.includes(target.id)) {
-      setArrayHabilities((value) => {
+      setArrayItemsToCarry((value) => {
         const customArray = [];
         value.forEach((element) => {
           if (target.id != element) customArray.push(element);

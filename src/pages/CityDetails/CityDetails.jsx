@@ -15,6 +15,7 @@ import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyCityRating from '../../components/ratings/ReadOnlyCityRating/ReadOnlyCityRating';
+import WriteRatingForCityRoute from '../../components/ratings/WriteRatingForCityRoute/WriteRatingForCityRoute';
 // import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
 import RouteMap from '../../components/RouteMap/RouteMap';
 import { itemsToCarryArr } from '../../data/object.itemsToCarry';
@@ -24,7 +25,6 @@ import {
   createComment,
   getByReference,
 } from '../../services/API_proyect/comment.service';
-import WriteRatingForCityRoute from '../../components/ratings/WriteRatingForCityRoute/WriteRatingForCityRoute';
 
 const CityDetails = () => {
   const [res, setRes] = useState({});
@@ -38,10 +38,6 @@ const CityDetails = () => {
   const theme = useTheme();
   const { state } = useLocation();
   const { id } = state;
-  const geolocations = [
-    [51.505, -0.09],
-    [51.505, -0.07],
-  ];
 
   const getData = async () => {
     setLoading(true);
@@ -174,7 +170,6 @@ const CityDetails = () => {
         {/* {city && <WriteRatingForOffer offerToRate={city} />}{' '} */}
         {city && <WriteRatingForCityRoute cityToRate={city} />}{' '}
       </div>
-      {/* <RouteMap geolocations={geolocations} /> */}
 
       {city && showRouteMap(city)}
 

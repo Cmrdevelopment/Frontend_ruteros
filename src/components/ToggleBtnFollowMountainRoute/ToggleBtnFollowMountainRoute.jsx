@@ -17,10 +17,7 @@ const ToggleBtnFollowMountainRoute = ({ mountainRouteToFollowId }) => {
       try {
         const isFav = await mountainRoute_getFollowingStatus(mountainRouteToFollowId);
 
-        if (
-          isFav?.data?.status ===
-          "Route is in user's mountainRoutesInterested array"
-        ) {
+        if (isFav?.data?.status === "Route is in user's mountainRoutesInterested array") {
           setIsFavorite(true);
         } else {
           setIsFavorite(false);
@@ -39,9 +36,9 @@ const ToggleBtnFollowMountainRoute = ({ mountainRouteToFollowId }) => {
       );
       if (
         response?.data ===
-        "Mountain route added to user's mountainRoutesInterested array" ||
+          "Mountain route added to user's mountainRoutesInterested array" ||
         response?.data ===
-        "Mountain route removed from user's mountainRoutesInterested array"
+          "Mountain route removed from user's mountainRoutesInterested array"
       ) {
         setIsFavorite(!isFavorite);
       }
