@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom';
 
 import ReadOnlyMountainRouteRating from '../ratings/ReadOnlyMountainRouteRating/ReadOnlyMountainRouteRating';
 import ToggleBtnFollowMountainRoute from '../ToggleBtnFollowMountainRoute/ToggleBtnFollowMountainRoute';
+
 const CardMountainRoute = ({ mountainRoute }) => {
   const navigate = useNavigate();
   const pathToMountainRouteDetails = `/MountainRouteDetails`;
 
-  //console.log("CardOffer --> offer: ", offer)
   return (
     <section className="CardMountainRoute-Info">
       <section
@@ -55,7 +55,7 @@ const CardMountainRoute = ({ mountainRoute }) => {
               <BsCalendarDay /> La dificultad de esta ruta es: {mountainRoute.difficulty}
             </p>
             <div className="CardMountainRoute-BtnToggle">
-              <ToggleBtnFollowMountainRoute MountainRouteToFollowId={mountainRoute._id} />
+              <ToggleBtnFollowMountainRoute mountainRouteToFollowId={mountainRoute._id} />
             </div>
           </div>
         </div>

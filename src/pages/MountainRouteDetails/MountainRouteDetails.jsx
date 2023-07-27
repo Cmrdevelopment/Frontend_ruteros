@@ -15,7 +15,7 @@ import Carousel_imgs from '../../components/Carousel_imgs/Carousel_imgs';
 import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyMountainRouteRating from '../../components/ratings/ReadOnlyMountainRouteRating/ReadOnlyMountainRouteRating';
-//import WriteRatingForMountainRoute from '../../components/ratings/WriteRatingForMountainRoute/WriteRatingForMountainRoute';
+import WriteRatingForMountainRoute from '../../components/ratings/WriteRatingForMountainRoute/WriteRatingForMountainRoute';
 // import { technologies } from '../../data/object.tecnologias';
 import { createMasChat } from '../../services/API_proyect/chat.service';
 import {
@@ -172,13 +172,13 @@ const MountainRouteDetails = () => {
           </div>
         </div>
       </div>
-      {/* <div className="offerDetails-horizontal-line"></div> */}
-      {/* <div className="mountainRouteDetails-offer-rating-writeRating-container">
+
+      <div className="mountainRouteDetails-offer-rating-writeRating-container">
         <p>Valora esta ruta!</p>
         {mountainRoute && (
           <WriteRatingForMountainRoute mountainRouteToRate={mountainRoute} />
         )}
-      </div> */}
+      </div>
 
       {mountainRoute && <Carousel_imgs images={mountainRoute.images} />}
 
