@@ -36,9 +36,9 @@ const ToggleBtnFollowMountainRoute = ({ mountainRouteToFollowId }) => {
       );
       if (
         response?.data ===
-          "Mountain route added to user's mountainRoutesInterested array" ||
+        "Mountain route added to user's mountainRoutesInterested array" ||
         response?.data ===
-          "Mountain route removed from user's mountainRoutesInterested array"
+        "Mountain route removed from user's mountainRoutesInterested array"
       ) {
         setIsFavorite(!isFavorite);
       }
@@ -56,13 +56,13 @@ const ToggleBtnFollowMountainRoute = ({ mountainRouteToFollowId }) => {
         {isFavorite ? (
           <p>
             {' '}
-            Dejar de seguirla{' '}
+            {/* Dejar de seguirla{' '} */}
             <RiUserUnfollowFill size={25} className="favorite-icon-pendiente-seguir" />
           </p>
         ) : (
           <p>
             {' '}
-            Sigue esta ruta de montaña{' '}
+            {/* Sigue esta ruta de montaña{' '} */}
             <RiUserFollowFill size={25} className="favorite-icon-siguiendo" />{' '}
           </p>
         )}

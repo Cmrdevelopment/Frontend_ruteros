@@ -5,7 +5,7 @@ import ReactPaginate from 'react-paginate';
 
 import { getAllMountainRoutes } from '../../services/API_proyect/mountainRoute.service';
 import { sortMountainRoutesByAverageScore_descendingOrder } from '../../util/filters/mountainRoute.filter';
-import CardMountainRoute from '../CardMountainRoute/CardMountainRoute';
+import CardMountainRoute2 from '../CardMountainRoute2/CardMountainRoute2';
 import { Spinner } from '../Spinner/Spinner';
 
 const MountainRouteList = ({ itemsPerPage }) => {
@@ -61,7 +61,7 @@ const MountainRouteList = ({ itemsPerPage }) => {
             <h2>Rutas de Montaña</h2>
             {itemPerPage.map((mountainRoute) => (
               <div key={mountainRoute._id}>
-                <CardMountainRoute mountainRoute={mountainRoute} />
+                <CardMountainRoute2 mountainRoute={mountainRoute} />
               </div>
             ))}
           </div>

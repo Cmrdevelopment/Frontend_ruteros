@@ -24,13 +24,13 @@ const CardCity = ({ city }) => {
           <img
             className="city-Info-img"
             src={city.image}
-            alt={`city's ${city.city} pic`}
+            alt={`city's ${city.routeName} pic`}
           />
           <div>
             {/*--- Este componente hace la media de las estrellas ---*/}
             <ReadOnlyCityRating city={city} />
             <p>({city?.ratings?.length} valoraciones)</p>
-            {city.city}
+            {/* {city.city} */}
           </div>
         </div>
         <div className="city-Info-toda_la_carta">
