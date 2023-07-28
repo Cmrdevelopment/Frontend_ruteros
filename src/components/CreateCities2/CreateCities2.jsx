@@ -88,8 +88,9 @@ const createCities2 = () => {
             <div>
               <div className="Create_Offer_form-field">
                 <label
-                  className={`createCity-form-label ${errors.routeName ? 'required-label' : ''
-                    }`}
+                  className={`createCity-form-label ${
+                    errors.routeName ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   className="createCity-input-routeName createCity-backgroundColor"
@@ -104,8 +105,9 @@ const createCities2 = () => {
                 {/* <label className="createCity-form-label">Tipo de oferta</label> */}
                 <select
                   id="createCity-select"
-                  className={`input-select createCity-backgroundColor ${errors.difficulty ? 'required-label' : ''
-                    }`}
+                  className={`input-select createCity-backgroundColor ${
+                    errors.difficulty ? 'required-label' : ''
+                  }`}
                   {...register('difficulty', { required: true })}
                 >
                   {difficulty.map((type, index) => (
@@ -123,8 +125,9 @@ const createCities2 = () => {
                 {/* <label className="createCity-form-label">Modalidad de trabajo</label> */}
                 <select
                   id="createCity-select"
-                  className={`input-select createCity-backgroundColor ${errors.routeState ? 'required-label' : ''
-                    }`}
+                  className={`input-select createCity-backgroundColor ${
+                    errors.routeState ? 'required-label' : ''
+                  }`}
                   {...register('routeState', { required: true })}
                 >
                   {routeState.map((state, index) => (
@@ -142,8 +145,9 @@ const createCities2 = () => {
               {/* Items to pick up to to carry to this route */}
 
               <label
-                className={`createCity-form-label ${errors.arrayItemsToCarry ? 'required-label' : ''
-                  }`}
+                className={`createCity-form-label ${
+                  errors.arrayItemsToCarry ? 'required-label' : ''
+                }`}
               ></label>
               <div className="createCity-itemsToCarry-container createCity-backgroundColor">
                 {itemsToCarryArr.map((itemToCarry, index) => (
@@ -180,8 +184,9 @@ const createCities2 = () => {
             <div className="createCity-form-container-duration-distance-localization">
               <div className="form-field">
                 <label
-                  className={`createCity-form-label ${errors.routeDistance ? 'required-label' : ''
-                    }`}
+                  className={`createCity-form-label ${
+                    errors.routeDistance ? 'required-label' : ''
+                  }`}
                 ></label>
 
                 <input
@@ -197,8 +202,9 @@ const createCities2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createCity-form-label ${errors.routeDistance ? 'required-label' : ''
-                    }`}
+                  className={`createCity-form-label ${
+                    errors.routeDistance ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   type="number"
@@ -213,8 +219,9 @@ const createCities2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createCity-form-label ${errors.routeLocation ? 'required-label' : ''
-                    }`}
+                  className={`createCity-form-label ${
+                    errors.routeLocation ? 'required-label' : ''
+                  }`}
                 ></label>
                 <input
                   className="createCity-input createCity-backgroundColor"
@@ -270,8 +277,9 @@ const createCities2 = () => {
           <section>
             <div className="createCity-textarea-route-description">
               <label
-                className={`createCity-form-label ${errors.descriptionGeneral ? 'required-label' : ''
-                  }`}
+                className={`createCity-form-label ${
+                  errors.descriptionGeneral ? 'required-label' : ''
+                }`}
               ></label>
 
               <textarea

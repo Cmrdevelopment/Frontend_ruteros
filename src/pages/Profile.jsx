@@ -174,8 +174,9 @@ const Profile = () => {
               </button>
 
               <button
-                className={`btn-profile ${activeButton === 'MountainRoutes' ? 'active' : ''
-                  }`}
+                className={`btn-profile ${
+                  activeButton === 'MountainRoutes' ? 'active' : ''
+                }`}
                 onClick={() => {
                   setActiveButton('MountainRoutes');
                   navigate('/profile/ProfileMountain');

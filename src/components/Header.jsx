@@ -35,7 +35,7 @@ const Header = () => {
     };
   }, []);
 
-  useEffect(() => { }, [ancho]);
+  useEffect(() => {}, [ancho]);
 
   return (
     <>

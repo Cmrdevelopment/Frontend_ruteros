@@ -160,12 +160,12 @@
   padding-top: 20px;
 }
 
-.mountainRouteDetails-city-jobType>h3 {
+.mountainRouteDetails-city-jobType > h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.mountainRouteDetails-technologies>h3 {
+.mountainRouteDetails-technologies > h3 {
   font-weight: 900;
   font-size: 25px;
 }
@@ -181,7 +181,7 @@
   border: 0px solid red;
 }
 
-.mountainRouteDetails-info-technologies>h5 {
+.mountainRouteDetails-info-technologies > h5 {
   font-weight: 900;
   font-size: 18px;
 }
@@ -346,12 +346,12 @@
     padding: 0;
   }
 
-  .mountainRouteDetails-technologies>h3 {
+  .mountainRouteDetails-technologies > h3 {
     font-size: 20px;
     margin-top: 12px;
   }
 
-  .mountainRouteDetails-info-technologies>h5 {
+  .mountainRouteDetails-info-technologies > h5 {
     text-align: center;
   }
 
