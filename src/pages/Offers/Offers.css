@@ -27,7 +27,7 @@
   gap: 10px;
 }
 
-.offers-filters-container > h2 {
+.offers-filters-container>h2 {
   font-size: 23px;
   margin-top: 9px;
   font-weight: 700;
@@ -38,7 +38,7 @@
   border-radius: 30px;
   height: 39px;
   width: 145px;
-  background-color: #25d366;
+  background-color: var(--btn-bg-color);
   color: white;
 }
 
@@ -92,6 +92,7 @@
   max-width: 340px;
   margin-left: 12px;
 }
+
 .offers-filter-annualSalary-container {
   margin-left: 12px;
 }
@@ -99,11 +100,13 @@
 .offers-filter-offerType-jobType-offerState-container {
   width: 340px;
 }
+
 .offers-filter-offerType-container,
 .offers-filter-jobType-container,
 .offers-filter-offerState-container {
   padding: 0 0 5px 0;
 }
+
 .offers-filter-experienceYears-annualSalary-container {
   width: 320px;
 }
@@ -115,7 +118,8 @@
     justify-content: center;
     align-items: center;
   }
-  .offers-filters-container > h2 {
+
+  .offers-filters-container>h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,6 +158,7 @@
     padding: 0 0 0 0;
   }
 }
+
 @media screen and (max-width: 991px) {
   .offersList-offers-container {
     display: flex;
@@ -169,12 +174,14 @@
     justify-content: center;
     width: 300px;
   }
+
   .cardOffer-link-to-offerDetails {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .cardOffer-Profile {
     display: flex;
     flex-direction: column;
@@ -187,15 +194,18 @@
   .cardOffer-Info-Description {
     max-width: 350px;
   }
+
   .cardOffer-Info-tabla-name {
     text-align: center;
     width: 250px;
   }
+
   .cardOffer-Info-Ubicado,
   .cardOffer-Info-AnnualSalary {
     text-align: center;
     width: 250px;
   }
+
   .cardOffer-Info-technologies {
     text-align: center;
     width: 200px;

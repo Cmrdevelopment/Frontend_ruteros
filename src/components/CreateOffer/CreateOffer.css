@@ -123,7 +123,7 @@
   border-radius: 30px;
   height: 40px;
   width: 180px;
-  background-color: #25d366;
+  background-color: var(--btn-bg-color);
   color: white;
   margin-bottom: 1rem;
 }

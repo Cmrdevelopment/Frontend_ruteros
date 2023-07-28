@@ -19,7 +19,7 @@
   border-radius: 30px;
   height: 39px;
   width: 145px;
-  background-color: #25d366;
+  background-color: var(--btn-bg-color);
   color: white;
 }
 

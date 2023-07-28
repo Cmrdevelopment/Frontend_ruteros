@@ -88,16 +88,15 @@ const createMountainRoute2 = () => {
       </div>
       <section className="createOffer2-container">
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          <section className="form-container-titulo-tipo-oferta-tecnologias-Uploadfile">
+          <section className="form-container-titulo-tipo-oferta-tecnologias-Uploadfile2">
             <div>
               <div className="Create_Offer_form-field">
                 <label
-                  className={`createMountainRoute-form-label ${
-                    errors.routeName ? 'required-label' : ''
-                  }`}
+                  className={`createMountainRoute-form-label ${errors.routeName ? 'required-label' : ''
+                    }`}
                 ></label>
                 <input
-                  className="createMountainRoute-input-routeName backgroundColor"
+                  className="createMountainRoute-input-routeName createMountainRoute-backgroundColor"
                   {...register('routeName', { required: true })}
                   placeholder="Escribe el nombre de la ruta"
                 />
@@ -109,9 +108,8 @@ const createMountainRoute2 = () => {
                 {/* <label className="createMountainRoute-form-label">Tipo de oferta</label> */}
                 <select
                   id="createMountainRoute-select"
-                  className={`input-select backgroundColor ${
-                    errors.difficulty ? 'required-label' : ''
-                  }`}
+                  className={`input-select createMountainRoute-backgroundColor ${errors.difficulty ? 'required-label' : ''
+                    }`}
                   {...register('difficulty', { required: true })}
                 >
                   {difficulty.map((type, index) => (
@@ -129,9 +127,8 @@ const createMountainRoute2 = () => {
                 {/* <label className="createMountainRoute-form-label">Modalidad de trabajo</label> */}
                 <select
                   id="createMountainRoute-select"
-                  className={`input-select backgroundColor ${
-                    errors.routeState ? 'required-label' : ''
-                  }`}
+                  className={`input-select createMountainRoute-backgroundColor ${errors.routeState ? 'required-label' : ''
+                    }`}
                   {...register('routeState', { required: true })}
                 >
                   {routeState.map((state, index) => (
@@ -149,12 +146,11 @@ const createMountainRoute2 = () => {
               {/* Items to pick up to to carry to this route */}
 
               <label
-                className={`createMountainRoute-form-label ${
-                  errors.technologies ? 'required-label' : ''
-                }`}
+                className={`createMountainRoute-form-label ${errors.technologies ? 'required-label' : ''
+                  }`}
               ></label>
 
-              <div className="createMountainRoute-itemsToCarry-container">
+              <div className="createMountainRoute-itemsToCarry-container createMountainRoute-backgroundColor">
                 {itemsToCarryArr.map((itemToCarry, index) => (
                   <figure key={index} className="tecnologia-item" id={itemToCarry.name}>
                     <div className="image-container">
@@ -186,14 +182,13 @@ const createMountainRoute2 = () => {
             <div className="createMountainRoute-form-container-duration-distance-localization">
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${
-                    errors.routeDistance ? 'required-label' : ''
-                  }`}
+                  className={`createMountainRoute-form-label ${errors.routeDistance ? 'required-label' : ''
+                    }`}
                 ></label>
 
                 <input
                   type="number"
-                  className="createMountainRoute-input backgroundColor"
+                  className="createMountainRoute-input createMountainRoute-backgroundColor"
                   {...register('routeDuration', { required: false })}
                   placeholder="Duración de la ruta"
                 />
@@ -204,13 +199,12 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${
-                    errors.routeDistance ? 'required-label' : ''
-                  }`}
+                  className={`createMountainRoute-form-label ${errors.routeDistance ? 'required-label' : ''
+                    }`}
                 ></label>
                 <input
                   type="number"
-                  className="createCity-input backgroundColor"
+                  className="createCity-input createMountainRoute-backgroundColor"
                   {...register('routeDistance', { required: true })}
                   placeholder="Distancia de la Ruta"
                 />
@@ -221,12 +215,11 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${
-                    errors.routeLocation ? 'required-label' : ''
-                  }`}
+                  className={`createMountainRoute-form-label ${errors.routeLocation ? 'required-label' : ''
+                    }`}
                 ></label>
                 <input
-                  className="createCity-input backgroundColor"
+                  className="createCity-input createMountainRoute-backgroundColor"
                   {...register('routeLocation', { required: true })}
                   placeholder="Localización de la ruta"
                 />
@@ -242,7 +235,7 @@ const createMountainRoute2 = () => {
             <input
               type="number"
               step="any"
-              className="input-create-cityRoute-geolocalization backgroundColor"
+              className="input-create-cityRoute-geolocalization createMountainRoute-backgroundColor"
               {...register('routeStartLatitude', { required: true })}
               placeholder="Latitud Comienzo Ruta"
               value="41.374663896520715"
@@ -251,7 +244,7 @@ const createMountainRoute2 = () => {
             <input
               type="number"
               step="any"
-              className="input-create-cityRoute-geolocalization backgroundColor"
+              className="input-create-cityRoute-geolocalization createMountainRoute-backgroundColor"
               {...register('routeStartLongitude', { required: true })}
               placeholder="Longitud Comienzo Ruta"
               value="2.10063376682015"
@@ -260,7 +253,7 @@ const createMountainRoute2 = () => {
             <input
               type="number"
               step="any"
-              className="input-create-cityRoute-geolocalization backgroundColor"
+              className="input-create-cityRoute-geolocalization createMountainRoute-backgroundColor"
               {...register('routeEndLatitude', { required: true })}
               placeholder="Latitud Fin Ruta"
               value="41.367221067676326"
@@ -269,7 +262,7 @@ const createMountainRoute2 = () => {
             <input
               type="number"
               step="any"
-              className="input-create-cityRoute-geolocalization backgroundColor"
+              className="input-create-cityRoute-geolocalization createMountainRoute-backgroundColor"
               {...register('routeEndLongitude', { required: true })}
               placeholder="Longitud Fin Ruta"
               value="2.095904339000168"
@@ -279,13 +272,12 @@ const createMountainRoute2 = () => {
           <section>
             <div className="createMountainRoute-textarea-route-description">
               <label
-                className={`createMountainRoute-form-label ${
-                  errors.descriptionGeneral ? 'required-label' : ''
-                }`}
+                className={`createMountainRoute-form-label ${errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
               ></label>
 
               <textarea
-                className="createMountainRoute-descriptionGeneral backgroundColor"
+                className="createMountainRoute-descriptionGeneral createMountainRoute-backgroundColor"
                 {...register('descriptionGeneral', { required: true })}
                 placeholder="Descripción general"
               ></textarea>
