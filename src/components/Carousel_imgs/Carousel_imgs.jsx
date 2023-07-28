@@ -26,10 +26,11 @@ const responsive = {
   },
 };
 
-const Carousel_imgs = ({ images }) => {
+const Carousel_imgs = ({ images, carouselHeight }) => {
   return (
     // <div className="carousel-imgs-container">
     <Carousel
+      style={{ height: carouselHeight }}
       swipeable={true}
       draggable={true}
       showDots={false}
@@ -65,6 +66,7 @@ const Carousel_imgs = ({ images }) => {
 
 Carousel_imgs.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string),
+  carouselHeight: PropTypes.string,
 };
 
 export default Carousel_imgs;
