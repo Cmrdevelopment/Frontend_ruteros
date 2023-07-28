@@ -48,7 +48,7 @@ const MountainRouteDetails = () => {
     const customFormData = {
       commentContent: inputValue,
       commentType: 'Publico',
-      referenceOfferComment: id,
+      referenceMountainRouteComment: id,
     };
     setLoading(true);
     setResComment(await createComment(customFormData));
@@ -59,7 +59,7 @@ const MountainRouteDetails = () => {
     const customFormData = {
       commentContent: inputValue,
       commentType: 'Privado',
-      referenceOfferComment: id,
+      referenceMountainRouteComment: id,
     };
 
     console.log(customFormData);

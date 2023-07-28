@@ -49,7 +49,7 @@ const CityDetails = () => {
     const customFormData = {
       commentContent: inputValue,
       commentType: 'Publico',
-      referenceOfferComment: id,
+      referenceCityRouteComment: id,
     };
     setLoading(true);
     setResComment(await createComment(customFormData));
@@ -60,7 +60,7 @@ const CityDetails = () => {
     const customFormData = {
       commentContent: inputValue,
       commentType: 'Privado',
-      referenceOfferComment: id,
+      referenceCityRouteComment: id,
     };
     setLoading(true);
     setResNewChat(await createMasChat(customFormData));
@@ -81,7 +81,7 @@ const CityDetails = () => {
   }, [resNewChat]);
 
   const getComments = async () => {
-    const dataComments = await getByReference('City', id);
+    const dataComments = await getByReference('CityRoute', id);
     console.log(dataComments);
     const filterData = dataComments.data.filter(
       (singleCommets) => singleCommets.commentType == 'Publico',
