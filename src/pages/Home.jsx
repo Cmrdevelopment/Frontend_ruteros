@@ -180,10 +180,82 @@ export const Home = () => {
         </div>
         <div className="home-subButton">
           <NavLink to="/citys">
-            <button className="home-contactUs">Ciudades</button>
+            <button className="home-contactUs">Rutas de Ciudades</button>
           </NavLink>
         </div>
       </div>
+
+      <div className="home-company-container">
+        <p className="home-p-company">
+          Algunas de nuestras rutas de montaña recomentadas
+        </p>
+        <div className="home-company-container-imagenes-ciudades">
+          <div className="home-company-container-imagenes-ciudades-primera-fila">
+            <NavLink to="/mountainRoutes">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_dubai-2650364_1280_phwab4.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Cumbres Misteriosas</h2>
+              </div>
+            </NavLink>
+            <NavLink to="/mountainRoutes">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_columbus-1618317_1280_pzk5vb.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Aldeas Alpinas</h2>
+              </div>
+            </NavLink>
+            <NavLink to="/mountainRoutes">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_new-york-city-78181_1280_tnbjs6.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Destinos Montañosos</h2>
+              </div>
+            </NavLink>
+          </div>
+          <div className="home-company-container-imagenes-ciudades-segunda-fila">
+            <NavLink to="/mountainRoutes">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546204/Ciudades/Ciudades_copenhagen-142711_1280_bjmra6.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Lugares Misteriosos</h2>
+              </div>
+            </NavLink>
+            <NavLink to="/mountainRoutes">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_paris-195327_1280_g3jnqz.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Rutas Montañosas</h2>
+              </div>
+            </NavLink>
+            <NavLink to="/mountainRoutes">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_hotel-de-cluny-187866_1280_ceydbm.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Montañas Intrigantes</h2>
+              </div>
+            </NavLink>
+          </div>
+        </div>
+        <div className="home-subButton">
+          <NavLink to="/citys">
+            <button className="home-contactUs">Rutas de Montañas</button>
+          </NavLink>
+        </div>
+      </div>
+
       <div className="home-works-container">
         <p className="home-works-title">Que relizamos ?</p>
         <p className="home-works-p">
