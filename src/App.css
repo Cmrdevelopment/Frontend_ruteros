@@ -31,6 +31,10 @@ body {
   --primary-font: 'Fuente-Principal', sans-serif;
   --font-bold: 'Fuente-Bold', sans-serif;
   --accent-color: #25d366;
+  /* --btn-bg-color: rgb(117, 128, 154); */
+  /* --btn-bg-color: rgb(125, 18, 158); */
+  --btn-bg-color: #6e2f5a;
+
 }
 
 main {
@@ -43,8 +47,6 @@ main {
 
 .btn {
   width: 100%;
-  /* padding: 10px;
-  margin-top: 25px; */
   background: var(--background-color-button-login);
   color: #fff;
   cursor: pointer;

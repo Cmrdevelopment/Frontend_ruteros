@@ -1,5 +1,6 @@
-.backgroundColor {
-  background-color: #d5e0f4;
+.createCity-backgroundColor {
+  /* background-color: #d5e0f4; */
+  background-color: #EADDCF;
 }
 
 .crear-oferta-titulo {
@@ -148,7 +149,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #d5e0f4;
+  /* background-color: #d5e0f4; */
   gap: 0.5rem;
   border: 2px solid #cecfd0;
   border-radius: 5px;
@@ -190,7 +191,7 @@
   font-size: 16px;
   color: black;
   text-align: center;
-  background-color: #d5e0f4;
+  /* background-color: #d5e0f4; */
   border: 2px solid #cecfd0;
 }
 
@@ -225,7 +226,7 @@
   border-radius: 30px;
   height: 40px;
   width: 180px;
-  background-color: #25d366;
+  background-color: var(--btn-bg-color);
   color: white;
   margin-bottom: 1rem;
   margin-top: 25px;

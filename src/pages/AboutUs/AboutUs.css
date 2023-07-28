@@ -4,7 +4,8 @@
 }
 
 .team-item {
-  background: #f4f5f6;
+  /* background: #f4f5f6; */
+  background-color: #F9F4EF;
   text-align: center;
   margin: 20px 0;
   padding: 50px 20px 40px 20px;
@@ -19,8 +20,9 @@
 }
 
 .team-item:hover {
-  background-color: #5ace33;
-  color: white;
+  /* background-color: #5ace33; */
+  background-color: #EADDCF;
+  color: #cb52a3;
 }
 
 .team-item h3 {
@@ -39,7 +41,8 @@
 }
 
 .team-item:hover h3 {
-  color: #ddd;
+  /* color: #ddd; */
+  color: #cb52a3;
 }
 
 .team-info {

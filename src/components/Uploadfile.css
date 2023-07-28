@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-#start > i.fa {
+#start>i.fa {
   transform: scale(0.8);
   opacity: 0.3;
 }
@@ -53,7 +53,7 @@ i.fa {
   padding: 9px 9px;
   text-align: center;
   /* background: #fff; */
-  background-color: #d5e0f4;
+  background-color: #EADDCF;
   border-radius: 7px;
   border: 3px solid #37a08e53;
   transition: all 0.2s ease;
@@ -93,7 +93,7 @@ i.fa {
   cursor: pointer;
 }
 
-.uploader > div {
+.uploader>div {
   margin: 0 0 0.5rem 0;
   color: #5f6982;
 }

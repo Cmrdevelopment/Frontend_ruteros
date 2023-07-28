@@ -52,7 +52,7 @@
   border-radius: 30px;
   height: 39px;
   width: 210px;
-  background-color: #25d366;
+  background-color: var(--btn-bg-color);
   color: white;
 }
 
@@ -60,6 +60,7 @@
   .containerProfile {
     flex-direction: column;
   }
+
   .formProfile-text-new-profile {
     font-size: 21px;
     margin-bottom: 0.5rem;

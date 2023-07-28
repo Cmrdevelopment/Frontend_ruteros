@@ -143,7 +143,7 @@ const Profile = () => {
               >
                 👷🏻‍♀️ Experiencia
               </button>
-              <button
+              {/* <button
                 className={`btn-profile ${activeButton === 'Offers' ? 'active' : ''}`}
                 onClick={() => {
                   setActiveButton('Offers');
@@ -151,7 +151,7 @@ const Profile = () => {
                 }}
               >
                 📋 Ofertas
-              </button>
+              </button> */}
 
               <button
                 className={`btn-profile ${activeButton === 'Habilities' ? 'active' : ''}`}
@@ -174,9 +174,8 @@ const Profile = () => {
               </button>
 
               <button
-                className={`btn-profile ${
-                  activeButton === 'MountainRoutes' ? 'active' : ''
-                }`}
+                className={`btn-profile ${activeButton === 'MountainRoutes' ? 'active' : ''
+                  }`}
                 onClick={() => {
                   setActiveButton('MountainRoutes');
                   navigate('/profile/ProfileMountain');
