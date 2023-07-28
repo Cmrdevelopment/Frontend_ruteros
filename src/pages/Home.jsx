@@ -120,47 +120,62 @@ export const Home = () => {
         <p className="home-p-company">Algunas de nuestras rutas de ciudad recomentadas</p>
         <div className="home-company-container-imagenes-ciudades">
           <div className="home-company-container-imagenes-ciudades-primera-fila">
-            <div className="hover-element">
-              <img
-                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_dubai-2650364_1280_phwab4.jpg"
-                alt="rutas de ciudades"
-              />
-              <h2 className="hover-text">Ciudades Enigmáticas</h2>
-            </div>
-            <div className="hover-element">
-              <img
-                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_columbus-1618317_1280_pzk5vb.jpg"
-                alt="rutas de ciudades"
-              />
-              <h2 className="hover-text">Ciudades Enigmáticas</h2>
-            </div>
-            <img
-              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_new-york-city-78181_1280_tnbjs6.jpg"
-              alt="rutas de ciudades"
-            />
+            <NavLink to="/citys">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_dubai-2650364_1280_phwab4.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Ciudades Enigmáticas</h2>
+              </div>
+            </NavLink>
+            <NavLink to="/citys">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_columbus-1618317_1280_pzk5vb.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Destinos Fascinantes</h2>
+              </div>
+            </NavLink>
+            <NavLink to="/citys">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_new-york-city-78181_1280_tnbjs6.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Lugares Únicos</h2>
+              </div>
+            </NavLink>
           </div>
           <div className="home-company-container-imagenes-ciudades-segunda-fila">
-            <div className="hover-element">
-              <img
-                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546204/Ciudades/Ciudades_copenhagen-142711_1280_bjmra6.jpg"
-                alt="rutas de ciudades"
-              />
-              <h2 className="hover-text">Ciudades Enigmáticas</h2>
-            </div>
-            <div className="hover-element">
-              <img
-                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_paris-195327_1280_g3jnqz.jpg"
-                alt="rutas de ciudades"
-              />
-              <h2 className="hover-text">Ciudades Enigmáticas</h2>
-            </div>
-            <div className="hover-element">
-              <img
-                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_hotel-de-cluny-187866_1280_ceydbm.jpg"
-                alt="rutas de ciudades"
-              />
-              <h2 className="hover-text">Ciudades Enigmáticas</h2>
-            </div>
+            <NavLink to="/citys">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546204/Ciudades/Ciudades_copenhagen-142711_1280_bjmra6.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Lugares Misteriosos</h2>
+              </div>
+            </NavLink>
+            <NavLink to="/citys">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_paris-195327_1280_g3jnqz.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Rutas Urbanas</h2>
+              </div>
+            </NavLink>
+            <NavLink to="/citys">
+              <div className="hover-element">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_hotel-de-cluny-187866_1280_ceydbm.jpg"
+                  alt="rutas de ciudades"
+                />
+                <h2 className="hover-text">Ciudades Intrigantes</h2>
+              </div>
+            </NavLink>
           </div>
         </div>
         <div className="home-subButton">
