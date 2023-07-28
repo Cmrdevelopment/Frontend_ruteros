@@ -65,7 +65,7 @@ const MountainRouteList = ({ itemsPerPage }) => {
               </div>
             ))}
           </div>
-          <div className='mountainRouteList-reactPaginate-container'>
+          <div className="mountainRouteList-reactPaginate-container">
             <ReactPaginate
               className="mountainRouteList-paginate"
               activeClassName="mountainRouteList-paginate-active-element"

@@ -67,7 +67,7 @@ const CitiesList = ({ itemsPerPage }) => {
               </div>
             ))}
           </div>
-          <div className='cityList-reactPaginate-container'>
+          <div className="cityList-reactPaginate-container">
             <ReactPaginate
               className="cityList-paginate"
               activeClassName="cityList-paginate-active-element"

@@ -101,46 +101,59 @@ export const Home = () => {
               src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690477140/Planificdor_de_viajes3_gnk6xu.png"
               alt="tercer punto de la infografia de planificador de viajes"
             />
+            <img
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542288/Planificdor_de_viajes4_w7kphm.png"
+              alt="cuarto punto de la infografia de planificador de viajes"
+            />
+            <img
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542804/Planificador_el_secreto_de_una_planificaci%C3%B3n_perfecta2_w2qrqk.png"
+              alt="el secreto de una planificación pefecta"
+            />
+            <img
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542572/Planificdor_de_viajes5_a7dytx.png"
+              alt="quinto punto de la infografia de planificador de viajes"
+            />
           </div>
         </div>
       </div>
       <div className="home-company-container">
-        <p className="home-p-company">Algunas de nuestros rutas recomentadas</p>
-
-        <ul className="home-company-list">
-          <li>
+        <p className="home-p-company">Algunas de nuestras rutas de ciudad recomentadas</p>
+        <div className="home-company-container-imagenes-ciudades">
+          <div className="home-company-container-imagenes-ciudades-primera-fila">
             <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687042575/ProjectFinalBOOTCAMP/Logos%20empresas/samsunglogo_c641x7.png"
-              alt="company-icon"
-            ></img>
-          </li>
-          <li>
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_dubai-2650364_1280_phwab4.jpg"
+              alt="rutas de ciudades"
+            />
             <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687042562/ProjectFinalBOOTCAMP/Logos%20empresas/deloitte_cn08vh.png"
-              alt="company-icon"
-            ></img>
-          </li>
-          <li>
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_columbus-1618317_1280_pzk5vb.jpg"
+              alt="rutas de ciudades"
+            />
             <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687042558/ProjectFinalBOOTCAMP/Logos%20empresas/googlelogo_tmjgkk.png"
-              alt="company-icon"
-            ></img>
-          </li>
-          <li>
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_new-york-city-78181_1280_tnbjs6.jpg"
+              alt="rutas de ciudades"
+            />
+          </div>
+          <div className="home-company-container-imagenes-ciudades-segunda-fila">
             <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687042547/ProjectFinalBOOTCAMP/Logos%20empresas/ibm_p8r7ix.png"
-              alt="company-icon"
-            ></img>
-          </li>
-          <li>
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546204/Ciudades/Ciudades_copenhagen-142711_1280_bjmra6.jpg"
+              alt="rutas de ciudades"
+            />
             <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687042373/ProjectFinalBOOTCAMP/accenturelogo_u3743w.png"
-              alt="company-icon"
-            ></img>
-          </li>
-        </ul>
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_paris-195327_1280_g3jnqz.jpg"
+              alt="rutas de ciudades"
+            />
+            <img
+              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_hotel-de-cluny-187866_1280_ceydbm.jpg"
+              alt="rutas de ciudades"
+            />
+          </div>
+        </div>
+        <div className="home-subButton">
+          <NavLink to="/citys">
+            <button className="home-contactUs">Ciudades</button>
+          </NavLink>
+        </div>
       </div>
-
       <div className="home-works-container">
         <p className="home-works-title">Que relizamos ?</p>
         <p className="home-works-p">

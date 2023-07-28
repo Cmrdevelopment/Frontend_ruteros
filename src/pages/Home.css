@@ -7,7 +7,7 @@
 }
 
 .home-planificador-de-viajes img {
-  height: 63vh;
+  height: 77vh;
   transition: transform 0.3s;
   z-index: 5;
 }
@@ -45,17 +45,12 @@
   0% {
     transform: translateX(0);
   }
-
   50% {
-    transform: translateX(-75px);
-    /* Mueve el texto 5 píxeles hacia la derecha */
+    transform: translateX(-75px); /* Mueve el texto 5 píxeles hacia la derecha */
   }
-
   75% {
-    transform: translateX(75px);
-    /* Mueve el texto 5 píxeles hacia la derecha */
+    transform: translateX(75px); /* Mueve el texto 5 píxeles hacia la derecha */
   }
-
   100% {
     transform: translateX(-75);
   }
@@ -76,7 +71,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .home-presentation {
@@ -90,7 +84,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-
 }
 
 .home-title {
@@ -114,7 +107,7 @@
   border-radius: 30px;
   height: 39px;
   width: 145px;
-  background-color: var(--btn-bg-color);
+  background-color: #25d366;
   color: white;
 }
 
@@ -138,7 +131,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 36px;
 }
 
 .home-p-company {
@@ -148,25 +141,24 @@
   font-size: 25px;
 }
 
-.home-company-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
-}
-
-.home-company-list>li>img {
-  width: 120px;
-}
-
-.home-works-container {
+.home-company-container-imagenes-ciudades {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
+}
+
+.home-company-container-imagenes-ciudades img {
+  height: 270px;
+  width: 390px;
+}
+
+.home-company-container-imagenes-ciudades-primera-fila img {
+  margin: 12px;
+}
+
+.home-company-container-imagenes-ciudades-segunda-fila img {
+  margin: 12px;
 }
 
 .home-works-title {
@@ -298,49 +290,40 @@
   .home-title {
     font-size: 22px;
   }
-
   .home-img {
     height: 210px;
     object-fit: cover;
   }
-
   .home-p {
     font-size: 12px;
   }
-
   .home-description {
     display: flex;
     flex-direction: row;
   }
-
   .home-contactUs,
   .home-learnMore {
     height: 38px;
     width: 119px;
   }
 }
-
 @media screen and (max-width: 600px) {
   .home-description {
     display: flex;
     flex-direction: column;
   }
-
   .home-presentation {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   .home-title,
   .home-p {
     text-align: center;
   }
-
   .home-br {
     display: none;
   }
-
   .home-p-company {
     font-size: 22px;
   }
