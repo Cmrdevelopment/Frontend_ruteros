@@ -1,16 +1,23 @@
+.profile-icon {
+  margin-right: 10px;
+  height: 35px;
+  width: 35px;
+  object-fit: cover;
+}
+
 .containerNavProfile {
-  height: 67vh;
+  height: 70vh;
   display: flex;
   width: 30vw;
   border-radius: 20px;
   border: 1.6px solid #e3e4e5;
+  border: 1px solid blue;
 }
 
 .mainContainer {
   display: flex;
-  /* border: 2px solid black; */
-  /* padding: 16px;*/
   gap: 20px;
+  border: 0px solid red;
 }
 
 .btn-profile.active {
@@ -54,7 +61,8 @@
   /* background-color: var(--mainColor);
   color: var(--textColor); */
   border-color: transparent;
-  background-color: white;
+  /* background-color: white; */
+  background-color: #EADDCF;
 }
 
 .btn-profile.active:hover {
@@ -112,7 +120,8 @@
   position: fixed;
   top: 20%;
   left: 0px;
-  background-color: white;
+  /* background-color: white; */
+  background-color: #EADDCF;
   width: 60px;
   transition: all;
 
@@ -152,20 +161,12 @@
   content: '👷🏻‍♀️';
 }
 
-#sidebar .offers-responsive:before {
-  content: '📋';
-}
-
 #sidebar .citys-responsive:before {
-  content: '📋';
+  content: url(https://res.cloudinary.com/dxpdntpqm/image/upload/v1690581972/UserFTProyect/profileIcons/city_Route_uqloai.png);
 }
 
 #sidebar .mountainRoutes-responsive:before {
   content: '📋';
-}
-
-#sidebar .tecnologies-responsive:before {
-  content: '📳';
 }
 
 #sidebar .habilities-responsive:before {
@@ -184,7 +185,8 @@
 }
 
 #sidebar div:hover {
-  background-color: #c9c9c9;
+  /* background-color: #c9c9c9; */
+  background-color: var(--btn-bg-color);
 }
 
 #sidebar:hover {
@@ -195,6 +197,6 @@
   } */
 }
 
-#sidebar:hover div > span {
+#sidebar:hover div>span {
   display: inline;
 }

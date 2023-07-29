@@ -34,19 +34,19 @@ const Profile = () => {
               <div id="sidebar">
                 <NavLink to="/profile">
                   <div className="cambiar-contrasena">
-                    <span>Editar perfil</span>
+                    <span>Perfil</span>
                   </div>
                 </NavLink>
 
                 <NavLink to="/profile/changePassword">
                   <div className="perfil-responsive">
-                    <span>Cambiar contraseña</span>
+                    <span>Contraseña</span>
                   </div>
                 </NavLink>
 
                 <NavLink to="/profile/changeEmail">
                   <div className="cambiar-email">
-                    <span>Cambiar email</span>
+                    <span>Email</span>
                   </div>
                 </NavLink>
 
@@ -56,35 +56,23 @@ const Profile = () => {
                   </div>
                 </NavLink>
 
-                <NavLink to="/profile/Offer">
-                  <div className="offers-responsive">
-                    <span>Oferta</span>
-                  </div>
-                </NavLink>
-
-                <NavLink to="/profile/ProfileCity">
-                  <div className="citys-responsive">
-                    <span>Rutas de Ciudad</span>
-                  </div>
-                </NavLink>
-
-                <NavLink to="/profile/ProfileMountain">
-                  <div className="mountainRoutes-responsive">
-                    <span>Rutas de Montaña</span>
-                  </div>
-                </NavLink>
-
-                <NavLink to="/profile/tecnologias">
-                  <div className="tecnologies-responsive">
-                    <span>Tecnologías</span>
-                  </div>
-                </NavLink>
-
                 <NavLink to="/profile/habilities">
                   <div className="habilities-responsive">
                     <span>Habilidades</span>
                   </div>
                 </NavLink>
+
+                <NavLink to="/profile/ProfileCity">
+                  <div className="citys-responsive">
+                    <span>Ciudad</span>
+                  </div>
+                </NavLink>
+
+                <NavLink to="/profile/ProfileMountain">
+                  <div className="mountainRoutes-responsive">
+                    <span>Montaña</span>
+                  </div>
+                </NavLink>¡
 
                 <div
                   className="borrar-perfil"
@@ -104,7 +92,7 @@ const Profile = () => {
         </div>
         <div className="mainContainer">
           {ancho > 800 ? (
-            <div className={`containerNavProfile`}>
+            <div className="containerNavProfile">
               <button
                 className={`btn-profile ${activeButton === 'Profile' ? 'active' : ''}`}
                 onClick={() => {
@@ -112,7 +100,12 @@ const Profile = () => {
                   navigate('/profile');
                 }}
               >
-                👨🏻‍⚕️ Perfil
+                <img
+                  className="profile-icon"
+                  alt="profile icon"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690566021/UserFTProyect/profileIcons/profile_ub7zht.png"
+                ></img>
+                Perfil
               </button>
 
               <button
@@ -122,7 +115,12 @@ const Profile = () => {
                   navigate('/profile/changePassword');
                 }}
               >
-                🔑 Contraseña
+                <img
+                  className="profile-icon"
+                  alt="password icon"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690565668/UserFTProyect/profileIcons/reset-password_ydodzt.png"
+                ></img>
+                Contraseña
               </button>
 
               <button
@@ -132,7 +130,12 @@ const Profile = () => {
                   navigate('/profile/changeEmail');
                 }}
               >
-                💌 Cambiar Email
+                <img
+                  className="profile-icon"
+                  alt="email icon"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690565543/UserFTProyect/profileIcons/email_gpvxwe.png"
+                ></img>
+                Email
               </button>
               <button
                 className={`btn-profile ${activeButton === 'Experience' ? 'active' : ''}`}
@@ -141,17 +144,13 @@ const Profile = () => {
                   navigate('/profile/experience');
                 }}
               >
-                👷🏻‍♀️ Experiencia
+                <img
+                  className="profile-icon"
+                  alt="route experience icon"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1689612757/MochilaPersonita_r2kpic.png"
+                ></img>
+                Experiencia
               </button>
-              {/* <button
-                className={`btn-profile ${activeButton === 'Offers' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveButton('Offers');
-                  navigate('/profile/Offer');
-                }}
-              >
-                📋 Ofertas
-              </button> */}
 
               <button
                 className={`btn-profile ${activeButton === 'Habilities' ? 'active' : ''}`}
@@ -160,7 +159,12 @@ const Profile = () => {
                   navigate('/profile/habilities');
                 }}
               >
-                🛠 Habilidades
+                <img
+                  className="profile-icon"
+                  alt="skill icon"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690564462/UserFTProyect/profileIcons/logical-thinking_hnhvn3.png"
+                ></img>
+                Habilidades
               </button>
 
               <button
@@ -170,19 +174,28 @@ const Profile = () => {
                   navigate('/profile/ProfileCity');
                 }}
               >
-                📋 Rutas de Ciudad
+                <img
+                  className="profile-icon"
+                  alt="city route icon"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690563951/UserFTProyect/profileIcons/city-route_xcpnlu.png"
+                ></img>
+                Rutas de Ciudad
               </button>
 
               <button
-                className={`btn-profile ${
-                  activeButton === 'MountainRoutes' ? 'active' : ''
-                }`}
+                className={`btn-profile ${activeButton === 'MountainRoutes' ? 'active' : ''
+                  }`}
                 onClick={() => {
                   setActiveButton('MountainRoutes');
                   navigate('/profile/ProfileMountain');
                 }}
               >
-                📋 Rutas de Montaña
+                <img
+                  className="profile-icon"
+                  alt="mountain route icon"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690563951/UserFTProyect/profileIcons/mountain-route_oyq3ui.png"
+                ></img>
+                Rutas de Montaña
               </button>
 
               <button
@@ -190,10 +203,14 @@ const Profile = () => {
                 onClick={() => {
                   useDeleteUser(setUser, logout);
                   setActiveButton('Delete');
-                  // navigate('/home');
                 }}
               >
-                🚮 Borrar Perfil
+                <img
+                  className="profile-icon"
+                  alt="delete user icon"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690566588/UserFTProyect/profileIcons/delete-user_yqjpxj.png"
+                ></img>
+                Borrar Perfil
               </button>
             </div>
           ) : null}
@@ -209,11 +226,3 @@ const Profile = () => {
 
 export default Profile;
 
-{
-  /* <button className="nav-icon close-icon" onClick={handleNav}>
-              <FaTimes />
-            </button> */
-}
-//   <button className="nav-icon" onClick={handleNav}>
-//   OPCIONES
-// </button>
