@@ -76,7 +76,7 @@ const FormProfile = () => {
             <div className="user_container-form-group">
               <label htmlFor="custom-input" className="custom-placeholder"></label>
               <input
-                className="input_user-perfil"
+                className="input-user-perfil"
                 placeholder="Introducir el Nombre"
                 type="text"
                 id="name"
@@ -93,13 +93,13 @@ const FormProfile = () => {
                   className="btn_profile_general"
                   type="submit"
                   disabled={send}
-                  // style={{ background: send ? "#49c1a388" : "#49c1a2" }}
-                  // style={{ background: send ? "#008000" : "#37A08E" }}
-                  // style={
-                  //   {
-                  //     background: send ? '#008000' : 'var(--background-color-button-login)',
-                  //   }
-                  // }
+                // style={{ background: send ? "#49c1a388" : "#49c1a2" }}
+                // style={{ background: send ? "#008000" : "#37A08E" }}
+                // style={
+                //   {
+                //     background: send ? '#008000' : 'var(--background-color-button-login)',
+                //   }
+                // }
                 >
                   CAMBIAR PERFIL
                 </button>

@@ -52,15 +52,15 @@ const Habilities = () => {
 
   return (
     <>
-      <section className="choose_technologies-container-choose-padre">
-        <p className="choose_technologies-container-choose">
+      <section className="habilities-choose-habilities-container">
+        {/* <p className="choose_technologies-container-choose">
           Selecciona tus habilidades ruteras
-        </p>
-        <div className="father-container-technologies">
+        </p> */}
+        <div className="habilities-habilities-container">
           {habilitiesArr.map((hability, index) => (
-            <figure
+            <div
               key={`${hability.name}-${index}`}
-              className="tecnologia-item"
+              className="habilities-hability-item"
               id={hability.name}
             >
               <div className="image-container">
@@ -71,7 +71,7 @@ const Habilities = () => {
                 setArrayHabilities={setArrayHabilities}
                 arrayHabilities={arrayHabilities}
               />
-            </figure>
+            </div>
           ))}
         </div>
         <button

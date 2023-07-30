@@ -34,13 +34,13 @@ export const habilitiesArr = [
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690038105/UserFTProyect/habilities/nature-guide_at5zrs.png',
   },
+  // {
+  //   name: 'Relax',
+  //   image:
+  //     'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690038728/UserFTProyect/habilities/relajaci%C3%B3n_x44lbc.png',
+  // },
   {
-    name: 'Relax',
-    image:
-      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690038728/UserFTProyect/habilities/relajaci%C3%B3n_x44lbc.png',
-  },
-  {
-    name: 'Campamento',
+    name: 'Camping',
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690039032/UserFTProyect/habilities/camping-tent_thx61d.png',
   },
@@ -54,51 +54,51 @@ export const habilitiesArr = [
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690039495/UserFTProyect/habilities/tracking_yzf0eg.png',
   },
-  {
-    name: 'Entomología',
-    image:
-      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690039667/UserFTProyect/habilities/insect-tracking_isfkxa.png',
-  },
+  // {
+  //   name: 'Entomología',
+  //   image:
+  //     'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690039667/UserFTProyect/habilities/insect-tracking_isfkxa.png',
+  // },
   {
     name: 'Alojamiento',
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690040042/UserFTProyect/habilities/hotel-finder_z1clyo.png',
   },
-  {
-    name: 'Espectáculos',
-    image:
-      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690040221/UserFTProyect/habilities/stage_mzrmjf.png',
-  },
+  // {
+  //   name: 'Espectáculos',
+  //   image:
+  //     'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690040221/UserFTProyect/habilities/stage_mzrmjf.png',
+  // },
   {
     name: 'Chino',
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/chinese_l1vymv.png',
   },
-  {
-    name: 'Frances',
-    image:
-      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/bonjour_e2pgks.png',
-  },
+  // {
+  //   name: 'Frances',
+  //   image:
+  //     'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/bonjour_e2pgks.png',
+  // },
   {
     name: 'Italiano',
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/ciao_x9579o.png',
   },
-  {
-    name: 'Castellano',
-    image:
-      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/spanish-language_hbi4qk.png',
-  },
+  // {
+  //   name: 'Castellano',
+  //   image:
+  //     'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/spanish-language_hbi4qk.png',
+  // },
   {
     name: 'Inglés',
     image:
       'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690050664/UserFTProyect/habilities/english_hhcq3d.png',
   },
-  {
-    name: 'Interculturalidad',
-    image:
-      'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690051809/UserFTProyect/habilities/cultural-diversity_kjnkc4.png',
-  },
+  // {
+  //   name: 'Interculturalidad',
+  //   image:
+  //     'https://res.cloudinary.com/dxpdntpqm/image/upload/v1690051809/UserFTProyect/habilities/cultural-diversity_kjnkc4.png',
+  // },
   {
     name: 'Adaptación',
     image:

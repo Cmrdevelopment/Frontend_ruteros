@@ -40,7 +40,7 @@ const ChangeEmail = () => {
     <div>
       {step === 1 ? (
         <div>
-          <p className="changeEmail-text-new-email">Cambio del Email</p>
+          <p className="changeEmail-text-new-email">Cambiar Email</p>
           <div className="changeEmail_container-new-email-general">
             <input
               className="changeEmail_container-new-email"

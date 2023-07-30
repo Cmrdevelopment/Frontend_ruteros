@@ -22,6 +22,7 @@
   border-radius: 12px;
   padding: 12px;
   font-size: 16px;
+  background-color: var(--header-bg-color);
 }
 
 .form-input-duracion {
@@ -32,12 +33,13 @@
   padding: 12px;
   font-size: 16px;
   margin-top: 7px;
+  background-color: var(--header-bg-color);
 }
 
 .form-input-empresa:hover,
 .form-input-duracion:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 5px 1px #25d366;
+  box-shadow: 1px 1px 5px 1px var(--btn-bg-color);
 }
 
 .form_Create-empresa-duracion-descripcion {
@@ -45,28 +47,38 @@
   gap: 12px;
 }
 
-.form-input-description-input {
-  height: 108px;
-  margin: 5px;
-}
-
-.tecnologies-experience {
+.createExperience-habilities {
   margin-top: 5px;
   /* padding-left: 30px; */
-  overflow: auto; /* Habilita el desplazamiento vertical cuando el contenido excede el tamaño */
+  overflow: auto;
+  /* Habilita el desplazamiento vertical cuando el contenido excede el tamaño */
   height: 170px;
   width: 500px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
+  background-color: var(--header-bg-color);
+  padding: 2rem;
+}
+
+.createExperience-habilities-item {
+  width: 95px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.1px;
+  border: 1px solid var(--btn-bg-color);
 }
 
 .Create_Experiencia-tecnologías-Uploadfile_photo_profile {
   display: flex;
   padding: 0 70px 12px;
   gap: 25px;
+  /* background-color: var(--header-bg-color); */
 }
 
 .form-label:hover {
@@ -90,17 +102,20 @@
 }
 
 .form-input-description-input {
+  height: 108px;
   width: 520px;
   border: 1px solid #e3e4e5;
   border-radius: 12px;
   padding: 41px;
   font-size: 16px;
   align-items: flex-start;
+  margin: 5px;
+  background-color: var(--header-bg-color);
 }
 
 .form-input-description-input:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 5px 1px #25d366;
+  box-shadow: 1px 1px 5px 1px var(--btn-bg-color);
 }
 
 .form-Uploadfile_photo_profile {
@@ -109,6 +124,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-right: 0px;
+  /* background-color: aqua; */
 }
 
 .form-label {
@@ -119,14 +135,24 @@
 }
 
 @media only screen and (max-width: 880px) {
-  .tecnologies-experience {
+  .createExperience-habilities {
     margin-top: 5px;
-    overflow: auto; /* Habilita el desplazamiento vertical cuando el contenido excede el tamaño */
+    overflow: auto;
+    /* Habilita el desplazamiento vertical cuando el contenido excede el tamaño */
     height: 250px;
     width: 250px;
     display: flex;
     justify-content: center;
   }
+
+  /* .tecnologies-experience {
+    margin-top: 5px;
+    overflow: auto;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+  } */
 
   .form_Create-empresa-duracion-descripcion {
     display: flex;
@@ -138,6 +164,7 @@
     width: 250px;
     min-height: 120px;
   }
+
   .Create_Experiencia-tecnologías-Uploadfile_photo_profile {
     display: flex;
     flex-direction: column;

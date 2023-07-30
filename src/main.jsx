@@ -17,7 +17,6 @@ import Habilities from './components/Habilities/Habilities';
 import Offer from './components/Offers/Offers';
 import ProfileCity from './components/profile/ProfileCity/ProfileCity';
 import ProfileMountain from './components/profile/ProfileMountain/ProfileMountain';
-import Tecnologias from './components/Tecnologias/Tecnologias';
 import { AuthContextProvider } from './contexts/authContext.jsx';
 import AboutUs from './pages/AboutUs/AboutUs';
 import CheckCode from './pages/CheckCode.jsx';
@@ -66,7 +65,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/profile/Offer" element={<Offer />} />
             <Route path="/profile/ProfileMountain" element={<ProfileMountain />} />
             <Route path="/profile/ProfileCity" element={<ProfileCity />} />
-            <Route path="/profile/tecnologias" element={<Tecnologias />} />
             <Route path="/profile/habilities" element={<Habilities />} />
           </Route>
           <Route path="/verifyCode" element={<CheckCode />} />

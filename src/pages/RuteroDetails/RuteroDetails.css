@@ -10,7 +10,7 @@
 }
 
 .ruteroDetails-carousel-imgs-container {
-  width: 100vw;
+  width: 99vw;
   min-height: 400px;
 }
 
@@ -171,12 +171,12 @@
   padding-top: 20px;
 }
 
-.ruteroDetails-city-jobType > h3 {
+.ruteroDetails-city-jobType>h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.ruteroDetails-technologies > h3 {
+.ruteroDetails-technologies>h3 {
   font-weight: 900;
   font-size: 25px;
 }
@@ -192,7 +192,7 @@
   border: 0px solid red;
 }
 
-.ruteroDetails-info-technologies > h5 {
+.ruteroDetails-info-technologies>h5 {
   font-weight: 900;
   font-size: 18px;
 }
@@ -399,12 +399,12 @@
     padding: 0;
   }
 
-  .ruteroDetails-technologies > h3 {
+  .ruteroDetails-technologies>h3 {
     font-size: 20px;
     margin-top: 12px;
   }
 
-  .ruteroDetails-info-technologies > h5 {
+  .ruteroDetails-info-technologies>h5 {
     text-align: center;
   }
 
@@ -420,7 +420,7 @@
     width: 100%;
   }
 
-  .ruteroDetails-single-experience-container > h3 {
+  .ruteroDetails-single-experience-container>h3 {
     font-size: 18px;
     font-weight: 900;
   }

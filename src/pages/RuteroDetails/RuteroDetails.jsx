@@ -284,7 +284,7 @@ const RuteroDetails = () => {
               key={experience?._id}
             >
               <h3>Nombre experiencia</h3>
-              <p>{experience.workedWith}</p>
+              <p>{experience.title}</p>
               <h3>Descripción</h3>
               <p>{experience.description}</p>
               <h3>Habilidades</h3>
@@ -444,15 +444,15 @@ const RuteroDetails = () => {
           <div className="Dev-comments" style={{ maxHeight: '400px', overflowY: 'auto' }}>
             {comments != null
               ? comments.map((singleComment) => (
-                  <div className="singlecomment-div" key={singleComment?._id}>
-                    <Comments comment={singleComment} setComentsByChild={setComments} />
-                    <DeleteCommentComponent
-                      className="trash-icon"
-                      commentId={singleComment?._id}
-                      onDelete={handleCommentDelete}
-                    />
-                  </div>
-                ))
+                <div className="singlecomment-div" key={singleComment?._id}>
+                  <Comments comment={singleComment} setComentsByChild={setComments} />
+                  <DeleteCommentComponent
+                    className="trash-icon"
+                    commentId={singleComment?._id}
+                    onDelete={handleCommentDelete}
+                  />
+                </div>
+              ))
               : null}
           </div>
         </Paper>

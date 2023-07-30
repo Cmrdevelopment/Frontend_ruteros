@@ -94,7 +94,7 @@ const Profile = () => {
           {ancho > 800 ? (
             <div className="containerNavProfile">
               <button
-                className={`btn-profile ${activeButton === 'Profile' ? 'active' : ''}`}
+                className={`btn-profile btn-profile-first ${activeButton === 'Profile' ? 'active' : ''}`}
                 onClick={() => {
                   setActiveButton('Profile');
                   navigate('/profile');
@@ -199,7 +199,7 @@ const Profile = () => {
               </button>
 
               <button
-                className={`btn-profile ${activeButton === 'Delete' ? 'active' : ''}`}
+                className={`btn-profile btn-profile-last ${activeButton === 'Delete' ? 'active' : ''}`}
                 onClick={() => {
                   useDeleteUser(setUser, logout);
                   setActiveButton('Delete');

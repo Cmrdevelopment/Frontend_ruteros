@@ -19,17 +19,20 @@ const ProfileCity = () => {
 
   return (
     <section className="Offers-Btn-filter">
-      <button className="btn_profile_general-my-expe" onClick={handleShowCreated}>
-        Mis rutas
-      </button>
+      <div className='profileCity-btns'>
+        <button className="btn_profile_general" onClick={handleShowCreated}>
+          Mis rutas
+        </button>
 
-      <NavLink to="/createCities2">
-        <button className="offer-button-Create">Crear Ruta</button>
-      </NavLink>
+        <NavLink to="/createCities2">
+          <button className="btn_profile_general">Crear Ruta</button>
+        </NavLink>
 
-      <button className="btn_profile_general-my-expe" onClick={handleShowInterested}>
-        Rutas que sigo
-      </button>
+        <button className="btn_profile_general" onClick={handleShowInterested}>
+          Rutas que sigo
+        </button>
+      </div>
+
       {showCreated ? <CityRoutesCreated /> : <CityRoutesInterested />}
     </section>
   );

@@ -26,7 +26,7 @@ const MyExperience = () => {
 
   return (
     <section className="experience-p-container_general">
-      <h3>Mi experiencia laboral</h3>
+      <h3>Mi experiencia rutera</h3>
       <div className="experience-p-container_general_section">
         {' '}
         {experiences.map((experience, index) => (
@@ -39,7 +39,7 @@ const MyExperience = () => {
               <div className="experience-p-container">
                 <p>
                   {' '}
-                  <u>Proyecto/Empresa</u>: {experience.workedWith}
+                  <u>Título:</u>: {experience.title}
                 </p>
                 <p>
                   {' '}

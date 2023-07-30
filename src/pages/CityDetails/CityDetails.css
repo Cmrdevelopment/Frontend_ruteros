@@ -9,7 +9,8 @@
 }
 
 .cityDetails-carousel-imgs-container {
-  width: 200%;
+  width: 99vw;
+  min-height: 400px;
 }
 
 .cityDetails-image-and-info-container {
@@ -164,12 +165,12 @@
   padding-top: 20px;
 }
 
-.cityDetails-city-jobType > h3 {
+.cityDetails-city-jobType>h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.cityDetails-itemsToCarry > h3 {
+.cityDetails-itemsToCarry>h3 {
   font-weight: 900;
   font-size: 25px;
 }
@@ -185,7 +186,7 @@
   border: 0px solid red;
 }
 
-.cityDetails-info-itemsToCarry > h5 {
+.cityDetails-info-itemsToCarry>h5 {
   font-weight: 900;
   font-size: 18px;
 }
@@ -350,12 +351,12 @@
     padding: 0;
   }
 
-  .cityDetails-itemsToCarry > h3 {
+  .cityDetails-itemsToCarry>h3 {
     font-size: 20px;
     margin-top: 12px;
   }
 
-  .cityDetails-info-itemsToCarry > h5 {
+  .cityDetails-info-itemsToCarry>h5 {
     text-align: center;
   }
 

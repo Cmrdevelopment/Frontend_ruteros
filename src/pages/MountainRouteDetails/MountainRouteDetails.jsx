@@ -180,7 +180,9 @@ const MountainRouteDetails = () => {
         )}
       </div>
 
-      {mountainRoute && <Carousel_imgs images={mountainRoute.images} />}
+      <div className="mountainRouteDetails-carousel-imgs-container">
+        {mountainRoute && <Carousel_imgs images={mountainRoute.images} />}
+      </div>
 
       <div className="mountainRouteDetails-city-jobType-technologies">
         <div className="mountainRouteDetails-city-jobType">

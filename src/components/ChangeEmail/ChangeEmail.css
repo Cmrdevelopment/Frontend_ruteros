@@ -18,10 +18,12 @@
   padding: 10px;
   gap: 18px;
 }
+
 .changeEmail_container-new-email {
   width: 450px;
   margin-top: 25px;
   border: 1px solid #e3e4e5;
+  background-color: var(--header-bg-color);
   border-radius: 12px;
   padding: 20px;
   font-size: 16px;
@@ -29,7 +31,7 @@
 
 .changeEmail_container-new-email:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 5px 1px #25d366;
+  box-shadow: 1px 1px 5px 1px var(--btn-bg-color);
 }
 
 @media only screen and (max-width: 880px) {

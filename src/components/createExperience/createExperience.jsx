@@ -11,7 +11,7 @@ import Uploadfile from '../Uploadfile';
 const createExperienceUser = () => {
   const { register, handleSubmit } = useForm();
   const [experienceData] = useState({
-    workedWith: '',
+    title: '',
     duration: 0,
     habilities: [],
     description: '',
@@ -67,9 +67,9 @@ const createExperienceUser = () => {
               <input
                 className="form-input-empresa"
                 type="text"
-                placeholder="Empresa"
-                name="workedWith"
-                {...register('workedWith', { required: true })}
+                placeholder="Ruta"
+                name="title"
+                {...register('title', { required: true })}
               />
             </label>
 
@@ -101,11 +101,11 @@ const createExperienceUser = () => {
           <label className="form-label-Create_Experiencia-tecnologías-Uploadfile_photo_profile">
             {' '}
             Habilidades
-            <div className="tecnologies-experience">
+            <div className="createExperience-habilities">
               {habilitiesArr.map((hability) => (
                 <figure
                   key={hability.name}
-                  className="tecnologia-item"
+                  className="createExperience-habilities-item"
                   id={hability.name}
                 >
                   <div className="image-container">
