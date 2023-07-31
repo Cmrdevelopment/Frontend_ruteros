@@ -4,3 +4,9 @@
   height: 400px;
   border: 0px solid black;
 }
+
+@media (max-width: 600px) {
+  .routeMap-container {
+    width: 100%;
+  }
+}

@@ -30,4 +30,12 @@
   .cityDetails-comments-container {
     width: 100%;
   }
+
+  .cityDetails-private-comments-container {
+    width: 100%;
+  }
+
+  .cityDetails-public-comments-container {
+    width: 100%;
+  }
 }
