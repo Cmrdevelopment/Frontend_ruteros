@@ -25,7 +25,8 @@ import Citys from './pages/Citys/Citys.jsx';
 import ForgotPassword from './pages/ForgotPassword.jsx';
 import { Home } from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
-import MountainRouteDetails from './pages/MountainRouteDetails/MountainRouteDetails';
+// import MountainRouteDetails from './pages/MountainRouteDetails/MountainRouteDetails';
+import MountainRouteDetails2 from './pages/MountainRouteDetails2/MountainRouteDetails2';
 import MountainRoutes from './pages/MountainRoutes/MountainRoutes.jsx';
 import OfferDetails from './pages/OfferDetails/OfferDetails';
 import Offers from './pages/Offers/Offers';
@@ -49,7 +50,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/ruteroDetails" element={<RuteroDetails />} />
           <Route path="/offerDetails" element={<OfferDetails />} />
           <Route path="/cityDetails" element={<CityDetails />} />
-          <Route path="/mountainRouteDetails" element={<MountainRouteDetails />} />
+          {/* <Route path="/mountainRouteDetails" element={<MountainRouteDetails />} /> */}
+          <Route path="/mountainRouteDetails2" element={<MountainRouteDetails2 />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/createOffer2" element={<CreateOffer2 />} />

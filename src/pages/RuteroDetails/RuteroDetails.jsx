@@ -31,7 +31,7 @@ const RuteroDetails = () => {
   const [res, setRes] = useState({});
   const [resComment, setResComment] = useState({});
   const [resNewChat, setResNewChat] = useState({});
-  const [show, setShow] = useState(false);
+  const [showPrivateComment, setShowPrivateComment] = useState(true);
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState(null);
   const [rutero, setRutero] = useState(null);
@@ -111,7 +111,7 @@ const RuteroDetails = () => {
 
   useEffect(() => {
     if (resNewChat?.status == 200) {
-      setShow(!show);
+      setShowPrivateComment(!showPrivateComment);
       Swal.fire({
         icon: 'success',
         title: '¡Mensaje enviado!',
@@ -320,78 +320,19 @@ const RuteroDetails = () => {
 
       {/* ------------------- Developer job experiences ---------------------*/}
 
-      <button
+      {/* <button
         className="ruteroDetails-private-comment-btn"
-        onClick={() => setShow(!show)}
+        onClick={() => setShowPrivateComment(!showPrivateComment)}
       >
         Chat privado
-        {/* <div className="container-privateMessage"> */}
-      </button>
-
-      {show ? (
-        <div className="ruteroDetails-private-comments-container">
-          <Paper
-            style={{
-              padding: '40px 20px 55px',
-              backgroundColor: '#fcfcfc',
-              border: '0px solid red',
-              width: '100%',
-            }}
-          >
-            <h3>Comentario privado</h3>
-            <Grid container wrap="nowrap" spacing={2}>
-              <Grid item>
-                <Avatar alt="Remy Sharp" src={user ? user?.image : imgLink} />
-              </Grid>
-              <Grid justifyContent="left" item xs zeroMinWidth>
-                <TextField
-                  id="newComent"
-                  label="Pon tu comentario"
-                  variant="outlined"
-                  style={{ width: '100%' }}
-                  onChange={(e) => setInputValue(e.target.value)}
-                />
-                <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{
-                    border: 'none',
-                    borderRadius: '30px',
-                    height: '39px',
-                    width: '270px',
-                    [theme.breakpoints.down('sm')]: {
-                      width: '120px',
-                    },
-                    backgroundColor: '#25d366',
-                    color: 'white',
-                    fontSize: '16px',
-                    transition: 'linear .2s',
-                    marginTop: '30px',
-                    ':hover': {
-                      borderBottom: '1.5px solid #25d366',
-                      backgroundColor: 'rgb(250, 250, 250)',
-                      color: '#25d366',
-                      fontSize: '18px',
-                      cursor: 'pointer',
-                    },
-                  }}
-                  onClick={() => handleCommentPrivate()}
-                  disabled={loading}
-                >
-                  Enviar
-                </Button>
-              </Grid>
-            </Grid>
-          </Paper>
-        </div>
-      ) : null}
+      </button> */}
 
       {/* ------------------- PUBLIC COMMENTS ----------------------------- */}
       <div style={{ padding: 0 }} className="ruteroDetails-public-comments-container">
         <Paper
           style={{
             padding: '40px 20px 0px',
-            backgroundColor: '#fcfcfc',
+            backgroundColor: 'var(--header-bg-color)',
             border: '0px solid red',
             width: '100%',
           }}
@@ -420,15 +361,15 @@ const RuteroDetails = () => {
                   [theme.breakpoints.down('sm')]: {
                     width: '120px',
                   },
-                  backgroundColor: '#25d366',
+                  backgroundColor: 'var(--btn-bg-color)',
                   color: 'white',
                   fontSize: '16px',
                   transition: 'linear .2s',
                   marginTop: '30px',
                   ':hover': {
                     borderBottom: '1.5px solid #25d366',
-                    backgroundColor: 'rgb(250, 250, 250)',
-                    color: '#25d366',
+                    backgroundColor: 'var(--header-bg-color)',
+                    color: 'var(--btn-bg-color)',
                     fontSize: '18px',
                     cursor: 'pointer',
                   },
@@ -457,7 +398,67 @@ const RuteroDetails = () => {
           </div>
         </Paper>
       </div>
-      {/* ------------------ COMMENTS ------------------------------- */}
+      {/* ------------------ PUBLIC COMMENTS ------------------------------- */}
+
+      {/* ------------------ PRIVATE COMMENTS ------------------------------- */}
+      {showPrivateComment ? (
+        <div className="ruteroDetails-private-comments-container">
+          <Paper
+            style={{
+              padding: '40px 20px 55px',
+              backgroundColor: 'var(--header-bg-color)',
+              border: '0px solid red',
+              width: '100%',
+            }}
+          >
+            <h3>Comentario privado</h3>
+            <Grid container wrap="nowrap" spacing={2}>
+              <Grid item>
+                <Avatar alt="Remy Sharp" src={user ? user?.image : imgLink} />
+              </Grid>
+              <Grid justifyContent="left" item xs zeroMinWidth>
+                <TextField
+                  id="newComent"
+                  label="Pon tu comentario"
+                  variant="outlined"
+                  style={{ width: '100%' }}
+                  onChange={(e) => setInputValue(e.target.value)}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{
+                    border: 'none',
+                    borderRadius: '30px',
+                    height: '39px',
+                    width: '270px',
+                    [theme.breakpoints.down('sm')]: {
+                      width: '120px',
+                    },
+                    backgroundColor: 'var(--btn-bg-color)',
+                    color: 'white',
+                    fontSize: '16px',
+                    transition: 'linear .2s',
+                    marginTop: '30px',
+                    ':hover': {
+                      borderBottom: '1.5px solid #25d366',
+                      backgroundColor: 'var(--header-bg-color)',
+                      color: 'var(--btn-bg-color)',
+                      fontSize: '18px',
+                      cursor: 'pointer',
+                    },
+                  }}
+                  onClick={() => handleCommentPrivate()}
+                  disabled={loading}
+                >
+                  Enviar
+                </Button>
+              </Grid>
+            </Grid>
+          </Paper>
+        </div>
+      ) : null}
+      {/* ------------------ PRIVATE COMMENTS ------------------------------- */}
     </div>
   );
 };

@@ -8,7 +8,7 @@ import ToggleBtnFollowMountainRoute from '../ToggleBtnFollowMountainRoute/Toggle
 
 const CardMountainRoute2 = ({ mountainRoute }) => {
   const navigate = useNavigate();
-  const pathById = `/mountainRouteDetails`;
+  const pathById = `/mountainRouteDetails2`;
 
   return (
     <section className="mountainRoute-Info">

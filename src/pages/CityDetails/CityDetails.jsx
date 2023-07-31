@@ -5,9 +5,10 @@ import './CityDetailsComments.css';
 import { Avatar, Button, Divider, Grid, Paper, TextField, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { BiCodeAlt } from 'react-icons/bi';
-import { BsCalendarDay } from 'react-icons/bs';
+import { BiTime } from 'react-icons/bi';
 import { FaMapMarker } from 'react-icons/fa';
-import { FaLaptopCode } from 'react-icons/fa';
+import { GiPathDistance } from 'react-icons/gi';
+import { MdReportProblem } from 'react-icons/md';
 import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
@@ -136,29 +137,29 @@ const CityDetails = () => {
           <div className="cityDetails-read-ratings">
             {city && <ReadOnlyCityRating city={city} />} ({city?.ratings.length})
           </div>
-          <div className="cityDetails-info-city-salary-jobtype-expYears">
+          <div className="cityDetails-info-localization-distance-difficulty-durartion">
             <div className="cityDetails-info-routeLocation">
               <p>Localización</p>
               <div className="cityDetails-info-city-detail">
-                <FaMapMarker /> {city?.routeLocation}
+                <FaMapMarker style={{ fontSize: '1.6em' }} /> {city?.routeLocation}
               </div>
             </div>
             <div className="cityDetails-info-routeLoDistance">
               <p>Distancia</p>
               <div className="cityDetails-info-city-detail">
-                {city?.routeDistance} Kms
+                <GiPathDistance style={{ fontSize: '1.6em' }} /> {city?.routeDistance} Kms
               </div>
             </div>
             <div className="cityDetails-info-routeDifficulty">
               <p>Dificultad</p>
               <div className="cityDetails-info-city-detail">
-                <FaLaptopCode /> {city?.difficulty}
+                <MdReportProblem style={{ fontSize: '1.6em' }} /> {city?.difficulty}
               </div>
             </div>
             <div className="cityDetails-info-routeDuration">
               <p>Duración</p>
               <div className="cityDetails-info-city-detail">
-                <BsCalendarDay /> {city?.routeDuration} hora/s
+                <BiTime style={{ fontSize: '1.6em' }} /> {city?.routeDuration} hora/s
               </div>
             </div>
           </div>
@@ -274,9 +275,9 @@ const CityDetails = () => {
 
 
       {/* -------------------COMMENTS ----------------------------- */}
-      <button className="cityDetails-private-comment-btn" onClick={() => setShowPrivateComment(!showPrivateComment)}>
+      {/* <button className="cityDetails-private-comment-btn" onClick={() => setShowPrivateComment(!showPrivateComment)}>
         Chat privado
-      </button>
+      </button> */}
 
       <div className="cityDetails-public-comments-container">
         <Paper

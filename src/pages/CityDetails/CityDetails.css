@@ -30,7 +30,7 @@
   gap: 1rem;
 }
 
-.cityDetails-info-city-salary-jobtype-expYears {
+.cityDetails-info-localization-distance-difficulty-durartion {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -347,6 +347,10 @@
 
   .cityDetails-city-jobType {
     display: none;
+  }
+
+  .cityDetails-itemsToCarry-container {
+    width: 100%;
   }
 
   .cityDetails-itemsToCarry {
