@@ -29,6 +29,7 @@
   padding: 1rem 0;
   background-color: var(--header-bg-color);
   border: 0px solid blue;
+  /* overflow: auto; */
 }
 
 .habilities-hability-item {

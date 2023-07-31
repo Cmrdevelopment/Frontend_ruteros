@@ -16,7 +16,6 @@ import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyCityRating from '../../components/ratings/ReadOnlyCityRating/ReadOnlyCityRating';
 import WriteRatingForCityRoute from '../../components/ratings/WriteRatingForCityRoute/WriteRatingForCityRoute';
-// import WriteRatingForOffer from '../../components/ratings/WriteRatingForOffer/WriteRatingForOffer';
 import RouteMap from '../../components/RouteMap/RouteMap';
 import { itemsToCarryArr } from '../../data/object.itemsToCarry';
 import { createMasChat } from '../../services/API_proyect/chat.service';
@@ -31,7 +30,7 @@ const CityDetails = () => {
   const [resComment, setResComment] = useState({});
   const [resNewChat, setResNewChat] = useState({});
   const [loading, setLoading] = useState(false);
-  const [show, setShow] = useState(false);
+  const [showPrivateComment, setShowPrivateComment] = useState(true);
   const [inputValue, setInputValue] = useState(null);
   const [city, setCity] = useState(null);
   const [comments, setComments] = useState(null);
@@ -69,7 +68,7 @@ const CityDetails = () => {
 
   useEffect(() => {
     if (resNewChat?.status == 200) {
-      setShow(!show);
+      setShowPrivateComment(!showPrivateComment);
       Swal.fire({
         icon: 'success',
         title: '¡Mensaje enviado!',
@@ -138,25 +137,25 @@ const CityDetails = () => {
             {city && <ReadOnlyCityRating city={city} />} ({city?.ratings.length})
           </div>
           <div className="cityDetails-info-city-salary-jobtype-expYears">
-            <div className="cityDetails-info-city">
+            <div className="cityDetails-info-routeLocation">
               <p>Localización</p>
               <div className="cityDetails-info-city-detail">
                 <FaMapMarker /> {city?.routeLocation}
               </div>
             </div>
-            <div className="cityDetails-info-annualSalary">
+            <div className="cityDetails-info-routeLoDistance">
               <p>Distancia</p>
               <div className="cityDetails-info-city-detail">
                 {city?.routeDistance} Kms
               </div>
             </div>
-            <div className="cityDetails-info-jobType">
+            <div className="cityDetails-info-routeDifficulty">
               <p>Dificultad</p>
               <div className="cityDetails-info-city-detail">
                 <FaLaptopCode /> {city?.difficulty}
               </div>
             </div>
-            <div className="cityDetails-info-experienceYears">
+            <div className="cityDetails-info-routeDuration">
               <p>Duración</p>
               <div className="cityDetails-info-city-detail">
                 <BsCalendarDay /> {city?.routeDuration} hora/s
@@ -173,7 +172,7 @@ const CityDetails = () => {
 
       {city && showRouteMap(city)}
 
-      <div className="cityDetails-city-jobType-itemsToCarry">
+      {/* <div className="cityDetails-city-jobType-itemsToCarry">
         <div className="cityDetails-city-jobType">
           <h3>Localización y dificultad</h3>
           <div className="cityDetails-city-jobType-without-title">
@@ -191,7 +190,7 @@ const CityDetails = () => {
             </div>
           </div>
         </div>
-        <div className="cityDetails-itemsToCArry">
+        <div className="cityDetails-itemsToCArry2">
           <h3>Equipación recomendada</h3>
 
           <div className="cityDetails-info-itemsToCArry">
@@ -199,7 +198,7 @@ const CityDetails = () => {
               <BiCodeAlt /> Equipo
             </h5>
             <div className="cityDetails-info-itemToCarry">
-              {/* ----------Show City route's items to carry -------------------- */}
+            
               <div className="cityDetails-icons-itemsToCarry-container">
                 {itemsToCarryArr
                   .filter((itemToCarry) => city?.itemsToCarry.includes(itemToCarry.name))
@@ -220,93 +219,70 @@ const CityDetails = () => {
                     </figure>
                   ))}
               </div>
-              {/* //------------------------ Show City Route item's to carry -------------------- */}
+              
             </div>
           </div>
         </div>
+      </div> */}
+
+      <div className="cityDetails-itemsToCarry-container">
+        <h3>Equipación recomendada</h3>
+
+        <div className="cityDetails-info-itemsToCArry">
+          <h5>
+            <BiCodeAlt /> Equipo
+          </h5>
+          <div className="cityDetails-info-itemToCarry">
+            {/* ----------Show City route's items to carry -------------------- */}
+            <div className="cityDetails-icons-itemsToCarry-container">
+              {itemsToCarryArr
+                .filter((itemToCarry) => city?.itemsToCarry.includes(itemToCarry.name))
+                .map((itemToCarry, index) => (
+                  <figure
+                    key={`${itemToCarry.name}_${index}`}
+                    className="cityDetails-tecnologia-item"
+                    id={itemToCarry.name}
+                  >
+                    <div className="cityDetails-icon-container">
+                      <img
+                        className="cityDetails-itemToCarry-image"
+                        src={itemToCarry.image}
+                        alt={itemToCarry.name}
+                      />
+                      <p>{itemToCarry.name}</p>
+                    </div>
+                  </figure>
+                ))}
+            </div>
+            {/* //------------------------ Show City Route item's to carry -------------------- */}
+          </div>
+        </div>
+        {/* </div> */}
+
       </div>
 
       {/* ----------------------- City Route Description ----------------------- */}
       <div className="cityDetails-city-description">
         <h3>Descripción</h3>
         <p>{city?.descriptionGeneral}</p>
-        <h3>Duración</h3>
+        {/* <h3>Duración</h3>
         <p>{city?.routeDuration}</p>
         <h3>Distancia</h3>
-        <p>{city?.routeDistance}</p>
+        <p>{city?.routeDistance}</p> */}
       </div>
       {/* ----------------------- City Route Description ----------------------- */}
 
-      {/* <Paper style={{ padding: '40px 20px 55px', backgroundColor: '#fcfcfc' }}> */}
-
-      <button className="cityDetails-private-comment-btn" onClick={() => setShow(!show)}>
-        Chat privado
-      </button>
-
-      {show ? (
-        <div className="cityDetails-private-comments-container">
-          <Paper
-            style={{
-              padding: '40px 20px 55px',
-              backgroundColor: '#fcfcfc',
-              border: '0px solid red',
-              width: '100%',
-            }}
-          >
-            <h3>Comentario privado</h3>
-            <Grid container wrap="nowrap" spacing={2}>
-              <Grid item>
-                <Avatar alt="Remy Sharp" src={city?.image} />
-              </Grid>
-              <Grid justifyContent="left" item xs zeroMinWidth>
-                <TextField
-                  id="newComent"
-                  label="Pon tu comentario"
-                  variant="outlined"
-                  style={{ width: '100%' }}
-                  onChange={(e) => setInputValue(e.target.value)}
-                />
-                <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{
-                    border: 'none',
-                    borderRadius: '30px',
-                    height: '39px',
-                    width: '270px',
-                    [theme.breakpoints.down('sm')]: {
-                      width: '120px',
-                    },
-                    backgroundColor: '#25d366',
-                    color: 'white',
-                    fontSize: '16px',
-                    transition: 'linear .2s',
-                    marginTop: '30px',
-                    ':hover': {
-                      borderBottom: '1.5px solid #25d366',
-                      backgroundColor: 'rgb(250, 250, 250)',
-                      color: '#25d366',
-                      fontSize: '18px',
-                      cursor: 'pointer',
-                    },
-                  }}
-                  onClick={() => handleCommentPrivate()}
-                  disabled={loading}
-                >
-                  Enviar
-                </Button>
-              </Grid>
-            </Grid>
-          </Paper>
-        </div>
-      ) : null}
 
       {/* -------------------COMMENTS ----------------------------- */}
+      {/* <button className="cityDetails-private-comment-btn" onClick={() => setShowPrivateComment(!showPrivateComment)}>
+        Chat privado
+      </button> */}
+
       <div className="cityDetails-public-comments-container">
         <Paper
           style={{
             padding: '40px 20px 0px',
-            backgroundColor: '#fcfcfc',
+            backgroundColor: 'var(--header-bg-color)',
             border: '0px solid red',
             width: '100%',
           }}
@@ -335,15 +311,15 @@ const CityDetails = () => {
                   [theme.breakpoints.down('sm')]: {
                     width: '120px',
                   },
-                  backgroundColor: '#25d366',
+                  backgroundColor: 'var(--btn-bg-color)',
                   color: 'white',
                   fontSize: '16px',
                   transition: 'linear .2s',
                   marginTop: '30px',
                   ':hover': {
                     borderBottom: '1.5px solid #25d366',
-                    backgroundColor: 'rgb(250, 250, 250)',
-                    color: '#25d366',
+                    backgroundColor: 'var(--header-bg-color)',
+                    color: 'var(--btn-bg-color)',
                     fontSize: '18px',
                     cursor: 'pointer',
                   },
@@ -370,6 +346,64 @@ const CityDetails = () => {
           </div>
         </Paper>
       </div>
+
+      {showPrivateComment ? (
+        <div className="cityDetails-private-comments-container">
+          <Paper
+            style={{
+              padding: '40px 20px 55px',
+              backgroundColor: 'var(--header-bg-color)',
+              border: '0px solid red',
+              width: '100%',
+            }}
+          >
+            <h3>Comentario privado</h3>
+            <Grid container wrap="nowrap" spacing={2}>
+              <Grid item>
+                <Avatar alt="Remy Sharp" src={city?.image} />
+              </Grid>
+              <Grid justifyContent="left" item xs zeroMinWidth>
+                <TextField
+                  id="newComent"
+                  label="Pon tu comentario"
+                  variant="outlined"
+                  style={{ width: '100%' }}
+                  onChange={(e) => setInputValue(e.target.value)}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{
+                    border: 'none',
+                    borderRadius: '30px',
+                    height: '39px',
+                    width: '270px',
+                    [theme.breakpoints.down('sm')]: {
+                      width: '120px',
+                    },
+                    backgroundColor: 'var(--btn-bg-color)',
+                    color: 'white',
+                    fontSize: '16px',
+                    transition: 'linear .2s',
+                    marginTop: '30px',
+                    ':hover': {
+                      borderBottom: '1.5px solid #25d366',
+                      backgroundColor: 'var(--header-bg-color)',
+                      color: 'var(--btn-bg-color)',
+                      fontSize: '18px',
+                      cursor: 'pointer',
+                    },
+                  }}
+                  onClick={() => handleCommentPrivate()}
+                  disabled={loading}
+                >
+                  Enviar
+                </Button>
+              </Grid>
+            </Grid>
+          </Paper>
+        </div>
+      ) : null}
       {/* ------------------ COMMENTS ------------------------------- */}
     </div>
   );

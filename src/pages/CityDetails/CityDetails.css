@@ -75,10 +75,10 @@
   align-items: center;
 }
 
-.cityDetails-info-city,
-.cityDetails-info-annualSalary,
-.cityDetails-info-jobType,
-.cityDetails-info-experienceYears {
+.cityDetails-info-routeLocation,
+.cityDetails-info-routeLoDistance,
+.cityDetails-info-routeDifficulty,
+.cityDetails-info-routeDuration {
   width: 230px;
   height: 110px;
   display: flex;
@@ -89,12 +89,13 @@
   border: 0.7px solid #e3e4e5;
   border-radius: 5px;
   padding: 0 0 0 12px;
+  background-color: var(--header-bg-color);
 }
 
-.cityDetails-info-city:hover,
-.cityDetails-info-annualSalary:hover,
-.cityDetails-info-jobType:hover,
-.cityDetails-info-experienceYears:hover {
+.cityDetails-info-routeLocation:hover,
+.cityDetails-info-routeLoDistance:hover,
+.cityDetails-info-routeDifficulty:hover,
+.cityDetails-info-routeDuration:hover {
   background-color: var(--btn-bg-color);
   color: #e3e4e5;
   font-weight: 700;
@@ -120,18 +121,34 @@
   gap: 1rem;
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
-  background-color: #fcfcfc;
+  background-color: var(--header-bg-color);
   margin-top: 1rem;
 }
 
-.cityDetails-city-jobType-itemsToCarry {
+.cityDetails-itemsToCarry-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  /* align-items: center; */
+  gap: 1rem;
+  border: 0px solid var(--btn-bg-color);
+  border: 0.7px solid #e3e4e5;
+  border-radius: 9px;
+  background-color: var(--header-bg-color);
+  padding: 1rem;
+}
+
+/* .cityDetails-city-jobType-itemsToCarry {
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: 0px solid black;
+  border: 1px solid var(--btn-bg-color);
+  background-color: var(--header-bg-color);
   padding: 1rem;
-}
+} */
 
 .cityDetails-city-jobType {
   width: 450px;
@@ -150,7 +167,7 @@
   padding-top: 20px;
 }
 
-.cityDetails-itemsToCarry {
+.cityDetails-itemsToCarry2 {
   width: 763px;
   height: 400px;
   display: flex;
@@ -160,9 +177,11 @@
   gap: 1rem;
   border: 0.7px solid #e3e4e5;
   border-radius: 9px;
-  background-color: #fcfcfc;
+  /* background-color: #fcfcfc; */
+  background-color: var(--header-bg-color);
   padding: 0 0 0 23px;
   padding-top: 20px;
+  border: 0px solid red;
 }
 
 .cityDetails-city-jobType>h3 {
@@ -275,7 +294,7 @@
   width: 80%;
   border: 1px solid #e3e4e5;
   border-radius: 9px;
-  background-color: #fcfcfc;
+  background-color: var(--header-bg-color);
   margin-bottom: 1rem;
 }
 
@@ -302,8 +321,8 @@
 .cityDetails-public-comments-container {
   width: 80%;
   border-radius: 9px;
-  background-color: #fcfcfc;
-  margin-bottom: 2rem;
+  background-color: var(--header-bg-color);
+  margin-bottom: 0.4rem;
   border: 0px solid red;
 }
 
@@ -313,10 +332,10 @@
     gap: 2rem;
   }
 
-  .cityDetails-info-city,
-  .cityDetails-info-annualSalary,
-  .cityDetails-info-jobType,
-  .cityDetails-info-experienceYears {
+  .cityDetails-info-routeLocation,
+  .cityDetails-info-routeLoDistance,
+  .cityDetails-info-routeDifficulty,
+  .cityDetails-info-routeDuration {
     gap: 1rem;
     width: 100%;
     align-items: center;

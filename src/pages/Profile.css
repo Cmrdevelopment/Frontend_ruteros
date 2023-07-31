@@ -28,6 +28,7 @@
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
+  border: 0px solid red;
   /* max-height: 561.39px; */
   /* margin-left: 30px; */
 }
