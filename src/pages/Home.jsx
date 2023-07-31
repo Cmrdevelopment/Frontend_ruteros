@@ -117,7 +117,10 @@ export const Home = () => {
         </div>
       </div>
       <div className="home-company-container">
-        <p className="home-p-company">Algunas de nuestras rutas de ciudad recomentadas</p>
+        <p className="home-p-company">
+          Algunas de nuestras <span className="home-negrita"> rutas de ciudad </span>{' '}
+          recomentadas
+        </p>
         <div className="home-company-container-imagenes-ciudades">
           <div className="home-company-container-imagenes-ciudades-primera-fila">
             <NavLink to="/citys">
@@ -187,7 +190,8 @@ export const Home = () => {
 
       <div className="home-company-container">
         <p className="home-p-company">
-          Algunas de nuestras rutas de montaña recomentadas
+          Algunas de nuestras <span className="home-negrita">rutas de montaña</span>{' '}
+          recomentadas
         </p>
         <div className="home-company-container-imagenes-ciudades">
           <div className="home-company-container-imagenes-ciudades-primera-fila">
