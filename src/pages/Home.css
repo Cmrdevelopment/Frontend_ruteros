@@ -96,12 +96,22 @@
   display: flex;
 }
 
+.home-contactUs-header{
+  border: none;
+  border-radius: 30px;
+  height: 39px;
+  width: 145px;
+  background-color: var(--btn-bg-color);
+  color: white;
+  margin-right: 25px;
+}
+
 .home-contactUs {
   border: none;
   border-radius: 30px;
   height: 39px;
   width: 180px;
-  background-color: #25d366;
+  background-color: var(--btn-bg-color);
   color: white;
 }
 
@@ -115,7 +125,8 @@
 }
 
 .home-contactUs:hover,
-.home-learnMore:hover {
+.home-learnMore:hover,
+.home-contactUs-header:hover {
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -240,7 +251,7 @@
 }
 
 .home-review-container {
-  margin-top: 45px;
+  margin: 45px 0 45px 0;
   display: flex;
   align-items: center;
   justify-content: center;

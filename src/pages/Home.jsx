@@ -24,7 +24,7 @@ export const Home = () => {
 
               <div className="home-subButton">
                 <NavLink to="/citys">
-                  <button className="home-contactUs">Ciudades</button>
+                  <button className="home-contactUs-header">Ciudades</button>
                 </NavLink>
                 <NavLink to="/mountainRoutes">
                   <button className="home-learnMore">
@@ -263,57 +263,61 @@ export const Home = () => {
         <section className="home-review-section">
           <figure className="home-review-figure">
             <p className="home-review-figure-p">
-              Gracias a DevLink, he podido encontrar proyectos emocionantes, colaborar con
-              equipos talentosos y expandir mi red profesional.
+              En mi viaje por rutas urbanas, me sentí viva como nunca. Con cada ciudad, mi
+              corazón se llenaba de maravillas y aprendizajes. Descubrí mi pasión por
+              explorar y apreciar la diversidad del mundo.
             </p>
             <div className="home-review-developer">
               <img
                 className="home-person-review"
-                src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1688032676/ProjectFinalBOOTCAMP/Perfil/AitorPerfil_rjgben.png"
+                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690793339/Ruteros/ChicaTestimonioFeliz_dkvgow.jpg"
                 alt="person-review"
               ></img>
 
               <div className="home-nameJob-person">
-                <p className="home-person">Aitor Gutierrez</p>
-                <p className="home-job">Full Stack Developer</p>
+                <p className="home-person">Maria Hernandez</p>
+                <p className="home-job">Urbanita soñadora</p>
               </div>
             </div>
           </figure>
 
           <figure className="home-review-figure">
             <p className="home-review-figure-p">
-              Me complace compartir mi experiencia con DevLink, una plataforma que ha sido
-              fundamental en mi búsqueda de empleo como frontend developer.
+              En mi viaje por rutas de montañas, me sentí vivo como nunca. Con cada
+              sendero, mi corazón se llenaba de maravillas y aprendizajes. Descubrí mi
+              pasión por explorar y apreciar la grandeza natural del mundo.
             </p>
             <div className="home-review-developer">
               <img
                 className="home-person-review"
-                src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1688032645/ProjectFinalBOOTCAMP/Perfil/JonathanPerfil_tf0hdq.png"
+                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690793399/Ruteros/ChicoTestimonioGafas_rcwehm.jpg"
                 alt="person-review"
               ></img>
 
               <div className="home-nameJob-person">
-                <p className="home-person">Jonathan Rodriguez</p>
-                <p className="home-job">Frontend Developer</p>
+                <p className="home-person">Erik Montaña</p>
+                <p className="home-job">Alpinista Aventurero</p>
               </div>
             </div>
           </figure>
 
           <figure className="home-review-figure">
             <p className="home-review-figure-p">
-              He tenido la oportunidad de acceder a increíbles ofertas de trabajo a través
-              de esta plataforma.
+              Durante mi travesía por rutas diversas, me sentí plena y enérgica. Cada
+              sendero desveló maravillas y enseñanzas. ¡Me contagié de la fiebre
+              aventurera y ahora disfruto explorando y bailando con cada nueva
+              experiencia!
             </p>
             <div className="home-review-developer">
               <img
                 className="home-person-review"
-                src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1688040986/ProjectFinalBOOTCAMP/Perfil/MarcPerfilweb_en_taman%CC%83o_pequen%CC%83o_gqybym.png"
+                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690793593/Ruteros/MujerTestimonioAlegre_hsdsbn.jpg"
                 alt="person-review"
               ></img>
 
               <div className="home-nameJob-person">
-                <p className="home-person">Marc Mateo</p>
-                <p className="home-job">Full Stack Developer</p>
+                <p className="home-person">Elena Vermejo</p>
+                <p className="home-job">Viajera de Horizontes</p>
               </div>
             </div>
           </figure>
