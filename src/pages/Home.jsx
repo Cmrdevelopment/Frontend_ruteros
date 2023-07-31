@@ -194,25 +194,25 @@ export const Home = () => {
             <NavLink to="/mountainRoutes">
               <div className="hover-element">
                 <img
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_dubai-2650364_1280_phwab4.jpg"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690756979/Monta%C3%B1as/Monta%C3%B1as_mountains-5982602_1280_xcpfj3.jpg"
                   alt="rutas de ciudades"
                 />
-                <h2 className="hover-text">Cumbres Misteriosas</h2>
+                <h2 className="hover-text">Castillos Misteriosas</h2>
               </div>
             </NavLink>
             <NavLink to="/mountainRoutes">
               <div className="hover-element">
                 <img
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_columbus-1618317_1280_pzk5vb.jpg"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690756931/Monta%C3%B1as/Monta%C3%B1as_people-2591874_1280_xgk9fh.jpg"
                   alt="rutas de ciudades"
                 />
-                <h2 className="hover-text">Aldeas Alpinas</h2>
+                <h2 className="hover-text">Vistas Alpinas</h2>
               </div>
             </NavLink>
             <NavLink to="/mountainRoutes">
               <div className="hover-element">
                 <img
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_new-york-city-78181_1280_tnbjs6.jpg"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690757000/Monta%C3%B1as/Monta%C3%B1as_bastei-3014467_1280_nphhth.jpg "
                   alt="rutas de ciudades"
                 />
                 <h2 className="hover-text">Destinos Montañosos</h2>
@@ -223,16 +223,16 @@ export const Home = () => {
             <NavLink to="/mountainRoutes">
               <div className="hover-element">
                 <img
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546204/Ciudades/Ciudades_copenhagen-142711_1280_bjmra6.jpg"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690756955/Monta%C3%B1as/Monta%C3%B1as_lake-5899481_1280_jecetw.jpg"
                   alt="rutas de ciudades"
                 />
-                <h2 className="hover-text">Lugares Misteriosos</h2>
+                <h2 className="hover-text">Lagos Misteriosos</h2>
               </div>
             </NavLink>
             <NavLink to="/mountainRoutes">
               <div className="hover-element">
                 <img
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_paris-195327_1280_g3jnqz.jpg"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690756906/Monta%C3%B1as/Monta%C3%B1as_mountains-440520_1280_nylywg.jpg"
                   alt="rutas de ciudades"
                 />
                 <h2 className="hover-text">Rutas Montañosas</h2>
@@ -241,7 +241,7 @@ export const Home = () => {
             <NavLink to="/mountainRoutes">
               <div className="hover-element">
                 <img
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690546203/Ciudades/Ciudades_hotel-de-cluny-187866_1280_ceydbm.jpg"
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690756877/Monta%C3%B1as/Monta%C3%B1as_alberta-2297204_1280_zcagtg.jpg"
                   alt="rutas de ciudades"
                 />
                 <h2 className="hover-text">Montañas Intrigantes</h2>
@@ -254,70 +254,6 @@ export const Home = () => {
             <button className="home-contactUs">Rutas de Montañas</button>
           </NavLink>
         </div>
-      </div>
-
-      <div className="home-works-container">
-        <p className="home-works-title">Que relizamos ?</p>
-        <p className="home-works-p">
-          Hacemos llegar a personas y empresas el talento de desarrolladres independientes{' '}
-          <br></br>mostrando todas sus habilidades y experiencia
-        </p>
-
-        <section className="home-works-section">
-          <figure className="home-figure">
-            <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687201713/ProjectFinalBOOTCAMP/Iconos/codificacion_haizvr_e3xurb.png"
-              alt="icon"
-              className="home-figure-img"
-            ></img>
-            <p className="home-figure-p">Muestra tu código</p>
-          </figure>
-
-          <figure className="home-figure">
-            <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687202629/ProjectFinalBOOTCAMP/Iconos/cv_d9xlwt_vgbzrd.png"
-              alt="icon"
-              className="home-figure-img"
-            ></img>
-            <p className="home-figure-p">Potencia tu CV</p>
-          </figure>
-
-          <figure className="home-figure">
-            <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687206027/ProjectFinalBOOTCAMP/Iconos/work-from-home_kg4n0a_sxziw9.png"
-              alt="icon"
-              className="home-figure-img"
-            ></img>
-            <p className="home-figure-p">Trabaja desde casa</p>
-          </figure>
-
-          <figure className="home-figure">
-            <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687202347/ProjectFinalBOOTCAMP/Iconos/ofertas_zo3exv_xnw4fp.png"
-              alt="icon"
-              className="home-figure-img"
-            ></img>
-            <p className="home-figure-p">Estabilidad laboral</p>
-          </figure>
-
-          <figure className="home-figure">
-            <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687379221/ProjectFinalBOOTCAMP/Iconos/entrevista_ux3w0d_auwekn.png"
-              alt="icon"
-              className="home-figure-img"
-            ></img>
-            <p className="home-figure-p">Entrevistas online</p>
-          </figure>
-
-          <figure className="home-figure">
-            <img
-              src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687379203/ProjectFinalBOOTCAMP/Iconos/money-management_obo14d_j2kdm8.png"
-              alt="icon"
-              className="home-figure-img"
-            ></img>
-            <p className="home-figure-p">Salarios competitiivos</p>
-          </figure>
-        </section>
       </div>
       <div className="home-review-container">
         <p className="home-review-title">

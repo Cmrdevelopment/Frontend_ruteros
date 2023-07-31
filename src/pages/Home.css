@@ -92,11 +92,6 @@
   color: white;
 }
 
-/* .home-img {
-  height: 300px;
-  object-fit: cover;
-} */
-
 .home-subButton {
   display: flex;
 }
@@ -105,7 +100,7 @@
   border: none;
   border-radius: 30px;
   height: 39px;
-  width: 145px;
+  width: 180px;
   background-color: #25d366;
   color: white;
 }
@@ -245,7 +240,7 @@
 }
 
 .home-review-container {
-  margin-top: 80px;
+  margin-top: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
