@@ -274,9 +274,9 @@ const CityDetails = () => {
 
 
       {/* -------------------COMMENTS ----------------------------- */}
-      {/* <button className="cityDetails-private-comment-btn" onClick={() => setShowPrivateComment(!showPrivateComment)}>
+      <button className="cityDetails-private-comment-btn" onClick={() => setShowPrivateComment(!showPrivateComment)}>
         Chat privado
-      </button> */}
+      </button>
 
       <div className="cityDetails-public-comments-container">
         <Paper

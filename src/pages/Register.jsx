@@ -46,6 +46,34 @@ const Register = () => {
     return <Navigate to="/verifyCode" />;
   }
 
+  // if (!role) {
+  //   return (
+  //     <div className="register-role_selection">
+  //       <h3 className="register-title-role">Selecciona tu rol</h3>
+
+  //       <div className="register-buttons-container">
+  //         <button className="register-btn-role" onClick={() => setRole('freelance')}>
+  //           <p>Freelance</p>
+  //           <img
+  //             className="register-photo"
+  //             src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687278019/ProjectFinalBOOTCAMP/Iconos/programacion_cdn0ri.png"
+  //             alt="Freelance icon"
+  //           />
+  //         </button>
+
+  //         <button className="register-btn-role" onClick={() => setRole('company')}>
+  //           <p>Empresa</p>
+  //           <img
+  //             className="register-photo"
+  //             src="https://res.cloudinary.com/dhlr7fvd8/image/upload/v1687277523/ProjectFinalBOOTCAMP/Iconos/edificio-de-oficinas_1_s9ifty.png"
+  //             alt="Company icon"
+  //           />
+  //         </button>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
   return (
     <div className="register-container">
       <h2>Registro</h2>
