@@ -250,6 +250,10 @@
   font-size: 12px;
 }
 
+.titleFatherContainerHome{
+  margin-top: 10px;
+}
+
 .home-review-container {
   margin: 45px 0 45px 0;
   display: flex;

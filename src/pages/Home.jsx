@@ -257,7 +257,19 @@ export const Home = () => {
       </div>
       <div className="home-review-container">
         <p className="home-review-title">
-          Algunos de nuestros clientes <br></br>satisfechos
+          Algunos de nuestros
+          <div className="titleFatherContainerHome">
+            <NavLink to="/ruteros" className="header-link-one">
+              <img
+                className="header-logo"
+                alt="icon"
+                src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1689612757/MochilaPersonita_r2kpic.png"
+              ></img>
+              <h3 className="titleWeb">Ru</h3>
+              <h3 className="titleWeb-second">Teros</h3>
+            </NavLink>
+          </div>
+          satisfechos
         </p>
 
         <section className="home-review-section">
