@@ -14,6 +14,11 @@
   min-height: 400px;
 }
 
+.ruteroDetails-ruteroLocationMap-container {
+  width: 80vw;
+  min-height: 400px;
+}
+
 .ruteroDetails-image-and-info-container {
   display: flex;
   justify-content: center;
@@ -151,7 +156,8 @@
 }
 
 .ruteroDetails-technologies {
-  width: 763px;
+  /* width: 763px; */
+  width: 80%;
   height: 400px;
   display: flex;
   flex-direction: column;

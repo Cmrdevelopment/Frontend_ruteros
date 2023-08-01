@@ -25,6 +25,7 @@ import {
 } from '../../services/API_proyect/comment.service';
 import { getByUserExperience } from '../../services/API_proyect/experience.service';
 import { getUserById } from '../../services/API_proyect/user.service';
+import RuteroLocationMap from '../../components/RuteroLocationMap/RuteroLocationMap';
 
 const RuteroDetails = () => {
   const { user } = useAuth();
@@ -162,10 +163,9 @@ const RuteroDetails = () => {
   return (
     <div className="ruteroDetails-container">
       <div className="ruteroDetails-carousel-imgs-container">
-        {/* <Carousel_imgs images={images} /> */}
-        {/* {rutero && <Carousel_imgs images={rutero?.images} />} */}
         {showCarousel(rutero?.images)}
       </div>
+
       <div className="ruteroDetails-image-and-info-container">
         <img
           className="ruteroDetails-image"
@@ -178,7 +178,7 @@ const RuteroDetails = () => {
             <div className="ruteroDetails-name-surname">
               {rutero?.name} {rutero?.surname}
             </div>
-            <div className="ruteroDetails-developerType">Top Rutero</div>
+            <div className="ruteroDetails-developerType">Top Rutera/o</div>
           </div>
           <div className="ruteroDetails-read-ratings">
             {rutero && <ReadOnlyDeveloperRating user={rutero} />} (
@@ -217,55 +217,40 @@ const RuteroDetails = () => {
         {rutero && <WriteRatingForRutero userToRate={rutero} />}
       </div>
 
-      <div className="ruteroDetails-city-languages-technologies">
-        <div className="ruteroDetails-city-languages">
-          <h3>Localización e idiomas</h3>
-          <div className="ruteroDetails-city-languages-without-title">
-            <div className="ruteroDetails-city-localization">
-              <h5>
-                <FaMapMarker /> Localización
-              </h5>
-              <div className="ruteroDetails-info-city-languages">{rutero?.city}</div>
-            </div>
-            <div className="ruteroDetails-languages">
-              <h5>
-                <FaLaptopCode /> Idiomas
-              </h5>
-              <div className="ruteroDetails-info-city-languages">Ingles Frances</div>
-            </div>
-          </div>
-        </div>
-        <div className="ruteroDetails-technologies">
-          <h3>Habilidades ruteras</h3>
+      <div className='ruteroDetails-ruteroLocationMap-container'>
+        {rutero && <RuteroLocationMap placeName={rutero?.city} />}
+      </div>
 
-          <div className="ruteroDetails-info-technologies">
-            <h5>
-              <BiCodeAlt /> Habilidades
-            </h5>
-            <div className="ruteroDetails-info-technology">
-              {/* //------------------------ Show Rutero's Habilities -------------------- */}
-              <div className="ruteroDetails-icons-technologies-container">
-                {habilitiesArr
-                  .filter((hability) => rutero?.habilities.includes(hability.name))
-                  .map((hability, index) => (
-                    <figure
-                      key={`${hability.name}_${index}`}
-                      className="ruteroDetails-tecnologia-item"
-                      id={hability.name}
-                    >
-                      <div className="ruteroDetails-icon-container">
-                        <img
-                          className="ruteroDetails-tech-image"
-                          src={hability.image}
-                          alt={hability.name}
-                        />
-                        <p>{hability.name}</p>
-                      </div>
-                    </figure>
-                  ))}
-              </div>
-              {/* //------------------------ Show Rutero's Habilities -------------------- */}
+      <div className="ruteroDetails-technologies">
+        <h3>Habilidades ruteras</h3>
+
+        <div className="ruteroDetails-info-technologies">
+          <h5>
+            <BiCodeAlt /> Habilidades
+          </h5>
+          <div className="ruteroDetails-info-technology">
+            {/* //------------------------ Show Rutero's Habilities -------------------- */}
+            <div className="ruteroDetails-icons-technologies-container">
+              {habilitiesArr
+                .filter((hability) => rutero?.habilities.includes(hability.name))
+                .map((hability, index) => (
+                  <figure
+                    key={`${hability.name}_${index}`}
+                    className="ruteroDetails-tecnologia-item"
+                    id={hability.name}
+                  >
+                    <div className="ruteroDetails-icon-container">
+                      <img
+                        className="ruteroDetails-tech-image"
+                        src={hability.image}
+                        alt={hability.name}
+                      />
+                      <p>{hability.name}</p>
+                    </div>
+                  </figure>
+                ))}
             </div>
+            {/* //------------------------ Show Rutero's Habilities -------------------- */}
           </div>
         </div>
       </div>

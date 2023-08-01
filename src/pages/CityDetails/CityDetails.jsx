@@ -165,6 +165,7 @@ const CityDetails = () => {
           </div>
         </div>
       </div>
+
       <div className="cityDetails-city-rating-writeRating-container">
         <p>Valora esta ruta</p>
         {/* {city && <WriteRatingForOffer offerToRate={city} />}{' '} */}

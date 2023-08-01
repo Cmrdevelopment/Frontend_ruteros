@@ -17,7 +17,7 @@
 
 .fluidContainerProfile {
   max-width: 900px;
-  height: 50vh;
+  height: 53vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,36 +152,35 @@
 }
 
 #sidebar .cambiar-contrasena:before {
-  content: url(https://res.cloudinary.com/dxpdntpqm/image/upload/v1690879460/UserFTProyect/profileIcons/profile_sjvwwy.png);
-
+  content: url(https://res.cloudinary.com/dxpdntpqm/image/upload/v1690889504/UserFTProyect/profileIcons/reset-password-small_tg0mls.png);
 }
 
 #sidebar .perfil-responsive:before {
-  content: '👨🏻‍⚕️';
+  content: url(https://res.cloudinary.com/dxpdntpqm/image/upload/v1690879460/UserFTProyect/profileIcons/profile_sjvwwy.png);
 }
 
 #sidebar .cambiar-email:before {
-  content: '💌';
+  content: url('https://res.cloudinary.com/dxpdntpqm/image/upload/v1690888186/UserFTProyect/profileIcons/email-small_zeqdba.png');
 }
 
 #sidebar .profile-experience:before {
-  content: '👷🏻‍♀️';
+  content: url('https://res.cloudinary.com/dxpdntpqm/image/upload/v1690889229/UserFTProyect/profileIcons/Rutero-small_rryrms.png');
 }
 
 #sidebar .citys-responsive:before {
-  content: url(https://res.cloudinary.com/dxpdntpqm/image/upload/v1690581972/UserFTProyect/profileIcons/city_Route_uqloai.png);
+  content: url('https://res.cloudinary.com/dxpdntpqm/image/upload/v1690581972/UserFTProyect/profileIcons/city_Route_uqloai.png');
 }
 
 #sidebar .mountainRoutes-responsive:before {
-  content: '📋';
+  content: url(https://res.cloudinary.com/dxpdntpqm/image/upload/v1690889618/UserFTProyect/profileIcons/mountain-route-small_eztdvr.png);
 }
 
 #sidebar .habilities-responsive:before {
-  content: '🛠';
+  content: url('https://res.cloudinary.com/dxpdntpqm/image/upload/v1690888350/UserFTProyect/profileIcons/logical-thinking-small_ufudxq.png');
 }
 
 #sidebar .borrar-perfil:before {
-  content: '🚮';
+  content: url(https://res.cloudinary.com/dxpdntpqm/image/upload/v1690881933/UserFTProyect/profileIcons/delete-user-small_gbzxkz.png);
 }
 
 #sidebar div span {
