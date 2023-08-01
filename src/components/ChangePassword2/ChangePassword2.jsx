@@ -20,7 +20,6 @@ const ChangePassword2 = () => {
   const formSubmit = async (formData) => {
     const { password, newPassword, confirmPassword } = formData;
     if (newPassword == confirmPassword) {
-
       Swal.fire({
         title: '¿De verdad quieres restablecer tu contraseña?',
         icon: 'warning',

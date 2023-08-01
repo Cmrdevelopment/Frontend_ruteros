@@ -28,7 +28,7 @@ const Register = () => {
       customFormData = {
         ...formData,
         images: imageArray,
-        rol: role
+        rol: role,
       };
 
       setSend(true);

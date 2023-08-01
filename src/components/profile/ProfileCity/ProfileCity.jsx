@@ -19,7 +19,7 @@ const ProfileCity = () => {
 
   return (
     <section className="Offers-Btn-filter">
-      <div className='profileCity-btns'>
+      <div className="profileCity-btns">
         <button className="btn_profile_general" onClick={handleShowCreated}>
           Mis rutas
         </button>

@@ -19,7 +19,7 @@ const ProfileMountain = () => {
 
   return (
     <section className="Offers-Btn-filter">
-      <div className='profileMountain-btns'>
+      <div className="profileMountain-btns">
         <button className="btn_profile_general" onClick={handleShowCreated}>
           Mis rutas
         </button>

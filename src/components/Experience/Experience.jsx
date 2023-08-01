@@ -15,16 +15,11 @@ const Experience = () => {
   return (
     <>
       <section className="btn_profile_general-create-my-experience">
-        <div className='experience-btns-container'>
-          <button
-            className="btn_profile_general"
-            onClick={handleButtonClick('create')}
-          >
+        <div className="experience-btns-container">
+          <button className="btn_profile_general" onClick={handleButtonClick('create')}>
             Crear Experiencia
           </button>
-          <button className="btn_profile_general"
-            onClick={handleButtonClick('my')}
-          >
+          <button className="btn_profile_general" onClick={handleButtonClick('my')}>
             Mis Experiencias
           </button>
         </div>

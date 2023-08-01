@@ -16,6 +16,7 @@ import Comments from '../../components/Comments/Comments';
 import DeleteCommentComponent from '../../components/DeleteComment/DeleteComment';
 import ReadOnlyDeveloperRating from '../../components/ratings/ReadOnlyUserRating/ReadOnlyUserRating';
 import WriteRatingForRutero from '../../components/ratings/WriteRatingForRutero/WriteRatingForRutero';
+import RuteroLocationMap from '../../components/RuteroLocationMap/RuteroLocationMap';
 import { useAuth } from '../../contexts/authContext';
 import { habilitiesArr } from '../../data/object.habilities';
 import { createMasChat } from '../../services/API_proyect/chat.service';
@@ -25,7 +26,6 @@ import {
 } from '../../services/API_proyect/comment.service';
 import { getByUserExperience } from '../../services/API_proyect/experience.service';
 import { getUserById } from '../../services/API_proyect/user.service';
-import RuteroLocationMap from '../../components/RuteroLocationMap/RuteroLocationMap';
 
 const RuteroDetails = () => {
   const { user } = useAuth();
@@ -217,7 +217,7 @@ const RuteroDetails = () => {
         {rutero && <WriteRatingForRutero userToRate={rutero} />}
       </div>
 
-      <div className='ruteroDetails-ruteroLocationMap-container'>
+      <div className="ruteroDetails-ruteroLocationMap-container">
         {rutero && <RuteroLocationMap placeName={rutero?.city} />}
       </div>
 
@@ -372,15 +372,15 @@ const RuteroDetails = () => {
           <div className="Dev-comments" style={{ maxHeight: '400px', overflowY: 'auto' }}>
             {comments != null
               ? comments.map((singleComment) => (
-                <div className="singlecomment-div" key={singleComment?._id}>
-                  <Comments comment={singleComment} setComentsByChild={setComments} />
-                  <DeleteCommentComponent
-                    className="trash-icon"
-                    commentId={singleComment?._id}
-                    onDelete={handleCommentDelete}
-                  />
-                </div>
-              ))
+                  <div className="singlecomment-div" key={singleComment?._id}>
+                    <Comments comment={singleComment} setComentsByChild={setComments} />
+                    <DeleteCommentComponent
+                      className="trash-icon"
+                      commentId={singleComment?._id}
+                      onDelete={handleCommentDelete}
+                    />
+                  </div>
+                ))
               : null}
           </div>
         </Paper>
@@ -453,8 +453,8 @@ const RuteroDetails = () => {
 const showCarousel = (images) => {
   if (images) {
     const filteredImages = images.filter((_, index) => index !== 0);
-    return <Carousel_imgs images={filteredImages} />
+    return <Carousel_imgs images={filteredImages} />;
   }
-}
+};
 
 export default RuteroDetails;

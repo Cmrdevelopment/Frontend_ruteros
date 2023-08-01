@@ -260,7 +260,6 @@ const CityDetails = () => {
           </div>
         </div>
         {/* </div> */}
-
       </div>
 
       {/* ----------------------- City Route Description ----------------------- */}
@@ -273,7 +272,6 @@ const CityDetails = () => {
         <p>{city?.routeDistance}</p> */}
       </div>
       {/* ----------------------- City Route Description ----------------------- */}
-
 
       {/* -------------------COMMENTS ----------------------------- */}
       {/* <button className="cityDetails-private-comment-btn" onClick={() => setShowPrivateComment(!showPrivateComment)}>

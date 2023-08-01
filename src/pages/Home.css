@@ -96,7 +96,7 @@
   display: flex;
 }
 
-.home-contactUs-header{
+.home-contactUs-header {
   border: none;
   border-radius: 30px;
   height: 39px;
@@ -250,7 +250,7 @@
   font-size: 12px;
 }
 
-.titleFatherContainerHome{
+.titleFatherContainerHome {
   margin-top: 10px;
 }
 
@@ -365,15 +365,8 @@
     z-index: 5;
   }
 
-
-
-
-
-
-  
   .home-img {
     height: 210px;
-    
   }
   .home-p {
     font-size: 12px;

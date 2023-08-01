@@ -37,43 +37,37 @@ const Profile = () => {
                     <span>Perfil</span>
                   </div>
                 </NavLink>
-
                 <NavLink to="/profile/changePassword">
                   <div className="perfil-responsive">
                     <span>Contraseña</span>
                   </div>
                 </NavLink>
-
                 <NavLink to="/profile/changeEmail">
                   <div className="cambiar-email">
                     <span>Email</span>
                   </div>
                 </NavLink>
-
                 <NavLink to="/profile/experience">
                   <div className="profile-experience">
                     <span>Experiencia</span>
                   </div>
                 </NavLink>
-
                 <NavLink to="/profile/habilities">
                   <div className="habilities-responsive">
                     <span>Habilidades</span>
                   </div>
                 </NavLink>
-
                 <NavLink to="/profile/ProfileCity">
                   <div className="citys-responsive">
                     <span>Ciudad</span>
                   </div>
                 </NavLink>
-
                 <NavLink to="/profile/ProfileMountain">
                   <div className="mountainRoutes-responsive">
                     <span>Montaña</span>
                   </div>
-                </NavLink>¡
-
+                </NavLink>
+                ¡
                 <div
                   className="borrar-perfil"
                   onClick={() => {
@@ -94,7 +88,9 @@ const Profile = () => {
           {ancho > 800 ? (
             <div className="containerNavProfile">
               <button
-                className={`btn-profile btn-profile-first ${activeButton === 'Profile' ? 'active' : ''}`}
+                className={`btn-profile btn-profile-first ${
+                  activeButton === 'Profile' ? 'active' : ''
+                }`}
                 onClick={() => {
                   setActiveButton('Profile');
                   navigate('/profile');
@@ -183,8 +179,9 @@ const Profile = () => {
               </button>
 
               <button
-                className={`btn-profile ${activeButton === 'MountainRoutes' ? 'active' : ''
-                  }`}
+                className={`btn-profile ${
+                  activeButton === 'MountainRoutes' ? 'active' : ''
+                }`}
                 onClick={() => {
                   setActiveButton('MountainRoutes');
                   navigate('/profile/ProfileMountain');
@@ -199,7 +196,9 @@ const Profile = () => {
               </button>
 
               <button
-                className={`btn-profile btn-profile-last ${activeButton === 'Delete' ? 'active' : ''}`}
+                className={`btn-profile btn-profile-last ${
+                  activeButton === 'Delete' ? 'active' : ''
+                }`}
                 onClick={() => {
                   useDeleteUser(setUser, logout);
                   setActiveButton('Delete');
@@ -225,4 +224,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
