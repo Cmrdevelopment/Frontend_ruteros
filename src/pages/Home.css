@@ -324,13 +324,56 @@
   color: rgb(110, 110, 110);
 }
 
+/* Hacer una media screen para portatiles de 15 pulgadas */
+
 @media screen and (max-width: 930px) {
-  .home-title {
-    font-size: 22px;
+  .home-presentation {
+    min-width: 175vh;
+    height: 250px;
+    color: white;
   }
+  .home-title {
+    font-size: 16px;
+  }
+
+  .home-title-home-br-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 0 0px;
+    width: 100vw;
+  }
+
+  .home-subButton {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-planificador-de-viajes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1px;
+    margin-top: 5px;
+  }
+
+  .home-planificador-de-viajes img {
+    height: 70vh;
+    object-fit: cover;
+    transition: transform 0.3s;
+    z-index: 5;
+  }
+
+
+
+
+
+
+  
   .home-img {
     height: 210px;
-    object-fit: cover;
+    
   }
   .home-p {
     font-size: 12px;

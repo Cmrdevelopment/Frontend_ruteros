@@ -14,8 +14,10 @@ const AboutUs = () => {
 
             <p className="section-subtitle">
               {' '}
-              Nuestra pasión por la aventura y la comunidad nos impulsó a crear una
-              plataforma donde los viajes se convierten en sueños realizados.
+              Nuestra <span className="about-negrita"> pasión por la aventura</span> y la
+              comunidad nos impulsó a crear una plataforma{' '}
+              <span className="about-negrita">donde las rutas</span> se convierten en
+              sueños realizados.
             </p>
           </div>
 
@@ -31,10 +33,12 @@ const AboutUs = () => {
                 <p>Las Palmas de Gran Canaria</p>
               </div>
               <p>
-                Me apasionó la programación por su inmenso potencial para crear e innovar.
-                Es a través de esta herramienta que podemos transformar ideas abstractas
-                en soluciones tangibles y eficientes, para hacer así la vida más fácil y
-                emocionante.
+                Quedé{' '}
+                <span className="about-negrita">
+                  fascinado por las travesías urbanas, descubriendo callejuelas ocultas
+                </span>{' '}
+                y vistas sorprendentes. Soy amante de las montañas, conquistando cumbres
+                majestuosas. La ciudad me inspira. La naturaleza me envuelve.
               </p>
 
               <ul className="team-icon">
@@ -99,10 +103,12 @@ const AboutUs = () => {
               </div>
 
               <p>
-                Soy un apasionado programador con una paciencia incansable. Disfruto cada
-                línea de código como un desafío creativo, encontrando soluciones con
-                perseverancia. La programación es mi lenguaje para dar vida a ideas y
-                superar obstáculos con determinación.
+                Me fliparon las rutas urbanas,{' '}
+                <span className="about-negrita">
+                  descubrir ciudades escondidas y paisajes alucinantes.
+                </span>{' '}
+                Me encantan las montañas, encontrar cimas épicas y senderos increíbles. La
+                ciudad me llena de emoción. La naturaleza me libera.
               </p>
 
               <ul className="team-icon">
@@ -167,10 +173,12 @@ const AboutUs = () => {
               </div>
 
               <p>
-                Soy un programador al que le apasiona crear soluciones completas y
-                eficientes. Mi atención a los pequeños detalles asegura que cada aspecto
-                del desarrollo esté cuidadosamente diseñado para ofrecer una user
-                experience excepcional.
+                Me cautivaron los laberintos urbanos,{' '}
+                <span className="about-negrita">
+                  explorando callejones secretos y panoramas asombrosos.
+                </span>{' '}
+                Adoro las montañas, hallar cumbres imponentes y senderos desafiantes. La
+                urbe me emociona. La naturaleza me libera.
               </p>
 
               <ul className="team-icon">

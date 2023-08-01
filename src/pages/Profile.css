@@ -152,7 +152,8 @@
 }
 
 #sidebar .cambiar-contrasena:before {
-  content: '🔑';
+  content: url(https://res.cloudinary.com/dxpdntpqm/image/upload/v1690879460/UserFTProyect/profileIcons/profile_sjvwwy.png);
+
 }
 
 #sidebar .perfil-responsive:before {
