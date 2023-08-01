@@ -37,7 +37,7 @@ const CardRuteros = ({ rutero }) => {
             <FaMapMarker /> Ubicado/a en {rutero.city}
           </p>
         </div>
-        <h3 className="developer-Info-Rol">{rutero.rol}</h3>
+        {/* <h3 className="developer-Info-Rol">{rutero.rol}</h3> */}
       </button>
 
       <div className="developer-Info-ratingsByOthers">

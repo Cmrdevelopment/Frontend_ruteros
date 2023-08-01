@@ -18,7 +18,7 @@ h1 {
   border: 1px solid #e3e4e5;
   border-radius: 0.9rem;
   padding: 0 0 0 0;
-  background-color: white;
+  background-color: var(--header-bg-color);
   color: black;
   /* gap: 1rem; */
   transition: transform 0.2s;

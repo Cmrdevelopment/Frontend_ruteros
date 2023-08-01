@@ -43,7 +43,7 @@ footer {
   /* Para navegadores basados en WebKit, como Chrome y Safari */
   background-clip: text;
   /* Para navegadores que no son WebKit */
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
@@ -91,7 +91,7 @@ footer {
 }
 
 .footer-form-title {
-  color: rgb(210, 210, 210);
+  color: rgb(0, 0, 0);
   font-size: 25px;
 }
 
