@@ -28,7 +28,6 @@ const responsive = {
 
 const Carousel_imgs = ({ images, carouselHeight }) => {
   return (
-    // <div className="carousel-imgs-container">
     <Carousel
       style={{ height: carouselHeight }}
       swipeable={true}
@@ -60,7 +59,6 @@ const Carousel_imgs = ({ images, carouselHeight }) => {
         );
       })}
     </Carousel>
-    // </div>
   );
 };
 

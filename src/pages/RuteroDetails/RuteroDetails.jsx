@@ -162,7 +162,9 @@ const RuteroDetails = () => {
   return (
     <div className="ruteroDetails-container">
       <div className="ruteroDetails-carousel-imgs-container">
-        <Carousel_imgs images={images} />
+        {/* <Carousel_imgs images={images} /> */}
+        {/* {rutero && <Carousel_imgs images={rutero?.images} />} */}
+        {showCarousel(rutero?.images)}
       </div>
       <div className="ruteroDetails-image-and-info-container">
         <img
@@ -462,5 +464,12 @@ const RuteroDetails = () => {
     </div>
   );
 };
+
+const showCarousel = (images) => {
+  if (images) {
+    const filteredImages = images.filter((_, index) => index !== 0);
+    return <Carousel_imgs images={filteredImages} />
+  }
+}
 
 export default RuteroDetails;

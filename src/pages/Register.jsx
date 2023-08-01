@@ -22,16 +22,22 @@ const Register = () => {
     let customFormData;
 
     if (inputfile.length !== 0) {
-      customFormData = { ...formData, image: inputfile[0], rol: role };
+      const imageArray = Array.from(inputfile); // Convert FileList to an array
+
+      // customFormData = { ...formData, image: inputfile[0], rol: role };
+      customFormData = {
+        ...formData,
+        images: imageArray,
+        rol: role
+      };
+
       setSend(true);
       setRes(await registerUser(customFormData));
-      console.log('entro arriba', customFormData);
       setSend(false);
     } else {
       customFormData = { ...formData, rol: role };
       setSend(true);
       setRes(await registerUser(customFormData));
-      console.log('entro abajo', customFormData);
       setSend(false);
     }
   };
