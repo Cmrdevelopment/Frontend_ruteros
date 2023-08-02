@@ -1,7 +1,7 @@
 import './Citys.css';
 
 import { useMediaQuery } from 'react-responsive';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
 
 import CitiesList from '../../components/CitiesList/CitiesList';
 
@@ -20,9 +20,9 @@ const Citys = () => {
 
       <div className="spinner"></div>
 
-      <NavLink to="/createCities2">
+      {/* <NavLink to="/createCities2">
         <button className="cities-button-create">Crear Ruta</button>
-      </NavLink>
+      </NavLink> */}
 
       <div className="cities-citiesList-container">
         {<CitiesList itemsPerPage={10} />}

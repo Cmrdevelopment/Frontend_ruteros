@@ -58,7 +58,7 @@ const MountainRouteList = ({ itemsPerPage }) => {
       ) : (
         <div>
           <div>
-            <h2>Rutas de Montaña</h2>
+            {/* <h2>Rutas de Montaña</h2> */}
             {itemPerPage.map((mountainRoute) => (
               <div key={mountainRoute._id}>
                 <CardMountainRoute2 mountainRoute={mountainRoute} />

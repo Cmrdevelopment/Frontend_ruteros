@@ -2,7 +2,7 @@ import './MountainRoutes.css';
 
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
 
 import MountainRoutesList from '../../components/MountainRoutesList/MountainRoutesList';
 // import AnnualSalarySlider from '../../components/offersComponts/AnnualSalarySlider/AnnualSalarySlider';
@@ -86,9 +86,9 @@ const MountainRoutes = () => {
       ) : (
         <h2 className="mountainRouteTit">Sigue nuestras rutas de montaña</h2>
       )}
-      <NavLink to="/createMountainRoute2">
+      {/* <NavLink to="/createMountainRoute2">
         <button className="offer-button-Create">Crear Ruta</button>
-      </NavLink>
+      </NavLink> */}
       <div className="spinner"></div>
 
       {<MountainRoutesList filters={filtersToApply} itemsPerPage={10} />}
