@@ -1,3 +1,257 @@
+/* Estilos generales */
+.home-description {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.home-presentation img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.home-title-home-br-button-container {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  transform: translate(-50%, -50%);  
+}
+
+.home-planificador-de-viajes-separado-primer-grupo img, .home-planificador-de-viajes-separado-segundo-grupo img{
+  margin-left: 21px;
+}
+
+.home-title {
+  font-size: 27px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.home-br {
+  display: block;
+}
+
+.home-p {
+  font-size: 16px;
+  color: white;
+}
+
+.home-contactUs-header,
+.home-learnMore {
+  border: none;
+  border-radius: 30px;
+  height: 39px;
+  width: 145px;
+  color: white;
+  margin-top: 10px;
+}
+
+.home-contactUs-header {
+  background-color: var(--btn-bg-color);
+  
+}
+
+.home-learnMore {
+  border: 2px solid #25d366;
+  background-color: transparent;
+  margin-left: 18px;
+}
+
+.home-planificador-de-viajes-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.home-planificador-de-viajes-texto-h2-y-h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 25px;
+  animation: moverTexto 18s infinite ease-in-out;
+}
+
+@keyframes moverTexto {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-75px); /* Mueve el texto 5 píxeles hacia la derecha */
+  }
+  75% {
+    transform: translateX(75px); /* Mueve el texto 5 píxeles hacia la derecha */
+  }
+  100% {
+    transform: translateX(-75);
+  }
+}
+
+.home-company-container-imagenes-ciudades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.home-company-container-imagenes-ciudades img {
+  box-shadow: 7px 7px 12px rgba(140, 120, 81, 0.7);
+  height: 270px;
+  width: 390px;
+}
+
+.home-company-container-imagenes-ciudades-primera-fila img {
+  margin: 12px;
+}
+
+.home-company-container-imagenes-ciudades-segunda-fila img {
+  margin: 12px;
+}
+
+.hover-element {
+  position: relative;
+  display: inline-flex;
+  height: 100px;
+  cursor: pointer;
+}
+
+.hover-text {
+  display: block;
+  position: absolute;
+  bottom: 0; /* Colocamos el texto inicialmente en la parte inferior */
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: #6e2f5a;
+  padding: 12px;
+  border-radius: 5px;
+  opacity: 0; /* Ocultamos el texto inicialmente */
+  transform: translateY(100%); /* Desplazamos el texto hacia abajo */
+  transition: opacity 0.3s, transform 0.3s; /* Agregamos transiciones para animar el desplazamiento y la opacidad */
+  text-align: center;
+}
+
+.hover-element:hover .hover-text {
+  opacity: 1; /* Hacemos el texto visible al hacer hover */
+  transform: translateY(0); /* Restauramos la posición del texto */
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+  .home-title-home-br-button-container {
+    text-align: center;
+  }
+
+  .home-title {
+    font-size: 21px;
+  }
+
+  .home-p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .home-contactUs-header,
+  .home-learnMore {
+    width: 130px;
+    font-size: 14px;
+    
+  }
+}
+
+.home-planificador-de-viajes{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 90%;
+  text-align: justify;
+  gap: 25px;
+}
+
+.home-planificador-de-viajes-planificación-conjunta img {
+  height: 75vh;
+  margin-left: 200px;
+  transition: transform 0.3s;
+  z-index: 5;
+}
+
+.home-planificador-de-viajes-separado{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  
+}
+.home-planificador-de-viajes-separado img{
+  height: 210px;
+}
+
+@media screen and (max-width: 750px) {
+
+  .home-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-left: auto;
+  }
+
+  .home-planificador-de-viajes-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  .home-planificador-de-viajes-planificación-conjunta img {
+    display: none;
+  }
+
+  .home-title {
+    font-size: 21px;
+  }
+
+  .home-p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .home-contactUs-header,
+  .home-learnMore {
+    width: 130px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .home-planificador-de-viajes {
   display: flex;
   flex-wrap: wrap;
@@ -73,12 +327,7 @@
   justify-content: center;
 }
 
-.home-presentation {
-  background-image: url('https://res.cloudinary.com/dxpdntpqm/image/upload/v1690477720/foto_principal_ruteros_jsokq1.jpg');
-  min-width: 191vh;
-  height: 360px;
-  color: white;
-}
+
 
 .home-button-container {
   display: flex;
@@ -326,23 +575,69 @@
 
 /* Hacer una media screen para portatiles de 15 pulgadas */
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1620px) {
   .home-presentation {
-    min-width: 175vh;
+  
     height: 250px;
     color: white;
   }
   .home-title {
-    font-size: 16px;
+    font-size: 21px;
+  }
+
+  .home-title-home-br-button-container {    
+    margin: 25px 0 0 180px;  
+  }
+
+  .home-planificador-de-viajes-separado-primer-grupo{
+    display: flex;
+  }
+  .home-planificador-de-viajes-separado-segundo-grupo{
+    display: flex;
+  } 
+}
+
+@media screen and (max-width: 1450px) {
+  .home-presentation {
+    min-width: 175vw;
+    height: 250px;
+    color: white;
+  }
+  .home-title {
+    font-size: 21px;
   }
 
   .home-title-home-br-button-container {
+  
+    margin: 25px 0 0 180px;
+  
+  }
+  .home-planificador-de-viajes-planificación-conjunta {
+    display: none;
+  }
+
+  .home-planificador-de-viajes-separado-primer-grupo{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 0 0 0px;
-    width: 100vw;
+  }
+  .home-planificador-de-viajes-separado-segundo-grupo{
+    display: flex;
+  } 
+}
+
+
+@media screen and (max-width: 990px) {
+  .home-presentation {
+    min-width: 100vw;
+    margin-left: 500px;
+    color: white;
+  }
+  .home-title {
+    font-size: 21px;
+  }
+
+  .home-title-home-br-button-container {
+    margin: 25px 0 0 180px;
+    width: 80vw;
   }
 
   .home-subButton {
@@ -354,6 +649,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1px;
     margin-top: 5px;
   }
@@ -402,3 +698,4 @@
     font-size: 22px;
   }
 }
+

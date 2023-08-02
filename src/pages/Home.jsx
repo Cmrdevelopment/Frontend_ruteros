@@ -11,6 +11,10 @@ export const Home = () => {
     <div className="home-container">
       <div className="home-description">
         <div className="home-presentation">
+          <img
+            src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690969392/foto_principal_ruteros_reduced_azx4qd.png"
+            alt="imagen inicial de rutas y viajes"
+          />
           <div className="home-title-home-br-button-container">
             <p className="home-title">
               Excursiones por todo el mundo con ganas
@@ -37,10 +41,12 @@ export const Home = () => {
         </div>
       </div>
       <div className="home-planificador-de-viajes">
-        <img
-          src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690470283/Infograf%C3%ADa_Planificaci%C3%B3n_de_Viajes_Ilustrado_Verde_llh0fx.png"
-          alt="infografia de planificador de viajes"
-        />
+        <div className="home-planificador-de-viajes-planificación-conjunta">
+          <img
+            src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690470283/Infograf%C3%ADa_Planificaci%C3%B3n_de_Viajes_Ilustrado_Verde_llh0fx.png"
+            alt="infografia de planificador de viajes"
+          />
+        </div>
         <div className="home-planificador-de-viajes-container">
           <div className="home-planificador-de-viajes-texto-h2-y-h3">
             <h2>
@@ -89,30 +95,36 @@ export const Home = () => {
               ¡Emprende tu próxima aventura hoy mismo y crea recuerdos que atesorarás para
               siempre!
             </p>
-            <img
-              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690475499/Planificdor_de_viajes1_co9osb.png"
-              alt="primer punto de la infografia de planificador de viajes"
-            />
-            <img
-              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690476402/Planificdor_de_viajes2.1_gmes5s.png"
-              alt="segundo punto de la infografia de planificador de viajes"
-            />
-            <img
-              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690477140/Planificdor_de_viajes3_gnk6xu.png"
-              alt="tercer punto de la infografia de planificador de viajes"
-            />
-            <img
-              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542288/Planificdor_de_viajes4_w7kphm.png"
-              alt="cuarto punto de la infografia de planificador de viajes"
-            />
-            <img
-              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542804/Planificador_el_secreto_de_una_planificaci%C3%B3n_perfecta2_w2qrqk.png"
-              alt="el secreto de una planificación pefecta"
-            />
-            <img
-              src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542572/Planificdor_de_viajes5_a7dytx.png"
-              alt="quinto punto de la infografia de planificador de viajes"
-            />
+            <div className="home-planificador-de-viajes-separado">
+              <div className="home-planificador-de-viajes-separado-primer-grupo">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690475499/Planificdor_de_viajes1_co9osb.png"
+                  alt="primer punto de la infografia de planificador de viajes"
+                />
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690476402/Planificdor_de_viajes2.1_gmes5s.png"
+                  alt="segundo punto de la infografia de planificador de viajes"
+                />
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690477140/Planificdor_de_viajes3_gnk6xu.png"
+                  alt="tercer punto de la infografia de planificador de viajes"
+                />
+              </div>
+              <div className="home-planificador-de-viajes-separado-segundo-grupo">
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542288/Planificdor_de_viajes4_w7kphm.png"
+                  alt="cuarto punto de la infografia de planificador de viajes"
+                />
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542804/Planificador_el_secreto_de_una_planificaci%C3%B3n_perfecta2_w2qrqk.png"
+                  alt="el secreto de una planificación pefecta"
+                />
+                <img
+                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690542572/Planificdor_de_viajes5_a7dytx.png"
+                  alt="quinto punto de la infografia de planificador de viajes"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
