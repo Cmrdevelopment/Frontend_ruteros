@@ -1,3 +1,17 @@
+.no-border-button {
+  border: none;
+  background: none;
+}
+
+.favorite-icon-pendiente-seguir {
+  color: rgb(52, 67, 151);
+}
+
+.favorite-icon-siguiendo {
+  color: rgb(35, 206, 49);
+}
+
+/* 
 .ToggleButtonCity {
   color: red;
   background-color: transparent;
@@ -6,4 +20,4 @@
 
 .favorite-icon {
   margin: 0 0 0 0px;
-}
+} */
