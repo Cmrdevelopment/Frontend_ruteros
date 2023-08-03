@@ -259,9 +259,9 @@ export const Chat = () => {
                   />
                 </li>
                 <MDBBtn
-                  color="info"
+                  color="black"
                   rounded
-                  className="float-end"
+                  className="float-end btn-rounded"
                   onClick={() => {
                     console.log(message);
 
