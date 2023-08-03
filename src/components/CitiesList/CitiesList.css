@@ -1,8 +1,8 @@
-.cityList-container {
+/* .cityList-container {
   padding-top: 1.5rem;
-  min-height: 70vh;
+  min-height: 1vh;
   border: 0px solid red;
-}
+} */
 
 .cityList-reactPaginate-container {
   display: flex;
@@ -36,4 +36,15 @@
   border: 1px solid #61d16d;
   padding: 1rem;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 721px) {
+
+  .cityList-reactPaginate-container {
+
+    margin: 0rem;
+
+  }
+
+
 }

@@ -15,9 +15,9 @@ const CardCity = ({ city }) => {
 
   return (
     <section className="city-Info">
-      <div className="city_ToggleBtnFollowUser">
+      {/* <div className="city_ToggleBtnFollowUser">
         <ToggleBtnFollowCity cityToFollowId={city._id} />
-      </div>
+      </div> */}
       <button
         className="city-card-btn"
         onClick={() =>
