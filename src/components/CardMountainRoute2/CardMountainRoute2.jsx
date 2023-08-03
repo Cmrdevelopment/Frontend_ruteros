@@ -1,6 +1,9 @@
 import './CardMountainRoute2.css';
 
-import { FcAddRow, FcClock, FcDepartment, FcEditImage } from 'react-icons/fc';
+import { GiPathDistance } from 'react-icons/gi';
+import { MdReportProblem } from 'react-icons/md';
+import { FaMapMarker } from 'react-icons/fa';
+import { BiTime } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 
 import ReadOnlyMountainRouteRating from '../ratings/ReadOnlyMountainRouteRating/ReadOnlyMountainRouteRating';
@@ -53,21 +56,21 @@ const CardMountainRoute2 = ({ mountainRoute }) => {
             <div className="mountainRoute-Info-separar-info-general">
               <p className="mountainRoute-Info-distance">
                 {' '}
-                <FcEditImage className="mountainRoute-FcEditImage" />
+                <GiPathDistance className="mountainRoute-GiPathDistance" />
                 {mountainRoute.routeDistance} km
               </p>
               <p className="mountainRoute-Info-routeDuration">
                 {' '}
-                <FcClock className="mountainRoute-FcClock" />
+                <BiTime className="mountainRoute-BiTime" />
                 {mountainRoute.routeDuration} Horas
               </p>
               <p className="">
-                <FcAddRow className="mountainRoute-FcAddRow" />
+                <MdReportProblem className="mountainRoute-MdReportProblem" />
                 {mountainRoute.difficulty}
               </p>
               <p className="">
                 {' '}
-                <FcDepartment className="mountainRoute-FcDepartment" />{' '}
+                <FaMapMarker className="mountainRoute-FaMapMarker" />{' '}
                 {mountainRoute.routeLocation}
               </p>
             </div>

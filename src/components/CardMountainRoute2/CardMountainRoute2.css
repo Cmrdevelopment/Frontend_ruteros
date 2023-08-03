@@ -134,22 +134,26 @@
   justify-content: center;
 }
 
-.mountainRoute-FcAddRow {
+.mountainRoute-GiPathDistance {
   font-size: 25px;
   margin: 0 3px 3px 0;
+  color: rgb(234, 11, 11);
 }
 
-.mountainRoute-FcClock {
+.mountainRoute-BiTime {
   font-size: 16px;
   margin: 0 3px 3px 0;
+  color: rgb(0, 4, 128);
 }
 
-.mountainRoute-FcDepartment {
+.mountainRoute-FaMapMarker {
   font-size: 16px;
   margin: 0 0 3px 0;
+  color: #61D65C;
 }
 
-.mountainRoute-FcEditImage {
-  font-size: 16px;
+.mountainRoute-MdReportProblem {
+  font-size: 19px;
   margin: 0 3px 3px 0;
+  color: rgb(229, 145, 10);
 }

@@ -1,7 +1,12 @@
 import './CardCity.css';
 
-import { FcAddRow, FcClock, FcDepartment, FcEditImage } from 'react-icons/fc';
+import { GiPathDistance } from 'react-icons/gi';
+import { MdReportProblem } from 'react-icons/md';
+import { FaMapMarker } from 'react-icons/fa';
+import { BiTime } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
+
+
 
 import ReadOnlyCityRating from '../ratings/ReadOnlyCityRating/ReadOnlyCityRating';
 import ToggleBtnFollowCity from '../ToggleBtnFollowCity/ToggleBtnFollowCity';
@@ -53,21 +58,21 @@ const CardCity = ({ city }) => {
             <div className="city-Info-separar-info-general">
               <p className="city-Info-distance">
                 {' '}
-                <FcEditImage className="city-FcEditImage" />
+                <GiPathDistance className="city-FcEditImage" />
                 {city.routeDistance} km
               </p>
               <p className="city-Info-routeDuration">
                 {' '}
-                <FcClock className="city-FcClock" />
+                <BiTime className="city-FcClock" />
                 {city.routeDuration} Horas
               </p>
               <p className="">
-                <FcAddRow className="city-FcAddRow" />
+                <MdReportProblem className="city-FcAddRow" />
                 {city.difficulty}
               </p>
               <p className="">
                 {' '}
-                <FcDepartment className="city-FcDepartment" />{' '}
+                <FaMapMarker className="city-FcDepartment" />{' '}
                 {city.routeLocation}
               </p>
             </div>
