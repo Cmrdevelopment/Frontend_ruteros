@@ -92,9 +92,8 @@ const createMountainRoute2 = () => {
             <div>
               <div className="Create_Offer_form-field">
                 <label
-                  className={`createMountainRoute-form-label ${
-                    errors.routeName ? 'required-label' : ''
-                  }`}
+                  className={`createMountainRoute-form-label ${errors.routeName ? 'required-label' : ''
+                    }`}
                 ></label>
                 <input
                   className="createMountainRoute-input-routeName createMountainRoute-backgroundColor"
@@ -109,9 +108,8 @@ const createMountainRoute2 = () => {
                 {/* <label className="createMountainRoute-form-label">Tipo de oferta</label> */}
                 <select
                   id="createMountainRoute-select"
-                  className={`input-select createMountainRoute-backgroundColor ${
-                    errors.difficulty ? 'required-label' : ''
-                  }`}
+                  className={`input-select createMountainRoute-backgroundColor ${errors.difficulty ? 'required-label' : ''
+                    }`}
                   {...register('difficulty', { required: true })}
                 >
                   {difficulty.map((type, index) => (
@@ -129,9 +127,8 @@ const createMountainRoute2 = () => {
                 {/* <label className="createMountainRoute-form-label">Modalidad de trabajo</label> */}
                 <select
                   id="createMountainRoute-select"
-                  className={`input-select createMountainRoute-backgroundColor ${
-                    errors.routeState ? 'required-label' : ''
-                  }`}
+                  className={`input-select createMountainRoute-backgroundColor ${errors.routeState ? 'required-label' : ''
+                    }`}
                   {...register('routeState', { required: true })}
                 >
                   {routeState.map((state, index) => (
@@ -149,9 +146,8 @@ const createMountainRoute2 = () => {
               {/* Items to pick up to to carry to this route */}
 
               <label
-                className={`createMountainRoute-form-label ${
-                  errors.technologies ? 'required-label' : ''
-                }`}
+                className={`createMountainRoute-form-label ${errors.technologies ? 'required-label' : ''
+                  }`}
               ></label>
 
               <div className="createMountainRoute-itemsToCarry-container createMountainRoute-backgroundColor">
@@ -186,9 +182,8 @@ const createMountainRoute2 = () => {
             <div className="createMountainRoute-form-container-duration-distance-localization">
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${
-                    errors.routeDistance ? 'required-label' : ''
-                  }`}
+                  className={`createMountainRoute-form-label ${errors.routeDistance ? 'required-label' : ''
+                    }`}
                 ></label>
 
                 <input
@@ -204,9 +199,8 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${
-                    errors.routeDistance ? 'required-label' : ''
-                  }`}
+                  className={`createMountainRoute-form-label ${errors.routeDistance ? 'required-label' : ''
+                    }`}
                 ></label>
                 <input
                   type="number"
@@ -221,9 +215,8 @@ const createMountainRoute2 = () => {
 
               <div className="form-field">
                 <label
-                  className={`createMountainRoute-form-label ${
-                    errors.routeLocation ? 'required-label' : ''
-                  }`}
+                  className={`createMountainRoute-form-label ${errors.routeLocation ? 'required-label' : ''
+                    }`}
                 ></label>
                 <input
                   className="createCity-input createMountainRoute-backgroundColor"
@@ -245,7 +238,7 @@ const createMountainRoute2 = () => {
               className="input-create-cityRoute-geolocalization createMountainRoute-backgroundColor"
               {...register('routeStartLatitude', { required: true })}
               placeholder="Latitud Comienzo Ruta"
-              value="41.374663896520715"
+            // value="41.374663896520715"
             />
 
             <input
@@ -254,7 +247,7 @@ const createMountainRoute2 = () => {
               className="input-create-cityRoute-geolocalization createMountainRoute-backgroundColor"
               {...register('routeStartLongitude', { required: true })}
               placeholder="Longitud Comienzo Ruta"
-              value="2.10063376682015"
+            // value="2.10063376682015"
             />
 
             <input
@@ -263,7 +256,7 @@ const createMountainRoute2 = () => {
               className="input-create-cityRoute-geolocalization createMountainRoute-backgroundColor"
               {...register('routeEndLatitude', { required: true })}
               placeholder="Latitud Fin Ruta"
-              value="41.367221067676326"
+            // value="41.367221067676326"
             />
 
             <input
@@ -272,16 +265,15 @@ const createMountainRoute2 = () => {
               className="input-create-cityRoute-geolocalization createMountainRoute-backgroundColor"
               {...register('routeEndLongitude', { required: true })}
               placeholder="Longitud Fin Ruta"
-              value="2.095904339000168"
+            // value="2.095904339000168"
             />
           </section>
 
           <section>
             <div className="createMountainRoute-textarea-route-description">
               <label
-                className={`createMountainRoute-form-label ${
-                  errors.descriptionGeneral ? 'required-label' : ''
-                }`}
+                className={`createMountainRoute-form-label ${errors.descriptionGeneral ? 'required-label' : ''
+                  }`}
               ></label>
 
               <textarea
