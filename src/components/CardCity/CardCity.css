@@ -159,14 +159,14 @@
 
 @media screen and (max-width: 721px) {
 
-  .city-card-btn{
-  display: flex;
-  flex-direction: column;
-  border: 0px solid red;
+  .city-card-btn {
+    display: flex;
+    flex-direction: column;
+    border: 0px solid red;
   }
 
-  .city-Info {
-    /* display: flex;
+  /* .city-Info {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -180,10 +180,6 @@
     transition: transform 0.2s;
     margin-bottom: 25px;
     box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
-    border: 0px solid red; */
-  }
+    border: 0px solid red; 
+  } */
 }
-
-
-
-
