@@ -234,7 +234,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: white;
+    background-color: #F9F4EF;
     transition: 1s;
   }
 
@@ -263,6 +263,7 @@ nav {
 
   header .responsive_nav {
     transform: translateY(100vh);
+    
   }
 
   .anchors {
