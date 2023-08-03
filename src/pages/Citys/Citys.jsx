@@ -1,8 +1,6 @@
 import './Citys.css';
 
 import { useMediaQuery } from 'react-responsive';
-
-//import { NavLink } from 'react-router-dom';
 import CitiesList from '../../components/CitiesList/CitiesList';
 
 const Citys = () => {
@@ -25,7 +23,7 @@ const Citys = () => {
       </NavLink> */}
 
       <div className="cities-citiesList-container">
-        {<CitiesList itemsPerPage={10} />}
+        {<CitiesList itemsPerPage={4} />}
       </div>
     </div>
   );
