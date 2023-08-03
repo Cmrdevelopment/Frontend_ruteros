@@ -206,7 +206,7 @@ export const Home = () => {
           recomentadas
         </p>
         <div className="home-company-container-imagenes-ciudades">
-          <div className="home-company-container-imagenes-ciudades-primera-fila">
+          <div className="home-company-container-imagenes-montañas-primera-fila">
             <NavLink to="/mountainRoutes">
               <div className="hover-element">
                 <img
@@ -235,7 +235,7 @@ export const Home = () => {
               </div>
             </NavLink>
           </div>
-          <div className="home-company-container-imagenes-ciudades-segunda-fila">
+          <div className="home-company-container-imagenes-montañas-segunda-fila">
             <NavLink to="/mountainRoutes">
               <div className="hover-element">
                 <img
