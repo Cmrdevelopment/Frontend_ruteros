@@ -2,10 +2,6 @@ import './Home.css';
 
 import { NavLink } from 'react-router-dom';
 
-//import ButtonStyle from '../components/ButtonStyle/ButtonStyle';
-//import { ThemeProvider, useTheme } from "@emotion/react";
-//import GlobalStyles from '../../styles/globalStyles';
-
 export const Home = () => {
   return (
     <div className="home-container">

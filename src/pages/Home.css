@@ -340,7 +340,6 @@
   }
 }
 
-
 @media screen and (max-width: 1205px) {
 
   .home-company-container-imagenes-ciudades img {
@@ -348,7 +347,6 @@
     height: 230px;
     width: 360px;
   }
-
 }
 
 @media screen and (max-width: 721px) {
@@ -364,6 +362,11 @@
   .home-title-home-br-button-container{
     margin: 90px 0 0 120px;
     padding: 0;
+  }
+
+  .home-planificador-de-viajes-texto-h2-y-h3 {
+    margin-top: 5px;
+    margin-bottom: 18px;
   }
 
   .home-title{
@@ -433,8 +436,6 @@
   .home-contactUs {
     margin-left: -18px;
   }
-
- 
 
   .home-p-company {
     display: flex;
