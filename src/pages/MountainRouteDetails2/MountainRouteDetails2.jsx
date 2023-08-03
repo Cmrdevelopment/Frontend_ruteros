@@ -145,28 +145,28 @@ const MountainRouteDetails2 = () => {
           <div className="mountainRouteDetails2-info-localization-distance-difficulty-durartion">
             <div className="mountainRouteDetails2-info-routeLocation">
               <p>Localización</p>
-              <div className="mountainRouteDetails2-info-mountainRoute-detail">
+              <div className="mountainRoute-FaMapMarker">
                 <FaMapMarker style={{ fontSize: '1.6em' }} />{' '}
                 {mountainRoute?.routeLocation}
               </div>
             </div>
             <div className="mountainRouteDetails2-info-routeLoDistance">
               <p>Distancia</p>
-              <div className="mountainRouteDetails2-info-mountainRoute-detail">
+              <div className="mountainRoute-GiPathDistance">
                 <GiPathDistance style={{ fontSize: '1.6em' }} />{' '}
                 {mountainRoute?.routeDistance} Kms
               </div>
             </div>
             <div className="mountainRouteDetails2-info-routeDifficulty">
               <p>Dificultad</p>
-              <div className="mountainRouteDetails2-info-mountainRoute-detail">
+              <div className="mountainRoute-MdReportProblem">
                 <MdReportProblem style={{ fontSize: '1.6em' }} />{' '}
                 {mountainRoute?.difficulty}
               </div>
             </div>
             <div className="mountainRouteDetails2-info-routeDuration">
               <p>Duración</p>
-              <div className="mountainRouteDetails2-info-mountainRoute-detail">
+              <div className="mountainRoute-BiTime">
                 <BiTime style={{ fontSize: '1.6em' }} /> {mountainRoute?.routeDuration}{' '}
                 hora/s
               </div>

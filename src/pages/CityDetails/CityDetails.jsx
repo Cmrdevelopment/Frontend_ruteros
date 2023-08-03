@@ -140,25 +140,25 @@ const CityDetails = () => {
           <div className="cityDetails-info-localization-distance-difficulty-durartion">
             <div className="cityDetails-info-routeLocation">
               <p>Localización</p>
-              <div className="cityDetails-info-city-detail">
+              <div className="city-FaMapMarker">
                 <FaMapMarker style={{ fontSize: '1.6em' }} /> {city?.routeLocation}
               </div>
             </div>
             <div className="cityDetails-info-routeLoDistance">
               <p>Distancia</p>
-              <div className="cityDetails-info-city-detail">
+              <div className="city-GiPathDistance">
                 <GiPathDistance style={{ fontSize: '1.6em' }} /> {city?.routeDistance} Kms
               </div>
             </div>
             <div className="cityDetails-info-routeDifficulty">
               <p>Dificultad</p>
-              <div className="cityDetails-info-city-detail">
+              <div className="city-MdReportProblem">
                 <MdReportProblem style={{ fontSize: '1.6em' }} /> {city?.difficulty}
               </div>
             </div>
             <div className="cityDetails-info-routeDuration">
               <p>Duración</p>
-              <div className="cityDetails-info-city-detail">
+              <div className="city-BiTime">
                 <BiTime style={{ fontSize: '1.6em' }} /> {city?.routeDuration} hora/s
               </div>
             </div>

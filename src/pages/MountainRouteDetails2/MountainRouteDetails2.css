@@ -376,3 +376,26 @@
     width: 100%;
   }
 }
+.mountainRoute-GiPathDistance {
+  font-size: 25px;
+  margin: 0 3px 3px 0;
+  color: rgb(234, 11, 11);
+}
+
+.mountainRoute-BiTime {
+  font-size: 16px;
+  margin: 0 3px 3px 0;
+  color: rgb(0, 4, 128);
+}
+
+.mountainRoute-FaMapMarker {
+  font-size: 16px;
+  margin: 0 0 3px 0;
+  color: #61d65c;
+}
+
+.mountainRoute-MdReportProblem {
+  font-size: 19px;
+  margin: 0 3px 3px 0;
+  color: rgb(229, 145, 10);
+}
