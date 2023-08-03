@@ -150,11 +150,38 @@
 
 @media screen and (max-width: 721px) {
 
-
-  .city-Info-toda_la_carta{
+  .city-card-btn{
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .city-card-btn img{
+   width: 270px;
+   object-fit: cover; 
+  } 
+
+  .city-Info-img-valoraciones{
+    margin-bottom: 0;
+  }
+
+  .city-Info-separar-info-general-routeState{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+  }
+
+  .city-Info-separar-info-general{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 -16px 0;
+  }
+
+  .city-Info-distance, .city-Info-routeDuration, .city-difficulty{
+    margin: 0;
   }
 
   .city-Info {    
@@ -165,9 +192,14 @@
   }
 
   .city-Info-descriptionGeneral {
-    
     width: 260px;
-    color: #676969;
+  }
+
+  .city-Info-routeName-descriptionGeneral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .city_ToggleBtnFollowUser {

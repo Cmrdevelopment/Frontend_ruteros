@@ -44,11 +44,6 @@ const CardCity = ({ city }) => {
               <h4 className="city-Info-name">{city.routeName}</h4>
               <p className="city-Info-descriptionGeneral">{city.descriptionGeneral}</p>
             </div>
-            {/* <div>
-                            <div className="mountainRoute_ToggleBtnFollowMontainRoute">
-                                <ToggleBtnFollowMountainRoute mountainRouteToFollowId={mountainRoute._id} />
-                            </div>
-                        </div> */}
           </div>
           <div className="city-Info-separar-info-general-routeState">
             <div className="city-Info-separar-info-general">
@@ -62,7 +57,7 @@ const CardCity = ({ city }) => {
                 <BiTime className="city-BiTime" />
                 {city.routeDuration} Horas
               </p>
-              <p className="">
+              <p className="city-difficulty">
                 <MdReportProblem className="city-MdReportProblem" />
                 {city.difficulty}
               </p>
