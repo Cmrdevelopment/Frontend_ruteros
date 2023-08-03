@@ -58,21 +58,21 @@ const CardCity = ({ city }) => {
             <div className="city-Info-separar-info-general">
               <p className="city-Info-distance">
                 {' '}
-                <GiPathDistance className="city-FcEditImage" />
+                <GiPathDistance className="city-GiPathDistance" />
                 {city.routeDistance} km
               </p>
               <p className="city-Info-routeDuration">
                 {' '}
-                <BiTime className="city-FcClock" />
+                <BiTime className="city-BiTime" />
                 {city.routeDuration} Horas
               </p>
               <p className="">
-                <MdReportProblem className="city-FcAddRow" />
+                <MdReportProblem className="city-MdReportProblem" />
                 {city.difficulty}
               </p>
               <p className="">
                 {' '}
-                <FaMapMarker className="city-FcDepartment" />{' '}
+                <FaMapMarker className="city-FaMapMarker" />{' '}
                 {city.routeLocation}
               </p>
             </div>
