@@ -1,9 +1,9 @@
 import './CardMountainRoute2.css';
 
+import { BiTime } from 'react-icons/bi';
+import { FaMapMarker } from 'react-icons/fa';
 import { GiPathDistance } from 'react-icons/gi';
 import { MdReportProblem } from 'react-icons/md';
-import { FaMapMarker } from 'react-icons/fa';
-import { BiTime } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 
 import ReadOnlyMountainRouteRating from '../ratings/ReadOnlyMountainRouteRating/ReadOnlyMountainRouteRating';

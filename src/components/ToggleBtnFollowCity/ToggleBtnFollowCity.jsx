@@ -2,11 +2,12 @@ import './ToggleBtnFollowCity.css';
 
 import { useEffect, useState } from 'react';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
+
 //import { RiUserFollowFill, RiUserUnfollowFill } from 'react-icons/ri';
- import {
-   getCityFollowingStatus,
-   toggleInterestedCityToUser,
- } from '../../services/API_proyect/city.service';
+import {
+  getCityFollowingStatus,
+  toggleInterestedCityToUser,
+} from '../../services/API_proyect/city.service';
 
 const ToggleBtnFollowCity = ({ cityToFollowId }) => {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -30,14 +31,10 @@ const ToggleBtnFollowCity = ({ cityToFollowId }) => {
 
   const handleAddToFavorites = async () => {
     try {
-      const response = await toggleInterestedCityToUser(
-        cityToFollowId,
-      );
+      const response = await toggleInterestedCityToUser(cityToFollowId);
       if (
-        response?.data ===
-          "City added to user's citysInterested array" ||
-        response?.data ===
-          "City removed from user's citysInterested array"
+        response?.data === "City added to user's citysInterested array" ||
+        response?.data === "City removed from user's citysInterested array"
       ) {
         setIsFavorite(!isFavorite);
       }
@@ -70,10 +67,7 @@ const ToggleBtnFollowCity = ({ cityToFollowId }) => {
   );
 };
 
-
-
 export default ToggleBtnFollowCity;
-
 
 //Version anterior y funcional
 // import './ToggleBtnFollowCity.css';

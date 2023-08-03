@@ -1,12 +1,10 @@
 import './CardCity.css';
 
+import { BiTime } from 'react-icons/bi';
+import { FaMapMarker } from 'react-icons/fa';
 import { GiPathDistance } from 'react-icons/gi';
 import { MdReportProblem } from 'react-icons/md';
-import { FaMapMarker } from 'react-icons/fa';
-import { BiTime } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
-
-
 
 import ReadOnlyCityRating from '../ratings/ReadOnlyCityRating/ReadOnlyCityRating';
 import ToggleBtnFollowCity from '../ToggleBtnFollowCity/ToggleBtnFollowCity';
@@ -44,9 +42,7 @@ const CardCity = ({ city }) => {
           <div className="city-Info-routeName-descriptionGeneral">
             <div>
               <h4 className="city-Info-name">{city.routeName}</h4>
-              <p className="city-Info-descriptionGeneral">
-                {city.descriptionGeneral}
-              </p>
+              <p className="city-Info-descriptionGeneral">{city.descriptionGeneral}</p>
             </div>
             {/* <div>
                             <div className="mountainRoute_ToggleBtnFollowMontainRoute">
@@ -72,8 +68,7 @@ const CardCity = ({ city }) => {
               </p>
               <p className="">
                 {' '}
-                <FaMapMarker className="city-FaMapMarker" />{' '}
-                {city.routeLocation}
+                <FaMapMarker className="city-FaMapMarker" /> {city.routeLocation}
               </p>
             </div>
             <div className="city-Info-separar-routeState">
@@ -131,7 +126,7 @@ export default CardCity;
 //               <p className="city-Info-descriptionGeneral">{city.descriptionGeneral}</p>
 //             </div>
 //             <div>
-              
+
 //             </div>
 //           </div>
 //           <div className="city-Info-separar-info-general-routeState">
@@ -158,7 +153,7 @@ export default CardCity;
 //             <div className="city-Info-separar-routeState">
 //               <p className="">{city.routeState}</p>
 //             </div>
-            
+
 //           </div>
 //         </div>
 //         <div className="city_ToggleBtnFollowUser">

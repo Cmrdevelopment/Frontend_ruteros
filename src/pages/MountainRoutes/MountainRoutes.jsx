@@ -2,8 +2,8 @@ import './MountainRoutes.css';
 
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-//import { NavLink } from 'react-router-dom';
 
+//import { NavLink } from 'react-router-dom';
 import MountainRoutesList from '../../components/MountainRoutesList/MountainRoutesList';
 // import AnnualSalarySlider from '../../components/offersComponts/AnnualSalarySlider/AnnualSalarySlider';
 // import ExperienceYearsSlider from '../../components/offersComponts/ExperienceYearsSlider/ExperienceYearsSlider';

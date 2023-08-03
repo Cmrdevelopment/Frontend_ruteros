@@ -1,8 +1,8 @@
 import './Citys.css';
 
 import { useMediaQuery } from 'react-responsive';
-//import { NavLink } from 'react-router-dom';
 
+//import { NavLink } from 'react-router-dom';
 import CitiesList from '../../components/CitiesList/CitiesList';
 
 const Citys = () => {
