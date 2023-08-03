@@ -3,9 +3,13 @@ import './MountainRoutes.css';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import MountainRoutesList from '../../components/MountainRoutesList/MountainRoutesList';
+import { NavLink } from 'react-router-dom';
+import { useAuth } from '../../contexts/authContext';
+
 
 const MountainRoutes = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 880 });
+  const { user } = useAuth();
 
   return (
     <div className="outletContainer">
@@ -16,9 +20,19 @@ const MountainRoutes = () => {
       ) : (
         <h2 className="mountainRouteTit">Sigue nuestras rutas de montaña</h2>
       )}
-      {/* <NavLink to="/createMountainRoute2">
-        <button className="offer-button-Create">Crear Ruta</button>
-      </NavLink> */}
+
+      {user == null && (
+        <h3 className='mountainRoute-subTitle'>
+          Tienes que registrarte para crear nuevas rutas
+        </h3>
+      )}
+
+      {user && ( 
+        <NavLink to="/createMountainRoute2">
+          <button className="mountainRoute-button-create">Crear Ruta</button>
+        </NavLink>
+      )}
+  
       <div className="spinner"></div>
 
       {<MountainRoutesList itemsPerPage={4} />}

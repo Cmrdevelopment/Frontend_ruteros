@@ -2,10 +2,12 @@ import './Citys.css';
 
 import { useMediaQuery } from 'react-responsive';
 import CitiesList from '../../components/CitiesList/CitiesList';
+import { NavLink } from 'react-router-dom';
+import { useAuth } from '../../contexts/authContext';
 
 const Citys = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 880 });
-
+  const { user } = useAuth();
   return (
     <div className="outletContainer">
       {isLargeScreen ? (
@@ -17,10 +19,18 @@ const Citys = () => {
       )}
 
       <div className="spinner"></div>
+      
+      {user == null && (
+        <h3 className='cities-subTitle'>
+          Tienes que registrarte para crear nuevas rutas
+        </h3>
+      )}
 
-      {/* <NavLink to="/createCities2">
-        <button className="cities-button-create">Crear Ruta</button>
-      </NavLink> */}
+      {user && ( 
+        <NavLink to="/createCities2">
+          <button className="cities-button-create">Crear Ruta</button>
+        </NavLink>
+      )}
 
       <div className="cities-citiesList-container">
         {<CitiesList itemsPerPage={4} />}
