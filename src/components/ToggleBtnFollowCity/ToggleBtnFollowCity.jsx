@@ -1,8 +1,8 @@
 import './ToggleBtnFollowCity.css';
 
 import { useEffect, useState } from 'react';
-//import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
-import { RiUserFollowFill, RiUserUnfollowFill } from 'react-icons/ri';
+import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
+//import { RiUserFollowFill, RiUserUnfollowFill } from 'react-icons/ri';
  import {
    getCityFollowingStatus,
    toggleInterestedCityToUser,
@@ -16,7 +16,7 @@ const ToggleBtnFollowCity = ({ cityToFollowId }) => {
       try {
         const isFav = await getCityFollowingStatus(cityToFollowId);
 
-        if (isFav?.data?.status === "Route is in user's cityRoutesInterested array") {
+        if (isFav?.data?.status === "City is in user's citysInterested arr") {
           setIsFavorite(true);
         } else {
           setIsFavorite(false);
@@ -35,9 +35,9 @@ const ToggleBtnFollowCity = ({ cityToFollowId }) => {
       );
       if (
         response?.data ===
-          "City route added to user's cityRoutesInterested array" ||
+          "City added to user's citysInterested array" ||
         response?.data ===
-          "City route removed from user's cityRoutesInterested array"
+          "City removed from user's citysInterested array"
       ) {
         setIsFavorite(!isFavorite);
       }
@@ -56,13 +56,13 @@ const ToggleBtnFollowCity = ({ cityToFollowId }) => {
           <p>
             {' '}
             {/* Dejar de seguirla{' '} */}
-            <RiUserUnfollowFill size={25} className="favorite-icon-pendiente-seguir" />
+            <AiTwotoneHeart size={25} className="favorite-icon-pendiente-seguir" />
           </p>
         ) : (
           <p>
             {' '}
             {/* Sigue esta ruta de ciudad{' '} */}
-            <RiUserFollowFill size={25} className="favorite-icon-siguiendo" />{' '}
+            <AiOutlineHeart size={25} className="favorite-icon-siguiendo" />{' '}
           </p>
         )}
       </button>

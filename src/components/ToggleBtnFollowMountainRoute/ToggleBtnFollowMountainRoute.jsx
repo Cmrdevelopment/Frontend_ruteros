@@ -1,8 +1,8 @@
 import './ToggleBtnFollowMountainRoute.css';
 
 import { useEffect, useState } from 'react';
-//import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
-import { RiUserFollowFill, RiUserUnfollowFill } from 'react-icons/ri';
+import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
+//import { RiUserFollowFill, RiUserUnfollowFill } from 'react-icons/ri';
 
 import {
   mountainRoute_getFollowingStatus,
@@ -57,13 +57,13 @@ const ToggleBtnFollowMountainRoute = ({ mountainRouteToFollowId }) => {
           <p>
             {' '}
             {/* Dejar de seguirla{' '} */}
-            <RiUserUnfollowFill size={25} className="favorite-icon-pendiente-seguir" />
+            <AiTwotoneHeart size={25} className="favorite-icon-pendiente-seguir" />
           </p>
         ) : (
           <p>
             {' '}
             {/* Sigue esta ruta de montaña{' '} */}
-            <RiUserFollowFill size={25} className="favorite-icon-siguiendo" />{' '}
+            <AiOutlineHeart size={25} className="favorite-icon-siguiendo" />{' '}
           </p>
         )}
       </button>
