@@ -11,26 +11,22 @@
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  /* border: 1.6px solid #e3e4e5; */
   border: 0px solid blue;
 }
 
 .fluidContainerProfile {
   max-width: 900px;
-  height: 50vh;
+  height: 46.4vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 2;
-  width: 909PX;
+  width: 900PX;
   border: 1px solid #8c7851;
   border-radius: 12px;
-  padding: 1rem;
   box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
   border: 0px solid red;
-  /* max-height: 561.39px; */
-  /* margin-left: 30px; */
 }
 
 .mainContainer {
@@ -62,7 +58,7 @@
   padding: 3px;
   width: 100%;
   cursor: pointer;
-  height: 58px;
+  height: 63px;
   font-size: 18px;
   /* background-color: var(--mainColor);
   color: var(--textColor); */
@@ -98,9 +94,9 @@
 
   .mainContainer {
     display: flex;
-    /* border: 2px solid black; */
+    
+ 
     margin-top: 30px;
-    /* height: 850px */
     height: 990px;
   }
 
