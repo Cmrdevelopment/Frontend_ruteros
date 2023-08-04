@@ -91,7 +91,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
     border-radius: 20px;
     margin-top: 5vh;
     gap: 8px;
@@ -119,6 +118,14 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 880px) {
+  .fluidContainerProfile {
+  box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.0);
+  }
+}
+
+
 
 /*  -------------------------------------------------------------------*/
 
