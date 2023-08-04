@@ -27,6 +27,7 @@
   width: 145px;
   background-color: var(--btn-bg-color);
   color: white;
+  
 }
 
 .cities-button-create:hover {
@@ -53,4 +54,8 @@
     text-align: center;
     padding: 0 0 0 0;
   }
+}
+
+.spinner{
+  padding-bottom: 2.2rem;
 }

@@ -20,7 +20,7 @@ const MountainRoutes = () => {
       ) : (
         <h2 className="mountainRouteTit">Sigue nuestras rutas de montaña</h2>
       )}
-
+<div className="spinner">
       {user == null && (
         <h3 className='mountainRoute-subTitle'>
           Tienes que registrarte para crear nuevas rutas
@@ -33,7 +33,7 @@ const MountainRoutes = () => {
         </NavLink>
       )}
   
-      <div className="spinner"></div>
+      </div>
 
       {<MountainRoutesList itemsPerPage={4} />}
     </div>

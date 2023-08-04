@@ -19,7 +19,7 @@ const Citys = () => {
         <h2 className="cities-title">Sigue nuestras rutas en ciudades</h2>
       )}
 
-      <div className="spinner"></div>
+<div className="spinner">
       {user == null && (
         <h3 className="cities-subTitle">
           Tienes que registrarte para crear nuevas rutas
@@ -31,8 +31,12 @@ const Citys = () => {
           <button className="cities-button-create">Crear Ruta</button>
         </NavLink>
       )}
+  </div>
 
-      <div className="cities-citiesList-container">{<CitiesList itemsPerPage={4} />}</div>
+      <div className="cities-citiesList-container">
+        {<CitiesList itemsPerPage={4} />}
+        
+        </div>
     </div>
   );
 };
