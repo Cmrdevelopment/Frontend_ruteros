@@ -1,8 +1,9 @@
 import './Citys.css';
 
 import { useMediaQuery } from 'react-responsive';
-import CitiesList from '../../components/CitiesList/CitiesList';
 import { NavLink } from 'react-router-dom';
+
+import CitiesList from '../../components/CitiesList/CitiesList';
 import { useAuth } from '../../contexts/authContext';
 
 const Citys = () => {
@@ -19,22 +20,19 @@ const Citys = () => {
       )}
 
       <div className="spinner"></div>
-      
       {user == null && (
-        <h3 className='cities-subTitle'>
+        <h3 className="cities-subTitle">
           Tienes que registrarte para crear nuevas rutas
         </h3>
       )}
 
-      {user && ( 
+      {user && (
         <NavLink to="/createCities2">
           <button className="cities-button-create">Crear Ruta</button>
         </NavLink>
       )}
 
-      <div className="cities-citiesList-container">
-        {<CitiesList itemsPerPage={4} />}
-      </div>
+      <div className="cities-citiesList-container">{<CitiesList itemsPerPage={4} />}</div>
     </div>
   );
 };

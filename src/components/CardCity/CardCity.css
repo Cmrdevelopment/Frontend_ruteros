@@ -108,13 +108,23 @@
   width: 750px;
   color: #676969;
   font-weight: 500;
-  text-align: justify;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   max-width: 70ch;
 }
+
+.city-Info-descriptionGeneral {
+  font-size: 16px; /* Tamaño de fuente para la descripción general */
+  /* Otras propiedades de estilo según tus necesidades */
+  text-overflow: ellipsis; /* Muestra los puntos suspensivos al final del texto */
+  overflow: hidden; /* Asegura que el contenido que excede el contenedor no sea visible */
+  display: -webkit-box; /* Establece el tipo de display necesario para el truco de las tres líneas */
+  -webkit-line-clamp: 3; /* Limita el texto a tres líneas */
+  -webkit-box-orient: vertical; /* Establece el flujo del texto en vertical */
+}
+
+
+
+
+
 
 .city-Info-Ubicado {
   font-size: 12px;
@@ -185,14 +195,14 @@
   }
 
   .city-Info {    
-    min-height: 500px;
-    max-height: 500px;
+    min-height: 520px;
+    max-height: 520px;
     width: 370px;
     z-index: 1;
   }
 
   .city-Info-descriptionGeneral {
-    width: 260px;
+    width: 300px;
   }
 
   .city-Info-routeName-descriptionGeneral{

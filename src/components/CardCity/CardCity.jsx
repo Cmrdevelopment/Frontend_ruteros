@@ -61,7 +61,7 @@ const CardCity = ({ city }) => {
                 <MdReportProblem className="city-MdReportProblem" />
                 {city.difficulty}
               </p>
-              <p className="">
+              <p className="city-routeLocation">
                 {' '}
                 <FaMapMarker className="city-FaMapMarker" /> {city.routeLocation}
               </p>
