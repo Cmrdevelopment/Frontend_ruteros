@@ -143,32 +143,31 @@ const MountainRouteDetails2 = () => {
             ({mountainRoute?.ratings.length})
           </div>
           <div className="mountainRouteDetails2-info-localization-distance-difficulty-durartion">
-            <div className="mountainRouteDetails2-info-routeLocation">
-              <p>Localización</p>
-              <div className="mountainRoute-FaMapMarker">
-                <FaMapMarker style={{ fontSize: '1.6em' }} />{' '}
-                {mountainRoute?.routeLocation}
-              </div>
-            </div>
-            <div className="mountainRouteDetails2-info-routeLoDistance">
-              <p>Distancia</p>
+          <div className="mountainRouteDetails2-info-routeLoDistance">
+              <p className='textoDistancia'>Distancia</p>
               <div className="mountainRoute-GiPathDistance">
-                <GiPathDistance style={{ fontSize: '1.6em' }} />{' '}
-                {mountainRoute?.routeDistance} Kms
-              </div>
-            </div>
-            <div className="mountainRouteDetails2-info-routeDifficulty">
-              <p>Dificultad</p>
-              <div className="mountainRoute-MdReportProblem">
-                <MdReportProblem style={{ fontSize: '1.6em' }} />{' '}
-                {mountainRoute?.difficulty}
+                <GiPathDistance style={{ fontSize: '1.0em' }} />{' '}
+                <span style={{ color: 'black' }}>{mountainRoute?.routeDistance} Kms</span> 
               </div>
             </div>
             <div className="mountainRouteDetails2-info-routeDuration">
-              <p>Duración</p>
+              <p className='textoDuracion'>Duración</p>
               <div className="mountainRoute-BiTime">
-                <BiTime style={{ fontSize: '1.6em' }} /> {mountainRoute?.routeDuration}{' '}
-                hora/s
+                <BiTime style={{ fontSize: '1.6em', color: 'green' }} />{' '}<span style={{color: 'black'}}>{mountainRoute?.routeDuration}
+                hora/s</span>
+              </div>
+            </div>
+            <div className="mountainRouteDetails2-info-routeDifficulty">
+              <p className='textoDificultad'>Dificultad</p>
+              <div className="mountainRoute-MdReportProblem">
+                <MdReportProblem style={{ fontSize: '1.6em' }} />{' '}<span style={{ color: 'black '}}>
+                {mountainRoute?.difficulty} </span>
+              </div>
+            </div>
+            <div className="mountainRouteDetails2-info-routeLocation">
+              <p className='textoLocalizacion'>Localización</p>
+              <div className="mountainRoute-FaMapMarker">
+                <FaMapMarker style={{ fontSize: '1.6em', color: '#2880CA'}}  />{' '} <span style={{ color: 'black' }}>{mountainRoute?.routeLocation}</span>
               </div>
             </div>
           </div>

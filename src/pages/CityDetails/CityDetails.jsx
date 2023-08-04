@@ -138,28 +138,31 @@ const CityDetails = () => {
             {city && <ReadOnlyCityRating city={city} />} ({city?.ratings.length})
           </div>
           <div className="cityDetails-info-localization-distance-difficulty-durartion">
-            <div className="cityDetails-info-routeLocation">
-              <p>Localización</p>
-              <div className="city-FaMapMarker">
-                <FaMapMarker style={{ fontSize: '1.6em' }} /> {city?.routeLocation}
-              </div>
-            </div>
-            <div className="cityDetails-info-routeLoDistance">
-              <p>Distancia</p>
+          <div className="cityDetails-info-routeLoDistance">
+              <p className='textoDistancia'>Distancia</p>
               <div className="city-GiPathDistance">
-                <GiPathDistance style={{ fontSize: '1.6em' }} /> {city?.routeDistance} Kms
-              </div>
-            </div>
-            <div className="cityDetails-info-routeDifficulty">
-              <p>Dificultad</p>
-              <div className="city-MdReportProblem">
-                <MdReportProblem style={{ fontSize: '1.6em' }} /> {city?.difficulty}
+              <GiPathDistance style={{ fontSize: '1.0em' }} />{' '}
+                <span style={{ color: 'black' }}>{city?.routeDistance} Kms</span> 
               </div>
             </div>
             <div className="cityDetails-info-routeDuration">
-              <p>Duración</p>
+              <p className='textoDuracion'>Duración</p>
               <div className="city-BiTime">
-                <BiTime style={{ fontSize: '1.6em' }} /> {city?.routeDuration} hora/s
+              <BiTime style={{ fontSize: '1.6em', color: 'green' }} />{' '}<span style={{color: 'black'}}>{city?.routeDuration}
+                hora/s</span>
+              </div>
+            </div>            
+            <div className="cityDetails-info-routeDifficulty">
+              <p className='textoDificultad'>Dificultad</p>
+              <div className="city-MdReportProblem">
+              <MdReportProblem style={{ fontSize: '1.6em' }} />{' '}<span style={{ color: 'black '}}>
+                {city?.difficulty} </span>
+              </div>
+            </div>
+            <div className="cityDetails-info-routeLocation">
+              <p clasName='textoLocalizacion'>Localización</p>
+              <div className="city-FaMapMarker">
+              <FaMapMarker style={{ fontSize: '1.6em', color: '#2880CA'}}  />{' '} <span style={{ color: 'black' }}>{city?.routeLocation}</span>
               </div>
             </div>
           </div>

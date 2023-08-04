@@ -380,22 +380,42 @@
   font-size: 25px;
   margin: 0 3px 3px 0;
   color: rgb(234, 11, 11);
+  padding-bottom: 0.3rem;
 }
 
 .mountainRoute-BiTime {
   font-size: 16px;
   margin: 0 3px 3px 0;
-  color: rgb(0, 4, 128);
+  color: rgb(10, 163, 23);
+  padding-bottom: 0.3rem;
 }
 
 .mountainRoute-FaMapMarker {
   font-size: 16px;
   margin: 0 0 3px 0;
-  color: #61d65c;
+  color: #2880CA;
+  padding-bottom: 0.3rem;
 }
 
+.textoLocalizacion{
+  padding-top: 0.2rem;
+  
+}
+.textoDistancia{
+  padding-top: 0.6rem;
+  
+}
+.textoDuracion{
+  padding-top: 0.2rem;
+  
+}
+.textoDificultad{
+  padding-top: 0.2rem;
+  
+}
 .mountainRoute-MdReportProblem {
   font-size: 19px;
   margin: 0 3px 3px 0;
   color: rgb(229, 145, 10);
+  padding-bottom: 0.3rem;
 }
