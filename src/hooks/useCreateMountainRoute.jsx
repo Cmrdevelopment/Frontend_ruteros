@@ -4,15 +4,15 @@ const handleMountainRouteCreationResponse = (res) => {
   if (res?.status === 200) {
     Swal.fire({
       icon: 'success',
-      title: 'MountainRoute creada con éxito!',
+      title: 'Ruta de montaña creada con éxito!',
       showConfirmButton: false,
       timer: 1500,
     });
   } else if (res?.status === 400 || res?.status === 500) {
     Swal.fire({
       icon: 'error',
-      title: 'Error al crear MountainRoute',
-      text: 'Hubo un problema al intentar crear la MountainRoute. Por favor, intente de nuevo.',
+      title: 'Error al crear ruta',
+      text: 'Hubo un problema al intentar crear la ruta. Por favor, intente de nuevo.',
       showConfirmButton: false,
       timer: 1500,
     });

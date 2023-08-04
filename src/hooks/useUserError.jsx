@@ -7,7 +7,7 @@ const useUserError = (res, setRegisterOk) => {
     setRegisterOk(() => true);
     Swal.fire({
       icon: 'success',
-      title: '¡Hola, bienvenidos a mi página web de desarrolladores!',
+      title: '¡Hola, bienvenidos a nuestra página web de Ruteros!',
       showConfirmButton: false,
       timer: 1500,
     });

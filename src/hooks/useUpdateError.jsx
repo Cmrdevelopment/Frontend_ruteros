@@ -47,7 +47,7 @@ const useUpdateError = (res, setChangeProfileDataOk) => {
     Swal.fire({
       icon: 'error',
       title: `Error updating user: ${error} ❎`,
-      text: 'POr favor, prueba de nuevo',
+      text: 'Por favor, prueba de nuevo',
       showConfirmButton: false,
       timer: 1500,
     });

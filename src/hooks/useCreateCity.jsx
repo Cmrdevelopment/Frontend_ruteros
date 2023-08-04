@@ -4,15 +4,15 @@ const handleCityCreationResponse = (res) => {
   if (res?.status === 200) {
     Swal.fire({
       icon: 'success',
-      title: 'City Route creada con éxito!',
+      title: 'Ruta de ciudad creada con éxito!',
       showConfirmButton: false,
       timer: 1500,
     });
   } else if (res?.status === 400 || res?.status === 500) {
     Swal.fire({
       icon: 'error',
-      title: 'Error al crear CityRoute',
-      text: 'Hubo un problema al intentar crear la CityRoute. Por favor, intente de nuevo.',
+      title: 'Error al crear la ruta de ciudad',
+      text: 'Hubo un problema al intentar crear la ruta. Por favor, intente de nuevo.',
       showConfirmButton: false,
       timer: 1500,
     });

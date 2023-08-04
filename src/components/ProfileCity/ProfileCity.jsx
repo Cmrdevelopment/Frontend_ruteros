@@ -2,8 +2,7 @@ import './ProfileCity.css';
 
 import React, { useState } from 'react';
 
-// import OffersCreated from '../offersCreated/offersCreated';
-// import OffersInterested from '../OffersInterested/offersInterested';
+
 
 const ProfileCity = () => {
   const [showCreated, setShowCreated] = useState(true);

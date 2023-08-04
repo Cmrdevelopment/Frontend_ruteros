@@ -30,7 +30,7 @@ const useLoginError = (res, setLoginOk, userlogin) => {
     setLoginOk(() => true);
     Swal.fire({
       icon: 'success',
-      title: '¡Hola, bienvenidos a nuestra web de desarrolladores!',
+      title: '¡Hola, bienvenidos a nuestra web de Ruteros!',
       text: 'Iniciado sesión con éxito ✅',
       showConfirmButton: false,
       timer: 1500,
@@ -80,5 +80,6 @@ const useLoginError = (res, setLoginOk, userlogin) => {
       timer: 1500,
     });
 };
+
 
 export default useLoginError;
