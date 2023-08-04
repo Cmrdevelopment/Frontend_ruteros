@@ -15,9 +15,9 @@ const CardMountainRoute2 = ({ mountainRoute }) => {
 
   return (
     <section className="mountainRoute-Info">
-      <div className="mountainRoute_ToggleBtnFollowMontainRoute">
+      {/* <div className="mountainRoute_ToggleBtnFollowMontainRoute">
         <ToggleBtnFollowMountainRoute mountainRouteToFollowId={mountainRoute._id} />
-      </div>
+      </div> */}
       <button
         className="mountainRoute-card-btn"
         onClick={() =>
@@ -64,7 +64,7 @@ const CardMountainRoute2 = ({ mountainRoute }) => {
                 <BiTime className="mountainRoute-BiTime" />
                 {mountainRoute.routeDuration} Horas
               </p>
-              <p className="">
+              <p className="mountainRoute-difficulty">
                 <MdReportProblem className="mountainRoute-MdReportProblem" />
                 {mountainRoute.difficulty}
               </p>

@@ -1,4 +1,5 @@
 .mountainRoute-Info {
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: first baseline;
@@ -117,13 +118,23 @@
   width: 750px;
   color: #676969;
   font-weight: 500;
-  text-align: justify;
-  text-overflow: ellipsis;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   max-width: 70ch;
+}
+
+.mountainRoute-Info-descriptionGeneral {
+  font-size: 16px;
+  /* Tamaño de fuente para la descripción general */
+  /* Otras propiedades de estilo según tus necesidades */
+  text-overflow: ellipsis;
+  /* Muestra los puntos suspensivos al final del texto */
+  overflow: hidden;
+  /* Asegura que el contenido que excede el contenedor no sea visible */
+  display: -webkit-box;
+  /* Establece el tipo de display necesario para el truco de las tres líneas */
+  -webkit-line-clamp: 3;
+  /* Limita el texto a tres líneas */
+  -webkit-box-orient: vertical;
+  /* Establece el flujo del texto en vertical */
 }
 
 .mountainRoute-Info-Ubicado {
@@ -156,4 +167,69 @@
   font-size: 19px;
   margin: 0 3px 3px 0;
   color: rgb(229, 145, 10);
+}
+
+@media screen and (max-width: 721px) {
+
+  .mountainRoute-card-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mountainRoute-card-btn img {
+    width: 270px;
+    object-fit: cover;
+  }
+
+  .mountainRoute-Info-img-valoraciones {
+    margin-bottom: 0;
+  }
+
+  .mountainRoute-Info-separar-info-general-routeState {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mountainRoute-Info-separar-info-general {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 -16px 0;
+  }
+
+  .mountainRoute-Info-distance,
+  .mountainRoute-Info-routeDuration,
+  .mountainRoute-difficulty {
+    margin: 0;
+  }
+
+  .mountainRoute-Info {
+    min-height: 520px;
+    max-height: 520px;
+    width: 370px;
+    z-index: 1;
+  }
+
+  .mountainRoute-Info-descriptionGeneral {
+    width: 300px;
+  }
+
+  .mountainRoute-Info-routeName-descriptionGeneral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mountainRoute_ToggleBtnFollowUser {
+    border: 0px solid rgb(124, 187, 180);
+    padding: 1px;
+    border: 0px solid red;
+    z-index: 5;
+  }
+
 }
