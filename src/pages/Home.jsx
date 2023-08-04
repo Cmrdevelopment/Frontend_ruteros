@@ -126,7 +126,11 @@ export const Home = () => {
       </div>
       <div className="home-company-container">
         <p className="home-p-company">
-          Algunas de nuestras <span className="home-negrita"> rutas de ciudad </span>{' '}
+          Algunas de nuestras{' '}
+          <span className="home-negrita" style={{ color: '#25d366' }}>
+            {' '}
+            rutas de ciudad{' '}
+          </span>{' '}
           recomentadas
         </p>
         <div className="home-company-container-imagenes-ciudades">
@@ -198,7 +202,10 @@ export const Home = () => {
 
       <div className="home-company-container">
         <p className="home-p-company">
-          Algunas de nuestras <span className="home-negrita">rutas de montaña</span>{' '}
+          Algunas de nuestras{' '}
+          <span className="home-negrita" style={{ color: '#6e2f5a' }}>
+            rutas de montaña
+          </span>{' '}
           recomentadas
         </p>
         <div className="home-company-container-imagenes-ciudades">
