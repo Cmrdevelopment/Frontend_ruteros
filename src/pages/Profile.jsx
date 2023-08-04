@@ -175,7 +175,7 @@ const Profile = () => {
                   alt="city route icon"
                   src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690563951/UserFTProyect/profileIcons/city-route_xcpnlu.png"
                 ></img>
-                Rutas de Ciudad
+                Rutas Ciudad
               </button>
 
               <button
@@ -192,7 +192,7 @@ const Profile = () => {
                   alt="mountain route icon"
                   src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690563951/UserFTProyect/profileIcons/mountain-route_oyq3ui.png"
                 ></img>
-                Rutas de Montaña
+                Rutas Montaña
               </button>
 
               <button

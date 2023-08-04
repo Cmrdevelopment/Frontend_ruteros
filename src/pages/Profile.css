@@ -7,7 +7,7 @@
 
 .containerNavProfile {
   width: 20vw;
-  height: 54vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -17,13 +17,13 @@
 
 .fluidContainerProfile {
   max-width: 900px;
-  height: 47vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 2;
-  width: 100%;
+  width: 909PX;
   border: 1px solid #8c7851;
   border-radius: 12px;
   padding: 1rem;
@@ -59,7 +59,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 30px;
+  padding: 3px;
   width: 100%;
   cursor: pointer;
   height: 58px;
@@ -73,7 +73,7 @@
 .btn-profile.active:hover {
   color: white;
   font-weight: 700;
-}
+} 
 
 @media only screen and (max-width: 880px) {
   .btn-profile {
@@ -91,7 +91,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 375px;
+   
     border-radius: 20px;
     margin-top: 5vh;
     gap: 8px;
