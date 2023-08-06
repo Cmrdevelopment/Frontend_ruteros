@@ -1,5 +1,6 @@
+// CardCity.js
+import React from 'react';
 import './CardCity.css';
-
 import { BiTime } from 'react-icons/bi';
 import { FaMapMarker } from 'react-icons/fa';
 import { GiPathDistance } from 'react-icons/gi';
@@ -13,19 +14,15 @@ const CardCity = ({ city }) => {
   const navigate = useNavigate();
   const pathById = `/cityDetails`;
 
+  const handleCardClick = () => {
+    navigate(pathById, {
+      state: { id: city._id },
+    });
+  };
+
   return (
     <section className="city-Info">
-      {/* <div className="city_ToggleBtnFollowUser">
-        <ToggleBtnFollowCity cityToFollowId={city._id} />
-      </div> */}
-      <button
-        className="city-card-btn"
-        onClick={() =>
-          navigate(pathById, {
-            state: { id: city._id },
-          })
-        }
-      >
+      <button className="city-card-btn" onClick={handleCardClick}>
         <div className="city-Info-img-valoraciones">
           <img
             className="city-Info-img"
@@ -71,12 +68,17 @@ const CardCity = ({ city }) => {
             </div>
           </div>
         </div>
+        
       </button>
+      <div className="city_ToggleBtnFollowUser">
+          <ToggleBtnFollowCity cityToFollowId={city._id} />
+        </div>
     </section>
   );
 };
 
 export default CardCity;
+
 
 //Version Anterior
 // import './CardCity.css';
