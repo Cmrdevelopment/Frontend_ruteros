@@ -14,7 +14,7 @@
   box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
   border: 0px solid red;
 }
-
+mountainRoute_ToggleBtnFollowMontainRoute
 .mountainRoute-Info:hover {
   background-color: #b3c8ec;
   transition: transform 0.2s;
@@ -170,6 +170,17 @@
 }
 
 @media screen and (max-width: 721px) {
+
+  .mountainRoute_ToggleBtnFollowMontainRoute {
+    margin-top: -512px;
+    margin-left: 320px;
+
+  }
+
+
+
+
+
 
   .mountainRoute-card-btn {
     display: flex;

@@ -80,6 +80,9 @@ const CardMountainRoute2 = ({ mountainRoute }) => {
           </div>
         </div>
       </button>
+      <div className="mountainRoute_ToggleBtnFollowMontainRoute">
+        <ToggleBtnFollowMountainRoute mountainRouteToFollowId={mountainRoute._id} />
+      </div>
     </section>
   );
 };

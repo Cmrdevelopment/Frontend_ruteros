@@ -57,13 +57,13 @@ const ToggleBtnFollowMountainRoute = ({ mountainRouteToFollowId }) => {
           <p>
             {' '}
             {/* Dejar de seguirla{' '} */}
-            <AiTwotoneHeart size={25} className="favorite-icon-pendiente-seguir" />
+            <AiTwotoneHeart size={27} className="favorite-icon-pendiente-seguir" />
           </p>
         ) : (
           <p>
             {' '}
             {/* Sigue esta ruta de montaña{' '} */}
-            <AiOutlineHeart size={25} className="favorite-icon-siguiendo" />{' '}
+            <AiOutlineHeart size={27} className="favorite-icon-siguiendo" />{' '}
           </p>
         )}
       </button>
