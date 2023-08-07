@@ -6,7 +6,7 @@ const useChangePasswordError = (res, setChangePasswordOk) => {
     setChangePasswordOk(() => true);
     Swal.fire({
       icon: 'success',
-      title: 'Change password ok ✅',
+      title: 'Password succesfully changed ✅',
       showConfirmButton: false,
       timer: 1500,
       position: 'center',

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="footer-information-container">
         <div className="footer-infotmation">
-          <p className="footer-infotmation-title">Unete y participa de nuestras rutas</p>
+          <p className="footer-infotmation-title">Unete y participa en nuestras rutas</p>
           <p className="footer-information-description">
             Disfruta de nuestras rutas tanto en la montaña como en la ciudad
             <br></br>y podrás disfrutar de los paisajes más emblematicos
