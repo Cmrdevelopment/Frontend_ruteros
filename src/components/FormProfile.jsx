@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import 'sweetalert2/dist/sweetalert2.min.css';
 import { useAuth } from '../contexts/authContext';
 import useUpdateError from '../hooks/useUpdateError';
 import { updateUser } from '../services/API_proyect/user.service';
@@ -23,12 +23,13 @@ const FormProfile = () => {
   //! --------- funcion que controla el formulario-----------------------
   const formSubmit = async (formData) => {
     Swal.fire({
-      title: '¿Deseas para cambiar los detalles de tu perfil?',
+      title: '¿Deseas cambiar los detalles de tu perfil?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: 'rgb(73, 193, 162)',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes',
+      customClass: 'custom-swal-bg',
     }).then(async (result) => {
       if (result.isConfirmed) {
         const inputfile = document.getElementById('file-upload').files;
@@ -93,13 +94,13 @@ const FormProfile = () => {
                   className="btn_profile_general"
                   type="submit"
                   disabled={send}
-                  // style={{ background: send ? "#49c1a388" : "#49c1a2" }}
-                  // style={{ background: send ? "#008000" : "#37A08E" }}
-                  // style={
-                  //   {
-                  //     background: send ? '#008000' : 'var(--background-color-button-login)',
-                  //   }
-                  // }
+                // style={{ background: send ? "#49c1a388" : "#49c1a2" }}
+                // style={{ background: send ? "#008000" : "#37A08E" }}
+                // style={
+                //   {
+                //     background: send ? '#008000' : 'var(--background-color-button-login)',
+                //   }
+                // }
                 >
                   CAMBIAR PERFIL
                 </button>

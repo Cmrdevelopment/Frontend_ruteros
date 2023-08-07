@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
+import '../styles/swal_styles.css'
 
 const useLoginError = (res, setLoginOk, userlogin) => {
   // -------404 o un 500  en este caso --------->res.response
@@ -30,10 +31,11 @@ const useLoginError = (res, setLoginOk, userlogin) => {
     setLoginOk(() => true);
     Swal.fire({
       icon: 'success',
-      title: '¡Hola, bienvenidos a nuestra web de Ruteros!',
+      title: '¡Hola, bienvenido a nuestra web de Ruteros!',
       text: 'Iniciado sesión con éxito ✅',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   }
 

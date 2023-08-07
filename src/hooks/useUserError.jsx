@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
+import '../styles/swal_styles.css'
 
 const useUserError = (res, setRegisterOk) => {
   //! 200 --->  respuesta ok register ok
@@ -7,9 +8,10 @@ const useUserError = (res, setRegisterOk) => {
     setRegisterOk(() => true);
     Swal.fire({
       icon: 'success',
-      title: '¡Hola, bienvenidos a nuestra página web de Ruteros!',
+      title: '¡Hola, bienvenido a nuestra web de Ruteros!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   }
 
