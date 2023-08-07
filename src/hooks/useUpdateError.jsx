@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-
+import '../styles/swal_styles.css'
 const useUpdateError = (res, setChangeProfileDataOk) => {
   let contador;
   //! if para comprobar con un contador que no tenemos nada en false es decir no se ha actualizado
@@ -32,6 +32,7 @@ const useUpdateError = (res, setChangeProfileDataOk) => {
       text: ` Update: ${check} `,
       showConfirmButton: false,
       timer: 4000,
+      customClass: 'custom-swal-bg',
     });
   }
   //! //! ----------200:  cuando algo no se actualiza
@@ -50,6 +51,7 @@ const useUpdateError = (res, setChangeProfileDataOk) => {
       text: 'Por favor, prueba de nuevo',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   }
 
@@ -62,6 +64,7 @@ const useUpdateError = (res, setChangeProfileDataOk) => {
       text: '¡Error Interno del Servidor! ¡Usuario no actualizado!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 };
 

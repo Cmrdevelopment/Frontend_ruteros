@@ -1,5 +1,5 @@
 import './ChangePassword2.css';
-
+import '../../styles/swal_styles.css';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Navigate } from 'react-router-dom';
@@ -28,6 +28,7 @@ const ChangePassword2 = () => {
         cancelButtonColor: '#d33',
         confirmButtonText: 'Yes',
         position: 'center',
+        customClass: 'custom-swal-bg',
       }).then(async (result) => {
         if (result.isConfirmed) {
           setSend(true);
@@ -41,6 +42,7 @@ const ChangePassword2 = () => {
         title: 'Parece que las contraseñas no son las mismas. ¡Prueba otra vez!',
         showConfirmButton: false,
         timer: 2500,
+        customClass: 'custom-swal-bg',
       });
     }
   };

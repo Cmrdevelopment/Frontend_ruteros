@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-
+import '../styles/swal_styles.css'
 const handleMountainRouteCreationResponse = (res) => {
   if (res?.status === 200) {
     Swal.fire({
@@ -7,6 +7,7 @@ const handleMountainRouteCreationResponse = (res) => {
       title: 'Ruta de montaña creada con éxito!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   } else if (res?.status === 400 || res?.status === 500) {
     Swal.fire({
@@ -15,6 +16,7 @@ const handleMountainRouteCreationResponse = (res) => {
       text: 'Hubo un problema al intentar crear la ruta. Por favor, intente de nuevo.',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   } else if (res?.status === 404) {
     Swal.fire({
@@ -23,6 +25,7 @@ const handleMountainRouteCreationResponse = (res) => {
       text: 'La operación solicitada no se puede completar porque el recurso requerido no se encontró.',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   }
 };

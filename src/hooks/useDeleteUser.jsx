@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-
+import '../styles/swal_styles.css'
 import { deleteUser } from '../services/API_proyect/user.service';
 
 const useDeleteUser = (setUser, logout) => {
@@ -12,6 +12,7 @@ const useDeleteUser = (setUser, logout) => {
     confirmButtonColor: 'rgb(73, 193, 162)',
     cancelButtonColor: '#d33',
     confirmButtonText: 'Yes',
+    customClass: 'custom-swal-bg',
   }).then(async (result) => {
     if (result.isConfirmed) {
       const res = await deleteUser();
@@ -23,6 +24,7 @@ const useDeleteUser = (setUser, logout) => {
             text: 'See you later!',
             showConfirmButton: false,
             timer: 1500,
+            customClass: 'custom-swal-bg',
           });
           setUser(() => null);
           localStorage.removeItem('user');
@@ -36,6 +38,7 @@ const useDeleteUser = (setUser, logout) => {
             text: 'Please, try again',
             showConfirmButton: false,
             timer: 1500,
+            customClass: 'custom-swal-bg',
           });
 
           break;

@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-
+import '../styles/swal_styles.css'
 const handleMountainRouteDeletionResponse = (res) => {
   if (res?.status === 200) {
     Swal.fire({
@@ -7,6 +7,7 @@ const handleMountainRouteDeletionResponse = (res) => {
       title: 'Ruta eliminada con éxito',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   } else {
     Swal.fire({
@@ -14,6 +15,7 @@ const handleMountainRouteDeletionResponse = (res) => {
       title: 'Error al eliminar la ruta',
       text: 'Hubo un problema al intentar eliminar la ruta. Por favor, intentelo de nuevo.',
       showConfirmButton: true,
+      customClass: 'custom-swal-bg',
     });
   }
 };

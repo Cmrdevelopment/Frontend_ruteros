@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-
+import '../styles/swal_styles.css'
 const handleExperienceDeletionResponse = (res) => {
   if (res?.status === 200) {
     Swal.fire({
@@ -7,6 +7,7 @@ const handleExperienceDeletionResponse = (res) => {
       title: 'Experiencia eliminada con éxito',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   } else {
     Swal.fire({
@@ -14,6 +15,7 @@ const handleExperienceDeletionResponse = (res) => {
       title: 'Error al eliminar la experiencia',
       text: 'Hubo un problema al intentar eliminar la experiencia. Por favor, intente de nuevo.',
       showConfirmButton: true,
+      customClass: 'custom-swal-bg',
     });
   }
 };

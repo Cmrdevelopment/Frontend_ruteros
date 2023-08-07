@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-
+import '../styles/swal_styles.css'
 const useForgotPasswordError = (res, setForgetOk) => {
   //! ------------------- 200 => {sendPassword: true, updateUser: true} && 200 => {updateUser: false, sendPassword: true}
 
@@ -12,6 +12,7 @@ const useForgotPasswordError = (res, setForgetOk) => {
         text: 'Email enviado con su nueva contraseña',
         showConfirmButton: false,
         timer: 3000,
+        customClass: 'custom-swal-bg',
       });
     }
 
@@ -22,6 +23,7 @@ const useForgotPasswordError = (res, setForgetOk) => {
         text: 'Oops, no podemos cambiar su contraseña porque su email no es válido',
         showConfirmButton: false,
         timer: 1500,
+        customClass: 'custom-swal-bg',
       });
     }
   }
@@ -33,6 +35,7 @@ const useForgotPasswordError = (res, setForgetOk) => {
       text: 'Usuario no registrado ❎. Introduzca un email válido',
       showConfirmButton: false,
       timer: 3000,
+      customClass: 'custom-swal-bg',
     });
 
   //! ------------------- 500 => Interval Server Error
@@ -43,6 +46,7 @@ const useForgotPasswordError = (res, setForgetOk) => {
       text: 'Internal server error ❎, por favor, pruebe otra vez!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 
   //! ------------------- 404 => 'dont send email and dont update user'
@@ -53,6 +57,7 @@ const useForgotPasswordError = (res, setForgetOk) => {
       text: 'Contraseña no actualizada. Por favor, inténtalo de nuevo!',
       showConfirmButton: false,
       timer: 3000,
+      customClass: 'custom-swal-bg',
     });
 };
 

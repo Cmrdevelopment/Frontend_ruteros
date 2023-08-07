@@ -24,6 +24,7 @@ const useUserError = (res, setRegisterOk) => {
       text: 'Parece que ese usuario ya existe. ¡Prueba uno diferente!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   //! res --> 500 --> Error general del server
 
@@ -34,6 +35,7 @@ const useUserError = (res, setRegisterOk) => {
       text: 'Internal server error!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 
   //! res --> 404 --> codigo en el envio del codigo
@@ -47,6 +49,7 @@ const useUserError = (res, setRegisterOk) => {
       text: 'Ese email ya está en la base e datos. ¡Probemos con otro!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 
   //! error ---> validacion de la contraseña
@@ -58,6 +61,7 @@ const useUserError = (res, setRegisterOk) => {
       text: 'Asegúrese de que su contraseña tenga al menos 8 caracteres, incluidas mayúsculas, minúsculas y un carácter especial.',
       showConfirmButton: false,
       timer: 1800,
+      customClass: 'custom-swal-bg',
     });
 };
 

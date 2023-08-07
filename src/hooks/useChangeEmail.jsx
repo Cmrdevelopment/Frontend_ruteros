@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-
+import '../styles/swal_styles.css';
 const useChangeEmailError = (res, setChangeEmailOK) => {
   let contador;
   //! if para comprobar con un contador que no tenemos nada en false es decir no se ha actualizado
@@ -32,6 +32,7 @@ const useChangeEmailError = (res, setChangeEmailOK) => {
       title: `Actualizado correctamente el cambio del email`,
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   }
   //! //! ----------200:  cuando algo no se actualiza
@@ -50,6 +51,7 @@ const useChangeEmailError = (res, setChangeEmailOK) => {
       text: 'Por favor, prueba otra vez.',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   }
   if (res?.response?.status == 403) {
@@ -59,6 +61,7 @@ const useChangeEmailError = (res, setChangeEmailOK) => {
       text: 'El código de confirmación es incorrecto! Por favor intentalo de nuevo.',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   }
   if (res?.response?.status == 409) {
@@ -68,6 +71,7 @@ const useChangeEmailError = (res, setChangeEmailOK) => {
       text: '¡El email ya está en uso! Por favor, utilice un email diferente.',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   }
 };

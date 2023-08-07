@@ -13,6 +13,7 @@ const useLoginError = (res, setLoginOk, userlogin) => {
       text: 'Internal Server Error ❎!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 
   //! ---------- 200 : {token , user}
@@ -47,6 +48,7 @@ const useLoginError = (res, setLoginOk, userlogin) => {
       text: "Password don't match!",
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 
   //! ---------- 404: User no register
@@ -58,6 +60,7 @@ const useLoginError = (res, setLoginOk, userlogin) => {
       text: 'Usuario no registrado',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 
   //! ---------- Wrong Password
@@ -69,6 +72,7 @@ const useLoginError = (res, setLoginOk, userlogin) => {
       text: 'La contraseña que introducida es incorrecta. Inténtalo de nuevo',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 
   //! ---------- Wrong Email
@@ -80,6 +84,7 @@ const useLoginError = (res, setLoginOk, userlogin) => {
       text: 'El correo electrónico introducido es incorrecto. Inténtalo de nuevo',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 };
 

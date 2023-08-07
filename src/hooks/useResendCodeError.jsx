@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-
+import '../styles/swal_styles.css'
 const useResendCodeError = (res) => {
   //! -------status: 500
   if (res?.response?.status == 500 || res?.response?.status == 404)
@@ -9,6 +9,7 @@ const useResendCodeError = (res) => {
       text: 'Internal Server Error!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 
   //! -------status: 200
@@ -18,6 +19,7 @@ const useResendCodeError = (res) => {
       title: 'Hemos enviado un email con su código. ¡Échale un vistazo!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
 };
 

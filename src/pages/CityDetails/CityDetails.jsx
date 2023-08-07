@@ -1,6 +1,7 @@
 import './CityDetails.css';
 import './CityDetailsDescription.css';
 import './CityDetailsComments.css';
+import '../../styles/swal_styles.css'
 
 import { Avatar, Button, Divider, Grid, Paper, TextField, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
@@ -75,6 +76,7 @@ const CityDetails = () => {
         title: '¡Mensaje enviado!',
         showConfirmButton: false,
         timer: 1500,
+        customClass: 'custom-swal-bg',
       });
       setResNewChat({});
     }

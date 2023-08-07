@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
+import '../styles/swal_styles.css';
 
 const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
   // -------404 o un 500  en este caso --------->res.response
@@ -12,6 +13,7 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       text: 'Internal Server Error ❎!',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
     });
   //! -------200:  ok delete user
   if (res?.data?.delete?.includes('Fail creating user')) {
@@ -23,6 +25,8 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       text: 'Oops, tu usuario ya no está activo. ¡Vamos a configurarlo de nuevo!',
       showConfirmButton: false,
       timer: 2500,
+      customClass: 'custom-swal-bg',
+
     });
   }
 
@@ -44,6 +48,8 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       title: 'Ok, código correcto ✅',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
+
     });
   }
   //! ------200: testCheckOk: false
@@ -55,6 +61,8 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       text: 'Usuario no eliminado. Por favor, inténtalo de nuevo',
       showConfirmButton: false,
       timer: 2500,
+      customClass: 'custom-swal-bg',
+
     });
   }
 
@@ -66,6 +74,8 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       text: 'Usuario eliminado de la base de datos. Regístrese de nuevo.',
       showConfirmButton: false,
       timer: 1500,
+      customClass: 'custom-swal-bg',
+
     });
 };
 
