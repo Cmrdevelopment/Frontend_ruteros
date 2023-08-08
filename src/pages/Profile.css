@@ -37,11 +37,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
   border: 1px solid #8c7851;
   border-radius: 12px;
   box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
   border: 0px solid red;
+  margin-bottom: 50px;
 }
 
 .mainContainer {
