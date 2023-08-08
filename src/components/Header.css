@@ -24,7 +24,6 @@ body {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -65,7 +64,7 @@ body {
   width: 300px;
 }
 
-.titleFatherContainer>a {
+.titleFatherContainer > a {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -30,7 +30,6 @@
   background-color: var(--header-bg-color);
   border: 0px solid blue;
   /* overflow: auto; */
-  
 }
 
 .habilities-hability-item {
@@ -102,7 +101,7 @@
     font-weight: 650;
   }
 
-  .habilities-habilities-container{
+  .habilities-habilities-container {
     gap: 9px;
   }
 

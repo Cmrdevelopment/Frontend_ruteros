@@ -16,14 +16,14 @@
   border: 0px solid blue;
 }
 
-.containerNavProfile-perfil-contraseña-email-experiencia{
+.containerNavProfile-perfil-contraseña-email-experiencia {
   display: flex;
   justify-content: center;
   width: 1200px;
   gap: 18px;
 }
 
-.containerNavProfile-habiliddes-rutas-borrar{
+.containerNavProfile-habiliddes-rutas-borrar {
   display: flex;
   justify-content: center;
   width: 1200px;
@@ -91,7 +91,6 @@
 .btn-profile.active:hover {
   color: white;
   font-weight: 700;
-  
 }
 
 @media only screen and (max-width: 880px) {
