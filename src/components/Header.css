@@ -81,7 +81,8 @@ body {
 }
 
 .titleWeb {
-  color: #75809a;
+  /* color: #75809a; */
+  color: var(--accent-color);
   /* font-size: 20px; */
   font-size: bold;
   font-weight: 700;
