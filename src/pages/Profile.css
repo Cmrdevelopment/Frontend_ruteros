@@ -140,6 +140,9 @@
 @media only screen and (max-width: 570px) {
   .fluidContainerProfile {
     box-shadow: 2px 2px 4px rgba(3, 3, 3, 0);
+    padding: 0;
+    margin: 0;
+    gap: 0;
   }
 }
 

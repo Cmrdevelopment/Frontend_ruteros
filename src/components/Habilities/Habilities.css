@@ -30,6 +30,7 @@
   background-color: var(--header-bg-color);
   border: 0px solid blue;
   /* overflow: auto; */
+  
 }
 
 .habilities-hability-item {
@@ -99,5 +100,15 @@
 
   .choose_technologies-container-choose:hover {
     font-weight: 650;
+  }
+
+  .habilities-habilities-container{
+    gap: 9px;
+  }
+
+  .btn_profile_general_tech {
+    margin-top: 25px;
+    margin-bottom: 0;
+    height: 39px;
   }
 }

@@ -73,15 +73,15 @@ const Habilities = () => {
               />
             </div>
           ))}
+          <button
+            className="btn_profile_general btn_profile_general_tech"
+            onClick={() => handleServiceAdd()}
+            disabled={send}
+          >
+            {' '}
+            GUARDAR
+          </button>
         </div>
-        <button
-          className="btn_profile_general btn_profile_general_tech"
-          onClick={() => handleServiceAdd()}
-          disabled={send}
-        >
-          {' '}
-          GUARDAR
-        </button>
       </section>
     </>
   );
