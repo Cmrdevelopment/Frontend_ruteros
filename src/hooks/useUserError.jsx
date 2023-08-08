@@ -9,7 +9,7 @@ const useUserError = (res, setRegisterOk) => {
     setRegisterOk(() => true);
     Swal.fire({
       icon: 'success',
-      title: '¡Hola, bienvenido a nuestra web de Ruteros!',
+      title: '¡Hola, bienvenida/o a nuestra web de Ruteros!',
       showConfirmButton: false,
       timer: 1500,
       customClass: 'custom-swal-bg',

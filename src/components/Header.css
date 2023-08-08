@@ -24,6 +24,7 @@ body {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -64,7 +65,7 @@ body {
   width: 300px;
 }
 
-.titleFatherContainer > a {
+.titleFatherContainer>a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,6 +123,7 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 100%;
+  object-fit: cover;
 }
 
 .navHeader button:hover {
@@ -236,14 +238,6 @@ nav {
     gap: 1.5rem;
     background-color: #f9f4ef;
     transition: 1s;
-  }
-
-  .profileCircle {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: solid black 6px;
   }
 
   .iconLogout {
