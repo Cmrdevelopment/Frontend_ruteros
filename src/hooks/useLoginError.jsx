@@ -1,5 +1,6 @@
+import '../styles/swal_styles.css';
+
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import '../styles/swal_styles.css'
 
 const useLoginError = (res, setLoginOk, userlogin) => {
   // -------404 o un 500  en este caso --------->res.response
@@ -87,6 +88,5 @@ const useLoginError = (res, setLoginOk, userlogin) => {
       customClass: 'custom-swal-bg',
     });
 };
-
 
 export default useLoginError;

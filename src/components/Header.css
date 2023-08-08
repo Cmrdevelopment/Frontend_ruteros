@@ -166,7 +166,7 @@ nav {
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  background-color: #F9F4EF;
+  background-color: #f9f4ef;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
@@ -234,7 +234,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: #F9F4EF;
+    background-color: #f9f4ef;
     transition: 1s;
   }
 
@@ -263,7 +263,6 @@ nav {
 
   header .responsive_nav {
     transform: translateY(100vh);
-    
   }
 
   .anchors {

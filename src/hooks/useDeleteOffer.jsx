@@ -1,5 +1,6 @@
+import '../styles/swal_styles.css';
+
 import Swal from 'sweetalert2';
-import '../styles/swal_styles.css'
 const handleOfferDeletionResponse = (res) => {
   if (res?.status === 200) {
     Swal.fire({

@@ -15,7 +15,7 @@ const Register = () => {
   const [res, setRes] = useState({});
   const [registerOk, setRegisterOk] = useState(false);
   const [send, setSend] = useState(false);
-  const [role, setRole] = useState(null);
+  const [role] = useState(null);
 
   const formSubmit = async (formData) => {
     const inputfile = document.getElementById('file-upload').files;

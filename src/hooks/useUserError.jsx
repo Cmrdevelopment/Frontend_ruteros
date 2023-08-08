@@ -1,5 +1,6 @@
+import '../styles/swal_styles.css';
+
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import '../styles/swal_styles.css'
 
 const useUserError = (res, setRegisterOk) => {
   //! 200 --->  respuesta ok register ok

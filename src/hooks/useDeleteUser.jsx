@@ -1,6 +1,8 @@
+import '../styles/swal_styles.css';
+
 import { Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import '../styles/swal_styles.css'
+
 import { deleteUser } from '../services/API_proyect/user.service';
 
 const useDeleteUser = (setUser, logout) => {

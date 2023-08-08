@@ -1,5 +1,6 @@
-import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 import '../styles/swal_styles.css';
+
+import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 const useChangePasswordError = (res, setChangePasswordOk) => {
   //!  --------- 200: {updateUser: true}
   if (res?.data?.updateUser?.toString() == 'true') {

@@ -1,6 +1,7 @@
 // CardCity.js
-import React from 'react';
 import './CardCity.css';
+
+import React from 'react';
 import { BiTime } from 'react-icons/bi';
 import { FaMapMarker } from 'react-icons/fa';
 import { GiPathDistance } from 'react-icons/gi';
@@ -68,7 +69,6 @@ const CardCity = ({ city }) => {
             </div>
           </div>
         </div>
-
       </button>
       <div className="city_ToggleBtnFollowUser">
         <ToggleBtnFollowCity cityToFollowId={city._id} />
@@ -78,7 +78,6 @@ const CardCity = ({ city }) => {
 };
 
 export default CardCity;
-
 
 //Version Anterior
 // import './CardCity.css';

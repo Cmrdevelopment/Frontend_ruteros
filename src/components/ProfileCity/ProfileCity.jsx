@@ -2,10 +2,8 @@ import './ProfileCity.css';
 
 import React, { useState } from 'react';
 
-
-
 const ProfileCity = () => {
-  const [showCreated, setShowCreated] = useState(true);
+  const [setShowCreated] = useState(true);
 
   const handleShowCreated = () => {
     setShowCreated(true);

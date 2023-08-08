@@ -3,7 +3,7 @@ import './ProfileMountain.css';
 import React, { useState } from 'react';
 
 const ProfileMountain = () => {
-  const [showCreated, setShowCreated] = useState(true);
+  const [setShowCreated] = useState(true);
 
   const handleShowCreated = () => {
     setShowCreated(true);

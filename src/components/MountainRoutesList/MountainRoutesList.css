@@ -39,14 +39,10 @@
 }
 
 @media screen and (max-width: 721px) {
-
-
-.mountainRouteList-paginate {
-
-  font-size: 16px;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
+  .mountainRouteList-paginate {
+    font-size: 16px;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
 }

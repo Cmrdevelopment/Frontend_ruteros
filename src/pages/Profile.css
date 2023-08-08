@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: center;
   flex: 2;
-  width: 900PX;
+  width: 900px;
   border: 1px solid #8c7851;
   border-radius: 12px;
   box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
@@ -69,7 +69,7 @@
 .btn-profile.active:hover {
   color: white;
   font-weight: 700;
-} 
+}
 
 @media only screen and (max-width: 880px) {
   .btn-profile {
@@ -94,7 +94,7 @@
 
   .mainContainer {
     display: flex;
-  
+
     margin-top: 30px;
     height: 900px;
   }
@@ -116,11 +116,9 @@
 
 @media only screen and (max-width: 570px) {
   .fluidContainerProfile {
-  box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.0);
+    box-shadow: 2px 2px 4px rgba(3, 3, 3, 0);
   }
 }
-
-
 
 /*  -------------------------------------------------------------------*/
 

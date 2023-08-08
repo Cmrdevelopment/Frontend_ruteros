@@ -1,7 +1,7 @@
 import './CityDetails.css';
 import './CityDetailsDescription.css';
 import './CityDetailsComments.css';
-import '../../styles/swal_styles.css'
+import '../../styles/swal_styles.css';
 
 import { Avatar, Button, Divider, Grid, Paper, TextField, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
@@ -141,30 +141,34 @@ const CityDetails = () => {
           </div>
           <div className="cityDetails-info-localization-distance-difficulty-durartion">
             <div className="cityDetails-info-routeDistance">
-              <p className='textoDistancia'>Distancia</p>
+              <p className="textoDistancia">Distancia</p>
               <div className="city-GiPathDistance">
                 <GiPathDistance style={{ fontSize: '1.0em' }} />{' '}
                 <span style={{ color: 'black' }}>{city?.routeDistance} Kms</span>
               </div>
             </div>
             <div className="cityDetails-info-routeDuration">
-              <p className='textoDuracion'>Duración</p>
+              <p className="textoDuracion">Duración</p>
               <div className="city-BiTime">
-                <BiTime style={{ fontSize: '1.6em', color: 'green' }} />{' '}<span style={{ color: 'black' }}>{city?.routeDuration}
-                  hora/s</span>
+                <BiTime style={{ fontSize: '1.6em', color: 'green' }} />{' '}
+                <span style={{ color: 'black' }}>
+                  {city?.routeDuration}
+                  hora/s
+                </span>
               </div>
             </div>
             <div className="cityDetails-info-routeDifficulty">
-              <p className='textoDificultad'>Dificultad</p>
+              <p className="textoDificultad">Dificultad</p>
               <div className="city-MdReportProblem">
-                <MdReportProblem style={{ fontSize: '1.6em' }} />{' '}<span style={{ color: 'black ' }}>
-                  {city?.difficulty} </span>
+                <MdReportProblem style={{ fontSize: '1.6em' }} />{' '}
+                <span style={{ color: 'black ' }}>{city?.difficulty} </span>
               </div>
             </div>
             <div className="cityDetails-info-routeLocation">
-              <p clasName='textoLocalizacion'>Localización</p>
+              <p className="textoLocalizacion">Localización</p>
               <div className="city-FaMapMarker">
-                <FaMapMarker style={{ fontSize: '1.6em', color: '#2880CA' }} />{' '} <span style={{ color: 'black' }}>{city?.routeLocation}</span>
+                <FaMapMarker style={{ fontSize: '1.6em', color: '#2880CA' }} />{' '}
+                <span style={{ color: 'black' }}>{city?.routeLocation}</span>
               </div>
             </div>
           </div>

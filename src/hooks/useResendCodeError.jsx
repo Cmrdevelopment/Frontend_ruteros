@@ -1,5 +1,6 @@
+import '../styles/swal_styles.css';
+
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import '../styles/swal_styles.css'
 const useResendCodeError = (res) => {
   //! -------status: 500
   if (res?.response?.status == 500 || res?.response?.status == 404)

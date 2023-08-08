@@ -173,12 +173,12 @@
   border: 0px solid red;
 }
 
-.mountainRouteDetails2-city-jobType>h3 {
+.mountainRouteDetails2-city-jobType > h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.mountainRouteDetails2-itemsToCarry>h3 {
+.mountainRouteDetails2-itemsToCarry > h3 {
   font-weight: 900;
   font-size: 25px;
 }
@@ -194,7 +194,7 @@
   border: 0px solid red;
 }
 
-.mountainRouteDetails2-info-itemsToCarry>h5 {
+.mountainRouteDetails2-info-itemsToCarry > h5 {
   font-weight: 900;
   font-size: 18px;
 }
@@ -363,12 +363,12 @@
     padding: 0;
   }
 
-  .mountainRouteDetails2-itemsToCarry>h3 {
+  .mountainRouteDetails2-itemsToCarry > h3 {
     font-size: 20px;
     margin-top: 12px;
   }
 
-  .mountainRouteDetails2-info-itemsToCarry>h5 {
+  .mountainRouteDetails2-info-itemsToCarry > h5 {
     text-align: center;
   }
 
@@ -394,28 +394,24 @@
 .mountainRoute-FaMapMarker {
   font-size: 16px;
   margin: 0 0 3px 0;
-  color: #2880CA;
+  color: #2880ca;
   padding-bottom: 0.3rem;
 }
 
 .textoLocalizacion {
   padding-top: 0.2rem;
-
 }
 
 .textoDistancia {
   padding-top: 0.6rem;
-
 }
 
 .textoDuracion {
   padding-top: 0.2rem;
-
 }
 
 .textoDificultad {
   padding-top: 0.2rem;
-
 }
 
 .mountainRoute-MdReportProblem {

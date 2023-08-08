@@ -1,5 +1,6 @@
 import './ChangePassword2.css';
 import '../../styles/swal_styles.css';
+
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Navigate } from 'react-router-dom';

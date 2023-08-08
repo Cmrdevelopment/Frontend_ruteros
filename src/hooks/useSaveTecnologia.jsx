@@ -1,5 +1,6 @@
+import '../styles/swal_styles.css';
+
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import '../styles/swal_styles.css'
 const handleTechnologyUpdateResponse = (res) => {
   if (res?.status === 200) {
     Swal.fire({

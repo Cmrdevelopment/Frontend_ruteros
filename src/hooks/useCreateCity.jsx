@@ -1,5 +1,6 @@
+import '../styles/swal_styles.css';
+
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import '../styles/swal_styles.css'
 const handleCityCreationResponse = (res) => {
   if (res?.status === 200) {
     Swal.fire({
@@ -8,7 +9,6 @@ const handleCityCreationResponse = (res) => {
       showConfirmButton: false,
       timer: 1500,
       customClass: 'custom-swal-bg',
-
     });
   } else if (res?.status === 400 || res?.status === 500) {
     Swal.fire({
@@ -18,7 +18,6 @@ const handleCityCreationResponse = (res) => {
       showConfirmButton: false,
       timer: 1500,
       customClass: 'custom-swal-bg',
-
     });
   } else if (res?.status === 404) {
     Swal.fire({
@@ -28,7 +27,6 @@ const handleCityCreationResponse = (res) => {
       showConfirmButton: false,
       timer: 1500,
       customClass: 'custom-swal-bg',
-
     });
   }
 };

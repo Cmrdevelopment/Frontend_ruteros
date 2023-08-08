@@ -1,5 +1,6 @@
-import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 import '../styles/swal_styles.css';
+
+import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
   // -------404 o un 500  en este caso --------->res.response
@@ -26,7 +27,6 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       showConfirmButton: false,
       timer: 2500,
       customClass: 'custom-swal-bg',
-
     });
   }
 
@@ -49,7 +49,6 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       showConfirmButton: false,
       timer: 1500,
       customClass: 'custom-swal-bg',
-
     });
   }
   //! ------200: testCheckOk: false
@@ -62,7 +61,6 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       showConfirmButton: false,
       timer: 2500,
       customClass: 'custom-swal-bg',
-
     });
   }
 
@@ -75,7 +73,6 @@ const useCheckCodeError = (res, setDeleteUser, setOkCheck) => {
       showConfirmButton: false,
       timer: 1500,
       customClass: 'custom-swal-bg',
-
     });
 };
 

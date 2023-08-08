@@ -160,7 +160,7 @@ mountainRoute_ToggleBtnFollowMontainRoute .mountainRoute-Info:hover {
 .mountainRoute-FaMapMarker {
   font-size: 16px;
   margin: 0 0 3px 0;
-  color: #2880CA;
+  color: #2880ca;
 }
 
 .mountainRoute-MdReportProblem {
@@ -170,17 +170,10 @@ mountainRoute_ToggleBtnFollowMontainRoute .mountainRoute-Info:hover {
 }
 
 @media screen and (max-width: 721px) {
-
   .mountainRoute_ToggleBtnFollowMontainRoute {
     margin-top: -512px;
     margin-left: 320px;
-
   }
-
-
-
-
-
 
   .mountainRoute-card-btn {
     display: flex;
@@ -242,5 +235,4 @@ mountainRoute_ToggleBtnFollowMontainRoute .mountainRoute-Info:hover {
     border: 0px solid red;
     z-index: 5;
   }
-
 }

@@ -1,10 +1,10 @@
 import './RuteroDetails.css';
-import '../../styles/swal_styles.css'
+import '../../styles/swal_styles.css';
+
 import { Avatar, Button, Divider, Grid, Paper, TextField, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { BiCodeAlt } from 'react-icons/bi';
 import { FaMapMarker } from 'react-icons/fa';
-import { FaLaptopCode } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { MdGroupAdd } from 'react-icons/md';
 import { MdPeople } from 'react-icons/md';

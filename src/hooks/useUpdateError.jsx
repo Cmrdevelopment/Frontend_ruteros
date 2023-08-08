@@ -1,5 +1,6 @@
+import '../styles/swal_styles.css';
+
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import '../styles/swal_styles.css'
 const useUpdateError = (res, setChangeProfileDataOk) => {
   let contador;
   //! if para comprobar con un contador que no tenemos nada en false es decir no se ha actualizado

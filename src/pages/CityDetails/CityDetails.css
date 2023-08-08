@@ -184,12 +184,12 @@
   border: 0px solid red;
 }
 
-.cityDetails-city-jobType>h3 {
+.cityDetails-city-jobType > h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.cityDetails-itemsToCarry>h3 {
+.cityDetails-itemsToCarry > h3 {
   font-weight: 900;
   font-size: 25px;
 }
@@ -205,7 +205,7 @@
   border: 0px solid red;
 }
 
-.cityDetails-info-itemsToCarry>h5 {
+.cityDetails-info-itemsToCarry > h5 {
   font-weight: 900;
   font-size: 18px;
 }
@@ -374,12 +374,12 @@
     padding: 0;
   }
 
-  .cityDetails-itemsToCarry>h3 {
+  .cityDetails-itemsToCarry > h3 {
     font-size: 20px;
     margin-top: 12px;
   }
 
-  .cityDetails-info-itemsToCarry>h5 {
+  .cityDetails-info-itemsToCarry > h5 {
     text-align: center;
   }
 
@@ -405,28 +405,24 @@
 .city-FaMapMarker {
   font-size: 16px;
   margin: 0 0 3px 0;
-  color: #2880CA;
+  color: #2880ca;
   padding-bottom: 0.3rem;
 }
 
 .textoLocalizacion {
   padding-top: 0.2rem;
-
 }
 
 .textoDistancia {
   padding-top: 0.6rem;
-
 }
 
 .textoDuracion {
   padding-top: 0.2rem;
-
 }
 
 .textoDificultad {
   padding-top: 0.2rem;
-
 }
 
 .city-MdReportProblem {

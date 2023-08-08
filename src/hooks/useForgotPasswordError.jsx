@@ -1,5 +1,6 @@
+import '../styles/swal_styles.css';
+
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import '../styles/swal_styles.css'
 const useForgotPasswordError = (res, setForgetOk) => {
   //! ------------------- 200 => {sendPassword: true, updateUser: true} && 200 => {updateUser: false, sendPassword: true}
 
