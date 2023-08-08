@@ -3,5 +3,15 @@
 }
 
 .btn-rounded:hover {
-  background-color: #eaddcf; /* Color de fondo cuando el cursor está sobre el botón */
+  background-color: #eaddcf;
+  /* Color de fondo cuando el cursor está sobre el botón */
+}
+
+.chatTemplate-mdbTextArea {
+  background-color: var(--header-bg-color)
+}
+
+.chatTemplate-mdbTextArea:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 1px var(--btn-bg-color);
 }

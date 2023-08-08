@@ -101,8 +101,8 @@ export const Chat = () => {
         <MDBContainer
           fluid
           className="py-5"
-          // style={{ backgroundColor: '#eee' }}
-          // style={{ minHeight: '700px', maxWidth: '80vw' }}
+        // style={{ backgroundColor: '#eee' }}
+        // style={{ minHeight: '700px', maxWidth: '80vw' }}
         >
           <MDBRow>
             <MDBCol md="6" lg="5" xl="4" className="mb-4 mb-md-0">
@@ -123,9 +123,9 @@ export const Chat = () => {
                     <MDBTypography
                       listUnStyled
                       className="mb-0"
-                      // style={{
-                      //   backgroundColor: '#eee',
-                      // }}
+                    // style={{
+                    //   backgroundColor: '#eee',
+                    // }}
                     >
                       <li className="p-2 border-bottom">
                         <a href="#!" className="d-flex justify-content-between">
@@ -255,6 +255,7 @@ export const Chat = () => {
                   <MDBTextArea
                     id="textAreaExample"
                     rows={4}
+                    className='chatTemplate-mdbTextArea'
                     style={{ marginTop: '2rem' }}
                   />
                 </li>
