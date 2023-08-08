@@ -14,8 +14,8 @@
   box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
   border: 0px solid red;
 }
-mountainRoute_ToggleBtnFollowMontainRoute
-.mountainRoute-Info:hover {
+
+mountainRoute_ToggleBtnFollowMontainRoute .mountainRoute-Info:hover {
   background-color: #b3c8ec;
   transition: transform 0.2s;
   animation: changeColor 2s ease infinite;
@@ -145,8 +145,8 @@ mountainRoute_ToggleBtnFollowMontainRoute
   justify-content: center;
 }
 
-.mountainRoute-GiPathDistance {
-  font-size: 25px;
+.cardmountainRoute2-GiPathDistance {
+  font-size: 20px;
   margin: 0 3px 3px 0;
   color: rgb(234, 11, 11);
 }

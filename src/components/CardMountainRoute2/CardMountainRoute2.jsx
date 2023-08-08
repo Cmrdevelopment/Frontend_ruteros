@@ -56,8 +56,8 @@ const CardMountainRoute2 = ({ mountainRoute }) => {
             <div className="mountainRoute-Info-separar-info-general">
               <p className="mountainRoute-Info-distance">
                 {' '}
-                <GiPathDistance className="mountainRoute-GiPathDistance" />
-                {mountainRoute.routeDistance} km
+                <GiPathDistance className="cardmountainRoute2-GiPathDistance" />
+                {mountainRoute.routeDistance} kms
               </p>
               <p className="mountainRoute-Info-routeDuration">
                 {' '}

@@ -47,7 +47,7 @@ const CardCity = ({ city }) => {
               <p className="city-Info-distance">
                 {' '}
                 <GiPathDistance className="city-GiPathDistance" />
-                {city.routeDistance} km
+                {city.routeDistance} kms
               </p>
               <p className="city-Info-routeDuration">
                 {' '}
@@ -68,11 +68,11 @@ const CardCity = ({ city }) => {
             </div>
           </div>
         </div>
-        
+
       </button>
       <div className="city_ToggleBtnFollowUser">
-          <ToggleBtnFollowCity cityToFollowId={city._id} />
-        </div>
+        <ToggleBtnFollowCity cityToFollowId={city._id} />
+      </div>
     </section>
   );
 };

@@ -144,31 +144,31 @@ const MountainRouteDetails2 = () => {
             ({mountainRoute?.ratings.length})
           </div>
           <div className="mountainRouteDetails2-info-localization-distance-difficulty-durartion">
-          <div className="mountainRouteDetails2-info-routeLoDistance">
+            <div className="mountainRouteDetails2-info-routeDistance">
               <p className='textoDistancia'>Distancia</p>
-              <div className="mountainRoute-GiPathDistance">
-                <GiPathDistance style={{ fontSize: '1.0em' }} />{' '}
-                <span style={{ color: 'black' }}>{mountainRoute?.routeDistance} Kms</span> 
+              <div className="mountainRouteDetails2-GiPathDistance">
+                <GiPathDistance />{' '}
+                <span style={{ color: 'black' }}>{mountainRoute?.routeDistance} Kms</span>
               </div>
             </div>
             <div className="mountainRouteDetails2-info-routeDuration">
               <p className='textoDuracion'>Duración</p>
               <div className="mountainRoute-BiTime">
-                <BiTime style={{ fontSize: '1.6em', color: 'green' }} />{' '}<span style={{color: 'black'}}>{mountainRoute?.routeDuration}
-                hora/s</span>
+                <BiTime style={{ fontSize: '1.6em', color: 'green' }} />{' '}<span style={{ color: 'black' }}>{mountainRoute?.routeDuration}
+                  hora/s</span>
               </div>
             </div>
             <div className="mountainRouteDetails2-info-routeDifficulty">
               <p className='textoDificultad'>Dificultad</p>
               <div className="mountainRoute-MdReportProblem">
-                <MdReportProblem style={{ fontSize: '1.6em' }} />{' '}<span style={{ color: 'black '}}>
-                {mountainRoute?.difficulty} </span>
+                <MdReportProblem style={{ fontSize: '1.6em' }} />{' '}<span style={{ color: 'black ' }}>
+                  {mountainRoute?.difficulty} </span>
               </div>
             </div>
             <div className="mountainRouteDetails2-info-routeLocation">
               <p className='textoLocalizacion'>Localización</p>
               <div className="mountainRoute-FaMapMarker">
-                <FaMapMarker style={{ fontSize: '1.6em', color: '#2880CA'}}  />{' '} <span style={{ color: 'black' }}>{mountainRoute?.routeLocation}</span>
+                <FaMapMarker style={{ fontSize: '1.6em', color: '#2880CA' }} />{' '} <span style={{ color: 'black' }}>{mountainRoute?.routeLocation}</span>
               </div>
             </div>
           </div>
@@ -301,65 +301,67 @@ const MountainRouteDetails2 = () => {
         </Paper>
       </div>
 
-      {showPrivateComment ? (
-        <div className="mountainRouteDetails2-private-comments-container">
-          <Paper
-            style={{
-              padding: '40px 20px 55px',
-              backgroundColor: 'var(--header-bg-color)',
-              border: '0px solid red',
-              width: '100%',
-            }}
-          >
-            <h3>Comentario privado</h3>
-            <Grid container wrap="nowrap" spacing={2}>
-              <Grid item>
-                <Avatar alt="Remy Sharp" src={mountainRoute?.image} />
+      {
+        showPrivateComment ? (
+          <div className="mountainRouteDetails2-private-comments-container">
+            <Paper
+              style={{
+                padding: '40px 20px 55px',
+                backgroundColor: 'var(--header-bg-color)',
+                border: '0px solid red',
+                width: '100%',
+              }}
+            >
+              <h3>Comentario privado</h3>
+              <Grid container wrap="nowrap" spacing={2}>
+                <Grid item>
+                  <Avatar alt="Remy Sharp" src={mountainRoute?.image} />
+                </Grid>
+                <Grid justifyContent="left" item xs zeroMinWidth>
+                  <TextField
+                    id="newComent"
+                    label="Pon tu comentario"
+                    variant="outlined"
+                    style={{ width: '100%' }}
+                    onChange={(e) => setInputValue(e.target.value)}
+                  />
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{
+                      border: 'none',
+                      borderRadius: '30px',
+                      height: '39px',
+                      width: '270px',
+                      [theme.breakpoints.down('sm')]: {
+                        width: '120px',
+                      },
+                      backgroundColor: 'var(--btn-bg-color)',
+                      color: 'white',
+                      fontSize: '16px',
+                      transition: 'linear .2s',
+                      marginTop: '30px',
+                      ':hover': {
+                        borderBottom: '1.5px solid #25d366',
+                        backgroundColor: 'var(--header-bg-color)',
+                        color: 'var(--btn-bg-color)',
+                        fontSize: '18px',
+                        cursor: 'pointer',
+                      },
+                    }}
+                    onClick={() => handleCommentPrivate()}
+                    disabled={loading}
+                  >
+                    Enviar
+                  </Button>
+                </Grid>
               </Grid>
-              <Grid justifyContent="left" item xs zeroMinWidth>
-                <TextField
-                  id="newComent"
-                  label="Pon tu comentario"
-                  variant="outlined"
-                  style={{ width: '100%' }}
-                  onChange={(e) => setInputValue(e.target.value)}
-                />
-                <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{
-                    border: 'none',
-                    borderRadius: '30px',
-                    height: '39px',
-                    width: '270px',
-                    [theme.breakpoints.down('sm')]: {
-                      width: '120px',
-                    },
-                    backgroundColor: 'var(--btn-bg-color)',
-                    color: 'white',
-                    fontSize: '16px',
-                    transition: 'linear .2s',
-                    marginTop: '30px',
-                    ':hover': {
-                      borderBottom: '1.5px solid #25d366',
-                      backgroundColor: 'var(--header-bg-color)',
-                      color: 'var(--btn-bg-color)',
-                      fontSize: '18px',
-                      cursor: 'pointer',
-                    },
-                  }}
-                  onClick={() => handleCommentPrivate()}
-                  disabled={loading}
-                >
-                  Enviar
-                </Button>
-              </Grid>
-            </Grid>
-          </Paper>
-        </div>
-      ) : null}
+            </Paper>
+          </div>
+        ) : null
+      }
       {/* ------------------ COMMENTS ------------------------------- */}
-    </div>
+    </div >
   );
 };
 

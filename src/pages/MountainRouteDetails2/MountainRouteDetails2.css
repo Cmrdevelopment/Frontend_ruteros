@@ -76,7 +76,7 @@
 }
 
 .mountainRouteDetails2-info-routeLocation,
-.mountainRouteDetails2-info-routeLoDistance,
+.mountainRouteDetails2-info-routeDistance,
 .mountainRouteDetails2-info-routeDifficulty,
 .mountainRouteDetails2-info-routeDuration {
   width: 230px;
@@ -85,7 +85,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 36px;
+  gap: 20px;
   border: 0.7px solid #e3e4e5;
   border-radius: 5px;
   padding: 0 0 0 12px;
@@ -93,7 +93,7 @@
 }
 
 .mountainRouteDetails2-info-routeLocation:hover,
-.mountainRouteDetails2-info-routeLoDistance:hover,
+.mountainRouteDetails2-info-routeDistance:hover,
 .mountainRouteDetails2-info-routeDifficulty:hover,
 .mountainRouteDetails2-info-routeDuration:hover {
   background-color: var(--btn-bg-color);
@@ -173,12 +173,12 @@
   border: 0px solid red;
 }
 
-.mountainRouteDetails2-city-jobType > h3 {
+.mountainRouteDetails2-city-jobType>h3 {
   font-weight: 900;
   font-size: 25px;
 }
 
-.mountainRouteDetails2-itemsToCarry > h3 {
+.mountainRouteDetails2-itemsToCarry>h3 {
   font-weight: 900;
   font-size: 25px;
 }
@@ -194,7 +194,7 @@
   border: 0px solid red;
 }
 
-.mountainRouteDetails2-info-itemsToCarry > h5 {
+.mountainRouteDetails2-info-itemsToCarry>h5 {
   font-weight: 900;
   font-size: 18px;
 }
@@ -322,7 +322,7 @@
   }
 
   .mountainRouteDetails2-info-routeLocation,
-  .mountainRouteDetails2-info-routeLoDistance,
+  .mountainRouteDetails2-info-routeDistance,
   .mountainRouteDetails2-info-routeDifficulty,
   .mountainRouteDetails2-info-routeDuration {
     gap: 1rem;
@@ -363,12 +363,12 @@
     padding: 0;
   }
 
-  .mountainRouteDetails2-itemsToCarry > h3 {
+  .mountainRouteDetails2-itemsToCarry>h3 {
     font-size: 20px;
     margin-top: 12px;
   }
 
-  .mountainRouteDetails2-info-itemsToCarry > h5 {
+  .mountainRouteDetails2-info-itemsToCarry>h5 {
     text-align: center;
   }
 
@@ -376,8 +376,9 @@
     width: 100%;
   }
 }
-.mountainRoute-GiPathDistance {
-  font-size: 25px;
+
+.mountainRouteDetails2-GiPathDistance {
+  font-size: 16px;
   margin: 0 3px 3px 0;
   color: rgb(234, 11, 11);
   padding-bottom: 0.3rem;
@@ -397,22 +398,26 @@
   padding-bottom: 0.3rem;
 }
 
-.textoLocalizacion{
+.textoLocalizacion {
   padding-top: 0.2rem;
-  
+
 }
-.textoDistancia{
+
+.textoDistancia {
   padding-top: 0.6rem;
-  
+
 }
-.textoDuracion{
+
+.textoDuracion {
   padding-top: 0.2rem;
-  
+
 }
-.textoDificultad{
+
+.textoDificultad {
   padding-top: 0.2rem;
-  
+
 }
+
 .mountainRoute-MdReportProblem {
   font-size: 19px;
   margin: 0 3px 3px 0;
