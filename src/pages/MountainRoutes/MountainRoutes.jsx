@@ -1,6 +1,5 @@
 import './MountainRoutes.css';
 
-import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavLink } from 'react-router-dom';
 
