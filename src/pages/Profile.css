@@ -6,23 +6,38 @@
 }
 
 .containerNavProfile {
-  width: 20vw;
-  height: 50vh;
+  width: 80vw;
+  height: 18vh;
+  gap: 12px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-radius: 20px;
   border: 0px solid blue;
 }
 
+.containerNavProfile-perfil-contraseña-email-experiencia{
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  gap: 18px;
+}
+
+.containerNavProfile-habiliddes-rutas-borrar{
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  gap: 18px;
+}
+
 .fluidContainerProfile {
-  max-width: 900px;
-  height: 46.4vh;
+  width: 1200px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 2;
-  width: 900px;
+  
   border: 1px solid #8c7851;
   border-radius: 12px;
   box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.7);
@@ -31,7 +46,9 @@
 
 .mainContainer {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   border: 0px solid red;
 }
 
@@ -53,22 +70,28 @@
 
 .btn-profile {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 3px;
   width: 100%;
   cursor: pointer;
-  height: 63px;
+  height: 54px;
   font-size: 18px;
   /* background-color: var(--mainColor);
   color: var(--textColor); */
   border-color: transparent;
   background-color: #eaddcf;
+  border-radius: 12px;
+  box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.5);
+}
+
+.btn-profile:hover {
+  box-shadow: 3px 3px 4px var(--btn-bg-color, 0.9);
 }
 
 .btn-profile.active:hover {
   color: white;
   font-weight: 700;
+  
 }
 
 @media only screen and (max-width: 880px) {

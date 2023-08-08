@@ -87,130 +87,137 @@ const Profile = () => {
         <div className="mainContainer">
           {ancho > 800 ? (
             <div className="containerNavProfile">
-              <button
-                className={`btn-profile btn-profile-first ${
-                  activeButton === 'Profile' ? 'active' : ''
-                }`}
-                onClick={() => {
-                  setActiveButton('Profile');
-                  navigate('/profile');
-                }}
-              >
-                <img
-                  className="profile-icon"
-                  alt="profile icon"
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690566021/UserFTProyect/profileIcons/profile_ub7zht.png"
-                ></img>
-                Perfil
-              </button>
+              <div className="containerNavProfile-perfil-contraseña-email-experiencia">
+                <button
+                  className={`btn-profile btn-profile-first ${
+                    activeButton === 'Profile' ? 'active' : ''
+                  }`}
+                  onClick={() => {
+                    setActiveButton('Profile');
+                    navigate('/profile');
+                  }}
+                >
+                  <img
+                    className="profile-icon"
+                    alt="profile icon"
+                    src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690566021/UserFTProyect/profileIcons/profile_ub7zht.png"
+                  ></img>
+                  Perfil
+                </button>
 
-              <button
-                className={`btn-profile ${activeButton === 'Password' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveButton('Password');
-                  navigate('/profile/changePassword');
-                }}
-              >
-                <img
-                  className="profile-icon"
-                  alt="password icon"
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690565668/UserFTProyect/profileIcons/reset-password_ydodzt.png"
-                ></img>
-                Contraseña
-              </button>
+                <button
+                  className={`btn-profile ${activeButton === 'Password' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveButton('Password');
+                    navigate('/profile/changePassword');
+                  }}
+                >
+                  <img
+                    className="profile-icon"
+                    alt="password icon"
+                    src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690565668/UserFTProyect/profileIcons/reset-password_ydodzt.png"
+                  ></img>
+                  Contraseña
+                </button>
 
-              <button
-                className={`btn-profile ${activeButton === 'Email' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveButton('Email');
-                  navigate('/profile/changeEmail');
-                }}
-              >
-                <img
-                  className="profile-icon"
-                  alt="email icon"
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690565543/UserFTProyect/profileIcons/email_gpvxwe.png"
-                ></img>
-                Email
-              </button>
-              <button
-                className={`btn-profile ${activeButton === 'Experience' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveButton('Experience');
-                  navigate('/profile/experience');
-                }}
-              >
-                <img
-                  className="profile-icon"
-                  alt="route experience icon"
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1689612757/MochilaPersonita_r2kpic.png"
-                ></img>
-                Experiencia
-              </button>
+                <button
+                  className={`btn-profile ${activeButton === 'Email' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveButton('Email');
+                    navigate('/profile/changeEmail');
+                  }}
+                >
+                  <img
+                    className="profile-icon"
+                    alt="email icon"
+                    src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690565543/UserFTProyect/profileIcons/email_gpvxwe.png"
+                  ></img>
+                  Email
+                </button>
+                <button
+                  className={`btn-profile ${
+                    activeButton === 'Experience' ? 'active' : ''
+                  }`}
+                  onClick={() => {
+                    setActiveButton('Experience');
+                    navigate('/profile/experience');
+                  }}
+                >
+                  <img
+                    className="profile-icon"
+                    alt="route experience icon"
+                    src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1689612757/MochilaPersonita_r2kpic.png"
+                  ></img>
+                  Experiencia
+                </button>
+              </div>
+              <div className="containerNavProfile-habiliddes-rutas-borrar">
+                <button
+                  className={`btn-profile ${
+                    activeButton === 'Habilities' ? 'active' : ''
+                  }`}
+                  onClick={() => {
+                    setActiveButton('Habilities');
+                    navigate('/profile/habilities');
+                  }}
+                >
+                  <img
+                    className="profile-icon"
+                    alt="skill icon"
+                    src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690564462/UserFTProyect/profileIcons/logical-thinking_hnhvn3.png"
+                  ></img>
+                  Habilidades
+                </button>
 
-              <button
-                className={`btn-profile ${activeButton === 'Habilities' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveButton('Habilities');
-                  navigate('/profile/habilities');
-                }}
-              >
-                <img
-                  className="profile-icon"
-                  alt="skill icon"
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690564462/UserFTProyect/profileIcons/logical-thinking_hnhvn3.png"
-                ></img>
-                Habilidades
-              </button>
+                <button
+                  className={`btn-profile ${activeButton === 'Citys' ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveButton('Citys');
+                    navigate('/profile/ProfileCity');
+                  }}
+                >
+                  <img
+                    className="profile-icon"
+                    alt="city route icon"
+                    src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690563951/UserFTProyect/profileIcons/city-route_xcpnlu.png"
+                  ></img>
+                  Rutas Ciudad
+                </button>
 
-              <button
-                className={`btn-profile ${activeButton === 'Citys' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveButton('Citys');
-                  navigate('/profile/ProfileCity');
-                }}
-              >
-                <img
-                  className="profile-icon"
-                  alt="city route icon"
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690563951/UserFTProyect/profileIcons/city-route_xcpnlu.png"
-                ></img>
-                Rutas Ciudad
-              </button>
+                <button
+                  className={`btn-profile ${
+                    activeButton === 'MountainRoutes' ? 'active' : ''
+                  }`}
+                  onClick={() => {
+                    setActiveButton('MountainRoutes');
+                    navigate('/profile/ProfileMountain');
+                  }}
+                >
+                  <img
+                    className="profile-icon"
+                    alt="mountain route icon"
+                    src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690563951/UserFTProyect/profileIcons/mountain-route_oyq3ui.png"
+                  ></img>
+                  Rutas Montaña
+                </button>
 
-              <button
-                className={`btn-profile ${
-                  activeButton === 'MountainRoutes' ? 'active' : ''
-                }`}
-                onClick={() => {
-                  setActiveButton('MountainRoutes');
-                  navigate('/profile/ProfileMountain');
-                }}
-              >
-                <img
-                  className="profile-icon"
-                  alt="mountain route icon"
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690563951/UserFTProyect/profileIcons/mountain-route_oyq3ui.png"
-                ></img>
-                Rutas Montaña
-              </button>
-
-              <button
-                className={`btn-profile btn-profile-last ${
-                  activeButton === 'Delete' ? 'active' : ''
-                }`}
-                onClick={() => {
-                  useDeleteUser(setUser, logout);
-                  setActiveButton('Delete');
-                }}
-              >
-                <img
-                  className="profile-icon"
-                  alt="delete user icon"
-                  src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690566588/UserFTProyect/profileIcons/delete-user_yqjpxj.png"
-                ></img>
-                Borrar Perfil
-              </button>
+                <button
+                  className={`btn-profile btn-profile-last ${
+                    activeButton === 'Delete' ? 'active' : ''
+                  }`}
+                  onClick={() => {
+                    useDeleteUser(setUser, logout);
+                    setActiveButton('Delete');
+                  }}
+                >
+                  <img
+                    className="profile-icon"
+                    alt="delete user icon"
+                    src="https://res.cloudinary.com/dxpdntpqm/image/upload/v1690566588/UserFTProyect/profileIcons/delete-user_yqjpxj.png"
+                  ></img>
+                  Borrar Perfil
+                </button>
+              </div>
             </div>
           ) : null}
 
