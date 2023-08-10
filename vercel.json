@@ -18,7 +18,7 @@
     { "src": "/profile/changePassword", "dest": "/profile/changePassword" },
     { "src": "/profile/changeEmail", "dest": "/profile/changeEmail" },
     { "src": "/profile/experience", "dest": "/profile/experience" },
-    { "src": "/profile/ProfileMountain", "dest": "/profile/ProfileMountain" },
+    // { "src": "/profile/ProfileMountain", "dest": "/profile/ProfileMountain" },
     { "src": "/profile/ProfileCity", "dest": "/profile/ProfileCity" },
     { "src": "/profile/habilities", "dest": "/profile/profile/habilities" },
     { "src": "/verifyCode", "dest": "/verifyCode" },

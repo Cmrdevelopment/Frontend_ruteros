@@ -16,7 +16,7 @@ import FormProfile from './components/FormProfile';
 import Habilities from './components/Habilities/Habilities';
 // import Offer from './components/Offers/Offers';
 import ProfileCity from './components/profile/ProfileCity/ProfileCity';
-import ProfileMountain from './components/profile/ProfileMountain/ProfileMountain';
+// import ProfileMountain from './components/profile/ProfileMountain/ProfileMountain';
 import { AuthContextProvider } from './contexts/authContext.jsx';
 import AboutUs from './pages/AboutUs/AboutUs';
 import CheckCode from './pages/CheckCode.jsx';
@@ -60,7 +60,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/profile/changePassword" element={<ChangePassword2 />} />
             <Route path="/profile/changeEmail" element={<ChangeEmail />} />
             <Route path="/profile/experience" element={<Experience />} />
-            <Route path="/profile/ProfileMountain" element={<ProfileMountain />} />
+            {/* <Route path="/profile/ProfileMountain" element={<ProfileMountain />} /> */}
             <Route path="/profile/ProfileCity" element={<ProfileCity />} />
             <Route path="/profile/habilities" element={<Habilities />} />
           </Route>
