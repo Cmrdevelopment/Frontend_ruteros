@@ -1,15 +1,16 @@
 import './MountainRoutesCreated.css';
 
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import { useAuth } from '../../contexts/authContext';
+// import React, { useEffect, useState } from 'react';
+// import { useAuth } from '../../contexts/authContext';
 // import { updateMountainRoute } from '../../services/API_proyect/mountainRoute.service';
-import { getUserById } from '../../services/API_proyect/user.service';
+// import { getUserById } from '../../services/API_proyect/user.service';
 import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
 
 const MountainRoutesCreated = () => {
   const [mountainRoutes, setMountainRoutes] = useState([]);
-  const { user } = useAuth();
+  // const { user } = useAuth();
 
   // const handleMountainRouteStateChange = async (
   //   mountainRouteId,
@@ -35,22 +36,22 @@ const MountainRoutesCreated = () => {
   //   }
   // };
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const userMountainRoute = await getUserById(user._id);
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     try {
+  //       const userMountainRoute = await getUserById(user._id);
 
-        console.log(userMountainRoute);
-        if (userMountainRoute) {
-          setMountainRoutes(userMountainRoute.data.mountainRoutesCreated);
-        }
-      } catch (error) {
-        console.error('Error al obtener el usuario:', error);
-      }
-    };
+  //       console.log(userMountainRoute);
+  //       if (userMountainRoute) {
+  //         setMountainRoutes(userMountainRoute.data.mountainRoutesCreated);
+  //       }
+  //     } catch (error) {
+  //       console.error('Error al obtener el usuario:', error);
+  //     }
+  //   };
 
-    fetchUser();
-  }, []);
+  //   fetchUser();
+  // }, []);
 
   return (
     <section className="offer-create-container_general experience-p-container_general">
