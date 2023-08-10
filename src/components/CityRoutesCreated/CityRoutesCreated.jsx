@@ -8,7 +8,7 @@ import { getUserById } from '../../services/API_proyect/user.service';
 import DeleteCityRouteButton from '../DeleteCityRoute/DeleteCityRoute';
 
 const CityRoutesCreated = () => {
-  const [CityRoute, setCityRoutes] = useState([]);
+  const [cityRoutes, setCityRoutes] = useState([]);
   const { user } = useAuth();
 
   const handleCityRouteStateChange = async (cityRouteId, newCityRouteState) => {
@@ -17,14 +17,14 @@ const CityRoutesCreated = () => {
       formData.append('cityRouteState', newCityRouteState);
       await updateCity(cityRouteId, formData);
       setCityRoutes(
-        CityRoute.map((city) => {
+        cityRoutes.map((city) => {
           if (city._id === cityRouteId) {
             return {
-              ...CityRoute,
+              ...cityRoutes,
               cityRouteState: newCityRouteState,
             };
           }
-          return CityRoute;
+          return cityRoutes;
         }),
       );
     } catch (error) {
@@ -52,21 +52,21 @@ const CityRoutesCreated = () => {
   return (
     <section className="offer-create-container_general experience-p-container_general">
       <h3>Rutas Creadas</h3>
-      {CityRoute.length > 0 ? (
+      {cityRoutes.length > 0 ? (
         <ul>
-          {CityRoute.map((CityRoute) => (
-            <li key={CityRoute._id}>
-              <h3>{CityRoute.routeName}</h3>
-              <p>Descripción: {CityRoute.descriptionGeneral}</p>
-              <p>Localización: {CityRoute.routeLocation}</p>
-              <p>Dificultad: {CityRoute.difficulty}</p>
+          {cityRoutes.map((cityRouteSingle) => (
+            <li key={cityRouteSingle._id}>
+              <h3>{cityRouteSingle.routeName}</h3>
+              <p>Descripción: {cityRouteSingle.descriptionGeneral}</p>
+              <p>Localización: {cityRouteSingle.routeLocation}</p>
+              <p>Dificultad: {cityRouteSingle.difficulty}</p>
               <p>
                 Estado de la ruta:
                 <select
                   className="select-offer-change-state"
-                  value={CityRoute.routeState}
+                  value={cityRouteSingle.routeState}
                   onChange={(e) =>
-                    handleCityRouteStateChange(CityRoute._id, e.target.value)
+                    handleCityRouteStateChange(cityRouteSingle._id, e.target.value)
                   }
                 >
                   <option value="Close">Close</option>
@@ -76,8 +76,8 @@ const CityRoutesCreated = () => {
               </p>
               {/* <p>Equipo recomendado: {mountainRoute.itemsToCarry.join(', ')}</p> */}
               <DeleteCityRouteButton
-                id={CityRoute._id}
-                CityRoute={CityRoute}
+                id={cityRouteSingle._id}
+                cityRoutes={cityRoutes}
                 setCityRoutes={setCityRoutes}
               />
             </li>
