@@ -10,13 +10,11 @@ import ChangePassword2 from './components/ChangePassword2/ChangePassword2';
 import { Chat } from './components/ChatTemplate.jsx';
 import CreateCities2 from './components/CreateCities2/CreateCities2';
 import CreateMountainRoute2 from './components/CreateMountainRoute2/CreateMountainRoute2';
-// import CreateOffer2 from './components/CreateOffer2/CreateOffer2';
 import Experience from './components/Experience/Experience';
 import FormProfile from './components/FormProfile';
 import Habilities from './components/Habilities/Habilities';
-// import Offer from './components/Offers/Offers';
 import ProfileCity from './components/profile/ProfileCity/ProfileCity';
-// import ProfileMountain from './components/profile/ProfileMountain/ProfileMountain';
+import ProfileMountain from './components/profile/ProfileMountain/ProfileMountain';
 import { AuthContextProvider } from './contexts/authContext.jsx';
 import AboutUs from './pages/AboutUs/AboutUs';
 import CheckCode from './pages/CheckCode.jsx';
@@ -25,11 +23,8 @@ import Citys from './pages/Citys/Citys.jsx';
 import ForgotPassword from './pages/ForgotPassword.jsx';
 import { Home } from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
-// import MountainRouteDetails from './pages/MountainRouteDetails/MountainRouteDetails';
 import MountainRouteDetails2 from './pages/MountainRouteDetails2/MountainRouteDetails2';
 import MountainRoutes from './pages/MountainRoutes/MountainRoutes.jsx';
-//import OfferDetails from './pages/OfferDetails/OfferDetails';
-// import Offers from './pages/Offers/Offers';
 import Profile from './pages/Profile';
 import Register from './pages/Register.jsx';
 import RuteroDetails from './pages/RuteroDetails/RuteroDetails';
@@ -60,7 +55,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/profile/changePassword" element={<ChangePassword2 />} />
             <Route path="/profile/changeEmail" element={<ChangeEmail />} />
             <Route path="/profile/experience" element={<Experience />} />
-            {/* <Route path="/profile/ProfileMountain" element={<ProfileMountain />} /> */}
+            <Route path="/profile/ProfileMountain" element={<ProfileMountain />} />
             <Route path="/profile/ProfileCity" element={<ProfileCity />} />
             <Route path="/profile/habilities" element={<Habilities />} />
           </Route>
