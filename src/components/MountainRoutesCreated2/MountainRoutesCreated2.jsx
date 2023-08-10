@@ -3,7 +3,7 @@ import './MountainRoutesCreated2.css';
 import React, { useEffect, useState } from 'react';
 
 import { useAuth } from '../../contexts/authContext';
-import { updateCity } from '../../services/API_proyect/city.service';
+import { updateMountainRoute } from '../../services/API_proyect/mountainRoute.service';
 import { getUserById } from '../../services/API_proyect/user.service';
 import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
 
@@ -18,7 +18,7 @@ const MountainRoutesCreated2 = () => {
     try {
       const formData = new FormData();
       formData.append('mountainRouteState', newMountainRouteState);
-      await updateCity(mountainRouteId, formData);
+      await updateMountainRoute(mountainRouteId, formData);
       setMountainRoutes(
         MountainRoute.map((mountain) => {
           if (mountain._id === mountainRouteId) {
