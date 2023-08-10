@@ -3,28 +3,31 @@ import './MountainRoutesCreated2.css';
 import React, { useEffect, useState } from 'react';
 
 import { useAuth } from '../../contexts/authContext';
-import { updateCity } from '../../services/API_proyect/city.service';
+import { updateMountain } from '../../services/API_proyect/city.service';
 import { getUserById } from '../../services/API_proyect/user.service';
-import DeleteCityRouteButton from '../DeleteCityRoute/DeleteCityRoute';
+import DeleteMountainRouteButton from '../DeleteCityRoute/DeleteCityRoute';
 
 const MountainRoutesCreated2 = () => {
-  const [CityRoute, setCityRoutes] = useState([]);
+  const [MountainRoute, setMountainRoutes] = useState([]);
   const { user } = useAuth();
 
-  const handleCityRouteStateChange = async (cityRouteId, newCityRouteState) => {
+  const handleMountainRouteStateChange = async (
+    mountainRouteId,
+    newMountainRouteState,
+  ) => {
     try {
       const formData = new FormData();
-      formData.append('cityRouteState', newCityRouteState);
-      await updateCity(cityRouteId, formData);
-      setCityRoutes(
-        CityRoute.map((city) => {
-          if (city._id === cityRouteId) {
+      formData.append('mountainRouteState', newMountainRouteState);
+      await updateMountain(mountainRouteId, formData);
+      setMountainRoutes(
+        MountainRoute.map((mountain) => {
+          if (mountain._id === mountainRouteId) {
             return {
-              ...CityRoute,
-              cityRouteState: newCityRouteState,
+              ...MountainRoute,
+              mountainRouteState: newMountainRouteState,
             };
           }
-          return CityRoute;
+          return MountainRoute;
         }),
       );
     } catch (error) {
@@ -35,11 +38,11 @@ const MountainRoutesCreated2 = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const userCityRoute = await getUserById(user._id);
+        const userMountainRoute = await getUserById(user._id);
 
-        console.log(userCityRoute);
-        if (userCityRoute) {
-          setCityRoutes(userCityRoute.data.cityRoutesCreated);
+        console.log(userMountainRoute);
+        if (userMountainRoute) {
+          setMountainRoutes(userMountainRoute.data.cityRoutesCreated);
         }
       } catch (error) {
         console.error('Error al obtener el usuario:', error);
@@ -52,21 +55,21 @@ const MountainRoutesCreated2 = () => {
   return (
     <section className="offer-create-container_general experience-p-container_general">
       <h3>Rutas Creadas</h3>
-      {CityRoute.length > 0 ? (
+      {MountainRoute.length > 0 ? (
         <ul>
-          {CityRoute.map((CityRoute) => (
-            <li key={CityRoute._id}>
-              <h3>{CityRoute.routeName}</h3>
-              <p>Descripción: {CityRoute.descriptionGeneral}</p>
-              <p>Localización: {CityRoute.routeLocation}</p>
-              <p>Dificultad: {CityRoute.difficulty}</p>
+          {MountainRoute.map((MountainRoute) => (
+            <li key={MountainRoute._id}>
+              <h3>{MountainRoute.routeName}</h3>
+              <p>Descripción: {MountainRoute.descriptionGeneral}</p>
+              <p>Localización: {MountainRoute.routeLocation}</p>
+              <p>Dificultad: {MountainRoute.difficulty}</p>
               <p>
                 Estado de la ruta:
                 <select
                   className="select-offer-change-state"
-                  value={CityRoute.routeState}
+                  value={MountainRoute.routeState}
                   onChange={(e) =>
-                    handleCityRouteStateChange(CityRoute._id, e.target.value)
+                    handleMountainRouteStateChange(MountainRoute._id, e.target.value)
                   }
                 >
                   <option value="Close">Close</option>
@@ -75,10 +78,10 @@ const MountainRoutesCreated2 = () => {
                 </select>
               </p>
               {/* <p>Equipo recomendado: {mountainRoute.itemsToCarry.join(', ')}</p> */}
-              <DeleteCityRouteButton
-                id={CityRoute._id}
-                CityRoute={CityRoute}
-                setCityRoutes={setCityRoutes}
+              <DeleteMountainRouteButton
+                id={MountainRoute._id}
+                MountainRoute={MountainRoute}
+                setMountainRoutes={setMountainRoutes}
               />
             </li>
           ))}
