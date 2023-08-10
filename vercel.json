@@ -17,7 +17,7 @@
     { "src": "/profile", "dest": "/profile" },
     { "src": "/profile/changePassword", "dest": "/profile/changePassword" },
     { "src": "/profile/changeEmail", "dest": "/profile/changeEmail" },
-    { "src": "/profile/experience", "dest": "/profile/experience" },    
+    { "src": "/profile/experience", "dest": "/profile/experience" },
     { "src": "/profile/ProfileCity", "dest": "/profile/ProfileCity" },
     { "src": "/profile/habilities", "dest": "/profile/profile/habilities" },
     { "src": "/verifyCode", "dest": "/verifyCode" },
