@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../contexts/authContext';
 import { updateCity } from '../../services/API_proyect/city.service';
 import { getUserById } from '../../services/API_proyect/user.service';
-import DeleteMountainRouteButton from '../DeleteCityRoute/DeleteCityRoute';
+import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
 
 const MountainRoutesCreated2 = () => {
   const [MountainRoute, setMountainRoutes] = useState([]);
