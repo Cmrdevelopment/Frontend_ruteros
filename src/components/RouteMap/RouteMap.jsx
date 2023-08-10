@@ -1,10 +1,11 @@
 import 'leaflet/dist/leaflet.css';
 import './RouteMap.css';
 
+import Leaflet from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 const RouteMap = ({ geolocations }) => {
-  const customMarkerIcon = L.icon({
+  const customMarkerIcon = Leaflet.icon({
     iconUrl:
       'https://res.cloudinary.com/dwbxywvdw/image/upload/v1690705657/Iconos/mapa_l4hpan.png',
     iconSize: [45, 45], // Ajusta el tamaño del ícono según tus necesidades
