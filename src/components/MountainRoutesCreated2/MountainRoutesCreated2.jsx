@@ -42,7 +42,7 @@ const MountainRoutesCreated2 = () => {
 
         console.log(userMountainRoute);
         if (userMountainRoute) {
-          setMountainRoutes(userMountainRoute.data.cityRoutesCreated);
+          setMountainRoutes(userMountainRoute.data.mountainRoutesCreated);
         }
       } catch (error) {
         console.error('Error al obtener el usuario:', error);
