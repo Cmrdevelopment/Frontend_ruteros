@@ -55,22 +55,32 @@ const Header = () => {
         <nav className="navHeader" ref={navRef}>
           <div className="navButton">
             <NavLink to="/home">
-              <button className="buttonNav">Inicio</button>
+              <button className="buttonNav" onClick={showNavbar}>
+                Inicio
+              </button>
             </NavLink>
             {/* <NavLink to="/offers">
               <button className="buttonNav">Ofertas</button>
             </NavLink> */}
             <NavLink to="/ruteros">
-              <button className="buttonNav">Ruteros</button>
+              <button className="buttonNav" onClick={showNavbar}>
+                Ruteros
+              </button>
             </NavLink>
             <NavLink to="/citys">
-              <button className="buttonNav">Ciudades</button>
+              <button className="buttonNav" onClick={showNavbar}>
+                Ciudades
+              </button>
             </NavLink>
             <NavLink to="/mountainRoutes">
-              <button className="buttonNav">Montañas</button>
+              <button className="buttonNav" onClick={showNavbar}>
+                Montañas
+              </button>
             </NavLink>
             <NavLink to="/aboutUs">
-              <button className="buttonNav">AboutUs</button>
+              <button className="buttonNav" onClick={showNavbar}>
+                AboutUs
+              </button>
             </NavLink>
             <NavLink to="/chat" className="header-link-two">
               <img
@@ -82,10 +92,14 @@ const Header = () => {
             {user == null && (
               <>
                 <NavLink to="/register">
-                  <button className="buttonNav">Register</button>
+                  <button className="buttonNav" onClick={showNavbar}>
+                    Register
+                  </button>
                 </NavLink>
                 <NavLink to="/login">
-                  <button className="buttonNav">Login</button>
+                  <button className="buttonNav" onClick={showNavbar}>
+                    Login
+                  </button>
                 </NavLink>
               </>
             )}
