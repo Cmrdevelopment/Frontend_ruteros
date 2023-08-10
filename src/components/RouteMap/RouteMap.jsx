@@ -4,6 +4,14 @@ import './RouteMap.css';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 const RouteMap = ({ geolocations }) => {
+  const customMarkerIcon = L.icon({
+    iconUrl:
+      'https://res.cloudinary.com/dwbxywvdw/image/upload/v1690705657/Iconos/mapa_l4hpan.png',
+    iconSize: [45, 45], // Ajusta el tamaño del ícono según tus necesidades
+    iconAnchor: [16, 32], // Ajusta el punto de anclaje si es necesario
+    popupAnchor: [0, -32], // Ajusta la posición del popup con respecto al ícono
+  });
+
   return (
     <div className="routeMap-container">
       <MapContainer
@@ -19,6 +27,7 @@ const RouteMap = ({ geolocations }) => {
           <Marker
             key={`${location.latitude}-${location.longitude}-${index}`}
             position={location}
+            icon={customMarkerIcon}
           >
             {showPopUp(index, geolocations.length)}
           </Marker>
