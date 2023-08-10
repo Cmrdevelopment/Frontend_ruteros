@@ -3,37 +3,37 @@ import './MountainRoutesCreated.css';
 import React, { useEffect, useState } from 'react';
 
 import { useAuth } from '../../contexts/authContext';
-import { updateMountainRoute } from '../../services/API_proyect/mountainRoute.service';
+// import { updateMountainRoute } from '../../services/API_proyect/mountainRoute.service';
 import { getUserById } from '../../services/API_proyect/user.service';
-// import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
+import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
 
 const MountainRoutesCreated = () => {
   const [mountainRoutes, setMountainRoutes] = useState([]);
   const { user } = useAuth();
 
-  const handleMountainRouteStateChange = async (
-    mountainRouteId,
-    newMountainRouteState,
-  ) => {
-    try {
-      const formData = new FormData();
-      formData.append('mountainRouteState', newMountainRouteState);
-      await updateMountainRoute(mountainRouteId, formData);
-      setMountainRoutes(
-        mountainRoutes.map((mountainRoute) => {
-          if (mountainRoute._id === mountainRouteId) {
-            return {
-              ...mountainRoute,
-              mountainRouteState: newMountainRouteState,
-            };
-          }
-          return mountainRoute;
-        }),
-      );
-    } catch (error) {
-      console.error('Error al cambiar el estado de la ruta de montaña:', error);
-    }
-  };
+  // const handleMountainRouteStateChange = async (
+  //   mountainRouteId,
+  //   newMountainRouteState,
+  // ) => {
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append('mountainRouteState', newMountainRouteState);
+  //     await updateMountainRoute(mountainRouteId, formData);
+  //     setMountainRoutes(
+  //       mountainRoutes.map((mountainRoute) => {
+  //         if (mountainRoute._id === mountainRouteId) {
+  //           return {
+  //             ...mountainRoute,
+  //             mountainRouteState: newMountainRouteState,
+  //           };
+  //         }
+  //         return mountainRoute;
+  //       }),
+  //     );
+  //   } catch (error) {
+  //     console.error('Error al cambiar el estado de la ruta de montaña:', error);
+  //   }
+  // };
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -65,7 +65,7 @@ const MountainRoutesCreated = () => {
               <p>Dificultad: {mountainRoute.difficulty}</p>
               <p>
                 Estado de la ruta:
-                <select
+                {/* <select
                   className="select-offer-change-state"
                   value={mountainRoute.routeState}
                   onChange={(e) =>
@@ -75,13 +75,13 @@ const MountainRoutesCreated = () => {
                   <option value="Close">Close</option>
                   <option value="Suspended">Suspended</option>
                   <option value="Open">Open</option>
-                </select>
+                </select> */}
               </p>
-              {/* <DeleteMountainRouteButton
+              <DeleteMountainRouteButton
                 id={mountainRoute._id}
                 mountainRoutes={mountainRoutes}
                 setMountainRoutes={setMountainRoutes}
-              /> */}
+              />
             </li>
           ))}
         </ul>
