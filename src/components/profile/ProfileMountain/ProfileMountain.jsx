@@ -3,8 +3,8 @@ import './ProfileMountain.css';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import CityRoutesCreated from '../../CityRoutesCreated/CityRoutesCreated';
-// import MountainRoutesCreated from '../../mountainRoutesCreated/mountainRoutesCreated';
+// import CityRoutesCreated from '../../CityRoutesCreated/CityRoutesCreated';
+import MountainRoutesCreated from '../../mountainRoutesCreated/mountainRoutesCreated';
 import MountainRoutesInterested from '../../MountainRoutesInterested/mountainRoutesInterested';
 // import CityRoutesInterested from '../../CityRoutesInterested/cityRoutesInterested';
 
@@ -34,8 +34,8 @@ const ProfileMountain = () => {
           Rutas que sigo
         </button>
       </div>
-
-      {showCreated ? <CityRoutesCreated /> : <MountainRoutesInterested />}
+      {/* MountainRoutesCreated es la que sospechamos */}
+      {showCreated ? <MountainRoutesCreated /> : <MountainRoutesInterested />}
     </section>
   );
 };
