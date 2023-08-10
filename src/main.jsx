@@ -41,20 +41,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          {/* <Route index element={<PruebaEmotion />} /> */}
+
           <Route path="/ruteros" element={<Ruteros />} />
           <Route path="/aboutUs" element={<AboutUs />} />
-          {/* <Route path="/offers" element={<Offers />} /> */}
           <Route path="/citys" element={<Citys />} />
           <Route path="/mountainRoutes" element={<MountainRoutes />} />
           <Route path="/ruteroDetails" element={<RuteroDetails />} />
-          {/* <Route path="/offerDetails" element={<OfferDetails />} /> */}
           <Route path="/cityDetails" element={<CityDetails />} />
-          {/* <Route path="/mountainRouteDetails" element={<MountainRouteDetails />} /> */}
           <Route path="/mountainRouteDetails2" element={<MountainRouteDetails2 />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/createOffer2" element={<CreateOffer2 />} /> */}
           <Route path="/createMountainRoute2" element={<CreateMountainRoute2 />} />
           <Route path="/createCities2" element={<CreateCities2 />} />
           <Route path="/register" element={<Register />} />
@@ -64,7 +60,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/profile/changePassword" element={<ChangePassword2 />} />
             <Route path="/profile/changeEmail" element={<ChangeEmail />} />
             <Route path="/profile/experience" element={<Experience />} />
-            {/* <Route path="/profile/Offer" element={<Offer />} /> */}
             <Route path="/profile/ProfileMountain" element={<ProfileMountain />} />
             <Route path="/profile/ProfileCity" element={<ProfileCity />} />
             <Route path="/profile/habilities" element={<Habilities />} />
