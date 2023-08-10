@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../contexts/authContext';
 import { updateMountainRoute } from '../../services/API_proyect/mountainRoute.service';
 import { getUserById } from '../../services/API_proyect/user.service';
-import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
+// import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
 
 const MountainRoutesCreated = () => {
   const [mountainRoutes, setMountainRoutes] = useState([]);
@@ -77,12 +77,11 @@ const MountainRoutesCreated = () => {
                   <option value="Open">Open</option>
                 </select>
               </p>
-              {/* <p>Equipo recomendado: {mountainRoute.itemsToCarry.join(', ')}</p> */}
-              <DeleteMountainRouteButton
+              {/* <DeleteMountainRouteButton
                 id={mountainRoute._id}
                 mountainRoutes={mountainRoutes}
                 setMountainRoutes={setMountainRoutes}
-              />
+              /> */}
             </li>
           ))}
         </ul>
