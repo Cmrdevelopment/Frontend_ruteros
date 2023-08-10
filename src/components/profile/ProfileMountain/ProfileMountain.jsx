@@ -3,10 +3,10 @@ import './ProfileMountain.css';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-// import MountainRoutesCreated from '../../mountainRoutesCreated/mountainRoutesCreated';
-// import MountainRoutesInterested from '../../MountainRoutesInterested/mountainRoutesInterested';
 import CityRoutesCreated from '../../CityRoutesCreated/CityRoutesCreated';
-import CityRoutesInterested from '../../CityRoutesInterested/cityRoutesInterested';
+// import MountainRoutesCreated from '../../mountainRoutesCreated/mountainRoutesCreated';
+import MountainRoutesInterested from '../../MountainRoutesInterested/mountainRoutesInterested';
+// import CityRoutesInterested from '../../CityRoutesInterested/cityRoutesInterested';
 
 const ProfileMountain = () => {
   const [showCreated, setShowCreated] = useState(true);
@@ -35,7 +35,7 @@ const ProfileMountain = () => {
         </button>
       </div>
 
-      {showCreated ? <CityRoutesCreated /> : <CityRoutesInterested />}
+      {showCreated ? <CityRoutesCreated /> : <MountainRoutesInterested />}
     </section>
   );
 };
