@@ -8,7 +8,7 @@ import { getUserById } from '../../services/API_proyect/user.service';
 import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
 
 const MountainRoutesCreated2 = () => {
-  const [MountainRoute, setMountainRoutes] = useState([]);
+  const [mountainRoute, setMountainRoutes] = useState([]);
   const { user } = useAuth();
 
   const handleMountainRouteStateChange = async (
@@ -20,14 +20,14 @@ const MountainRoutesCreated2 = () => {
       formData.append('mountainRouteState', newMountainRouteState);
       await updateMountainRoute(mountainRouteId, formData);
       setMountainRoutes(
-        MountainRoute.map((mountain) => {
+        mountainRoute.map((mountain) => {
           if (mountain._id === mountainRouteId) {
             return {
-              ...MountainRoute,
+              ...mountainRoute,
               mountainRouteState: newMountainRouteState,
             };
           }
-          return MountainRoute;
+          return mountainRoute;
         }),
       );
     } catch (error) {
@@ -55,21 +55,24 @@ const MountainRoutesCreated2 = () => {
   return (
     <section className="offer-create-container_general experience-p-container_general">
       <h3>Rutas Creadas</h3>
-      {MountainRoute.length > 0 ? (
+      {mountainRoute.length > 0 ? (
         <ul>
-          {MountainRoute.map((MountainRoute) => (
-            <li key={MountainRoute._id}>
-              <h3>{MountainRoute.routeName}</h3>
-              <p>Descripción: {MountainRoute.descriptionGeneral}</p>
-              <p>Localización: {MountainRoute.routeLocation}</p>
-              <p>Dificultad: {MountainRoute.difficulty}</p>
+          {mountainRoute.map((mountainRouteSingle) => (
+            <li key={mountainRouteSingle._id}>
+              <h3>{mountainRouteSingle.routeName}</h3>
+              <p>Descripción: {mountainRouteSingle.descriptionGeneral}</p>
+              <p>Localización: {mountainRouteSingle.routeLocation}</p>
+              <p>Dificultad: {mountainRouteSingle.difficulty}</p>
               <p>
                 Estado de la ruta:
                 <select
                   className="select-offer-change-state"
-                  value={MountainRoute.routeState}
+                  value={mountainRouteSingle.routeState}
                   onChange={(e) =>
-                    handleMountainRouteStateChange(MountainRoute._id, e.target.value)
+                    handleMountainRouteStateChange(
+                      mountainRouteSingle._id,
+                      e.target.value,
+                    )
                   }
                 >
                   <option value="Close">Close</option>
@@ -79,8 +82,8 @@ const MountainRoutesCreated2 = () => {
               </p>
               {/* <p>Equipo recomendado: {mountainRoute.itemsToCarry.join(', ')}</p> */}
               <DeleteMountainRouteButton
-                id={MountainRoute._id}
-                MountainRoute={MountainRoute}
+                id={mountainRouteSingle._id}
+                mountainRoute={mountainRouteSingle}
                 setMountainRoutes={setMountainRoutes}
               />
             </li>

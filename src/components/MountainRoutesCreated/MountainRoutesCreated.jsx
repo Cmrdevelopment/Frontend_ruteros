@@ -1,57 +1,56 @@
 import './MountainRoutesCreated.css';
 
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-// import React, { useEffect, useState } from 'react';
-// import { useAuth } from '../../contexts/authContext';
-// import { updateMountainRoute } from '../../services/API_proyect/mountainRoute.service';
-// import { getUserById } from '../../services/API_proyect/user.service';
+import { useAuth } from '../../contexts/authContext';
+import { updateMountainRoute } from '../../services/API_proyect/mountainRoute.service';
+import { getUserById } from '../../services/API_proyect/user.service';
 import DeleteMountainRouteButton from '../DeleteMountainRoute/DeleteMountainRoute';
 
 const MountainRoutesCreated = () => {
   const [mountainRoutes, setMountainRoutes] = useState([]);
-  // const { user } = useAuth();
+  const { user } = useAuth();
 
-  // const handleMountainRouteStateChange = async (
-  //   mountainRouteId,
-  //   newMountainRouteState,
-  // ) => {
-  //   try {
-  //     const formData = new FormData();
-  //     formData.append('mountainRouteState', newMountainRouteState);
-  //     await updateMountainRoute(mountainRouteId, formData);
-  //     setMountainRoutes(
-  //       mountainRoutes.map((mountainRoute) => {
-  //         if (mountainRoute._id === mountainRouteId) {
-  //           return {
-  //             ...mountainRoute,
-  //             mountainRouteState: newMountainRouteState,
-  //           };
-  //         }
-  //         return mountainRoute;
-  //       }),
-  //     );
-  //   } catch (error) {
-  //     console.error('Error al cambiar el estado de la ruta de montaña:', error);
-  //   }
-  // };
+  const handleMountainRouteStateChange = async (
+    mountainRouteId,
+    newMountainRouteState,
+  ) => {
+    try {
+      const formData = new FormData();
+      formData.append('mountainRouteState', newMountainRouteState);
+      await updateMountainRoute(mountainRouteId, formData);
+      setMountainRoutes(
+        mountainRoutes.map((mountainRoute) => {
+          if (mountainRoute._id === mountainRouteId) {
+            return {
+              ...mountainRoute,
+              mountainRouteState: newMountainRouteState,
+            };
+          }
+          return mountainRoute;
+        }),
+      );
+    } catch (error) {
+      console.error('Error al cambiar el estado de la ruta de montaña:', error);
+    }
+  };
 
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     try {
-  //       const userMountainRoute = await getUserById(user._id);
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const userMountainRoute = await getUserById(user._id);
 
-  //       console.log(userMountainRoute);
-  //       if (userMountainRoute) {
-  //         setMountainRoutes(userMountainRoute.data.mountainRoutesCreated);
-  //       }
-  //     } catch (error) {
-  //       console.error('Error al obtener el usuario:', error);
-  //     }
-  //   };
+        console.log(userMountainRoute);
+        if (userMountainRoute) {
+          setMountainRoutes(userMountainRoute.data.mountainRoutesCreated);
+        }
+      } catch (error) {
+        console.error('Error al obtener el usuario:', error);
+      }
+    };
 
-  //   fetchUser();
-  // }, []);
+    fetchUser();
+  }, []);
 
   return (
     <section className="offer-create-container_general experience-p-container_general">
@@ -66,7 +65,7 @@ const MountainRoutesCreated = () => {
               <p>Dificultad: {mountainRoute.difficulty}</p>
               <p>
                 Estado de la ruta:
-                {/* <select
+                <select
                   className="select-offer-change-state"
                   value={mountainRoute.routeState}
                   onChange={(e) =>
@@ -76,7 +75,7 @@ const MountainRoutesCreated = () => {
                   <option value="Close">Close</option>
                   <option value="Suspended">Suspended</option>
                   <option value="Open">Open</option>
-                </select> */}
+                </select>
               </p>
               <DeleteMountainRouteButton
                 id={mountainRoute._id}
