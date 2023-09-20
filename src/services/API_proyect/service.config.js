@@ -11,7 +11,7 @@ const APIHeaders = {
 
 export const API = axios.create({
   //baseURL: `http://localhost:8080/api/v1`,
-  baseURL: `https://backend-ruteros-prueba.vercel.app/`,
+  baseURL: `https://backend-ruteros-prueba.vercel.app/api/v1`,
   headers: APIHeaders,
   timeout: 60000,
 });
